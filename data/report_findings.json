@@ -1,0 +1,935 @@
+{
+  "meta": {
+    "season": 2025,
+    "rows": 166053,
+    "actual_play_rows": 147974,
+    "administrative_rows": 18079,
+    "columns": 24,
+    "unique_teams": 236,
+    "unique_games": 956,
+    "weeks": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "date_min": "2025-08-23",
+    "date_max": "2026-01-20",
+    "source": "SportsDataverse espn_cfb_pbp 2025 season release",
+    "definitions": {
+      "actual_play": "play == true; excludes administrative/non-play rows",
+      "EPA": "Average of source EPA over included actual plays with a nonmissing EPA value",
+      "def_EPA": "Source defensive EPA, defined as negative offensive EPA; positive favors defense",
+      "success_rate": "EPA_success == true / actual plays with a nonmissing EPA_success flag; source defines success as EPA > 0",
+      "explosive_rate": "EPA_explosive == true / actual plays with a nonmissing EPA_explosive flag; source EPA-based flag, not a yardage threshold",
+      "scoring_rate": "scoring_play == true / actual plays with a nonmissing scoring_play flag",
+      "average_yards": "Mean statYardage among included records with nonmissing statYardage",
+      "team_threshold": "At least 300 actual plays faced/run, applied to team offense and defense rankings",
+      "missing_values": {
+        "yds_rushed": 102678,
+        "yds_receiving": 123574,
+        "wallclock": 564,
+        "orig_play_type": 25
+      },
+      "checks": {
+        "actual_play_EPA_success_disagreements": 0,
+        "actual_play_def_EPA_not_negative_EPA": 0,
+        "actual_play_missing_EPA": 0,
+        "actual_play_missing_def_EPA": 0
+      },
+      "season_type_rows": {
+        "2": 158113,
+        "3": 7940
+      }
+    },
+    "overall": {
+      "n": 147974,
+      "mean_epa": 0.047844339327389504,
+      "epa_n": 147974,
+      "success_rate": 0.43758362955654373,
+      "success_n": 147974,
+      "explosive_rate": 0.06359225269304067,
+      "explosive_n": 147974,
+      "scoring_rate": 0.05761147228567181,
+      "scoring_n": 147974,
+      "mean_yards": 6.417201670563748,
+      "yards_n": 147974
+    }
+  },
+  "sections": [
+    {
+      "id": "season-phase",
+      "kicker": "SEASON PHASE",
+      "title": "Postseason play carried a different EPA profile",
+      "copy": "Among 140,896 regular-season actual plays, average EPA was 0.049 and the EPA-positive rate was 43.8%. The 7,078 postseason plays averaged 0.025 EPA with a 43.6% success rate. These are play-weighted averages, so each actual play contributes once.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "Regular season",
+            "key": "2",
+            "n": 140896,
+            "mean_epa": 0.048994440545839596,
+            "epa_n": 140896,
+            "success_rate": 0.43768453327276857,
+            "success_n": 140896,
+            "explosive_rate": 0.06372785600726777,
+            "explosive_n": 140896,
+            "scoring_rate": 0.057730524642289345,
+            "scoring_n": 140896,
+            "mean_yards": 6.419827390415626,
+            "yards_n": 140896
+          },
+          {
+            "label": "Postseason",
+            "key": "3",
+            "n": 7078,
+            "mean_epa": 0.024950208036806913,
+            "epa_n": 7078,
+            "success_rate": 0.43557502119242725,
+            "success_n": 7078,
+            "explosive_rate": 0.06089290760101724,
+            "explosive_n": 7078,
+            "scoring_rate": 0.055241593670528395,
+            "scoring_n": 7078,
+            "mean_yards": 6.364933597061317,
+            "yards_n": 7078
+          }
+        ]
+      }
+    },
+    {
+      "id": "explosives",
+      "kicker": "EXPLOSIVE PLAYS",
+      "title": "EPA-flagged explosive plays delivered much larger value per snap",
+      "copy": "The source marked 9,410 of 147,974 actual plays as EPA-explosive (6.4%). Those plays averaged 3.245 EPA, compared with -0.169 for other actual plays. Explosive status uses the dataset's EPA-based flag, not a yardage threshold.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "EPA-explosive",
+            "n": 9410,
+            "mean_epa": 3.245441173531677,
+            "epa_n": 9410,
+            "success_rate": 1.0,
+            "success_n": 9410,
+            "explosive_rate": 1.0,
+            "explosive_n": 9410,
+            "scoring_rate": 0.37236981934112645,
+            "scoring_n": 9410,
+            "mean_yards": 25.060998937300745,
+            "yards_n": 9410
+          },
+          {
+            "label": "Other plays",
+            "n": 138564,
+            "mean_epa": -0.16930720226972337,
+            "epa_n": 138564,
+            "success_rate": 0.3993894518056638,
+            "success_n": 138564,
+            "explosive_rate": 0.0,
+            "explosive_n": 138564,
+            "scoring_rate": 0.036235963165035655,
+            "scoring_n": 138564,
+            "mean_yards": 5.151085419012153,
+            "yards_n": 138564
+          }
+        ]
+      }
+    },
+    {
+      "id": "success",
+      "kicker": "SUCCESS RATE",
+      "title": "Fewer than half of actual plays added expected points",
+      "copy": "147,974 actual plays had a defined success flag; 64,751 were positive-EPA plays, a 43.8% success rate. EPA-positive plays averaged 1.166 EPA, while nonpositive plays averaged -0.822. The source defines success as EPA greater than zero.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "Average EPA by success outcome",
+        "data": [
+          {
+            "label": "EPA-positive",
+            "n": 64751,
+            "mean_epa": 1.1657873568383261,
+            "epa_n": 64751,
+            "success_rate": 1.0,
+            "success_n": 64751,
+            "explosive_rate": 0.14532594091210946,
+            "explosive_n": 64751,
+            "scoring_rate": 0.12483204892588531,
+            "scoring_n": 64751,
+            "mean_yards": 12.099874905406866,
+            "yards_n": 64751
+          },
+          {
+            "label": "EPA-nonpositive",
+            "n": 83223,
+            "mean_epa": -0.8219624247504574,
+            "epa_n": 83223,
+            "success_rate": 0.0,
+            "success_n": 83223,
+            "explosive_rate": 0.0,
+            "explosive_n": 83223,
+            "scoring_rate": 0.005311031806111291,
+            "scoring_n": 83223,
+            "mean_yards": 1.9958424954639944,
+            "yards_n": 83223
+          }
+        ]
+      }
+    },
+    {
+      "id": "pass-rush",
+      "kicker": "PLAY PROFILE",
+      "title": "Pass-coded snaps were more efficient than rush-coded snaps",
+      "copy": "Rush-coded events (Rush, Rushing Touchdown) totaled 63,904 actual plays at 0.092 EPA per play. The pass-coded set (Pass Completion, Pass Incompletion, Pass Reception, Passing Touchdown, Sack) totaled 59,768 at 0.187. Other play types are excluded from this comparison; categories follow the source's play labels.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "Rush-coded",
+            "n": 63904,
+            "mean_epa": 0.09165349356881944,
+            "epa_n": 63904,
+            "success_rate": 0.45734226339509265,
+            "success_n": 63904,
+            "explosive_rate": 0.06431522283425138,
+            "explosive_n": 63904,
+            "scoring_rate": 0.0484007260891337,
+            "scoring_n": 63904,
+            "mean_yards": 5.007824236354532,
+            "yards_n": 63904
+          },
+          {
+            "label": "Pass-coded",
+            "n": 59768,
+            "mean_epa": 0.18685167507446312,
+            "epa_n": 59768,
+            "success_rate": 0.45457435416945524,
+            "success_n": 59768,
+            "explosive_rate": 0.08814081113639406,
+            "explosive_n": 59768,
+            "scoring_rate": 0.04796881274260474,
+            "scoring_n": 59768,
+            "mean_yards": 6.685935617721858,
+            "yards_n": 59768
+          }
+        ]
+      }
+    },
+    {
+      "id": "downs",
+      "kicker": "DOWN & DISTANCE",
+      "title": "Fourth down produced the strongest average EPA, with a small denominator",
+      "copy": "EPA per actual play varies by down because the field position and conversion stakes change. 1st down: 0.038 EPA on 65,914 plays (40.2% positive). 3rd down: 0.046 EPA on 26,040 plays (43.4% positive). 2nd down: 0.047 EPA on 41,393 plays (44.6% positive). 4th down: 0.093 EPA on 14,572 plays (58.3% positive). The chart reports all four downs; fourth-down volume is substantially lower than early-down volume.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "1",
+            "key": "1",
+            "n": 65914,
+            "mean_epa": 0.03768976499517782,
+            "epa_n": 65914,
+            "success_rate": 0.401508025609127,
+            "success_n": 65914,
+            "explosive_rate": 0.032891343265467124,
+            "explosive_n": 65914,
+            "scoring_rate": 0.03929362502654975,
+            "scoring_n": 65914,
+            "mean_yards": 6.1620444822040845,
+            "yards_n": 65914
+          },
+          {
+            "label": "3",
+            "key": "3",
+            "n": 26040,
+            "mean_epa": 0.046024034448295614,
+            "epa_n": 26040,
+            "success_rate": 0.43437019969278035,
+            "success_n": 26040,
+            "explosive_rate": 0.13114439324116745,
+            "explosive_n": 26040,
+            "scoring_rate": 0.054262672811059905,
+            "scoring_n": 26040,
+            "mean_yards": 5.842741935483871,
+            "yards_n": 26040
+          },
+          {
+            "label": "2",
+            "key": "2",
+            "n": 41393,
+            "mean_epa": 0.04727029090494478,
+            "epa_n": 41393,
+            "success_rate": 0.44553426907931293,
+            "success_n": 41393,
+            "explosive_rate": 0.05404295412267775,
+            "explosive_n": 41393,
+            "scoring_rate": 0.047061097286980894,
+            "scoring_n": 41393,
+            "mean_yards": 5.853815862585462,
+            "yards_n": 41393
+          },
+          {
+            "label": "4",
+            "key": "4",
+            "n": 14572,
+            "mean_epa": 0.09309219899582699,
+            "epa_n": 14572,
+            "success_rate": 0.5831732088937689,
+            "success_n": 14572,
+            "explosive_rate": 0.10787812242657151,
+            "explosive_n": 14572,
+            "scoring_rate": 0.1743755146856986,
+            "scoring_n": 14572,
+            "mean_yards": 10.160993686522097,
+            "yards_n": 14572
+          }
+        ]
+      }
+    },
+    {
+      "id": "quarters",
+      "kicker": "GAME FLOW",
+      "title": "Second-quarter plays averaged the most EPA among regulation quarters",
+      "copy": "Period 2 averaged 0.077 EPA per actual play across 40,876 plays, compared with 0.028 in Period 1, 0.032 in Period 3, and 0.041 in Period 4. Overtime periods are shown separately and have much smaller samples.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "1",
+            "key": "1",
+            "n": 35365,
+            "mean_epa": 0.028200455305595666,
+            "epa_n": 35365,
+            "success_rate": 0.4348367029548989,
+            "success_n": 35365,
+            "explosive_rate": 0.06514915877279796,
+            "explosive_n": 35365,
+            "scoring_rate": 0.05140675809416089,
+            "scoring_n": 35365,
+            "mean_yards": 6.431528347235968,
+            "yards_n": 35365
+          },
+          {
+            "label": "3",
+            "key": "3",
+            "n": 34557,
+            "mean_epa": 0.031779589913114935,
+            "epa_n": 34557,
+            "success_rate": 0.4322423821512284,
+            "success_n": 34557,
+            "explosive_rate": 0.06444425152646352,
+            "explosive_n": 34557,
+            "scoring_rate": 0.05243510721416789,
+            "scoring_n": 34557,
+            "mean_yards": 6.517695401799925,
+            "yards_n": 34557
+          },
+          {
+            "label": "4",
+            "key": "4",
+            "n": 36904,
+            "mean_epa": 0.041272753408266916,
+            "epa_n": 36904,
+            "success_rate": 0.4304411445913722,
+            "success_n": 36904,
+            "explosive_rate": 0.06413938868415348,
+            "explosive_n": 36904,
+            "scoring_rate": 0.05836765662258834,
+            "scoring_n": 36904,
+            "mean_yards": 5.993659223932365,
+            "yards_n": 36904
+          },
+          {
+            "label": "2",
+            "key": "2",
+            "n": 40876,
+            "mean_epa": 0.07735737339323286,
+            "epa_n": 40876,
+            "success_rate": 0.4487474312555044,
+            "success_n": 40876,
+            "explosive_rate": 0.05998630002935708,
+            "explosive_n": 40876,
+            "scoring_rate": 0.06517271748703396,
+            "scoring_n": 40876,
+            "mean_yards": 6.695689402094138,
+            "yards_n": 40876
+          },
+          {
+            "label": "5",
+            "key": "5",
+            "n": 227,
+            "mean_epa": 0.9894614427100195,
+            "epa_n": 227,
+            "success_rate": 0.7665198237885462,
+            "success_n": 227,
+            "explosive_rate": 0.21145374449339208,
+            "explosive_n": 227,
+            "scoring_rate": 0.2599118942731278,
+            "scoring_n": 227,
+            "mean_yards": 7.008810572687224,
+            "yards_n": 227
+          },
+          {
+            "label": "6",
+            "key": "6",
+            "n": 45,
+            "mean_epa": 1.6534320672353109,
+            "epa_n": 45,
+            "success_rate": 0.7555555555555555,
+            "success_n": 45,
+            "explosive_rate": 0.26666666666666666,
+            "explosive_n": 45,
+            "scoring_rate": 0.4,
+            "scoring_n": 45,
+            "mean_yards": 9.377777777777778,
+            "yards_n": 45
+          }
+        ]
+      }
+    },
+    {
+      "id": "weeks",
+      "kicker": "WEEKLY RHYTHM",
+      "title": "Week 4 led the adequately sized weekly EPA averages",
+      "copy": "Among weeks with at least 300 actual plays, Week 4 averaged 0.084 EPA across 9,798 plays; Week 15 averaged -0.067 across 1,538. Weeks below 300 actual plays are omitted from this comparison to limit small-sample swings.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "1",
+            "key": "1",
+            "n": 21959,
+            "mean_epa": 0.03289851123697639,
+            "epa_n": 21959,
+            "success_rate": 0.43358076415137303,
+            "success_n": 21959,
+            "explosive_rate": 0.06179698529076916,
+            "explosive_n": 21959,
+            "scoring_rate": 0.054465139578305025,
+            "scoring_n": 21959,
+            "mean_yards": 6.283847169725397,
+            "yards_n": 21959
+          },
+          {
+            "label": "2",
+            "key": "2",
+            "n": 12506,
+            "mean_epa": 0.05229652862953117,
+            "epa_n": 12506,
+            "success_rate": 0.4379497841036303,
+            "success_n": 12506,
+            "explosive_rate": 0.062370062370062374,
+            "explosive_n": 12506,
+            "scoring_rate": 0.060291060291060294,
+            "scoring_n": 12506,
+            "mean_yards": 6.576923076923077,
+            "yards_n": 12506
+          },
+          {
+            "label": "3",
+            "key": "3",
+            "n": 11189,
+            "mean_epa": 0.06547849207631434,
+            "epa_n": 11189,
+            "success_rate": 0.44624184466887123,
+            "success_n": 11189,
+            "explosive_rate": 0.06166770935740459,
+            "explosive_n": 11189,
+            "scoring_rate": 0.061042094914648314,
+            "scoring_n": 11189,
+            "mean_yards": 6.6416122977924745,
+            "yards_n": 11189
+          },
+          {
+            "label": "4",
+            "key": "4",
+            "n": 9798,
+            "mean_epa": 0.08421408643950186,
+            "epa_n": 9798,
+            "success_rate": 0.4402939375382731,
+            "success_n": 9798,
+            "explosive_rate": 0.06695243927332109,
+            "explosive_n": 9798,
+            "scoring_rate": 0.061543172075933864,
+            "scoring_n": 9798,
+            "mean_yards": 6.570320473566034,
+            "yards_n": 9798
+          },
+          {
+            "label": "5",
+            "key": "5",
+            "n": 8657,
+            "mean_epa": 0.06068542072959558,
+            "epa_n": 8657,
+            "success_rate": 0.4431096222709946,
+            "success_n": 8657,
+            "explosive_rate": 0.06364791498209542,
+            "explosive_n": 8657,
+            "scoring_rate": 0.05625505371375765,
+            "scoring_n": 8657,
+            "mean_yards": 6.473605175002888,
+            "yards_n": 8657
+          },
+          {
+            "label": "6",
+            "key": "6",
+            "n": 7951,
+            "mean_epa": 0.06232233209470588,
+            "epa_n": 7951,
+            "success_rate": 0.44157967551251415,
+            "success_n": 7951,
+            "explosive_rate": 0.06741290403722802,
+            "explosive_n": 7951,
+            "scoring_rate": 0.05760281725569111,
+            "scoring_n": 7951,
+            "mean_yards": 6.434410765941391,
+            "yards_n": 7951
+          },
+          {
+            "label": "7",
+            "key": "7",
+            "n": 9063,
+            "mean_epa": 0.04667245457878863,
+            "epa_n": 9063,
+            "success_rate": 0.4347346353304645,
+            "success_n": 9063,
+            "explosive_rate": 0.06399646916032219,
+            "explosive_n": 9063,
+            "scoring_rate": 0.05825885468387951,
+            "scoring_n": 9063,
+            "mean_yards": 6.39766081871345,
+            "yards_n": 9063
+          },
+          {
+            "label": "8",
+            "key": "8",
+            "n": 9721,
+            "mean_epa": 0.06918015607020789,
+            "epa_n": 9721,
+            "success_rate": 0.441209752083119,
+            "success_n": 9721,
+            "explosive_rate": 0.06583684806089908,
+            "explosive_n": 9721,
+            "scoring_rate": 0.057710112128381855,
+            "scoring_n": 9721,
+            "mean_yards": 6.495833761958647,
+            "yards_n": 9721
+          },
+          {
+            "label": "9",
+            "key": "9",
+            "n": 8702,
+            "mean_epa": 0.03323687102286677,
+            "epa_n": 8702,
+            "success_rate": 0.4317398299241554,
+            "success_n": 8702,
+            "explosive_rate": 0.06584693173982993,
+            "explosive_n": 8702,
+            "scoring_rate": 0.05688347506320386,
+            "scoring_n": 8702,
+            "mean_yards": 6.308434842564927,
+            "yards_n": 8702
+          },
+          {
+            "label": "10",
+            "key": "10",
+            "n": 8358,
+            "mean_epa": 0.02044386776187797,
+            "epa_n": 8358,
+            "success_rate": 0.4304857621440536,
+            "success_n": 8358,
+            "explosive_rate": 0.06424982053122756,
+            "explosive_n": 8358,
+            "scoring_rate": 0.057310361330461836,
+            "scoring_n": 8358,
+            "mean_yards": 6.272313950705911,
+            "yards_n": 8358
+          },
+          {
+            "label": "11",
+            "key": "11",
+            "n": 8418,
+            "mean_epa": 0.02352983574609762,
+            "epa_n": 8418,
+            "success_rate": 0.4305060584461867,
+            "success_n": 8418,
+            "explosive_rate": 0.06177239249227845,
+            "explosive_n": 8418,
+            "scoring_rate": 0.05654549774293181,
+            "scoring_n": 8418,
+            "mean_yards": 6.278213352340224,
+            "yards_n": 8418
+          },
+          {
+            "label": "12",
+            "key": "12",
+            "n": 9368,
+            "mean_epa": 0.053144360201737115,
+            "epa_n": 9368,
+            "success_rate": 0.444598633646456,
+            "success_n": 9368,
+            "explosive_rate": 0.0630871050384287,
+            "explosive_n": 9368,
+            "scoring_rate": 0.05657557643040137,
+            "scoring_n": 9368,
+            "mean_yards": 6.5465414175918015,
+            "yards_n": 9368
+          },
+          {
+            "label": "13",
+            "key": "13",
+            "n": 10264,
+            "mean_epa": 0.04998429488767786,
+            "epa_n": 10264,
+            "success_rate": 0.4386204208885425,
+            "success_n": 10264,
+            "explosive_rate": 0.0632307092751364,
+            "explosive_n": 10264,
+            "scoring_rate": 0.05845674201091192,
+            "scoring_n": 10264,
+            "mean_yards": 6.3173226812159005,
+            "yards_n": 10264
+          },
+          {
+            "label": "14",
+            "key": "14",
+            "n": 10355,
+            "mean_epa": 0.043658461685835204,
+            "epa_n": 10355,
+            "success_rate": 0.4393046837276678,
+            "success_n": 10355,
+            "explosive_rate": 0.06267503621438919,
+            "explosive_n": 10355,
+            "scoring_rate": 0.057460164171897636,
+            "scoring_n": 10355,
+            "mean_yards": 6.434476098503138,
+            "yards_n": 10355
+          },
+          {
+            "label": "15",
+            "key": "15",
+            "n": 1538,
+            "mean_epa": -0.06679935310240617,
+            "epa_n": 1538,
+            "success_rate": 0.40312093628088425,
+            "success_n": 1538,
+            "explosive_rate": 0.06046814044213264,
+            "explosive_n": 1538,
+            "scoring_rate": 0.04746423927178153,
+            "scoring_n": 1538,
+            "mean_yards": 5.665799739921977,
+            "yards_n": 1538
+          },
+          {
+            "label": "16",
+            "key": "16",
+            "n": 127,
+            "mean_epa": 0.08446702619237224,
+            "epa_n": 127,
+            "success_rate": 0.4330708661417323,
+            "success_n": 127,
+            "explosive_rate": 0.06299212598425197,
+            "explosive_n": 127,
+            "scoring_rate": 0.05511811023622047,
+            "scoring_n": 127,
+            "mean_yards": 5.039370078740157,
+            "yards_n": 127
+          }
+        ]
+      }
+    },
+    {
+      "id": "offense-teams",
+      "kicker": "TEAM OFFENSE",
+      "title": "Vanderbilt Commodores led the 300-play offense group in EPA per play",
+      "copy": "With a minimum of 300 actual plays, Vanderbilt Commodores averaged 0.307 EPA per play over 907 plays. Sam Houston Bearkats was lowest in this same qualifying group at -0.147 over 937. This is an unadjusted, play-weighted season average, not an opponent-adjusted rating.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "Vanderbilt Commodores",
+            "key": "Vanderbilt Commodores",
+            "n": 907,
+            "mean_epa": 0.3072755814025788,
+            "epa_n": 907,
+            "success_rate": 0.5203969128996693,
+            "success_n": 907,
+            "explosive_rate": 0.10143329658213891,
+            "explosive_n": 907,
+            "scoring_rate": 0.08489525909592062,
+            "scoring_n": 907,
+            "mean_yards": 7.930540242557883,
+            "yards_n": 907
+          },
+          {
+            "label": "North Dakota State Bison",
+            "key": "North Dakota State Bison",
+            "n": 894,
+            "mean_epa": 0.2572482602224921,
+            "epa_n": 894,
+            "success_rate": 0.5055928411633109,
+            "success_n": 894,
+            "explosive_rate": 0.0738255033557047,
+            "explosive_n": 894,
+            "scoring_rate": 0.09284116331096197,
+            "scoring_n": 894,
+            "mean_yards": 8.217002237136466,
+            "yards_n": 894
+          },
+          {
+            "label": "North Texas Mean Green",
+            "key": "North Texas Mean Green",
+            "n": 1106,
+            "mean_epa": 0.2511034235467707,
+            "epa_n": 1106,
+            "success_rate": 0.5135623869801085,
+            "success_n": 1106,
+            "explosive_rate": 0.07956600361663653,
+            "explosive_n": 1106,
+            "scoring_rate": 0.08951175406871609,
+            "scoring_n": 1106,
+            "mean_yards": 7.594936708860759,
+            "yards_n": 1106
+          },
+          {
+            "label": "Notre Dame Fighting Irish",
+            "key": "Notre Dame Fighting Irish",
+            "n": 835,
+            "mean_epa": 0.25100456934399945,
+            "epa_n": 835,
+            "success_rate": 0.4946107784431138,
+            "success_n": 835,
+            "explosive_rate": 0.09221556886227544,
+            "explosive_n": 835,
+            "scoring_rate": 0.08263473053892216,
+            "scoring_n": 835,
+            "mean_yards": 7.685029940119761,
+            "yards_n": 835
+          },
+          {
+            "label": "Indiana Hoosiers",
+            "key": "Indiana Hoosiers",
+            "n": 1180,
+            "mean_epa": 0.24707728586459565,
+            "epa_n": 1180,
+            "success_rate": 0.5177966101694915,
+            "success_n": 1180,
+            "explosive_rate": 0.07542372881355933,
+            "explosive_n": 1180,
+            "scoring_rate": 0.08728813559322034,
+            "scoring_n": 1180,
+            "mean_yards": 7.237288135593221,
+            "yards_n": 1180
+          },
+          {
+            "label": "Sam Houston Bearkats",
+            "key": "Sam Houston Bearkats",
+            "n": 937,
+            "mean_epa": -0.14701760399168737,
+            "epa_n": 937,
+            "success_rate": 0.37459978655282816,
+            "success_n": 937,
+            "explosive_rate": 0.054429028815368194,
+            "explosive_n": 937,
+            "scoring_rate": 0.0416221985058698,
+            "scoring_n": 937,
+            "mean_yards": 5.926360725720384,
+            "yards_n": 937
+          },
+          {
+            "label": "Massachusetts Minutemen",
+            "key": "Massachusetts Minutemen",
+            "n": 935,
+            "mean_epa": -0.14680674920745074,
+            "epa_n": 935,
+            "success_rate": 0.35508021390374334,
+            "success_n": 935,
+            "explosive_rate": 0.039572192513368985,
+            "explosive_n": 935,
+            "scoring_rate": 0.026737967914438502,
+            "scoring_n": 935,
+            "mean_yards": 4.748663101604278,
+            "yards_n": 935
+          },
+          {
+            "label": "Ball State Cardinals",
+            "key": "Ball State Cardinals",
+            "n": 944,
+            "mean_epa": -0.12156568745435295,
+            "epa_n": 944,
+            "success_rate": 0.3633474576271186,
+            "success_n": 944,
+            "explosive_rate": 0.05402542372881356,
+            "explosive_n": 944,
+            "scoring_rate": 0.04343220338983051,
+            "scoring_n": 944,
+            "mean_yards": 5.606991525423729,
+            "yards_n": 944
+          },
+          {
+            "label": "UTEP Miners",
+            "key": "UTEP Miners",
+            "n": 944,
+            "mean_epa": -0.12139221498746645,
+            "epa_n": 944,
+            "success_rate": 0.3591101694915254,
+            "success_n": 944,
+            "explosive_rate": 0.06673728813559322,
+            "explosive_n": 944,
+            "scoring_rate": 0.05402542372881356,
+            "scoring_n": 944,
+            "mean_yards": 6.123940677966102,
+            "yards_n": 944
+          },
+          {
+            "label": "Charlotte 49ers",
+            "key": "Charlotte 49ers",
+            "n": 918,
+            "mean_epa": -0.11667554483450705,
+            "epa_n": 918,
+            "success_rate": 0.37145969498910675,
+            "success_n": 918,
+            "explosive_rate": 0.05010893246187364,
+            "explosive_n": 918,
+            "scoring_rate": 0.034858387799564274,
+            "scoring_n": 918,
+            "mean_yards": 5.367102396514161,
+            "yards_n": 918
+          }
+        ]
+      }
+    },
+    {
+      "id": "defense-teams",
+      "kicker": "TEAM DEFENSE",
+      "title": "Texas Tech Red Raiders posted the strongest defensive EPA average in the qualifying group",
+      "copy": "Among defenses facing at least 300 actual plays, Texas Tech Red Raiders averaged 0.236 defensive EPA per play over 1,128 plays. Air Force Falcons averaged -0.266 over 814. Because defensive EPA is defined as negative offensive EPA, higher values indicate more expected points denied. This is not opponent-adjusted.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_def_epa",
+        "unit": "Defensive EPA / play",
+        "data": [
+          {
+            "label": "Texas Tech Red Raiders",
+            "n": 1128,
+            "mean_def_epa": 0.235505432755759
+          },
+          {
+            "label": "Toledo Rockets",
+            "n": 981,
+            "mean_def_epa": 0.16909336221046464
+          },
+          {
+            "label": "Oklahoma Sooners",
+            "n": 1010,
+            "mean_def_epa": 0.15302854101404106
+          },
+          {
+            "label": "Fresno State Bulldogs",
+            "n": 954,
+            "mean_def_epa": 0.1494785704390308
+          },
+          {
+            "label": "Old Dominion Monarchs",
+            "n": 1066,
+            "mean_def_epa": 0.14568779592823383
+          },
+          {
+            "label": "Air Force Falcons",
+            "n": 814,
+            "mean_def_epa": -0.26581040501173503
+          },
+          {
+            "label": "UAB Blazers",
+            "n": 870,
+            "mean_def_epa": -0.23823446812985957
+          },
+          {
+            "label": "Arkansas Razorbacks",
+            "n": 945,
+            "mean_def_epa": -0.2255940540994286
+          },
+          {
+            "label": "Rutgers Scarlet Knights",
+            "n": 808,
+            "mean_def_epa": -0.19211516470307172
+          },
+          {
+            "label": "Boston College Eagles",
+            "n": 933,
+            "mean_def_epa": -0.184885798303644
+          }
+        ]
+      }
+    },
+    {
+      "id": "scoring",
+      "kicker": "FINISHING PLAYS",
+      "title": "Scoring-flagged plays averaged 1.943 EPA per play",
+      "copy": "8,525 of 147,974 actual plays (5.8%) carry the source's scoring-play flag. Flagged plays averaged 1.943 EPA; unflagged plays averaged -0.068. The flag is reported as supplied and is not reconstructed from score changes.",
+      "chart": {
+        "type": "bar",
+        "metric": "mean_epa",
+        "unit": "EPA / actual play",
+        "data": [
+          {
+            "label": "Scoring flagged",
+            "n": 8525,
+            "mean_epa": 1.9427740524800992,
+            "epa_n": 8525,
+            "success_rate": 0.9481524926686217,
+            "success_n": 8525,
+            "explosive_rate": 0.4110263929618768,
+            "explosive_n": 8525,
+            "scoring_rate": 1.0,
+            "scoring_n": 8525,
+            "mean_yards": 23.305102639296187,
+            "yards_n": 8525
+          },
+          {
+            "label": "Not scoring flagged",
+            "n": 139449,
+            "mean_epa": -0.06799927234875625,
+            "epa_n": 139449,
+            "success_rate": 0.40637078788661085,
+            "success_n": 139449,
+            "explosive_rate": 0.042352401236294274,
+            "explosive_n": 139449,
+            "scoring_rate": 0.0,
+            "scoring_n": 139449,
+            "mean_yards": 5.384785835681862,
+            "yards_n": 139449
+          }
+        ]
+      }
+    }
+  ]
+}

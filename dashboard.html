@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d13">
+  <meta name="description" content="Filter and explore 166,053 plays from the 2025 college football season.">
+  <title>Explore the Data — Saturday Signal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <script>
+    (() => {
+      function showStartupError(message) {
+        const status = document.getElementById('load-status');
+        const panel = document.getElementById('dashboard-error');
+        if (!status || !panel || !panel.hidden) return;
+        status.textContent = 'Dashboard failed to load';
+        status.setAttribute('data-state', 'error');
+        panel.hidden = false;
+        panel.textContent = `The dashboard could not start: ${message}. Check that the page is served over HTTP, its JavaScript files loaded, and then reload.`;
+      }
+      window.addEventListener('error', (event) => {
+        if (event.target instanceof HTMLScriptElement) showStartupError(`script failed to load: ${event.target.src || 'inline script'}`);
+        else if (event.message) showStartupError(`JavaScript error: ${event.message}`);
+      }, true);
+      window.addEventListener('unhandledrejection', (event) => showStartupError(`JavaScript promise failed: ${event.reason && event.reason.message || event.reason || 'unknown error'}`));
+      window.addEventListener('DOMContentLoaded', () => window.setTimeout(() => {
+        if (!window.__SATURDAY_DASHBOARD_STARTED__) showStartupError('js/dashboard.js did not initialize');
+      }, 30000), { once: true });
+    })();
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
+  <script src="js/common.js" defer></script>
+  <script src="js/dashboard.js" defer></script>
+</head>
+<body class="dashboard-page">
+  <a class="skip-link" href="#main">Skip to dashboard</a>
+  <header class="site-header">
+    <a class="brand-lockup" href="index.html" aria-label="Saturday Signal home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">SATURDAY<span>SIGNAL</span></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="index.html">The report</a><a class="nav-link is-active" href="dashboard.html" aria-current="page">Explore the data <span aria-hidden="true">↗</span></a></nav>
+    <div class="header-season"><span class="live-dot"></span> 2025 SEASON <span class="header-divider">/</span> INTERACTIVE</div>
+  </header>
+
+  <main id="main" class="dashboard-main page-shell">
+    <section class="dashboard-heading">
+      <div><div class="eyebrow"><span class="eyebrow-rule"></span> THE ANALYTICS BOOTH <span class="eyebrow-year">01—16</span></div><h1>Read the <em>field.</em></h1><p>Choose a team, set the game state, and follow the signal through 2025.</p></div>
+      <div class="data-status"><span class="status-pulse"></span><span id="load-status" role="status">Loading 166,053 plays…</span></div>
+    </section>
+
+    <section class="dashboard-controls panel" aria-label="Dashboard filters and controls">
+      <div class="controls-top"><div><span class="panel-kicker">FILTER THE TAPE</span><span class="control-help">Every view updates from actual plays only.</span></div><button type="button" id="reset-filters" class="reset-button">Reset all filters <span aria-hidden="true">↺</span></button></div>
+      <div class="filter-grid">
+        <label class="field-control team-control"><span>Team</span><select id="team-filter"><option value="">All teams</option></select></label>
+        <label class="field-control"><span>Week <i>TIME</i></span><select id="week-filter"><option value="">All weeks</option></select></label>
+        <label class="field-control"><span>Play type</span><select id="type-filter"><option value="">All play types</option></select></label>
+        <label class="field-control"><span>Season type</span><select id="season-filter"><option value="">All season types</option></select></label>
+        <label class="field-control"><span>Perspective</span><select id="perspective-filter"><option value="offense">Offense</option><option value="defense">Defense</option></select></label>
+      </div>
+      <div class="control-divider"></div>
+      <div class="display-controls">
+        <label class="field-control measure-control"><span>Measure <i>WHAT TO MEASURE</i></span><select id="measure-filter">
+          <option value="epa">Average EPA / actual play</option><option value="success">EPA success rate</option><option value="explosive">EPA explosive-play rate</option><option value="yards">Average recorded yards</option><option value="scoring">Scoring-play rate</option><option value="plays">Actual play count</option>
+        </select></label>
+        <label class="field-control breakdown-control"><span>Breakdown <i>HOW TO GROUP</i></span><select id="breakdown-filter">
+          <option value="team">Team</option><option value="week">Week</option><option value="type">Play type</option><option value="down">Down</option><option value="quarter">Quarter / period</option><option value="opponent">Opponent</option>
+        </select></label>
+        <div id="team-context" class="team-context" aria-live="polite"><div class="team-logo-fallback">CF</div><div><span class="context-label">CURRENT LENS</span><strong>All teams</strong><small>2025 • college football</small></div></div>
+      </div>
+    </section>
+
+    <section class="summary-grid" id="summary-cards" aria-label="Filtered summary statistics">
+      <div class="summary-card"><span class="summary-label">Actual plays</span><strong class="summary-value">—</strong><span class="summary-foot">Filtered denominator</span></div>
+      <div class="summary-card"><span class="summary-label">Average EPA</span><strong class="summary-value">—</strong><span class="summary-foot">Per actual play</span></div>
+      <div class="summary-card"><span class="summary-label">EPA success</span><strong class="summary-value">—</strong><span class="summary-foot">Positive EPA share</span></div>
+      <div class="summary-card"><span class="summary-label">Explosive rate</span><strong class="summary-value">—</strong><span class="summary-foot">Source EPA flag</span></div>
+      <div class="summary-card"><span class="summary-label">Scoring-play rate</span><strong class="summary-value">—</strong><span class="summary-foot">Source scoring flag</span></div>
+    </section>
+
+    <div id="dashboard-error" class="error-panel" hidden role="alert"></div>
+    <section class="chart-grid" aria-label="Interactive charts">
+      <article class="chart-panel panel chart-primary"><div class="chart-heading"><div><span class="panel-kicker">THE MATCHUP</span><h2 id="primary-chart-title">EPA by team</h2></div><span class="chart-unit" id="primary-chart-unit">EPA / actual play</span></div><div id="chart-primary" class="chart-canvas" role="img" aria-label="Primary chart"></div></article>
+      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">WEEK TO WEEK</span><h2>Season rhythm</h2></div><span class="chart-unit" id="trend-unit">Current measure</span></div><div id="chart-trend" class="chart-canvas" role="img" aria-label="Selected measure by week"></div></article>
+      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">THE DOWN MARKER</span><h2>Where the play starts</h2></div><span class="chart-unit" id="down-unit">Current measure</span></div><div id="chart-down" class="chart-canvas" role="img" aria-label="Selected measure by down"></div></article>
+      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">PLAY CALL</span><h2>Play-type profile</h2></div><span class="chart-unit" id="type-unit">Current measure</span></div><div id="chart-type" class="chart-canvas" role="img" aria-label="Selected measure by play type"></div></article>
+    </section>
+
+    <section class="table-panel panel" aria-labelledby="table-title">
+      <div class="table-heading"><div><span class="panel-kicker">THE BOX SCORE, REBUILT</span><h2 id="table-title">Numbers behind this view</h2><p id="table-caption">Aggregated by Team • calculated on filtered actual plays</p></div><label class="sort-control"><span>Sort</span><select id="table-sort"><option value="metric">Selected measure</option><option value="n">Play count</option><option value="label">Group name</option></select></label></div>
+      <div class="table-scroll"><table id="results-table"><thead><tr><th scope="col">Group</th><th scope="col">Actual plays</th><th scope="col" id="measure-heading">Average EPA</th><th scope="col">Mean EPA</th><th scope="col">EPA success</th><th scope="col">Explosive rate</th><th scope="col">Scoring rate</th></tr></thead><tbody><tr><td colspan="7" class="empty-cell">Load the play-by-play to begin.</td></tr></tbody></table></div>
+      <div class="table-foot"><span id="table-range">—</span><div class="table-pages"><button id="table-prev" type="button" aria-label="Previous table page" disabled>←</button><button id="table-next" type="button" aria-label="Next table page" disabled>→</button></div></div>
+    </section>
+    <p class="dashboard-footnote"><strong>Reading the measure:</strong> EPA is average expected points added per actual play; positive defensive EPA means expected points denied. Actual-play views include special-teams events and exclude administrative rows. Success/explosive defensive rates count non-successful / non-explosive offense flags. Yardage uses `statYardage`; the source’s explosive flag is EPA-based. Filtering and calculations run in your browser after the CSV finishes loading.</p>
+  </main>
+  <footer class="site-footer page-shell"><a class="brand-lockup footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">SATURDAY<span>SIGNAL</span></span></a><span>PLAY BY PLAY, WITH PURPOSE.</span><a href="#main">BACK TO TOP ↑</a></footer>
+</body>
+</html>
