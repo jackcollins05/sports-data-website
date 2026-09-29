@@ -1,97 +1,115 @@
-# Saturday Signal — 2025 College Football
+# Gridiron Pulse — Explore the 2025 College Football Season
 
-Saturday Signal is a static, browser-based college football analytics project. It pairs an editorial report with an interactive dashboard built from SportsDataverse’s ESPN college football play-by-play data for the 2025 season.
+Gridiron Pulse is a static, browser-based exploration of the 2025 NCAA Division I Football Bowl Subdivision (FBS) season. The project pairs an editorial season report with an interactive FBS Explorer for team performance, players, games, and official AP Top 25 polls. The report and dashboard run from prepared files in this repository; no server-side application or private key is required after deployment.
 
-## Pages
+## Site pages
 
-- `index.html` is the scrollable report, with ten data-backed findings, charts, and a methodology section.
-- `dashboard.html` loads and filters the season data in the browser. It supports offense/defense perspective, team/week/play-type/season-type filters, a switchable measure and grouping, responsive charts, and an aggregated sortable/paginated table.
+- [`index.html`](index.html) — the season report: five verified headline metrics, 11 data-backed findings with visualizations, and methodology notes.
+- [`dashboard.html`](dashboard.html) — the FBS Explorer: game/week/team filters, team and player measures, player leaderboards and details, Team Room, conference measure rank, game results, AP poll board and ranking timeline, and an interactive FBS geography map.
 
-Both pages use the same navigation, typography, palette, and responsive design system. They use relative local paths and can be hosted as a static GitHub Pages site. GitHub Pages has not been enabled as part of this project work.
+The two pages share the layout and design system in `css/styles.css`. Browser requests use paths relative to the repository root, so the pages can be hosted at `https://jackcollins05.github.io/sports-data-website/`. Run a local static server only for local preview (instructions below); the deployed website needs no Python server or backend.
 
-## Version 2 visual experience
+## Scope and data sources
 
-The report opens with a full-height stadium-field scene, restrained light beams, and season totals. Its findings reveal once as they enter view; headline figures count toward their verified values unless reduced motion is enabled. The team-offense finding uses an interactive efficiency × EPA-explosive-rate map for the ten highest qualifying offensive EPA averages among teams with at least 300 actual plays. Dashed crosshairs mark the unweighted means across those ten teams. Hover or keyboard-focus a point to read the exact EPA, explosive rate, success rate, and play count.
+The current report and dashboard focus on FBS teams and players for the 2025 season. FBS teams' games against FCS opponents remain in the schedule when at least one team is FBS. Team divisions come from the prepared ESPN/SportsDataverse team metadata and are not inferred from school names.
 
-The dashboard adds a broadcast-style team performance banner. Team selection changes the logo, primary/secondary branding accents, and filtered performance values while leaving the dark site palette in place. Existing static team metadata and initials fallback are retained. The CSV loading screen displays actual parsed-row progress; the dataset streams in 1 MiB chunks through Papa Parse without estimating progress. The hero field is static on mobile, and motion respects reduced-motion preferences.
+The prepared data in `data/football_2025/` is based on the project's downloaded 2025 files from these public sources:
 
-## Data
+- **Player game box scores:** SportsDataverse [`espn_cfb_player_box`](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_player_box), joined with its [`espn_cfb_rosters`](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_rosters) roster source for names, positions, jersey numbers, and headshots.
+- **Schedules and final scores:** SportsDataverse [`espn_cfb_schedules`](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_schedules).
+- **Team game statistics:** SportsDataverse [`espn_cfb_team_box`](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_team_box).
+- **Team metadata and branding:** SportsDataverse [`espn_cfb_teams`](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_teams), prepared as [`data/team_branding.json`](data/team_branding.json). It contains ESPN team IDs, names, abbreviations, conferences, divisions, colors, and ESPN-hosted logo URLs.
+- **AP Top 25:** historical AP poll records retrieved from ESPN's college football rankings feed using the cfbfastR/SportsDataverse rankings documentation ([cfbfastR manual](https://sportsdataverse.r-universe.dev/cfbfastR/doc/manual.html)). The prepared files retain the AP poll's preseason, regular poll, and final snapshots; the project does not create its own rankings or substitute CFP rankings. The 2025 source has no normal poll after schedule Week 1. The first available regular poll is source-labeled Week 2 and is shown to users as “After Week 1”; later labels follow the same convention. Preseason and Final remain distinct periods.
+- **School geography:** stadium/campus coordinates from the [NCAA football stadium dataset](https://github.com/gboeing/data-visualization/tree/main/ncaa-football-stadiums), joined to the project team metadata by ESPN team ID and stored in [`team_geography_2025.json`](data/football_2025/team_geography_2025.json). Coordinates are stadium or campus locations; the file documents two approximate fallbacks.
+- **State boundaries:** the locally bundled [`us_states.geojson`](data/football_2025/us_states.geojson), sourced from the [PublicaMundi MappingAPI US states GeoJSON](https://github.com/PublicaMundi/MappingAPI/blob/master/data/geojson/us-states.json). The interactive map uses this local geometry and local team coordinates; it does not call a map service or load map tiles.
 
-### Source and row meaning
+The upstream providers publish season data and may revise files over time. The raw downloads used for this project are kept locally under `raw_data/` and are intentionally ignored by Git. The public site uses the prepared data files in `data/`; it does not fetch from `raw_data/` and does not need access to that folder.
 
-The source is the public [`espn_cfb_pbp` SportsDataverse release](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_pbp), specifically its 2025 season CSV. Its underlying play-by-play is ESPN data processed and published by SportsDataverse. **One source row represents one play record**; some rows represent administrative events rather than an actual play.
+## Data preparation and reproducibility
 
-The downloaded raw CSV is 582,452,515 bytes (about 555 MB). It lives at `raw_data/play_by_play_2025.csv` locally and is intentionally excluded from Git by `.gitignore`. Do not remove the `raw_data/` ignore rule or commit the raw file. The website-ready CSV at `data/cfb_pbp_2025_dashboard.csv` retains all **166,053 rows** and the 24 fields documented in `scripts/prepare_data.py`; it is **31,782,613 bytes**. It covers weeks 1–16 and 236 distinct teams in the possession and defense fields. Its source timestamps span 2025-08-23 through 2026-01-20.
+`scripts/prepare_football_data.py` reads the source schedule, player box, team box, roster, AP poll JSON, original play-by-play, and checked-in team metadata from their documented local paths under `raw_data/` and `data/`. It writes all-division and FBS-filtered tables, AP poll snapshots/trends, and a data-quality report into `data/football_2025/`. It preserves identifiers as strings, joins on IDs, validates duplicates and coverage, and does not silently resolve the documented unmapped passing rows. The raw inputs are not modified by the script.
 
-### Preparation and analysis
+`scripts/build_fbs_report.py` reads the prepared FBS season, team-game, game, player, and AP files and reproducibly generates `data/football_2025/report_findings_2025.json`, the small payload used by the report page. Its metric choices, minimum-opportunity thresholds, and calculation details are included in that output and described in the report methodology. `scripts/build_team_branding.py`, `scripts/prepare_data.py`, and `scripts/analyze_data.py` support the earlier play-by-play project version and its retained legacy artifacts; they are not the current report's findings pipeline.
 
-From the project root:
+To reproduce the current derived data, first obtain the original source files from the links above and place them at the exact paths expected in `scripts/prepare_football_data.py` (including `raw_data/play_by_play_2025.csv` and the files in `raw_data/supporting_2025/`). Keep those raw files out of Git. Then run:
 
 ```sh
-python3 scripts/prepare_data.py
-python3 scripts/analyze_data.py
-python3 scripts/build_team_branding.py
+python3 scripts/prepare_football_data.py
+python3 scripts/build_fbs_report.py
 ```
 
-`prepare_data.py` selects the documented 24 dashboard columns, preserves every row, and writes the smaller CSV. It prints exact output counts and missing-cell summaries. `analyze_data.py` reads that cleaned CSV, validates boolean encodings and EPA relationships, calculates the report statistics, and writes `data/report_findings.json`. `build_team_branding.py` downloads the public 2025 team reference CSV and writes the compact static JSON used by the site. It needs internet access but no API key or secret.
+The preparation script refuses to overwrite existing generated outputs unless explicitly instructed. Review its options before regenerating data. `data/football_2025/player_data_quality_2025.json` records source/join coverage and known data-quality limitations.
 
-The raw source is not bundled into Git, so reproducing the CSV requires obtaining the same public release file and placing it at the documented ignored path before running the preparation script. Analysis of report findings only requires the cleaned CSV.
+## Main data files
 
-## Metric definitions and denominators
+Each row in a player game table is a player-team-game appearance; each row in a player season table is one player/team season stint. Each team-game row is one team in one game. Each schedule row is one game. AP snapshot rows represent one team in one actual poll period; ranking trend rows preserve ranked/unranked status across periods.
 
-- **Actual play:** `play == true`. This source flag marks actual plays versus administrative rows. Report averages/rates exclude the 18,079 administrative rows; the website CSV still preserves all 166,053 rows. The report denominator is 147,974 actual plays.
-- **Offensive EPA per actual play:** arithmetic mean of `EPA` across included actual plays with a nonmissing EPA value. This is an unadjusted possession-team average across the source’s actual-play records, including actual special-teams events; it is not an opponent-adjusted rating or a scrimmage-only EPA statistic. The retained 24 columns do not include the source's separate `scrimmage_play` flag.
-- **Defensive EPA per actual play:** arithmetic mean of `def_EPA` for actual plays faced by `def_pos_team`. The source defines `def_EPA` as negative offensive EPA, so a higher value indicates more expected points denied.
-- **EPA success rate:** count of `EPA_success == true` divided by actual plays with a nonmissing flag. The source defines a successful play as EPA greater than zero. For defense, the dashboard reports the complement (EPA ≤ 0 allowed) as defensive stop rate.
-- **EPA explosive-play rate:** count of `EPA_explosive == true` divided by actual plays with a nonmissing flag. This is the source’s EPA-based explosive flag, not a project-invented yardage threshold. In defensive perspective, the displayed share is the complement, or non-explosive share allowed.
-- **Scoring-play rate:** count of `scoring_play == true` divided by actual plays with a nonmissing flag. In defensive perspective it represents opponents’ scoring-flag share.
-- **Average recorded yards:** arithmetic mean of `statYardage` among included actual plays with a nonmissing value. The separate `yds_rushed` and `yds_receiving` fields are intentionally sparse because they apply to particular play types.
-- **Play-type comparison:** rush-coded includes `Rush` and `Rushing Touchdown`; pass-coded includes `Pass Reception`, `Pass Incompletion`, `Pass Completion`, `Sack`, and `Passing Touchdown`. Other types are excluded from that comparison.
-- **Team ranking sample minimum:** the report’s possession-team and defensive-team EPA comparisons include teams with at least 300 actual plays run or faced, respectively. Values are still unadjusted for opponent strength and are not causal claims.
-- **Grouping rates:** each week/down/period/team/play-type measure uses the actual plays in that group as the denominator. Figures show play counts alongside rates/averages; overtime and low-volume late-week samples are clearly identified by their counts.
+| File | Use |
+|---|---|
+| `data/football_2025/fbs_games_2025.csv` | FBS-involving schedule, dates, teams, scores, and results. |
+| `data/football_2025/fbs_team_game_stats_2025.csv` | Traditional team statistics for each FBS team-game. |
+| `data/football_2025/fbs_player_season_stats_2025.csv` | Season totals and recalculated rates for FBS player/team stints; primary source for season leaderboards. |
+| `data/football_2025/fbs_players_2025.csv` | FBS roster identity, positions, jersey, headshot, and team metadata; loaded on demand for player presentation. |
+| `data/football_2025/fbs_player_game_stats_2025.csv` | FBS player-game lines; approximately 16 MB and loaded only for week/season-type player-game exploration. |
+| `data/football_2025/ap_top25_2025.csv` | Official AP Top 25 team rows for each available 2025 poll snapshot. |
+| `data/football_2025/ap_top25_trends_2025.csv` | Team-by-poll ranked status, movement, weeks ranked, and best rank; supports timelines and entry/exit calculations. |
+| `data/football_2025/team_geography_2025.json` | Coordinates and location/conference metadata for all 136 FBS programs. |
+| `data/football_2025/us_states.geojson` | Local state polygons used by the interactive map. |
+| `data/football_2025/report_findings_2025.json` | Small, reproducible headline/story/chart payload for the report page. |
+| `data/football_2025/player_data_quality_2025.json` | Preparation diagnostics, match coverage, duplicate checks, and known limitations. |
 
-All retained flags, `EPA`, `def_EPA`, and `statYardage` are populated for the actual-play subset. The cleaned file contains 564 blank `wallclock` values, 25 unspecified `orig_play_type` values, 102,678 blank `yds_rushed` values, and 123,574 blank `yds_receiving` values. No rows are excluded during preparation. The raw season file’s (`game_id`, `game_play_number`) key is unique across all 166,053 rows.
+The folder also retains complete all-division counterparts (`players_2025.csv`, `player_game_stats_2025.csv`, `player_season_stats_2025.csv`, `games_2025.csv`, and `team_game_stats_2025.csv`) for traceability and future analysis. The browser experience is FBS-focused and uses the FBS files listed above.
 
-## Team branding and credits
+### Metric and data notes
 
-`data/team_branding.json` is generated from the season-2025 ESPN college football teams reference published in the [SportsDataverse `espn_cfb_teams` release](https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_teams). It supplies canonical team names, abbreviations, conference/division labels, primary/secondary colors, and ESPN logo URLs. The static file contains branding for all 236 teams in the dashboard dataset. The dashboard falls back to team initials and the site palette when branding or a logo is unavailable. Logos remain hosted by ESPN; this student project does not claim ownership of team marks.
+- Traditional box-score values are reported source statistics. Rates in the prepared season file are recalculated from aggregate totals and opportunities rather than summed from per-game averages. Team rate measures likewise use total conversions divided by total attempts when the dashboard aggregates games.
+- The AP ranking pages use only the supplied AP Top 25 snapshots. Unranked periods remain explicitly unranked; they are not assigned a fabricated rank of 26.
+- The source contains 37 FCS quarterbacks with unresolved generic passing-category rows. None of the unresolved rows affect FBS quarterbacks; the primary FBS QB leaderboard excludes lines marked with unresolved passing games rather than guessing at field mappings. See the generated quality report for details.
+- Roster positions and team identity are joined using athlete/team IDs. Players who changed teams remain distinct by team stint.
+- FBS-only browser files are filtered using the division field in prepared team branding metadata. A schedule game remains when it involves at least one FBS program, while team-game and player files retain only FBS teams/players.
 
-Play-by-play data and metadata credit: ESPN and SportsDataverse. Team logo assets credit: ESPN. Dashboard/report design and analysis: Jack Collins.
+## Runtime libraries and external assets
+
+- [Apache ECharts 5.6.0](https://echarts.apache.org/) provides interactive charts.
+- [Papa Parse 5.4.1](https://www.papaparse.com/) parses prepared CSV files in the browser.
+- Both libraries load over HTTPS from jsDelivr through `js/dependencies.js`, with bounded timeouts and visible failure handling. The live pages do not use web workers for CSV parsing.
+- Google Fonts loads Barlow Condensed, Manrope, and DM Mono over HTTPS; local system font fallbacks are defined in CSS.
+- Team logos and player headshots use the prepared ESPN URLs. If an image is unavailable, the interface falls back to initials or retains the surrounding team/player information.
+
+The report loads only its compact JSON findings and team metadata. The dashboard loads its small schedule, team-game, player-season, AP, branding, and map data at startup. Player roster imagery and the larger player-game CSV are deferred until the related explorer area or filters need them. The legacy play-by-play CSV is retained in the repository from the earlier project version but is not fetched by either current page.
 
 ## Local preview
 
-Run a small static server from the project root (opening HTML via `file://` will block local data fetches):
+From the repository root:
 
 ```sh
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000/` for the report or `http://localhost:8000/dashboard.html` for the dashboard. The dashboard streams the approximately 31.8 MB cleaned CSV in 1 MiB chunks, then calculates filtered views in the browser. A network connection is required for the CDN chart/parser libraries, Google Fonts, and hosted team logos. If remote libraries fail, the dashboard displays a data-load error; unavailable logos use initials. No backend service is required.
+Open <http://localhost:8000/> for the report and <http://localhost:8000/dashboard.html> for the FBS Explorer. A local static server is needed for local browser `fetch()` calls; GitHub Pages itself serves the same files as a static site. The CDN, Google Fonts, ESPN-hosted logos, and headshots require internet access, while the report data, prepared CSVs, and map geometry are bundled locally.
 
-## Libraries and visual assets
+## Repository guide
 
-- [Apache ECharts 5.6.0](https://echarts.apache.org/) — interactive dashboard charts, loaded from jsDelivr on `dashboard.html` only.
-- [Papa Parse 5.4.1](https://www.papaparse.com/) — streamed browser CSV parsing in 1 MiB chunks, loaded from jsDelivr on `dashboard.html` only.
-- Google Fonts — Barlow Condensed (display), Manrope (body), and DM Mono (numeric labels).
-- A small custom Canvas 2D stadium-field illustration runs behind the report hero. It is decorative, noninteractive, pauses outside the viewport, uses a low device-pixel ratio, and becomes static when reduced motion is requested; the report remains complete without it.
-
-## Project file guide
-
-| File | Purpose |
+| Path | Purpose |
 |---|---|
-| `.gitignore` | Ignores the entire local `raw_data/` directory. |
-| `README.md` | Project, metric, data-source, preview, and file documentation. |
-| `index.html` | Editorial report/story page and methodology. |
-| `dashboard.html` | Interactive analytics interface. |
-| `css/styles.css` | Shared design tokens, layout, accessible focus treatment, charts, and responsive styles. |
-| `js/common.js` | Shared number formatting, HTML escaping, and team initials helper. |
-| `js/field.js` | Lightweight canvas field visual with reduced-motion and visibility handling. |
-| `js/report.js` | Loads verified findings JSON and renders report cards, story index, scroll reveals, comparison charts, and the accessible team signal map. |
-| `js/dashboard.js` | Chunked CSV loading, filters, aggregations, dashboard charts, team performance banner, loading feedback, and table behavior. |
-| `data/cfb_pbp_2025_dashboard.csv` | All 166,053 source rows reduced to the 24 retained fields; 31,782,613 bytes. |
-| `data/report_findings.json` | Machine-readable, script-generated report findings, chart data, definitions, and validation results. |
-| `data/team_branding.json` | Static 2025 team names, colors, conference/division metadata, and logo URLs for 236 teams. |
-| `scripts/prepare_data.py` | Reproducible 24-column data preparation script. |
-| `scripts/analyze_data.py` | Recomputes report findings and validates source flag/EPA definitions against the cleaned CSV. |
-| `scripts/build_team_branding.py` | Downloads the public team reference and builds static team branding metadata. |
-| `raw_data/play_by_play_2025.csv` | Local raw source download; ignored by Git and not part of the website output. |
+| `.gitignore` | Excludes `raw_data/` and `.DS_Store`; raw source downloads are not part of deployment. |
+| `index.html`, `dashboard.html` | The two public site pages: Season Report and FBS Explorer. |
+| `css/styles.css` | Shared typography, colors, responsive layouts, accessibility states, map, report, chart, and dashboard styles. |
+| `js/common.js` | Shared brand identity, formatting, escaping, and display helpers. |
+| `js/boot-guard.js` | Surfaces script, promise, or slow initialization failures as visible page errors. |
+| `js/dependencies.js` | Loads ECharts and Papa Parse over HTTPS and reports dependency failures. |
+| `js/report.js` | Loads the report findings/branding data and renders its metrics, 11 story sections, and charts. |
+| `js/dashboard.js` | Loads FBS data, initializes dashboard filters/charts, and renders rankings, map, team/player/game views. |
+| `js/field.js` | Lightweight decorative report-hero field canvas with reduced-motion and visibility handling. |
+| `data/football_2025/` | Prepared FBS and all-division datasets, official AP snapshots/trends, report JSON, data-quality report, geography metadata, and state polygons. |
+| `data/team_branding.json` | Prepared team names, ESPN IDs, conferences/divisions, colors, and logo URLs. |
+| `data/cfb_pbp_2025_dashboard.csv` | Legacy V1 play-by-play dashboard extract (166,053 rows, 24 columns; 31,782,613 bytes); retained but not loaded by the current site. |
+| `data/report_findings.json` | Legacy V1 play-by-play/EPA report output; retained but not loaded by the current report. |
+| `scripts/prepare_football_data.py` | Rebuilds the current player, team, game, FBS, AP, and data-quality outputs from local source files. |
+| `scripts/build_fbs_report.py` | Rebuilds the current report findings JSON from prepared FBS tables. |
+| `scripts/prepare_data.py` | Legacy V1 play-by-play cleaning script. |
+| `scripts/analyze_data.py` | Legacy V1 play-by-play/EPA report analysis. |
+| `scripts/build_team_branding.py` | Legacy branding preparation helper retained for reproducibility/history. |
+| `raw_data/` | Local-only upstream source files; ignored by Git and never needed by the deployed static site. |
+
+Design and analysis: Jack Collins. Data credits: ESPN and SportsDataverse; AP poll records are attributed to the AP through ESPN's historical rankings data; geography and boundary sources are linked above. Team names, logos, and other marks belong to their respective rights holders.

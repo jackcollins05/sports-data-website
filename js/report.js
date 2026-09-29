@@ -1,169 +1,127 @@
-(function () {
-  const path = 'data/report_findings.json';
-  const el = (tag, className, text) => {
-    const node = document.createElement(tag);
-    if (className) node.className = className;
-    if (text !== undefined) node.textContent = text;
-    return node;
+(() => {
+  const DATA = 'data/football_2025/report_findings_2025.json';
+  const BRAND_URL = 'data/team_branding.json';
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
+  const fmt = GridironPulse;
+  let teams = {};
+  const charts = [];
+  const make = (tag, cls, text) => { const el = document.createElement(tag); if (cls) el.className = cls; if (text != null) el.textContent = text; return el; };
+  const brand = (teamId) => {
+    for (const [name, value] of Object.entries(teams)) if (String(value.id) === String(teamId)) return { name, ...value };
+    return null;
   };
-  function valueFor(point, metric) { return Number(point[metric]) || 0; }
-  function metricText(value, metric) {
-    return metric.includes('rate') ? Saturday.percent(value) : Saturday.signed(value, 3);
+  const logo = (teamId, className = 'team-mark') => {
+    const meta = brand(teamId); const wrap = make('span', className);
+    if (meta?.logo) { const img = document.createElement('img'); img.src = meta.logo; img.alt = `${meta.team_name || meta.name} logo`; img.loading = 'lazy'; img.referrerPolicy = 'no-referrer'; img.onerror = () => img.replaceWith(make('span','mark-fallback',fmt.initials(meta.shortName || meta.team_name))); wrap.append(img); }
+    else wrap.append(make('span','mark-fallback',fmt.initials(meta?.shortName)));
+    if (meta?.primaryColor) wrap.style.setProperty('--mark-color',fmt.color(meta.primaryColor));
+    return wrap;
+  };
+  const chartBase = {
+    animationDuration: 680, animationDurationUpdate: 360,
+    textStyle: { fontFamily: 'Manrope, sans-serif', color: '#a9b5bd' },
+    grid: { left: 138, right: 35, top: 20, bottom: 38, containLabel: false },
+    tooltip: { trigger:'axis', axisPointer:{type:'shadow'}, backgroundColor:'#101b26', borderColor:'#314552', textStyle:{color:'#f2f5f1',fontFamily:'DM Mono,monospace',fontSize:11}, extraCssText:'box-shadow:0 14px 40px #0009;border-radius:4px' },
+    xAxis: { type:'value', axisLabel:{color:'#80909a',fontSize:10,fontFamily:'DM Mono'}, splitLine:{lineStyle:{color:'#263540'}}, axisLine:{lineStyle:{color:'#263540'}} },
+    yAxis: { type:'category', inverse:true, axisLabel:{color:'#d3dbdc',fontSize:11,width:124,overflow:'truncate'}, axisTick:{show:false}, axisLine:{show:false} },
+    aria:{enabled:true,decal:{show:true}}
+  };
+  async function loadJson(url) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 25000);
+    try {
+      const response = await fetch(url, { signal: controller.signal });
+      if (!response.ok) throw new Error(`${url} returned HTTP ${response.status}`);
+      return await response.json();
+    } catch (error) {
+      if (error.name === 'AbortError') throw new Error(`${url} did not respond within 25 seconds`);
+      throw error;
+    } finally { clearTimeout(timer); }
   }
-  function buildBars(chart) {
-    const figure = el('figure', 'finding-visual');
-    figure.setAttribute('aria-label', `${chart.unit} comparison chart`);
-    const heading = el('div', 'viz-header');
-    heading.append(el('span', '', chart.metric === 'success_rate' ? 'EPA SUCCESS SHARE' : chart.metric.includes('def_epa') ? 'DEFENSIVE EPA / ACTUAL PLAY' : chart.metric.includes('rate') ? 'PLAY RATE' : 'AVERAGE EPA / ACTUAL PLAY'));
-    heading.append(el('span', 'viz-unit', chart.unit)); figure.append(heading);
-    const values = chart.data.map((d) => valueFor(d, chart.metric));
-    let min = Math.min(0, ...values); let max = Math.max(0, ...values);
-    if (min === max) { min -= 1; max += 1; }
-    const range = max - min; const zero = (-min / range) * 100;
-    const rows = el('div', 'viz-bars');
-    for (const [index, item] of chart.data.entries()) {
-      const v = valueFor(item, chart.metric);
-      const row = el('div', 'viz-row');
-      row.append(el('span', 'viz-label', item.label));
-      const track = el('span', 'viz-track'); track.style.setProperty('--zero', `${zero}%`);
-      const bar = el('i', 'viz-bar');
-      const left = v < 0 ? ((v - min) / range) * 100 : zero;
-      const width = Math.max(1, Math.abs(v / range) * 100);
-      bar.style.setProperty('--left', `${left}%`); bar.style.setProperty('--width', `${width}%`);
-      bar.style.setProperty('--bar-i', index);
-      bar.style.setProperty('--bar-color', v < 0 ? 'var(--blue)' : 'var(--accent)');
-      track.append(bar); row.append(track); row.append(el('span', 'viz-value', metricText(v, chart.metric)));
-      const count = el('span', 'viz-count', `${Saturday.compact(item.n)} plays`); row.append(count);
-      rows.append(row);
+  function optionFor(story) {
+    const data = story.data;
+    const labels = Array.isArray(data) ? data.map(d => d.label || d.team || d.name || `Week ${d.week}`) : [];
+    if (story.kind === 'movement') {
+      const merged=[...data.risers.map(x=>({...x,kind:'Riser'})),...data.fallers.map(x=>({...x,kind:'Fall'}))];
+      return {...chartBase,grid:{...chartBase.grid,left:165},tooltip:{...chartBase.tooltip,formatter:p=>{const x=merged[p[0].dataIndex];return `<b>${fmt.esc(x.team)}</b><br>Preseason #${x.preseason_rank} → Final #${x.final_rank}<br>${x.movement>0?'Up':'Down'} ${Math.abs(x.movement)} places`; }},yAxis:{...chartBase.yAxis,data:merged.map(x=>x.team)},series:[{type:'bar',data:merged.map(x=>({value:x.movement,itemStyle:{color:x.movement>=0?'#bded57':'#ff7c70'}})),barMaxWidth:18,label:{show:true,position:'right',color:'#e8ede8',fontFamily:'DM Mono',formatter:p=>`${p.value>0?'+':''}${p.value}`}}],legend:{show:false}};
     }
-    figure.append(rows);
-    const axis = el('div', 'viz-axis'); axis.append(el('span', '', metricText(min, chart.metric))); axis.append(el('span', '', metricText(max, chart.metric))); figure.append(axis);
+    if (story.kind === 'weekly') return { ...chartBase, grid:{left:50,right:24,top:24,bottom:38}, tooltip:{...chartBase.tooltip,trigger:'axis',formatter:p=>{const w=data[p[0].dataIndex];return `<b>Week ${w.week}</b><br>${fmt.number(w.points_per_team_game,1)} points / team-game<br>${w.team_games} team games`; }}, xAxis:{type:'category',data:data.map(x=>`W${x.week}`),axisLabel:{color:'#84949b',fontFamily:'DM Mono'},axisLine:{lineStyle:{color:'#263540'}},axisTick:{show:false}},yAxis:{type:'value',axisLabel:{color:'#84949b',fontFamily:'DM Mono'},splitLine:{lineStyle:{color:'#263540'}}},series:[{type:'line',data:data.map(x=>x.points_per_team_game),smooth:.28,symbolSize:7,lineStyle:{color:'#c7ff4a',width:3},itemStyle:{color:'#c7ff4a',borderColor:'#07101a',borderWidth:2},areaStyle:{color:'rgba(199,255,74,.10)'}}]};
+    if (story.kind === 'churn') return {...chartBase,grid:{left:60,right:25,top:36,bottom:42},tooltip:{...chartBase.tooltip,trigger:'axis'},legend:{top:0,right:8,textStyle:{color:'#a9b5bd'},data:['Entered','Dropped']},xAxis:{type:'category',data:data.map(x=>x.poll_label.replace('Week ','W')),axisLabel:{color:'#84949b',fontFamily:'DM Mono'},axisLine:{lineStyle:{color:'#263540'}},axisTick:{show:false}},yAxis:{type:'value',axisLabel:{color:'#84949b'},splitLine:{lineStyle:{color:'#263540'}}},series:[{name:'Entered',type:'bar',data:data.map(x=>x.entered),itemStyle:{color:'#c7ff4a'},barMaxWidth:18},{name:'Dropped',type:'bar',data:data.map(x=>x.dropped),itemStyle:{color:'#ff7c70'},barMaxWidth:18}]};
+    if (story.kind === 'stacked-teams') return {...chartBase,tooltip:{...chartBase.tooltip,trigger:'axis',formatter:p=>{const d=data[p[0].dataIndex];return `<b>${fmt.esc(d.label)}</b><br>Net passing: ${fmt.number(d.pass,1)} yd / game<br>Rushing: ${fmt.number(d.rush,1)} yd / game<br>Total offense: ${fmt.number(d.value,1)} yd / game`; }},yAxis:{...chartBase.yAxis,data:labels},series:[{name:'Net passing yards / game',type:'bar',stack:'yards',data:data.map(x=>x.pass),itemStyle:{color:'#55b9e8'},barMaxWidth:18},{name:'Rushing yards / game',type:'bar',stack:'yards',data:data.map(x=>x.rush),itemStyle:{color:'#c7ff4a'},barMaxWidth:18}],legend:{top:0,right:6,textStyle:{color:'#a9b5bd'}}};
+    const metric=story.kind==='players'?story.metric:story.metric;
+    const values=data.map(x=> Number(x[metric] ?? x.value));
+    const percent=story.kind==='third-down';
+    return {...chartBase,tooltip:{...chartBase.tooltip,formatter:p=>{const x=data[p[0].dataIndex];const value=Number(x[metric]??x.value);return `<b>${fmt.esc(x.name||x.label||x.team)}</b><br>${fmt.esc(story.unit)}: ${percent?fmt.percent(value,1):fmt.number(value,metric==='sacks'?1:0)}${story.kind==='players'?`<br>${fmt.esc(x.team)} · ${fmt.esc(x.position||'')}`:''}${x.games?`<br>${x.games} games`:''}`;}},yAxis:{...chartBase.yAxis,data:labels},xAxis:{...chartBase.xAxis,max:percent?100:undefined,axisLabel:{...chartBase.xAxis.axisLabel,formatter: v=>percent?`${v}%`:fmt.number(v)}},series:[{type:'bar',data:values.map((v,i)=>({value:v,itemStyle:{color:brand(data[i].team_id)?.primaryColor?fmt.color(brand(data[i].team_id).primaryColor):'#c7ff4a',borderRadius:[0,4,4,0]}})),barMaxWidth:18,label:{show:true,position:'right',color:'#e8ede8',fontFamily:'DM Mono',fontSize:10,formatter:p=>percent?`${Number(p.value).toFixed(1)}%`:fmt.number(p.value,story.metric==='sacks'?1:0)}}]};
+  }
+  function playerSpotlight(story) {
+    const p=story.data[0]; if (!p) return null;
+    const card=make('aside','player-spotlight'); card.append(logo(p.team_id,'spotlight-team-logo'));
+    const portrait=make('div','player-portrait');
+    if(p.headshot_url){const img=document.createElement('img');img.src=p.headshot_url;img.alt=`${p.name}, ${p.team}`;img.loading='lazy';img.referrerPolicy='no-referrer';img.onerror=()=>img.replaceWith(make('span','portrait-fallback',fmt.initials(p.name)));portrait.append(img);}else portrait.append(make('span','portrait-fallback',fmt.initials(p.name)));
+    const bio=make('div','player-spotlight-bio');bio.append(make('span','spotlight-kicker',`${p.position || 'PLAYER'} / #${p.jersey || '—'} / ${p.team_abbreviation}`),make('strong','',p.name),make('span','spotlight-school',p.team));
+    const values=story.metric==='passing_yards'?[[fmt.number(p.passing_yards),'PASS YARDS'],[fmt.number(p.passing_touchdowns),'PASS TD'],[fmt.percent(p.completion_pct,1),'COMPLETION']]:story.metric==='rushing_yards'?[[fmt.number(p.rushing_yards),'RUSH YARDS'],[fmt.number(p.rushing_attempts),'CARRIES'],[fmt.number(p.rushing_yards_per_attempt,2),'YARDS / CARRY']]:story.metric==='receiving_yards'?[[fmt.number(p.receiving_yards),'REC YARDS'],[fmt.number(p.receptions),'CATCHES'],[fmt.number(p.receiving_touchdowns),'REC TD']]:[[fmt.number(p.sacks,1),'SACKS'],[fmt.number(p.tackles),'TACKLES'],[fmt.number(p.tfl,1),'TACKLES FOR LOSS']];
+    const metrics=make('div','spotlight-metrics');values.forEach(([v,k])=>{const cell=make('div','');cell.append(make('b','',v),make('span','',k));metrics.append(cell);});
+    card.append(portrait,bio,metrics);return card;
+  }
+  function gameScoreboard(data) {
+    const host=make('div','game-feature-row');
+    for(const game of data.close.slice(0,4)){
+      const card=make('article','scorebug');card.append(make('span','scorebug-meta',`${game.season_type==='3'?'POSTSEASON':`WEEK ${game.week}`} · ${game.margin===1?'1-POINT FINISH':`${game.margin}-POINT FINISH`}`));
+      const sides=make('div','scorebug-sides');
+      const home=make('div','scorebug-side');home.append(logo(game.home_team_id,'game-logo'),make('span','scorebug-name',shortTeamName(game.home_team)),make('b','scorebug-score',fmt.number(game.home_score)));
+      const away=make('div','scorebug-side');away.append(logo(game.away_team_id,'game-logo'),make('span','scorebug-name',shortTeamName(game.away_team)),make('b','scorebug-score',fmt.number(game.away_score)));
+      sides.append(home,make('span','scorebug-at','FINAL'),away);card.append(sides);host.append(card);
+    }
+    return host;
+  }
+  function shortTeamName(name) { return String(name || '').replace(/ (Tigers|Bulldogs|Eagles|Wildcats|Bears|Huskies|Rebels|Panthers|Cardinals|Hawks|Trojans|Raiders|Knights|Rams|Wolves|Lions|Spartans|Warriors|Owls|Falcons|Bruins|Gators|Hurricanes|Cougars|Aggies|Mustangs|Pirates|Buffaloes|Volunteers|Sooners|Buckeyes|Hoosiers|Irish|RedHawks|Golden Hurricane|Mean Green|Ragin' Cajuns|Thundering Herd|Dukes|Tide|Gamecocks|Seminoles|Orange|Aztecs)$/,''); }
+  function chartFor(story, index) {
+    const figure=make('figure','report-chart');figure.setAttribute('aria-label',`${story.unit || story.kicker} visualization`);
+    const head=make('figcaption','report-chart-heading');head.append(make('span','chart-ledger-mark',String(index+1).padStart(2,'0')),make('span','',story.unit || story.kicker));figure.append(head);
+    if(story.kind==='games'){
+      figure.append(make('div','game-count-callout',fmt.compact(story.data.close_count)));
+      figure.append(make('p','game-count-label','close finishes from the full FBS-involving schedule'));
+      figure.append(gameScoreboard(story.data));
+      const top=story.data.high_scoring[0]; if(top){const badge=make('div','big-scoreline');badge.append(make('span','',`HIGHEST TOTAL · ${top.season_type==='3'?'POSTSEASON':`WEEK ${top.week}`}`),make('strong','',`${top.home_score} — ${top.away_score}`),make('small','',`${top.home_team} vs ${top.away_team} / ${fmt.number(top.combined)} combined points`));figure.append(badge);}
+      return figure;
+    }
+    const canvas=make('div','report-chart-canvas');canvas.id=`report-chart-${story.id}`;canvas.setAttribute('role','img');canvas.setAttribute('aria-label',`${story.kicker}; ${story.data.length || story.data.risers?.length || 0} displayed records`);figure.append(canvas);
+    if(story.kind==='players') {const spot=playerSpotlight(story);if(spot)figure.append(spot);}
+    if(story.kind==='movement') figure.append(make('p','chart-caption','Rise is preseason rank minus final rank; positive values mean moved up. This graphic includes teams ranked in both snapshots.'));
     return figure;
   }
-  function buildSignalMap(chart) {
-    const NS = 'http://www.w3.org/2000/svg';
-    const svg = document.createElementNS(NS, 'svg');
-    const data = chart.data.filter((point) => Number.isFinite(point.mean_epa) && Number.isFinite(point.explosive_rate));
-    const W = 760; const H = 440; const m = { top: 46, right: 30, bottom: 60, left: 74 };
-    const xMin = Math.min(0, ...data.map((p) => p.mean_epa)); const xMax = Math.max(...data.map((p) => p.mean_epa));
-    const yMin = 0; const yMax = Math.max(...data.map((p) => p.explosive_rate)) * 1.16;
-    const x = (value) => m.left + ((value - xMin) / (xMax - xMin || 1)) * (W - m.left - m.right);
-    const y = (value) => H - m.bottom - ((value - yMin) / (yMax - yMin || 1)) * (H - m.top - m.bottom);
-    const meanX = data.reduce((sum, point) => sum + point.mean_epa, 0) / data.length;
-    const meanY = data.reduce((sum, point) => sum + point.explosive_rate, 0) / data.length;
-    svg.setAttribute('viewBox', `0 0 ${W} ${H}`); svg.setAttribute('role', 'group');
-    svg.setAttribute('aria-label', 'Efficiency and EPA explosive-play rate for the ten highest EPA teams with at least 300 actual plays. Focus or hover a marker for team values.');
-    const node = (tag, attrs, text) => {
-      const item = document.createElementNS(NS, tag);
-      Object.entries(attrs || {}).forEach(([key, value]) => item.setAttribute(key, value));
-      if (text !== undefined) item.textContent = text;
-      svg.append(item); return item;
-    };
-    const x0 = m.left; const x1 = W - m.right; const y0 = m.top; const y1 = H - m.bottom;
-    node('rect', { x: x0, y: y0, width: x1 - x0, height: y1 - y0, class: 'signal-plot' });
-    for (let i = 0; i <= 4; i++) {
-      const value = xMin + (xMax - xMin) * i / 4; const px = x(value);
-      node('line', { x1: px, y1: y0, x2: px, y2: y1, class: 'signal-gridline' });
-      node('text', { x: px, y: y1 + 23, class: 'signal-tick', 'text-anchor': 'middle' }, value.toFixed(2));
-      const rate = yMax * i / 4; const py = y(rate);
-      node('line', { x1: x0, y1: py, x2: x1, y2: py, class: 'signal-gridline' });
-      node('text', { x: x0 - 12, y: py + 4, class: 'signal-tick', 'text-anchor': 'end' }, `${(rate * 100).toFixed(1)}%`);
-    }
-    node('line', { x1: x(meanX), y1: y0, x2: x(meanX), y2: y1, class: 'signal-midline' });
-    node('line', { x1: x0, y1: y(meanY), x2: x1, y2: y(meanY), class: 'signal-midline' });
-    node('text', { x: (x0 + x1) / 2, y: H - 12, class: 'signal-axis-title', 'text-anchor': 'middle' }, 'AVERAGE EPA / ACTUAL PLAY');
-    const yTitle = node('text', { x: 19, y: (y0 + y1) / 2, class: 'signal-axis-title', 'text-anchor': 'middle', transform: `rotate(-90 19 ${(y0 + y1) / 2})` }, 'EPA-EXPLOSIVE RATE');
-    yTitle.setAttribute('aria-hidden', 'true');
-    node('text', { x: x0 + 10, y: y0 + 17, class: 'signal-quadrant' }, 'HIGHER RATE / LOWER EPA');
-    node('text', { x: x1 - 10, y: y0 + 17, class: 'signal-quadrant', 'text-anchor': 'end' }, 'HIGHER ON BOTH');
-    node('text', { x: x0 + 10, y: y1 - 10, class: 'signal-quadrant' }, 'LOWER ON BOTH');
-    node('text', { x: x1 - 10, y: y1 - 10, class: 'signal-quadrant', 'text-anchor': 'end' }, 'HIGHER EPA / LOWER RATE');
-    data.forEach((point, index) => {
-      const group = document.createElementNS(NS, 'g');
-      group.setAttribute('class', point.mean_epa === Math.max(...data.map((item) => item.mean_epa)) ? 'signal-point signal-point-lead' : 'signal-point');
-      group.setAttribute('tabindex', '0'); group.setAttribute('role', 'img');
-      group.setAttribute('aria-label', `${point.label}: average EPA ${Saturday.signed(point.mean_epa, 3)}, EPA explosive rate ${Saturday.percent(point.explosive_rate)}, success rate ${Saturday.percent(point.success_rate)}, ${Saturday.compact(point.n)} actual plays`);
-      const title = document.createElementNS(NS, 'title'); title.textContent = `${point.label} • EPA ${Saturday.signed(point.mean_epa, 3)} • explosive ${Saturday.percent(point.explosive_rate)} • success ${Saturday.percent(point.success_rate)} • ${Saturday.compact(point.n)} plays`; group.append(title);
-      const halo = document.createElementNS(NS, 'circle'); halo.setAttribute('cx', x(point.mean_epa)); halo.setAttribute('cy', y(point.explosive_rate)); halo.setAttribute('r', index === 0 ? 13 : 11); halo.setAttribute('class', 'signal-halo'); group.append(halo);
-      const dot = document.createElementNS(NS, 'circle'); dot.setAttribute('cx', x(point.mean_epa)); dot.setAttribute('cy', y(point.explosive_rate)); dot.setAttribute('r', index === 0 ? 6 : 5); dot.setAttribute('class', 'signal-dot'); group.append(dot);
-      svg.append(group);
+  function card(label,value,foot){const el=make('div','stat-card');const number=make('strong','stat-value',value);const end=Number(String(value).replace(/,/g,''));if(Number.isFinite(end))number.dataset.count=String(end);el.append(number,make('span','stat-label',label),make('span','stat-foot',foot));return el;}
+  function installReveals(){const els=$$('[data-reveal],.stat-value');const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;const show=node=>{node.classList.add('is-visible');const n=node.matches('[data-count]')?node:node.querySelector('[data-count]');if(n&&!n.dataset.counted){n.dataset.counted='true';const end=+n.dataset.count;if(reduced){n.textContent=end.toLocaleString('en-US');return;}const start=performance.now();const step=t=>{const p=Math.min(1,(t-start)/800);n.textContent=Math.round(end*(1-Math.pow(1-p,3))).toLocaleString('en-US');if(p<1)requestAnimationFrame(step);};requestAnimationFrame(step);}};if(reduced||!('IntersectionObserver'in window)){els.forEach(show);return;}const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){show(e.target);io.unobserve(e.target);}}),{threshold:.12});els.forEach(x=>io.observe(x));}
+  function render(data){
+    const o=data.overview;const values={'fbs_teams':o.fbs_teams,'fbs_games':o.fbs_games,'players':o.players};
+    $$('[data-overview]').forEach(n=>n.textContent=fmt.compact(values[n.dataset.overview]));
+    $('#report-summary').textContent=`The 2025 FBS season spans ${fmt.compact(o.fbs_teams)} teams and ${fmt.compact(o.fbs_games)} scheduled games involving at least one FBS program, including FBS–FCS matchups. The prepared player pool contains ${fmt.compact(o.players)} FBS roster entries; the source schedule reports ${fmt.compact(o.fbs_points_scored)} FBS team points. Official AP data supplies ${fmt.compact(o.poll_snapshots)} snapshots: preseason, regular polls labeled Weeks 2–16, and the final poll.`;
+    const cards=$('#headline-stats');cards.replaceChildren(card('FBS PROGRAMS',fmt.compact(o.fbs_teams),'Full FBS roster coverage'),card('FBS-INVOLVING GAMES',fmt.compact(o.fbs_games),'Includes games against FCS opponents'),card('PLAYER / TEAM ENTRIES',fmt.compact(o.players),'Prepared FBS roster entries'),card('AP POLL SNAPSHOTS',fmt.compact(o.poll_snapshots),`Preseason + ${o.regular_polls} regular + final`),card('FBS TEAM POINTS',fmt.compact(o.fbs_points_scored),'Across reported team-game scores'));
+    const index=$('#story-index-links'),container=$('#findings');index.replaceChildren();container.replaceChildren();
+    if (!data?.overview || !Array.isArray(data.stories) || data.stories.length < 8) throw new Error('The report findings JSON is missing its overview or story sections.');
+    if (!window.echarts?.init) throw new Error('ECharts is unavailable; report charts cannot initialize.');
+    data.stories.forEach((story,i)=>{
+      const link=make('a','index-link');link.href=`#story-${story.id}`;link.append(make('b','',String(i+1).padStart(2,'0')),make('span','',story.title));index.append(link);
+      const section=make('article',`finding finding--${i%3===1?'wide':i%3===2?'stat':'standard'}`);section.id=`story-${story.id}`;section.dataset.reveal='';
+      const copy=make('div','finding-copy');const kicker=make('div','finding-kicker');kicker.append(make('span','',story.kicker),make('b','',`FIELD NOTE ${String(i+1).padStart(2,'0')}`));copy.append(kicker,make('h2','',story.title),make('p','',story.copy));
+      if(story.kind==='movement'){const rankItems=[...story.data.risers.slice(0,3).map(x=>({...x,type:'BIGGEST RISE'})),...story.data.fallers.slice(0,2).map(x=>({...x,type:'BIGGEST DROP'}))];const chips=make('div','movement-calls');for(const x of rankItems){const item=make('div','movement-chip');item.append(logo(x.team_id,'movement-logo'),make('span','',`${x.team} · ${x.type}`),make('strong','',`${x.movement>0?'+':''}${x.movement}`));chips.append(item);}copy.append(chips);}
+      section.append(copy,chartFor(story,i));container.append(section);
     });
-    const figure = el('figure', 'finding-visual signal-figure');
-    const heading = el('div', 'viz-header'); heading.append(el('span', '', 'THE SIGNAL MAP / 300+ PLAY COHORT')); heading.append(el('span', 'viz-unit', 'EPA × EPA-EXPLOSIVE RATE'));
-    figure.append(heading, svg);
-    const note = el('figcaption', 'signal-caption', `Each point is a team from the 10 highest qualifying offensive EPA averages. Crosshairs mark the cohort means: ${Saturday.signed(meanX, 3)} EPA and ${Saturday.percent(meanY)} explosive rate. Focus a point with the keyboard for its exact values.`);
-    figure.append(note); return figure;
-  }
-  function stat(label, value, foot) {
-    const card = el('div', 'stat-card'); card.append(el('strong', 'stat-value', value)); card.append(el('span', 'stat-label', label));
-    const count = Number(String(value).replace(/,/g, ''));
-    if (Number.isFinite(count)) card.querySelector('.stat-value').dataset.count = String(count);
-    if (foot) card.append(el('span', 'stat-foot', foot)); return card;
-  }
-  function render(data) {
-    const meta = data.meta; const overall = meta.overall;
-    const idx = Object.fromEntries(data.sections.map((item) => [item.id, item]));
-    const rush = idx['pass-rush'].chart.data.find((item) => item.label === 'Rush-coded');
-    const pass = idx['pass-rush'].chart.data.find((item) => item.label === 'Pass-coded');
-    document.getElementById('report-summary').textContent =
-      `This season’s ${Saturday.compact(meta.rows)} play records contain ${Saturday.compact(meta.actual_play_rows)} actual plays, ${Saturday.compact(meta.unique_teams)} teams and ${meta.weeks.length} weeks. Across actual plays, average EPA was ${Saturday.signed(overall.mean_epa)} and ${Saturday.percent(overall.success_rate)} had positive EPA. One clear split: the selected pass-coded labels averaged ${Saturday.signed(pass.mean_epa)} EPA per play, compared with ${Saturday.signed(rush.mean_epa)} for rush-coded plays; just ${Saturday.percent(overall.explosive_rate)} carried the source’s EPA-explosive flag.`;
-    const setText = (id, value) => { const node = document.getElementById(id); if (node) node.textContent = value; };
-    setText('method-row-count', Saturday.compact(meta.rows) + ' rows');
-    setText('method-game-count', Saturday.compact(meta.unique_games) + ' games');
-    setText('method-team-count', Saturday.compact(meta.unique_teams));
-    setText('method-week-range', `${Math.min(...meta.weeks)}–${Math.max(...meta.weeks)}`);
-    setText('method-date-range', `${meta.date_min} to ${meta.date_max}`);
-    setText('method-column-count', `${meta.columns} selected dashboard columns`);
-    setText('method-admin-count', Saturday.compact(meta.administrative_rows));
-    setText('method-actual-count', `${Saturday.compact(meta.actual_play_rows)} actual plays`);
-    setText('method-type-missing', Saturday.compact(meta.definitions.missing_values.orig_play_type || 0));
-    setText('method-clock-missing', Saturday.compact(meta.definitions.missing_values.wallclock || 0));
-    const stats = document.getElementById('headline-stats'); stats.replaceChildren(
-      stat('PLAY-BY-PLAY RECORDS', Saturday.compact(meta.rows)),
-      stat('ACTUAL PLAYS', Saturday.compact(meta.actual_play_rows)),
-      stat('TEAMS IN POSSESSION FIELDS', Saturday.compact(meta.unique_teams)),
-      stat('WEEKS IN THE FILE', String(meta.weeks.length))
-    );
-    const index = document.getElementById('story-index-links');
-    const findings = document.getElementById('findings'); index.replaceChildren(); findings.replaceChildren();
-    data.sections.forEach((finding, i) => {
-      const link = el('a', 'index-link'); link.href = `#finding-${finding.id}`;
-      link.append(el('b', '', String(i + 1).padStart(2, '0'))); link.append(el('span', '', finding.title)); index.append(link);
-      const section = el('article', 'finding'); section.id = `finding-${finding.id}`;
-      section.dataset.reveal = '';
-      section.dataset.index = String(i + 1).padStart(2, '0');
-      section.classList.add(i % 3 === 1 ? 'finding--wide' : i % 3 === 2 ? 'finding--stat' : 'finding--standard');
-      const copy = el('div', 'finding-copy'); copy.dataset.index = section.dataset.index; const kicker = el('div', 'finding-kicker'); kicker.append(el('span', '', finding.kicker)); kicker.append(el('b', '', `FIELD NOTE ${String(i + 1).padStart(2, '0')}`));
-      copy.append(kicker); copy.append(el('h2', '', finding.title)); copy.append(el('p', '', finding.copy));
-      const mark = el('div', 'finding-mark', `${Saturday.compact(meta.actual_play_rows)} actual plays in the season view`); copy.append(mark);
-      section.append(copy); section.append(finding.id === 'offense-teams' ? buildSignalMap(finding.chart) : buildBars(finding.chart)); findings.append(section);
+    // ECharts measures its host at initialization. Initialize only after the
+    // complete report section is attached and has its final CSS dimensions.
+    data.stories.forEach(story=>{
+      if(story.kind==='games')return;
+      const host=$(`#report-chart-${story.id}`);
+      if(!host||!host.isConnected)throw new Error(`Report chart container is missing for ${story.id}.`);
+      const rect=host.getBoundingClientRect();
+      if(rect.width<1||rect.height<1)throw new Error(`Report chart container has no visible size for ${story.id}.`);
+      const chart=window.echarts.init(host,null,{renderer:'canvas'});
+      chart.setOption(optionFor(story));charts.push(chart);
     });
-    installReveals();
+    installReveals();window.addEventListener('resize',()=>charts.forEach(c=>c.resize()),{passive:true});
   }
-  function installReveals() {
-    const targets = document.querySelectorAll('[data-reveal], .hero-scoreline strong[data-count], .stat-value[data-count]');
-    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const reveal = (target) => {
-      target.classList.add('is-visible');
-      const counter = target.matches('[data-count]') ? target : target.querySelector('[data-count]');
-      if (!counter) return;
-      const end = Number(counter.dataset.count); if (!Number.isFinite(end)) return;
-      if (reduced || end < 25) { counter.textContent = end.toLocaleString('en-US'); return; }
-      const start = performance.now(); const duration = 850;
-      function tick(now) {
-        const t = Math.min(1, (now - start) / duration); const eased = 1 - Math.pow(1 - t, 3);
-        counter.textContent = Math.round(end * eased).toLocaleString('en-US');
-        if (t < 1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-    };
-    if (!('IntersectionObserver' in window) || reduced) { targets.forEach(reveal); return; }
-    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-      if (!entry.isIntersecting) return;
-      reveal(entry.target); observer.unobserve(entry.target);
-    }), { threshold: .12, rootMargin: '0px 0px -5% 0px' });
-    targets.forEach((target) => observer.observe(target));
-  }
-  fetch(path).then((response) => { if (!response.ok) throw new Error(`Could not load ${path}`); return response.json(); })
-    .then(render).catch((error) => { document.getElementById('findings').textContent = `The report findings could not be loaded: ${error.message}`; });
+  Promise.all([window.GridironDependencies.ready,loadJson(DATA),loadJson(BRAND_URL)])
+    .then(([,data,brandData])=>{teams=brandData.teams||{};render(data);window.GridironBoot?.ready();})
+    .catch(error=>{const message=`The season report could not finish loading: ${error.message}. Check the local server, CDN access, and prepared data files.`;$('#findings').textContent=message;window.GridironBoot?.fail(error.message);});
 })();

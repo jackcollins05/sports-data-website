@@ -3,31 +3,26 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d13">
-  <meta name="description" content="A data-driven look at 166,053 plays from the 2025 college football season.">
-  <title>Saturday Signal — 2025 College Football</title>
+  <meta name="theme-color" content="#07101a">
+  <meta name="description" content="Explore the 2025 FBS college football season through teams, players, game scores, and official AP Top 25 rankings.">
+  <title>2025 College Football</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script src="js/boot-guard.js"></script>
+  <script src="js/dependencies.js"></script>
   <script src="js/common.js" defer></script>
   <script src="js/field.js" defer></script>
   <script src="js/report.js" defer></script>
 </head>
 <body class="report-page">
-  <a class="skip-link" href="#main">Skip to the report</a>
+  <a class="skip-link" href="#main">Skip to the season report</a>
   <header class="site-header">
-    <a class="brand-lockup" href="index.html" aria-label="Saturday Signal home">
-      <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
-      <span class="brand-name">SATURDAY<span>SIGNAL</span></span>
-    </a>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a class="nav-link is-active" href="index.html" aria-current="page">The report</a>
-      <a class="nav-link" href="dashboard.html">Explore the data <span aria-hidden="true">↗</span></a>
-    </nav>
-    <div class="header-season"><span class="live-dot"></span> 2025 SEASON <span class="header-divider">/</span> FINAL</div>
+    <a class="brand-lockup" href="index.html" aria-label="Home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name" data-brand></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a class="nav-link is-active" href="index.html" aria-current="page">Season report</a><a class="nav-link" href="dashboard.html">FBS Explorer <span aria-hidden="true">↗</span></a></nav>
+    <div class="header-season"><span class="live-dot"></span> 2025 / FBS SEASON</div>
   </header>
-
   <main id="main">
     <section class="hero" aria-labelledby="hero-title">
       <canvas id="field-canvas" class="field-canvas" aria-hidden="true"></canvas>
@@ -35,71 +30,45 @@
       <div class="hero-field-label" aria-hidden="true"><span>HOME</span><span>50</span><span>AWAY</span></div>
       <div class="hero-scrim"></div>
       <div class="hero-content page-shell">
-        <div class="eyebrow"><span class="eyebrow-rule"></span> 2025 COLLEGE FOOTBALL <span class="eyebrow-year">ONE SEASON / THE FULL TAPE</span></div>
-        <h1 id="hero-title">Saturday<br><em>Signal.</em></h1>
-        <p class="hero-deck">The field moves fast.<br>The numbers tell the story.</p>
-        <div class="hero-byline"><span>A PLAY-BY-PLAY FIELD GUIDE</span><span class="byline-dot">·</span><span>BY JACK COLLINS</span></div>
-        <div class="hero-scoreline" aria-label="2025 dataset overview">
-          <div><strong data-count="166053">166,053</strong><span>PLAY RECORDS</span></div>
-          <div><strong data-count="236">236</strong><span>TEAMS</span></div>
-          <div><strong data-count="16">16</strong><span>WEEKS</span></div>
+        <div class="eyebrow"><span class="eyebrow-rule"></span> COLLEGE FOOTBALL / 2025 <span class="eyebrow-year">FBS SEASON IN REVIEW</span></div>
+        <p class="hero-brand-kicker" data-brand></p>
+        <h1 id="hero-title">The season<br><em>on the field.</em></h1>
+        <p class="hero-deck">Explore the 2025 College Football Season through the teams, players, games, and rankings that shaped it.</p>
+        <div class="hero-scoreline" id="hero-scoreline" aria-label="Verified season overview">
+          <div><strong data-overview="fbs_teams">—</strong><span>FBS TEAMS</span></div>
+          <div><strong data-overview="fbs_games">—</strong><span>GAMES</span></div>
+          <div><strong data-overview="players">—</strong><span>PLAYER ENTRIES</span></div>
         </div>
-        <a class="hero-cta" href="#season-at-a-glance"><span class="signal-glyph" aria-hidden="true">⌁</span> Read the season <span aria-hidden="true">↓</span></a>
+        <a class="hero-cta" href="dashboard.html"><span class="signal-glyph" aria-hidden="true">⌁</span> Explore the dashboard <span aria-hidden="true">↗</span></a>
       </div>
-      <div class="hero-side-note" aria-hidden="true">THE NUMBERS TELL THE STORY</div>
-      <div class="hero-bottomline"><span><i></i> ONE SEASON</span><span>2025 — 26</span><span>SCROLL TO CALL THE GAME ↓</span></div>
+      <div class="hero-side-note" aria-hidden="true">THE 2025 SEASON, IN THE NUMBERS</div>
+      <div class="hero-bottomline"><span><i></i> <b data-overview="fbs_teams">—</b> FBS PROGRAMS</span><span>PRESEASON — FINAL</span><a href="#season-at-a-glance">SCROLL TO EXPLORE ↓</a></div>
     </section>
 
     <section class="intro-section section-pad" id="season-at-a-glance">
       <div class="page-shell">
-        <div class="section-kicker"><span>01</span><span>THE FIELD OF PLAY</span><span class="kicker-line"></span></div>
-        <div class="intro-grid">
-          <div>
-            <p class="story-transition">ONE SEASON <span>↓</span> THE NUMBERS TELL THE STORY</p>
-            <p class="display-statement">A season is more than a final score.</p>
-            <p id="report-summary" class="intro-copy">Loading the verified season findings…</p>
-          </div>
-          <aside class="metric-note">
-            <div class="metric-note-mark">EPA</div>
-            <p><strong>Expected points added</strong> estimates how a play changes the offense’s expected scoring value. Positive EPA moves the offense toward points; negative EPA moves it away.</p>
-            <span class="note-source">A PLAY-BY-PLAY LENS</span>
-          </aside>
-        </div>
-        <div id="headline-stats" class="stat-grid" aria-label="Season at a glance"></div>
+        <div class="section-kicker"><span>01</span><span>SEASON AT A GLANCE</span><span class="kicker-line"></span></div>
+        <div class="intro-grid"><div><p class="story-transition">ONE SEASON <span>↓</span> EVERY SNAP HAS A STORY</p><p class="display-statement">The whole season.<br>From first whistle to final poll.</p><p id="report-summary" class="intro-copy" aria-live="polite">Loading verified season findings…</p></div>
+          <aside class="metric-note"><div class="metric-note-mark">FBS / 2025</div><p><strong>Traditional football, in context.</strong> Follow the scoring, production, close finishes, standout players, and official AP poll movement across the FBS season.</p><span class="note-source">SCORES · BOX SCORES · AP TOP 25</span></aside></div>
+        <div id="headline-stats" class="stat-grid" aria-label="2025 FBS season headline numbers"></div>
       </div>
     </section>
 
-    <section class="story-index page-shell" aria-labelledby="story-index-title">
-      <div class="index-card">
-        <div class="index-top"><span>INSIDE THE NUMBERS</span><span>10 FIELD NOTES</span></div>
-        <h2 id="story-index-title">A season in ten signals.</h2>
-        <div id="story-index-links" class="index-links"></div>
-        <div class="index-bottom"><span>ALL FIGURES RECOMPUTED FROM PLAY-LEVEL DATA</span><span>SCROLL TO EXPLORE ↓</span></div>
-      </div>
-    </section>
+    <section class="story-index page-shell" aria-labelledby="story-index-title"><div class="index-card"><div class="index-top"><span>THE SEASON, DRIVE BY DRIVE</span><span>11 VERIFIED FIELD NOTES</span></div><h2 id="story-index-title">The storylines that defined 2025.</h2><div id="story-index-links" class="index-links"></div><div class="index-bottom"><span>FBS TEAMS / OFFICIAL AP POLL / TRADITIONAL BOX SCORE DATA</span><a href="dashboard.html">TAKE THE FIELD ↗</a></div></div></section>
 
-    <section id="findings" class="findings-section page-shell" aria-label="Season findings">
-      <div class="loading-state" role="status">Building the season story from verified results…</div>
-    </section>
+    <section id="findings" class="findings-section page-shell" aria-label="2025 FBS season report findings"><div class="loading-state" role="status">Building the report from prepared FBS data…</div></section>
 
-    <section class="method-section section-pad">
-      <div class="page-shell method-grid">
-        <div>
-          <div class="section-kicker"><span>11</span><span>THE FILM ROOM</span><span class="kicker-line"></span></div>
-          <h2 class="method-title">How the numbers<br><em>were called.</em></h2>
-        </div>
-        <div class="method-copy">
-          <p>The source is SportsDataverse’s ESPN college football play-by-play release for the 2025 season. Each row represents one play record. The season file contains <strong id="method-row-count">166,053 rows</strong> across <span id="method-game-count">956 games</span>, <span id="method-team-count">236</span> distinct possession/defense team names, and weeks <span id="method-week-range">1–16</span>. Source dates run from <span id="method-date-range">2025-08-23 to 2026-01-20</span>.</p>
-          <p>The raw file was reduced to <span id="method-column-count">24 selected dashboard columns</span> using <code>scripts/prepare_data.py</code>. No data rows were removed in preparation. The report-analysis script separates actual plays (`play == true`) from administrative rows; the <span id="method-admin-count">18,079</span> administrative rows remain in the published data file but are excluded from report rates and play-level averages. The resulting denominator is <strong id="method-actual-count">147,974 actual plays</strong>. EPA and the relevant flags have no missing values in that subset. Rush/receiving yard fields are play-specific and naturally blank on other event types.</p>
-          <p>EPA averages are the arithmetic mean of `EPA` over included actual plays. Defensive EPA uses `def_EPA`, which is defined as the negative of offensive EPA: higher values mean more expected points denied. EPA success is the share with `EPA_success == true` (source definition: EPA &gt; 0). Explosive rate is the share with `EPA_explosive == true`; this is the source’s EPA-based flag, not a custom yardage cutoff. Scoring rate is the share with `scoring_play == true`. Team offense and defense comparisons require at least 300 actual plays and are unadjusted for opponent strength. They group all actual-play records by the source’s possession/defense fields, including actual special-teams events; the retained columns do not include a separate scrimmage-play flag. Down, quarter, and week rates use the actual plays in that grouping; very small overtime and late-week samples are shown with counts.</p>
-          <p>Season type codes follow ESPN’s convention: 2 is regular season and 3 is postseason. Play-type comparisons are limited to the explicitly listed Rush/Rushing Touchdown and pass-coded labels shown in the figure; remaining event types are not silently assigned to either group. The release includes <span id="method-type-missing">25</span> plays with an unspecified play type and <span id="method-clock-missing">564</span> missing wallclock values; neither field is needed to calculate the displayed EPA findings.</p>
-          <div class="method-links"><a href="https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_pbp" target="_blank" rel="noreferrer">SportsDataverse dataset release ↗</a><a href="https://github.com/sportsdataverse/cfbfastR-cfb-data/blob/main/DATASETS.md" target="_blank" rel="noreferrer">Source field definitions ↗</a></div>
-          <p class="byline-foot">Prepared by Jack Collins <span>·</span> Financial Data Analytics <span>·</span> 2025 season</p>
-        </div>
-      </div>
-    </section>
+    <section class="method-section section-pad" id="methodology"><div class="page-shell method-grid"><div><div class="section-kicker"><span>12</span><span>THE FILM ROOM</span><span class="kicker-line"></span></div><h2 class="method-title">How the season<br><em>was counted.</em></h2></div>
+      <div class="method-copy">
+        <p>This report focuses on Football Bowl Subdivision teams. Team division is joined from the existing team branding metadata by ESPN <code>team_id</code>, not inferred from school names. The full all-division prepared files remain available; these report views use the FBS-filtered player, game, and team-game files.</p>
+        <p>Player season totals come from the 2025 SportsDataverse <code>espn_cfb_player_box</code> dataset after category rows were pivoted to player-game rows and summed by player/team. Completion percentage, yards per attempt, yards per carry, yards per reception, and other rates are recalculated from season totals and attempts. Leaderboards apply the displayed workload thresholds. Passing entries affected by unresolved generic fields were all FCS quarterbacks; no affected FBS quarterback is included in the FBS pool.</p>
+        <p>Game dates, participants, scores, and winners come from <code>espn_cfb_schedules</code>. Traditional team performance comes from <code>espn_cfb_team_box</code>. One game-table row represents one scheduled game; one team-game row represents one FBS team's statistics in one game. FBS teams' matchups with FCS opponents remain included. Team scoring leaders require at least eight team-game rows; third-down comparisons require at least 80 attempts; player thresholds appear with each report finding.</p>
+        <p>The AP Top 25 tables contain the source's preseason poll, regular polls labeled Weeks 2–16, and its final poll. There is no regular poll labeled Week 1 in the source. In the report timeline, the preseason snapshot precedes regular-season results; poll “Week 2” is the poll published after schedule Week 1. AP ranks and movement are official source values; this project does not create its own rankings. An unranked team has a blank rank, never an invented No. 26.</p>
+        <p>Weekly team scoring charts use ESPN schedule season type 2 (regular season) because postseason week numbers restart at 1. “Close game” means a final score margin of three points or fewer. Team and player summaries use only nonmissing source values; a rate is not calculated when its attempt denominator is zero or unavailable. The prepared season totals may show zero where no category row contributed a total, so leaderboard claims are based on positive recorded production and sufficient workload.</p>
+        <div class="method-links"><a href="https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_player_box" target="_blank" rel="noreferrer">SportsDataverse player box data ↗</a><a href="https://github.com/sportsdataverse/sportsdataverse-data/releases/tag/espn_cfb_schedules" target="_blank" rel="noreferrer">Schedules ↗</a><a href="https://sportsdataverse.r-universe.dev/cfbfastR/doc/manual.html" target="_blank" rel="noreferrer">ESPN weekly rankings source documentation ↗</a></div>
+        <p class="byline-foot">Prepared by Jack Collins <span>·</span> Financial Data Analytics <span>·</span> 2025 FBS season</p>
+      </div></div></section>
   </main>
-
-  <footer class="site-footer page-shell"><a class="brand-lockup footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">SATURDAY<span>SIGNAL</span></span></a><span>PLAY BY PLAY, WITH PURPOSE.</span><a href="#main">BACK TO TOP ↑</a></footer>
+  <footer class="site-footer page-shell"><a class="brand-lockup footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name" data-brand></span></a><span>EXPLORE THE 2025 COLLEGE FOOTBALL SEASON</span><a href="#main">BACK TO TOP ↑</a></footer>
 </body>
 </html>

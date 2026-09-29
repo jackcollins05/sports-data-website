@@ -1,128 +1,76 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#080d13">
-  <meta name="description" content="Filter and explore 166,053 plays from the 2025 college football season.">
-  <title>Explore the Data — Saturday Signal</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&amp;family=DM+Mono:wght@400;500&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#07101a">
+  <meta name="description" content="Explore 2025 FBS teams, players, game results, and AP Top 25 rankings.">
+  <title>FBS Explorer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
-  <script>
-    (() => {
-      function showStartupError(message) {
-        const status = document.getElementById('load-status');
-        const panel = document.getElementById('dashboard-error');
-        if (!status || !panel || !panel.hidden) return;
-        status.textContent = 'Dashboard failed to load';
-        status.setAttribute('data-state', 'error');
-        panel.hidden = false;
-        panel.textContent = `The dashboard could not start: ${message}. Check that the page is served over HTTP, its JavaScript files loaded, and then reload.`;
-        document.getElementById('loading-overlay').hidden = true;
-        document.getElementById('main').inert = false;
-      }
-      window.addEventListener('error', (event) => {
-        if (event.target instanceof HTMLScriptElement) showStartupError(`script failed to load: ${event.target.src || 'inline script'}`);
-        else if (event.message) showStartupError(`JavaScript error: ${event.message}`);
-      }, true);
-      window.addEventListener('unhandledrejection', (event) => showStartupError(`JavaScript promise failed: ${event.reason && event.reason.message || event.reason || 'unknown error'}`));
-      window.addEventListener('DOMContentLoaded', () => window.setTimeout(() => {
-        if (!window.__SATURDAY_DASHBOARD_STARTED__) showStartupError('js/dashboard.js did not initialize');
-      }, 30000), { once: true });
-    })();
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/echarts@5.6.0/dist/echarts.min.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js" defer></script>
-  <script src="js/common.js" defer></script>
-  <script src="js/dashboard.js" defer></script>
+  <script src="js/boot-guard.js"></script>
+  <script src="js/dependencies.js"></script>
+  <script src="js/common.js" defer></script><script src="js/dashboard.js" defer></script>
 </head>
 <body class="dashboard-page">
-  <a class="skip-link" href="#main">Skip to dashboard</a>
-  <header class="site-header">
-    <a class="brand-lockup" href="index.html" aria-label="Saturday Signal home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">SATURDAY<span>SIGNAL</span></span></a>
-    <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="index.html">The report</a><a class="nav-link is-active" href="dashboard.html" aria-current="page">Explore the data <span aria-hidden="true">↗</span></a></nav>
-    <div class="header-season"><span class="live-dot"></span> 2025 SEASON <span class="header-divider">/</span> INTERACTIVE</div>
-  </header>
-
-  <div id="loading-overlay" class="loading-overlay" role="status" aria-live="polite" aria-label="Loading 2025 college football play-by-play">
-    <div class="loading-card">
-      <div class="loading-brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SATURDAY <b>SIGNAL</b></span><small>DATA OPERATIONS / 2025</small></div>
-      <div class="loading-field" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="loading-ball">●</span></div>
-      <p class="loading-kicker">READING THE SEASON</p>
-      <h1>Processing<br><em>the tape.</em></h1>
-      <div class="loading-facts"><span><b>166,053</b> PLAY RECORDS</span><span><b>236</b> TEAMS</span><span><b>16</b> WEEKS</span></div>
-      <div class="load-meter" role="progressbar" aria-label="CSV rows parsed" aria-valuemin="0" aria-valuemax="166053" aria-valuenow="0"><i id="load-progress-fill"></i></div>
-      <p id="load-stage">Connecting to the play-by-play file…</p>
-      <p id="load-count" class="load-count">0 / 166,053 ROWS PARSED</p>
-    </div>
-  </div>
-
+  <a class="skip-link" href="#main">Skip to the FBS Explorer</a>
+  <header class="site-header"><a class="brand-lockup" href="index.html" aria-label="Home"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name" data-brand></span></a>
+    <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="index.html">Season report</a><a class="nav-link is-active" href="dashboard.html" aria-current="page">FBS Explorer</a></nav><div class="header-season"><span class="live-dot"></span> 2025 / EXPLORE</div></header>
+  <div id="loading-overlay" class="loading-overlay" role="status" aria-live="polite"><div class="loading-card"><div class="loading-brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span data-brand></span><small>FBS DATA CENTER / 2025</small></div><div class="loading-field" aria-hidden="true"><i></i><i></i><i></i><i></i><span>●</span></div><p class="loading-kicker">OPENING THE SEASON FILE</p><h1>Bringing<br><em>it to life.</em></h1><div class="loading-facts"><span><b data-loader="teams">—</b> FBS TEAMS</span><span><b data-loader="games">—</b> GAMES</span><span><b data-loader="polls">—</b> AP SNAPSHOTS</span></div><div class="load-meter"><i id="load-progress-fill"></i></div><p id="load-stage">Loading standings, player leaders, and official poll data…</p></div></div>
   <main id="main" class="dashboard-main page-shell" inert>
-    <section class="dashboard-heading">
-      <div><div class="eyebrow"><span class="eyebrow-rule"></span> THE ANALYTICS BOOTH <span class="eyebrow-year">01—16</span></div><h1>Read the <em>field.</em></h1><p>Choose a team, set the game state, and follow the signal through 2025.</p></div>
-      <div class="data-status"><span class="status-pulse"></span><span id="load-status" role="status">Loading 166,053 plays…</span></div>
-    </section>
-
-    <section class="team-broadcast" id="team-broadcast" aria-label="Filtered team performance" aria-live="polite">
-      <div class="broadcast-identity">
-        <div id="team-identity-logo" class="broadcast-logo"><span>CF</span></div>
-        <div class="broadcast-nameplate"><span id="team-identity-kicker">SEASON-WIDE LENS / 2025</span><h2 id="team-identity-name">ALL TEAMS</h2><span class="broadcast-subtitle">PERFORMANCE SIGNAL</span></div>
-      </div>
-      <div class="broadcast-metrics">
-        <div><span id="broadcast-epa-label">OFFENSIVE EPA</span><strong id="broadcast-epa">—</strong><small>PER ACTUAL PLAY</small></div>
-        <div><span id="broadcast-success-label">SUCCESS RATE</span><strong id="broadcast-success">—</strong><small>EPA &gt; 0</small></div>
-        <div><span id="broadcast-explosive-label">EXPLOSIVE RATE</span><strong id="broadcast-explosive">—</strong><small>SOURCE EPA FLAG</small></div>
-        <div><span id="broadcast-yards-label">AVERAGE YARDS</span><strong id="broadcast-yards">—</strong><small>RECORDED YARDAGE</small></div>
-        <div><span>TOTAL PLAYS</span><strong id="broadcast-plays">—</strong><small>FILTERED ACTUAL PLAYS</small></div>
-      </div>
-      <div class="broadcast-rule" aria-hidden="true"></div>
-    </section>
-
-    <section class="dashboard-controls panel" aria-label="Dashboard filters and controls">
-      <div class="controls-top"><div><span class="panel-kicker">FILTER THE TAPE</span><span class="control-help">Every view updates from actual plays only.</span></div><button type="button" id="reset-filters" class="reset-button">Reset all filters <span aria-hidden="true">↺</span></button></div>
-      <div class="filter-grid">
-        <label class="field-control team-control"><span>Team</span><select id="team-filter"><option value="">All teams</option></select></label>
-        <label class="field-control"><span>Week <i>TIME</i></span><select id="week-filter"><option value="">All weeks</option></select></label>
-        <label class="field-control"><span>Play type</span><select id="type-filter"><option value="">All play types</option></select></label>
-        <label class="field-control"><span>Season type</span><select id="season-filter"><option value="">All season types</option></select></label>
-        <label class="field-control"><span>Perspective</span><select id="perspective-filter"><option value="offense">Offense</option><option value="defense">Defense</option></select></label>
-      </div>
-      <div class="control-divider"></div>
-      <div class="display-controls">
-        <label class="field-control measure-control"><span>Measure <i>WHAT TO MEASURE</i></span><select id="measure-filter">
-          <option value="epa">Average EPA / actual play</option><option value="success">EPA success rate</option><option value="explosive">EPA explosive-play rate</option><option value="yards">Average recorded yards</option><option value="scoring">Scoring-play rate</option><option value="plays">Actual play count</option>
-        </select></label>
-        <label class="field-control breakdown-control"><span>Breakdown <i>HOW TO GROUP</i></span><select id="breakdown-filter">
-          <option value="team">Team</option><option value="week">Week</option><option value="type">Play type</option><option value="down">Down</option><option value="quarter">Quarter / period</option><option value="opponent">Opponent</option>
-        </select></label>
-      </div>
-    </section>
-
-    <section class="summary-grid" id="summary-cards" aria-label="Filtered summary statistics">
-      <div class="summary-card"><span class="summary-label">Actual plays</span><strong class="summary-value">—</strong><span class="summary-foot">Filtered denominator</span></div>
-      <div class="summary-card"><span class="summary-label">Average EPA</span><strong class="summary-value">—</strong><span class="summary-foot">Per actual play</span></div>
-      <div class="summary-card"><span class="summary-label">EPA success</span><strong class="summary-value">—</strong><span class="summary-foot">Positive EPA share</span></div>
-      <div class="summary-card"><span class="summary-label">Explosive rate</span><strong class="summary-value">—</strong><span class="summary-foot">Source EPA flag</span></div>
-      <div class="summary-card"><span class="summary-label">Scoring-play rate</span><strong class="summary-value">—</strong><span class="summary-foot">Source scoring flag</span></div>
-    </section>
-
+    <section class="dashboard-heading"><div><div class="eyebrow"><span class="eyebrow-rule"></span> <span data-brand></span> <span class="eyebrow-year">FBS EXPLORER / 2025</span></div><h1>Find your<br><em>game.</em></h1><p>Open the box score, follow the rankings, and find the names behind the season.</p></div><div class="data-status"><span class="status-pulse"></span><span id="load-status" role="status">Loading FBS data…</span></div></section>
     <div id="dashboard-error" class="error-panel" hidden role="alert"></div>
-    <section class="chart-grid" aria-label="Interactive charts">
-      <article class="chart-panel panel chart-primary"><div class="chart-heading"><div><span class="panel-kicker">THE MATCHUP</span><h2 id="primary-chart-title">EPA by team</h2></div><span class="chart-unit" id="primary-chart-unit">EPA / actual play</span></div><div id="chart-primary" class="chart-canvas" role="img" aria-label="Primary chart"></div></article>
-      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">WEEK TO WEEK</span><h2>Season rhythm</h2></div><span class="chart-unit" id="trend-unit">Current measure</span></div><div id="chart-trend" class="chart-canvas" role="img" aria-label="Selected measure by week"></div></article>
-      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">THE DOWN MARKER</span><h2>Where the play starts</h2></div><span class="chart-unit" id="down-unit">Current measure</span></div><div id="chart-down" class="chart-canvas" role="img" aria-label="Selected measure by down"></div></article>
-      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">PLAY CALL</span><h2>Play-type profile</h2></div><span class="chart-unit" id="type-unit">Current measure</span></div><div id="chart-type" class="chart-canvas" role="img" aria-label="Selected measure by play type"></div></article>
+    <section class="dashboard-controls panel" aria-label="Season filters and display controls"><div class="controls-top"><div><span class="panel-kicker">SET THE GAME LENS</span><span class="control-help">Filter verified FBS schedules and box scores.</span></div><button type="button" id="reset-filters" class="reset-button">Reset filters <span aria-hidden="true">↺</span></button></div>
+      <div class="filter-groups">
+        <fieldset class="filter-group"><legend>GAME FILTERS</legend><div class="filter-grid game-filter-grid">
+          <label class="field-control"><span>Week <i>TIME</i></span><select id="week-filter"><option value="">All weeks</option></select></label>
+          <label class="field-control team-control"><span>Team <i>GROUP</i></span><select id="team-filter"><option value="">All FBS teams</option></select></label>
+          <label class="field-control"><span>Season type</span><select id="season-filter"><option value="" selected>All season types</option><option value="2">Regular season</option><option value="3">Postseason</option></select></label>
+          <label class="field-control"><span>Game side</span><select id="side-filter"><option value="">Home + away</option><option value="home">Home team</option><option value="away">Away team</option></select></label>
+        </div></fieldset>
+        <fieldset class="filter-group"><legend>PLAYER FILTERS</legend><div class="filter-grid player-filter-grid">
+          <label class="field-control"><span>Position</span><select id="position-filter"><option value="">All positions</option></select></label>
+          <label class="field-control player-stat-control"><span>Player statistic <i>FULL LEADERBOARD</i></span><select id="player-measure">
+            <optgroup label="Passing"><option value="passing_yards">Passing yards</option><option value="passing_touchdowns">Passing touchdowns</option><option value="passing_completions">Completions</option><option value="passing_attempts">Attempts</option><option value="passing_completion_pct">Completion percentage · 100 attempts</option><option value="passing_interceptions">Interceptions</option><option value="passing_yards_per_attempt">Yards per attempt · 100 attempts</option></optgroup>
+            <optgroup label="Rushing"><option value="rushing_yards">Rushing yards</option><option value="rushing_touchdowns">Rushing touchdowns</option><option value="rushing_attempts">Rushing attempts</option><option value="rushing_yards_per_attempt">Yards per rush · 100 carries</option></optgroup>
+            <optgroup label="Receiving"><option value="receptions">Receptions</option><option value="receiving_yards">Receiving yards</option><option value="receiving_touchdowns">Receiving touchdowns</option><option value="receiving_yards_per_reception">Yards per reception · 40 catches</option></optgroup>
+            <optgroup label="Defense"><option value="defensive_total_tackles">Total tackles</option><option value="defensive_solo_tackles">Solo tackles</option><option value="defensive_sacks">Sacks</option><option value="defensive_tackles_for_loss">Tackles for loss</option><option value="defensive_interceptions">Interceptions</option><option value="passes_defended">Passes defended</option><option value="quarterback_hurries">Quarterback hurries</option></optgroup>
+            <optgroup label="Kicking"><option value="field_goals_made">Field goals made</option><option value="field_goal_pct">Field goal percentage · 10 attempts</option><option value="total_kicking_points">Kicking points</option></optgroup>
+          </select></label>
+        </div></fieldset>
+        <fieldset class="filter-group"><legend>ANALYSIS</legend><div class="filter-grid analysis-filter-grid">
+          <label class="field-control"><span>Team measure <i>CHANGE THE MEASURE</i></span><select id="measure-filter"><option value="points_per_game">Points per game</option><option value="yards_per_game">Total yards per game</option><option value="pass_yards_per_game">Passing yards per game</option><option value="rush_yards_per_game">Rushing yards per game</option><option value="third_down_pct">Third-down conversion %</option><option value="fourth_down_pct">Fourth-down conversion %</option><option value="turnovers_per_game">Turnovers per game</option><option value="yards_per_rush">Yards per rush</option></select></label>
+          <label class="field-control"><span>Breakdown <i>CHANGE THE GROUPING</i></span><select id="breakdown-filter"><option value="team">Team</option><option value="week">Week</option><option value="conference">Conference</option><option value="home_away">Home / away</option><option value="ap_status">AP ranked status</option></select></label>
+        </div></fieldset>
+      </div>
+      <p class="filter-footnote">Season player leaders use the prepared player-season file. Completion and pass-efficiency rates require 100 attempts, yards per carry 100 rushes, yards per catch 40 receptions, and field-goal percentage 10 attempts; each rate is recomputed from totals. Selecting a week or season type loads player-game data on demand for weekly/game leaders. Poll periods preserve the published AP labels; “After Week 1” is the Week 2 poll released after schedule Week 1. Preseason and Final stay distinct.</p>
     </section>
 
-    <section class="table-panel panel" aria-labelledby="table-title">
-      <div class="table-heading"><div><span class="panel-kicker">THE BOX SCORE, REBUILT</span><h2 id="table-title">Numbers behind this view</h2><p id="table-caption">Aggregated by Team • calculated on filtered actual plays</p></div><label class="sort-control"><span>Sort</span><select id="table-sort"><option value="metric">Selected measure</option><option value="n">Play count</option><option value="label">Group name</option></select></label></div>
-      <div class="table-scroll"><table id="results-table"><thead><tr><th scope="col">Group</th><th scope="col">Actual plays</th><th scope="col" id="measure-heading">Average EPA</th><th scope="col">Mean EPA</th><th scope="col">EPA success</th><th scope="col">Explosive rate</th><th scope="col">Scoring rate</th></tr></thead><tbody><tr><td colspan="7" class="empty-cell">Load the play-by-play to begin.</td></tr></tbody></table></div>
-      <div class="table-foot"><span id="table-range">—</span><div class="table-pages"><button id="table-prev" type="button" aria-label="Previous table page" disabled>←</button><button id="table-next" type="button" aria-label="Next table page" disabled>→</button></div></div>
+    <nav class="dashboard-section-nav" aria-label="Explorer sections"><a href="#team-broadcast">Overview</a><a href="#ap-board">Top 25</a><a href="#team-profile">Teams</a><a href="#player-explorer">Players</a><a href="#games-explorer">Games</a></nav>
+
+    <section id="team-broadcast" class="team-broadcast" aria-label="Selected FBS team spotlight" aria-live="polite">
+      <div id="team-watermark" class="team-watermark" aria-hidden="true"></div><div class="broadcast-identity"><div id="team-identity-logo" class="broadcast-logo"><span>FBS</span></div><div class="broadcast-nameplate"><span id="team-identity-kicker">2025 FBS / SEASON VIEW</span><h2 id="team-identity-name">ALL FBS TEAMS</h2><span class="broadcast-subtitle" id="team-identity-subtitle">TEAM PERFORMANCE</span></div></div>
+      <div class="broadcast-metrics"><div><span>RECORD</span><strong id="broadcast-record">—</strong><small>FILTERED GAMES</small></div><div><span id="team-rank-label">AP RANK</span><strong id="broadcast-rank">—</strong><small id="broadcast-rank-foot">SELECT A POLL</small></div><div><span>CONFERENCE RANK</span><strong id="broadcast-conference-rank">—</strong><small id="broadcast-conference-rank-foot">SELECT A TEAM</small></div><div><span>POINTS / GAME</span><strong id="broadcast-points">—</strong><small>NONMISSING SCORES</small></div><div><span>YARDS / GAME</span><strong id="broadcast-yards">—</strong><small>TEAM BOX SCORE</small></div><div><span>TEAM GAMES</span><strong id="broadcast-games">—</strong><small>FILTERED VIEW</small></div></div>
+      <div class="team-geography" aria-label="College football across America"><div class="geo-heading"><div><span class="panel-kicker">COLLEGE FOOTBALL ACROSS AMERICA</span><strong id="geo-title">The national footprint</strong></div><span class="geo-live-dot" aria-hidden="true"></span></div><div class="geo-map-stage"><svg id="team-geography-map" viewBox="0 0 640 380" role="img" aria-label="Regional map of college football programs"><g id="geo-states"></g><g id="geo-markers"></g></svg><div id="geo-map-unavailable" class="geo-map-unavailable" hidden><strong>MAP UNAVAILABLE</strong><span>Team and season statistics are still available.</span></div><div class="geo-national"><div class="geo-national-head"><span>NATIONAL LOCATOR</span><span id="geo-team-count">136 PROGRAMS</span></div><svg id="team-national-map" viewBox="0 0 640 380" role="img" aria-label="National locator showing FBS team locations and the current regional map extent"><g id="geo-national-states"></g><g id="geo-national-markers"></g><rect id="geo-national-window" class="geo-national-window" x="0" y="0" width="0" height="0" rx="5"/></svg></div><div class="geo-legend"><span><i class="legend-selected"></i>SELECTED PROGRAM</span><span><i class="legend-conference"></i>CONFERENCE</span><span><i class="legend-other"></i>OTHER FBS</span></div></div><div class="geo-location"><span class="geo-pin" aria-hidden="true">⌖</span><div><strong id="geo-location-title">United States</strong><span id="geo-location-text">136 FBS programs · 2025 season</span></div></div></div>
     </section>
-    <p class="dashboard-footnote"><strong>Reading the measure:</strong> EPA is average expected points added per actual play; positive defensive EPA means expected points denied. Actual-play views include special-teams events and exclude administrative rows. Success/explosive defensive rates count non-successful / non-explosive offense flags. Yardage uses `statYardage`; the source’s explosive flag is EPA-based. Filtering and calculations run in your browser after the CSV finishes loading.</p>
+
+    <section class="summary-grid" id="summary-cards" aria-label="Summary statistics for current filters"><div class="summary-card"><span class="summary-label">FBS games</span><strong class="summary-value" id="summary-games">—</strong><span class="summary-foot">Scheduled games matching filters</span></div><div class="summary-card"><span class="summary-label">Points per game</span><strong class="summary-value" id="summary-points">—</strong><span class="summary-foot">Mean of reported scores</span></div><div class="summary-card"><span class="summary-label">Total yards / game</span><strong class="summary-value" id="summary-yards">—</strong><span class="summary-foot">Reported team yardage</span></div><div class="summary-card"><span class="summary-label">Turnovers / game</span><strong class="summary-value" id="summary-turnovers">—</strong><span class="summary-foot">Team-reported total</span></div><div class="summary-card"><span class="summary-label">Players with selected stat</span><strong class="summary-value" id="summary-players">—</strong><span class="summary-foot">Player-season / game rows</span></div></section>
+
+    <section class="ap-board panel" id="ap-board" aria-labelledby="ap-board-title"><div class="ap-board-head"><div><span class="panel-kicker">THE OFFICIAL POLL / ALL 25 TEAMS</span><h3 id="ap-board-title">Selected AP snapshot</h3><p id="ap-board-caption">Select a ranked team to load its season-long ranking trail.</p></div><label class="field-control ap-poll-control"><span>RANKINGS · POLL PERIOD</span><select id="poll-filter"><option value="">Loading AP poll periods…</option></select></label></div><div id="ap-summary-grid" class="ap-summary-grid" aria-live="polite"></div><p id="ap-transition-list" class="chart-note" aria-live="polite"></p><div id="ap-board-list" class="ap-board-list" role="list" aria-label="All teams in the selected AP Top 25"></div></section>
+
+    <section class="chart-grid chart-grid-feature" aria-label="Team, player, and weekly trends"><article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">SEASON-LONG ARC</span><h2 id="rank-trend-title">Team rank timeline</h2></div><span class="chart-unit">RANK 1–25 / LOWER IS HIGHER</span></div><div id="chart-rank-trend" class="chart-canvas" role="img" aria-label="Selected team's official AP ranking timeline"></div><p id="rank-trend-summary" class="chart-note">Select a team to inspect its peak rank and weeks in the Top 25.</p></article>
+      <article id="team-chart-panel" class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">BOX SCORE / TEAM VIEW</span><h2 id="team-chart-title">Points per game by team</h2></div><span class="chart-unit" id="team-chart-unit">POINTS / GAME</span></div><div id="chart-teams" class="chart-canvas" role="img" aria-label="Team performance for current filters"></div></article>
+      <article id="player-chart-preview" class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">PLAYER LEADERS / SEASON TOTALS</span><h2 id="player-chart-title">Passing yards leaders</h2></div><span class="chart-unit" id="player-chart-unit">SEASON TOTAL</span></div><div id="chart-players" class="chart-canvas" role="img" aria-label="Player leaderboard for selected category"></div><p id="player-load-note" class="chart-note">Season aggregates loaded; choose a week to load game-level player statistics.</p></article>
+      <article class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">WEEKLY SCOREBOARD</span><h2 id="weekly-title">Regular-season scoring rhythm</h2></div><span class="chart-unit">POINTS / TEAM-GAME</span></div><div id="chart-weekly" class="chart-canvas" role="img" aria-label="Weekly scoring trend"></div></article>
+      <article id="games-explorer" class="chart-panel panel"><div class="chart-heading"><div><span class="panel-kicker">GAME DAY</span><h2>Recent finals in this view</h2></div><span class="chart-unit">SCHEDULE SCORE / NOT PREDICTION</span></div><div id="game-feature" class="dashboard-game-list" aria-live="polite"></div></article>
+    </section>
+
+    <section class="team-profile panel" id="team-profile"><div class="profile-title"><div><span class="panel-kicker">TEAM ROOM</span><h2 id="profile-heading">Season leaders</h2><p id="profile-caption">Select a team to open its season card.</p></div><div id="profile-logo" class="profile-logo" aria-hidden="true">FBS</div></div><div class="profile-leaders" id="team-leaders"></div></section>
+
+    <section id="player-explorer" class="leaderboard-panel panel" aria-labelledby="leaderboard-title"><div class="leaderboard-head"><div><span class="panel-kicker">THE FULL SEASON BOARD</span><h3 id="leaderboard-title">FBS player leaders</h3><p id="leaderboard-caption">Season totals from prepared player box scores. Select a row for the player card.</p><div id="leaderboard-selected-team" class="leaderboard-selected" aria-live="polite"></div></div><div class="leaderboard-tools"><label class="field-control"><span>Show ranks</span><select id="leaderboard-limit"><option value="10">Top 10</option><option value="25" selected>Top 25</option><option value="50">Top 50</option><option value="all">All players · selected team</option></select></label></div></div><div class="leaderboard-labels" aria-hidden="true"><span>RANK</span><span></span><span>PLAYER / JERSEY</span><span>POS</span><span>SCHOOL</span><span>G</span><span>SELECTED STAT</span><span>CONTEXT</span><span></span></div><div id="leaderboard-list" class="leaderboard-list" role="list" aria-label="Ranked FBS player leaderboard"></div><div id="player-detail" class="player-detail" hidden aria-live="polite"></div><p id="leaderboard-note" class="chart-note">Season totals load without the player-game file. Rates apply the attempt minimum shown in the selected statistic.</p></section>
+
+    <section class="table-panel panel" aria-labelledby="table-title"><div class="table-heading"><div><span class="panel-kicker">THE NUMBERS BEHIND THE VIEW</span><h2 id="table-title">Team standings &amp; production</h2><p id="table-caption">Grouped by team / calculated from the selected time and season filters.</p></div><label class="sort-control"><span>Sort rows</span><select id="table-sort"><option value="metric">Selected measure</option><option value="name">Name</option><option value="games">Games</option></select></label></div><div class="table-scroll"><table id="results-table"><thead><tr><th id="row-rank-heading">Rank</th><th>Team / group</th><th>W-L-T</th><th>Games</th><th id="measure-heading">Points / game</th><th>Yards / game</th><th>Turnovers</th><th>3rd down</th></tr></thead><tbody><tr><td colspan="8" class="empty-cell">Loading verified standings…</td></tr></tbody></table></div><div class="table-foot"><span id="table-range">—</span><div class="table-pages"><button id="table-prev" type="button" aria-label="Previous table page" disabled>←</button><button id="table-next" type="button" aria-label="Next table page" disabled>→</button></div></div></section>
+    <section class="method-mini"><strong>DATA NOTE</strong><p>Traditional totals come from the prepared ESPN/SportsDataverse box-score files. Rates use totals divided by reported opportunities. No AP ranks are estimated. The regular-season AP source has no Week 1 poll; preseason and final remain separately labeled. Game rank badges use the latest official AP poll published on or before each game date. Player-game statistics load only when a week or season type is selected.</p><a href="index.html#methodology">Full methodology ↗</a></section>
   </main>
-  <footer class="site-footer page-shell"><a class="brand-lockup footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name">SATURDAY<span>SIGNAL</span></span></a><span>PLAY BY PLAY, WITH PURPOSE.</span><a href="#main">BACK TO TOP ↑</a></footer>
+  <footer class="site-footer page-shell"><a class="brand-lockup footer-brand" href="index.html"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span class="brand-name" data-brand></span></a><span>THE 2025 FBS SEASON IN DATA</span><a href="#main">BACK TO TOP ↑</a></footer>
 </body>
 </html>
