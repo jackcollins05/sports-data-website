@@ -9,6 +9,12 @@ Saturday Signal is a static, browser-based college football analytics project. I
 
 Both pages use the same navigation, typography, palette, and responsive design system. They use relative local paths and can be hosted as a static GitHub Pages site. GitHub Pages has not been enabled as part of this project work.
 
+## Version 2 visual experience
+
+The report opens with a full-height stadium-field scene, restrained light beams, and season totals. Its findings reveal once as they enter view; headline figures count toward their verified values unless reduced motion is enabled. The team-offense finding uses an interactive efficiency × EPA-explosive-rate map for the ten highest qualifying offensive EPA averages among teams with at least 300 actual plays. Dashed crosshairs mark the unweighted means across those ten teams. Hover or keyboard-focus a point to read the exact EPA, explosive rate, success rate, and play count.
+
+The dashboard adds a broadcast-style team performance banner. Team selection changes the logo, primary/secondary branding accents, and filtered performance values while leaving the dark site palette in place. Existing static team metadata and initials fallback are retained. The CSV loading screen displays actual parsed-row progress; the dataset streams in 1 MiB chunks through Papa Parse without estimating progress. The hero field is static on mobile, and motion respects reduced-motion preferences.
+
 ## Data
 
 ### Source and row meaning
@@ -60,12 +66,12 @@ Run a small static server from the project root (opening HTML via `file://` will
 python3 -m http.server 8000
 ```
 
-Then visit `http://localhost:8000/` for the report or `http://localhost:8000/dashboard.html` for the dashboard. The dashboard downloads and parses the approximately 31.8 MB cleaned CSV in a web worker, then calculates filtered views in the browser. A network connection is required for the CDN chart/parser libraries, Google Fonts, and hosted team logos. If remote libraries or logo assets are unavailable, the page reports a data-load error or uses initials for missing logos; no backend service is required.
+Then visit `http://localhost:8000/` for the report or `http://localhost:8000/dashboard.html` for the dashboard. The dashboard streams the approximately 31.8 MB cleaned CSV in 1 MiB chunks, then calculates filtered views in the browser. A network connection is required for the CDN chart/parser libraries, Google Fonts, and hosted team logos. If remote libraries fail, the dashboard displays a data-load error; unavailable logos use initials. No backend service is required.
 
 ## Libraries and visual assets
 
 - [Apache ECharts 5.6.0](https://echarts.apache.org/) — interactive dashboard charts, loaded from jsDelivr on `dashboard.html` only.
-- [Papa Parse 5.4.1](https://www.papaparse.com/) — streamed, worker-backed browser CSV parsing, loaded from jsDelivr on `dashboard.html` only.
+- [Papa Parse 5.4.1](https://www.papaparse.com/) — streamed browser CSV parsing in 1 MiB chunks, loaded from jsDelivr on `dashboard.html` only.
 - Google Fonts — Barlow Condensed (display), Manrope (body), and DM Mono (numeric labels).
 - A small custom Canvas 2D stadium-field illustration runs behind the report hero. It is decorative, noninteractive, pauses outside the viewport, uses a low device-pixel ratio, and becomes static when reduced motion is requested; the report remains complete without it.
 
@@ -80,8 +86,8 @@ Then visit `http://localhost:8000/` for the report or `http://localhost:8000/das
 | `css/styles.css` | Shared design tokens, layout, accessible focus treatment, charts, and responsive styles. |
 | `js/common.js` | Shared number formatting, HTML escaping, and team initials helper. |
 | `js/field.js` | Lightweight canvas field visual with reduced-motion and visibility handling. |
-| `js/report.js` | Loads verified findings JSON and renders report cards, story index, and comparison charts. |
-| `js/dashboard.js` | Worker-backed CSV loading, filters, aggregations, dashboard charts, team accents, and table behavior. |
+| `js/report.js` | Loads verified findings JSON and renders report cards, story index, scroll reveals, comparison charts, and the accessible team signal map. |
+| `js/dashboard.js` | Chunked CSV loading, filters, aggregations, dashboard charts, team performance banner, loading feedback, and table behavior. |
 | `data/cfb_pbp_2025_dashboard.csv` | All 166,053 source rows reduced to the 24 retained fields; 31,782,613 bytes. |
 | `data/report_findings.json` | Machine-readable, script-generated report findings, chart data, definitions, and validation results. |
 | `data/team_branding.json` | Static 2025 team names, colors, conference/division metadata, and logo URLs for 236 teams. |

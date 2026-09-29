@@ -1,0 +1,959 @@
+game_id,season,week,season_type,game_date,home_team_id,home_team,home_abbreviation,home_division,home_score,away_team_id,away_team,away_abbreviation,away_division,away_score,winner_team_id,winner,venue,attendance,status,neutral_site,conference_competition
+401767509,2025,1,2,2025-08-30T16:00Z,2643,The Citadel Bulldogs,CIT,FCS,0,2449,North Dakota State Bison,NDSU,FCS,38,2449,North Dakota State Bison,Johnson Hagood Stadium,10691,STATUS_FINAL,false,false
+401767130,2025,1,2,2025-08-30T23:00Z,2571,South Dakota State Jackrabbits,SDST,FCS,20,16,Sacramento State Hornets,SAC,FCS,3,2571,South Dakota State Jackrabbits,Dana J. Dykhouse Stadium,19163,STATUS_FINAL,false,false
+401767224,2025,2,2,2025-09-06T18:30Z,2634,Tennessee State Tigers,TNST,FCS,3,2449,North Dakota State Bison,NDSU,FCS,59,2449,North Dakota State Bison,Nissan Stadium,8569,STATUS_FINAL,false,false
+401767217,2025,3,2,2025-09-13T19:30Z,2449,North Dakota State Bison,NDSU,FCS,41,2546,Southeast Missouri State Redhawks,SEMO,FCS,14,2449,North Dakota State Bison,Fargodome,17354,STATUS_FINAL,false,false
+401767131,2025,3,2,2025-09-14T01:00Z,16,Sacramento State Hornets,SAC,FCS,49,2385,Mercyhurst Lakers,MERC,FCS,28,16,Sacramento State Hornets,Hornet Stadium,12231,STATUS_FINAL,false,false
+401767132,2025,4,2,2025-09-21T01:00Z,16,Sacramento State Hornets,SAC,FCS,45,2110,Central Arkansas Bears,CARK,FCS,16,16,Sacramento State Hornets,Hornet Stadium,13253,STATUS_FINAL,false,false
+401767510,2025,5,2,2025-09-27T18:00Z,2449,North Dakota State Bison,NDSU,FCS,51,233,South Dakota Coyotes,SDAK,FCS,13,2449,North Dakota State Bison,Fargodome,18498,STATUS_FINAL,false,true
+401767073,2025,5,2,2025-09-28T01:00Z,16,Sacramento State Hornets,SAC,FCS,24,13,Cal Poly Mustangs,CP,FCS,32,13,Cal Poly Mustangs,Hornet Stadium,15016,STATUS_FINAL,false,true
+401767438,2025,6,2,2025-10-04T23:00Z,2287,Illinois State Redbirds,ILST,FCS,16,2449,North Dakota State Bison,NDSU,FCS,33,2449,North Dakota State Bison,Hancock Stadium,9829,STATUS_FINAL,false,true
+401767511,2025,7,2,2025-10-11T19:30Z,2449,North Dakota State Bison,NDSU,FCS,45,79,Southern Illinois Salukis,SIU,FCS,17,2449,North Dakota State Bison,Fargodome,15812,STATUS_FINAL,false,true
+401767133,2025,7,2,2025-10-12T00:00Z,2692,Weber State Wildcats,WEB,FCS,27,16,Sacramento State Hornets,SAC,FCS,55,16,Sacramento State Hornets,Stewart Stadium,2126,STATUS_FINAL,false,true
+401767449,2025,8,2,2025-10-18T17:00Z,282,Indiana State Sycamores,INST,FCS,7,2449,North Dakota State Bison,NDSU,FCS,38,2449,North Dakota State Bison,"Memorial Stadium (Terre Haute, IN)",3252,STATUS_FINAL,false,true
+401767123,2025,8,2,2025-10-19T01:00Z,16,Sacramento State Hornets,SAC,FCS,40,2458,Northern Colorado Bears,UNCO,FCS,35,16,Sacramento State Hornets,Hornet Stadium,20022,STATUS_FINAL,false,true
+401767101,2025,9,2,2025-10-25T02:35Z,16,Sacramento State Hornets,SAC,FCS,35,149,Montana Grizzlies,MONT,FCS,49,149,Montana Grizzlies,Hornet Stadium,18029,STATUS_FINAL,false,true
+401767512,2025,9,2,2025-10-26T00:00Z,2571,South Dakota State Jackrabbits,SDST,FCS,7,2449,North Dakota State Bison,NDSU,FCS,38,2449,North Dakota State Bison,Dana J. Dykhouse Stadium,19477,STATUS_FINAL,false,true
+401767513,2025,10,2,2025-11-01T19:30Z,2449,North Dakota State Bison,NDSU,FCS,38,2754,Youngstown State Penguins,YSU,FCS,30,2449,North Dakota State Bison,Fargodome,14607,STATUS_FINAL,false,true
+401767066,2025,10,2,2025-11-01T20:00Z,331,Eastern Washington Eagles,EWU,FCS,13,16,Sacramento State Hornets,SAC,FCS,35,16,Sacramento State Hornets,Roos Field,4356,STATUS_FINAL,false,true
+401767507,2025,11,2,2025-11-08T19:00Z,155,North Dakota Fighting Hawks,UND,FCS,10,2449,North Dakota State Bison,NDSU,FCS,15,2449,North Dakota State Bison,Alerus Center,12749,STATUS_FINAL,false,true
+401767129,2025,11,2,2025-11-08T22:00Z,2502,Portland State Vikings,PRST,FCS,24,16,Sacramento State Hornets,SAC,FCS,52,16,Sacramento State Hornets,Hillsboro Stadium,1284,STATUS_FINAL,false,true
+401767514,2025,12,2,2025-11-15T20:30Z,2449,North Dakota State Bison,NDSU,FCS,48,2460,Northern Iowa Panthers,UNI,FCS,16,2449,North Dakota State Bison,Fargodome,14736,STATUS_FINAL,false,true
+401767096,2025,12,2,2025-11-16T02:00Z,16,Sacramento State Hornets,SAC,FCS,23,70,Idaho Vandals,IDHO,FCS,20,16,Sacramento State Hornets,Hornet Stadium,15467,STATUS_FINAL,false,true
+401767515,2025,13,2,2025-11-22T20:30Z,2449,North Dakota State Bison,NDSU,FCS,62,2900,St. Thomas-Minnesota Tommies,STMN,FCS,7,2449,North Dakota State Bison,Fargodome,15278,STATUS_FINAL,false,false
+401767134,2025,13,2,2025-11-22T21:00Z,302,UC Davis Aggies,UCD,FCS,31,16,Sacramento State Hornets,SAC,FCS,27,302,UC Davis Aggies,UC Davis Health Stadium,14590,STATUS_FINAL,false,true
+401836198,2025,15,2,2025-12-06T18:00Z,2449,North Dakota State Bison,NDSU,FCS,28,2287,Illinois State Redbirds,ILST,FCS,29,2287,Illinois State Redbirds,Fargodome,10464,STATUS_FINAL,false,false
+401756846,2025,1,2,2025-08-23T16:00Z,2306,Kansas State Wildcats,KSU,FBS,21,66,Iowa State Cyclones,ISU,FBS,24,66,Iowa State Cyclones,Aviva Stadium,47221,STATUS_FINAL,true,true
+401760371,2025,1,2,2025-08-23T20:00Z,2439,UNLV Rebels,UNLV,FBS,38,304,Idaho State Bengals,IDST,FCS,31,2439,UNLV Rebels,Allegiant Stadium,25723,STATUS_FINAL,false,false
+401756847,2025,1,2,2025-08-23T22:30Z,2305,Kansas Jayhawks,KU,FBS,31,278,Fresno State Bulldogs,FRES,FBS,7,2305,Kansas Jayhawks,David Booth Kansas Memorial Stadium,41525,STATUS_FINAL,false,false
+401757218,2025,1,2,2025-08-23T23:00Z,98,Western Kentucky Hilltoppers,WKU,FBS,41,2534,Sam Houston Bearkats,SHSU,FBS,24,98,Western Kentucky Hilltoppers,Houchens Industries-L.T. Smith Stadium,15312,STATUS_FINAL,false,true
+401754516,2025,1,2,2025-08-23T23:30Z,62,Hawai'i Rainbow Warriors,HAW,FBS,23,24,Stanford Cardinal,STAN,FBS,20,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,15194,STATUS_FINAL,false,false
+401762522,2025,1,2,2025-08-28T21:30Z,58,South Florida Bulls,USF,FBS,34,68,Boise State Broncos,BOIS,FBS,7,58,South Florida Bulls,Raymond James Stadium,34707,STATUS_FINAL,false,false
+401752794,2025,1,2,2025-08-28T22:00Z,164,Rutgers Scarlet Knights,RUTG,FBS,34,195,Ohio Bobcats,OHIO,FBS,31,164,Rutgers Scarlet Knights,SHI Stadium,46907,STATUS_FINAL,false,false
+401762790,2025,1,2,2025-08-28T22:00Z,189,Bowling Green Falcons,BGSU,FBS,26,322,Lafayette Leopards,LAF,FCS,7,189,Bowling Green Falcons,Doyt L. Perry Stadium,19328,STATUS_FINAL,false,false
+401754373,2025,1,2,2025-08-28T23:00Z,152,NC State Wolfpack,NCSU,FBS,24,151,East Carolina Pirates,ECU,FBS,17,152,NC State Wolfpack,Carter-Finley Stadium,56919,STATUS_FINAL,false,false
+401756848,2025,1,2,2025-08-28T23:00Z,2116,UCF Knights,UCF,FBS,17,55,Jacksonville State Gamecocks,JVST,FBS,10,2116,UCF Knights,Acrisure Bounce House,43043,STATUS_FINAL,false,false
+401757219,2025,1,2,2025-08-28T23:00Z,48,Delaware Blue Hens,DEL,FBS,35,2169,Delaware State Hornets,DSU,FCS,17,48,Delaware Blue Hens,Delaware Stadium,17895,STATUS_FINAL,false,false
+401761588,2025,1,2,2025-08-28T23:00Z,2433,UL Monroe Warhawks,ULM,FBS,29,2598,Saint Francis Red Flash,SFPA,FCS,0,2433,UL Monroe Warhawks,Malone Stadium,12459,STATUS_FINAL,false,false
+401762789,2025,1,2,2025-08-28T23:00Z,2006,Akron Zips,AKR,FBS,0,2751,Wyoming Cowboys,WYO,FBS,10,2751,Wyoming Cowboys,InfoCision Stadium,9138,STATUS_FINAL,false,false
+401752674,2025,1,2,2025-08-28T23:30Z,142,Missouri Tigers,MIZ,FBS,61,2110,Central Arkansas Bears,CARK,FCS,6,142,Missouri Tigers,Memorial Stadium,57321,STATUS_FINAL,false,false
+401754517,2025,1,2,2025-08-28T23:30Z,150,Duke Blue Devils,DUKE,FBS,45,2210,Elon Phoenix,ELON,FCS,17,150,Duke Blue Devils,Wallace Wade Stadium,15677,STATUS_FINAL,false,false
+401756876,2025,1,2,2025-08-28T23:30Z,197,Oklahoma State Cowboys,OKST,FBS,27,2630,UT Martin Skyhawks,UTM,FCS,7,197,Oklahoma State Cowboys,Boone Pickens Stadium,44809,STATUS_FINAL,false,false
+401752793,2025,1,2,2025-08-29T00:00Z,135,Minnesota Golden Gophers,MINN,FBS,23,2084,Buffalo Bulls,BUFF,FBS,10,135,Minnesota Golden Gophers,Huntington Bank Stadium,47774,STATUS_FINAL,false,false
+401756852,2025,1,2,2025-08-29T00:00Z,248,Houston Cougars,HOU,FBS,27,2617,Stephen F. Austin Lumberjacks,SFA,FCS,0,248,Houston Cougars,TDECU Stadium,28150,STATUS_FINAL,false,false
+401762430,2025,1,2,2025-08-29T00:30Z,5,UAB Blazers,UAB,FBS,52,2011,Alabama State Hornets,ALST,FCS,42,5,UAB Blazers,Protective Stadium,26294,STATUS_FINAL,false,false
+401752796,2025,1,2,2025-08-29T01:00Z,2132,Cincinnati Bearcats,CIN,FBS,17,158,Nebraska Cornhuskers,NEB,FBS,20,158,Nebraska Cornhuskers,GEHA Field at Arrowhead Stadium,72884,STATUS_FINAL,true,false
+401762791,2025,1,2,2025-08-29T01:00Z,275,Wisconsin Badgers,WIS,FBS,17,193,Miami (OH) RedHawks,M-OH,FBS,0,275,Wisconsin Badgers,Camp Randall Stadium,65952,STATUS_FINAL,false,false
+401760357,2025,1,2,2025-08-29T02:00Z,21,San Diego State Aztecs,SDSU,FBS,42,2619,Stony Brook Seawolves,STBK,FCS,0,21,San Diego State Aztecs,Snapdragon Stadium,20624,STATUS_FINAL,false,false
+401752795,2025,1,2,2025-08-29T23:30Z,356,Illinois Fighting Illini,ILL,FBS,52,2710,Western Illinois Leathernecks,WIU,FCS,3,356,Illinois Fighting Illini,Gies Memorial Stadium,56040,STATUS_FINAL,false,false
+401762432,2025,1,2,2025-08-29T22:00Z,349,Army Black Knights,ARMY,FBS,27,2627,Tarleton State Texans,TAR,FCS,30,2627,Tarleton State Texans,Michie Stadium,23032,STATUS_FINAL,false,false
+401752802,2025,1,2,2025-08-29T23:00Z,127,Michigan State Spartans,MSU,FBS,23,2711,Western Michigan Broncos,WMU,FBS,6,127,Michigan State Spartans,Spartan Stadium,71657,STATUS_FINAL,false,false
+401754374,2025,1,2,2025-08-29T23:00Z,154,Wake Forest Demon Deacons,WAKE,FBS,10,338,Kennesaw State Owls,KENN,FBS,9,154,Wake Forest Demon Deacons,Allegacy Federal Credit Union Stadium,30789,STATUS_FINAL,false,false
+401761589,2025,1,2,2025-08-29T23:00Z,2429,Charlotte 49ers,CLT,FBS,11,2026,App State Mountaineers,APP,FBS,34,2026,App State Mountaineers,Bank of America Stadium,35718,STATUS_FINAL,true,false
+401756854,2025,1,2,2025-08-29T23:30Z,2305,Kansas Jayhawks,KU,FBS,46,2681,Wagner Seahawks,WAG,FCS,7,2305,Kansas Jayhawks,David Booth Kansas Memorial Stadium,39129,STATUS_FINAL,false,false
+401752667,2025,1,2,2025-08-30T00:00Z,239,Baylor Bears,BAY,FBS,24,2,Auburn Tigers,AUB,FBS,38,2,Auburn Tigers,McLane Stadium,45233,STATUS_FINAL,false,false
+401754375,2025,1,2,2025-08-30T00:00Z,38,Colorado Buffaloes,COLO,FBS,20,59,Georgia Tech Yellow Jackets,GT,FBS,27,59,Georgia Tech Yellow Jackets,Folsom Field,52868,STATUS_FINAL,false,false
+401766898,2025,1,2,2025-08-30T00:15Z,2229,Florida International Panthers,FIU,FBS,42,2065,Bethune-Cookman Wildcats,BCU,FCS,9,2229,Florida International Panthers,Pitbull Stadium,18034,STATUS_FINAL,false,false
+401757224,2025,1,2,2025-08-30T01:30Z,2534,Sam Houston Bearkats,SHSU,FBS,21,2439,UNLV Rebels,UNLV,FBS,38,2439,UNLV Rebels,Shell Energy Stadium,5837,STATUS_FINAL,false,false
+401760358,2025,1,2,2025-08-30T02:30Z,23,San José State Spartans,SJSU,FBS,14,2117,Central Michigan Chippewas,CMU,FBS,16,2117,Central Michigan Chippewas,CEFCU Stadium,14877,STATUS_FINAL,false,false
+401752677,2025,1,2,2025-08-30T16:00Z,194,Ohio State Buckeyes,OSU,FBS,14,251,Texas Longhorns,TEX,FBS,7,194,Ohio State Buckeyes,Ohio Stadium,107524,STATUS_FINAL,false,false
+401752807,2025,1,2,2025-08-30T19:30Z,213,Penn State Nittany Lions,PSU,FBS,46,2440,Nevada Wolf Pack,NEV,FBS,11,213,Penn State Nittany Lions,Beaver Stadium,106915,STATUS_FINAL,false,false
+401752671,2025,1,2,2025-08-30T23:30Z,228,Clemson Tigers,CLEM,FBS,10,99,LSU Tigers,LSU,FBS,17,99,LSU Tigers,"Memorial Stadium (Clemson, SC)",81500,STATUS_FINAL,false,false
+401752669,2025,1,2,2025-08-30T19:30Z,61,Georgia Bulldogs,UGA,FBS,45,276,Marshall Thundering Herd,MRSH,FBS,7,61,Georgia Bulldogs,Sanford Stadium,93033,STATUS_FINAL,false,false
+401752804,2025,1,2,2025-08-30T20:00Z,2483,Oregon Ducks,ORE,FBS,59,147,Montana State Bobcats,MTST,FCS,13,2483,Oregon Ducks,Autzen Stadium,57257,STATUS_FINAL,false,false
+401752665,2025,1,2,2025-08-30T19:30Z,52,Florida State Seminoles,FSU,FBS,31,333,Alabama Crimson Tide,ALA,FBS,17,52,Florida State Seminoles,Doak Campbell Stadium,67277,STATUS_FINAL,false,false
+401756850,2025,1,2,2025-08-31T02:00Z,9,Arizona State Sun Devils,ASU,FBS,38,2464,Northern Arizona Lumberjacks,NAU,FCS,19,9,Arizona State Sun Devils,Mountain America Stadium,56759,STATUS_FINAL,false,false
+401752808,2025,1,2,2025-08-30T23:30Z,130,Michigan Wolverines,MICH,FBS,34,167,New Mexico Lobos,UNM,FBS,17,130,Michigan Wolverines,Michigan Stadium,110648,STATUS_FINAL,false,false
+401752668,2025,1,2,2025-08-30T23:00Z,57,Florida Gators,FLA,FBS,55,2341,Long Island University Sharks,LIU,FCS,0,57,Florida Gators,Ben Hill Griffin Stadium,89451,STATUS_FINAL,false,false
+401754521,2025,1,2,2025-08-31T01:15Z,2567,SMU Mustangs,SMU,FBS,42,2837,East Texas A&M Lions,ETAM,FCS,13,2567,SMU Mustangs,Gerald J. Ford Stadium,33044,STATUS_FINAL,false,false
+401756855,2025,1,2,2025-08-30T23:00Z,2306,Kansas State Wildcats,KSU,FBS,38,155,North Dakota Fighting Hawks,UND,FCS,35,2306,Kansas State Wildcats,Bill Snyder Family Stadium,51927,STATUS_FINAL,false,false
+401752675,2025,1,2,2025-08-30T22:00Z,201,Oklahoma Sooners,OU,FBS,35,2287,Illinois State Redbirds,ILST,FCS,3,201,Oklahoma Sooners,"Memorial Stadium (Norman, OK)",83218,STATUS_FINAL,false,false
+401752678,2025,1,2,2025-08-30T23:00Z,245,Texas A&M Aggies,TA&M,FBS,42,2636,UTSA Roadrunners,UTSA,FBS,24,245,Texas A&M Aggies,Kyle Field,107521,STATUS_FINAL,false,false
+401752806,2025,1,2,2025-08-30T18:30Z,84,Indiana Hoosiers,IU,FBS,27,295,Old Dominion Monarchs,ODU,FBS,14,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",47109,STATUS_FINAL,false,false
+401752672,2025,1,2,2025-08-30T23:45Z,145,Ole Miss Rebels,MISS,FBS,63,2247,Georgia State Panthers,GAST,FBS,7,145,Ole Miss Rebels,Vaught-Hemingway Stadium,66378,STATUS_FINAL,false,false
+401756853,2025,1,2,2025-08-30T19:30Z,66,Iowa State Cyclones,ISU,FBS,55,233,South Dakota Coyotes,SDAK,FCS,7,66,Iowa State Cyclones,Jack Trice Stadium,61500,STATUS_FINAL,false,false
+401756877,2025,1,2,2025-08-30T23:30Z,2641,Texas Tech Red Raiders,TTU,FBS,67,2029,Arkansas-Pine Bluff Golden Lions,UAPB,FCS,7,2641,Texas Tech Red Raiders,Galaxy Stadium,60229,STATUS_FINAL,false,false
+401752676,2025,1,2,2025-08-30T16:00Z,2633,Tennessee Volunteers,TENN,FBS,45,183,Syracuse Orange,SYR,FBS,26,2633,Tennessee Volunteers,Mercedes-Benz Stadium,45918,STATUS_FINAL,true,false
+401752673,2025,1,2,2025-08-30T16:00Z,2572,Southern Miss Golden Eagles,USM,FBS,17,344,Mississippi State Bulldogs,MSST,FBS,34,344,Mississippi State Bulldogs,M. M. Roberts Stadium,33485,STATUS_FINAL,false,false
+401752797,2025,1,2,2025-08-30T16:00Z,120,Maryland Terrapins,MD,FBS,39,2226,Florida Atlantic Owls,FAU,FBS,7,120,Maryland Terrapins,SECU Stadium,35067,STATUS_FINAL,false,false
+401752801,2025,1,2,2025-08-30T16:00Z,2509,Purdue Boilermakers,PUR,FBS,31,2050,Ball State Cardinals,BALL,FBS,0,2509,Purdue Boilermakers,Ross-Ade Stadium,53994,STATUS_FINAL,false,false
+401752803,2025,1,2,2025-08-30T16:00Z,2655,Tulane Green Wave,TULN,FBS,23,77,Northwestern Wildcats,NU,FBS,3,2655,Tulane Green Wave,Yulman Stadium,22103,STATUS_FINAL,false,false
+401754520,2025,1,2,2025-08-30T16:00Z,221,Pittsburgh Panthers,PITT,FBS,61,2184,Duquesne Dukes,DUQ,FCS,9,221,Pittsburgh Panthers,Acrisure Stadium,53006,STATUS_FINAL,false,false
+401762434,2025,1,2,2025-08-30T16:00Z,2426,Navy Midshipmen,NAVY,FBS,52,2678,VMI Keydets,VMI,FCS,7,2426,Navy Midshipmen,Navy-Marine Corps Memorial Stadium,30014,STATUS_FINAL,false,false
+401762792,2025,1,2,2025-08-30T16:00Z,2309,Kent State Golden Flashes,KENT,FBS,21,2771,Merrimack Warriors,MRMK,FCS,17,2309,Kent State Golden Flashes,Zoeller Field at Dix Stadium,8647,STATUS_FINAL,false,false
+401752670,2025,1,2,2025-08-30T16:45Z,96,Kentucky Wildcats,UK,FBS,24,2649,Toledo Rockets,TOL,FBS,16,96,Kentucky Wildcats,Kroger Field,56457,STATUS_FINAL,false,false
+401754518,2025,1,2,2025-08-30T18:00Z,103,Boston College Eagles,BC,FBS,66,2230,Fordham Rams,FOR,FCS,10,103,Boston College Eagles,"Alumni Stadium (Chestnut Hill, MA)",41221,STATUS_FINAL,false,false
+401756878,2025,1,2,2025-08-30T18:00Z,277,West Virginia Mountaineers,WVU,FBS,45,2523,Robert Morris Colonials,RMU,FCS,3,277,West Virginia Mountaineers,Milan Puskar Stadium,57093,STATUS_FINAL,false,false
+401757167,2025,1,2,2025-08-30T18:00Z,41,UConn Huskies,CONN,FBS,59,2115,Central Connecticut Blue Devils,CCSU,FCS,13,41,UConn Huskies,Pratt & Whitney Stadium,37594,STATUS_FINAL,false,false
+401754519,2025,1,2,2025-08-30T19:00Z,97,Louisville Cardinals,LOU,FBS,51,2198,Eastern Kentucky Colonels,EKU,FCS,17,97,Louisville Cardinals,L&N Federal Credit Union Stadium,50536,STATUS_FINAL,false,false
+401760359,2025,1,2,2025-08-30T19:30Z,2005,Air Force Falcons,AFA,FBS,49,2083,Bucknell Bison,BUCK,FCS,13,2005,Air Force Falcons,Falcon Stadium,30207,STATUS_FINAL,false,false
+401762456,2025,1,2,2025-08-30T19:30Z,113,Massachusetts Minutemen,MASS,FBS,10,218,Temple Owls,TEM,FBS,42,218,Temple Owls,Warren McGuirk Alumni Stadium,11565,STATUS_FINAL,false,false
+401762793,2025,1,2,2025-08-30T19:30Z,2459,Northern Illinois Huskies,NIU,FBS,19,107,Holy Cross Crusaders,HC,FCS,17,2459,Northern Illinois Huskies,Huskie Stadium,10569,STATUS_FINAL,false,false
+401757220,2025,1,2,2025-08-30T20:00Z,2335,Liberty Flames,LIB,FBS,28,311,Maine Black Bears,ME,FCS,7,2335,Liberty Flames,Williams Stadium (VA),20337,STATUS_FINAL,false,false
+401752666,2025,1,2,2025-08-30T20:15Z,8,Arkansas Razorbacks,ARK,FBS,52,2010,Alabama A&M Bulldogs,AAMU,FCS,7,8,Arkansas Razorbacks,Donald W. Reynolds Razorback Stadium,70827,STATUS_FINAL,false,false
+401762433,2025,1,2,2025-08-30T20:30Z,235,Memphis Tigers,MEM,FBS,45,236,Chattanooga Mocs,UTC,FCS,10,235,Memphis Tigers,Simmons Bank Liberty Stadium,25011,STATUS_FINAL,false,false
+401752799,2025,1,2,2025-08-30T22:00Z,2294,Iowa Hawkeyes,IOWA,FBS,34,399,UAlbany Great Danes,ALB,FCS,7,2294,Iowa Hawkeyes,Kinnick Stadium,69250,STATUS_FINAL,false,false
+401754616,2025,1,2,2025-08-30T22:00Z,258,Virginia Cavaliers,UVA,FBS,48,324,Coastal Carolina Chanticleers,CCU,FBS,7,258,Virginia Cavaliers,Scott Stadium,46143,STATUS_FINAL,false,false
+401761590,2025,1,2,2025-08-30T22:00Z,256,James Madison Dukes,JMU,FBS,45,2692,Weber State Wildcats,WEB,FCS,10,256,James Madison Dukes,Bridgeforth Stadium,24965,STATUS_FINAL,false,false
+401752679,2025,1,2,2025-08-30T23:00Z,238,Vanderbilt Commodores,VAN,FBS,45,2127,Charleston Southern Buccaneers,CHSO,FCS,3,238,Vanderbilt Commodores,FirstBank Stadium,35000,STATUS_FINAL,false,false
+401757222,2025,1,2,2025-08-30T23:00Z,2393,Middle Tennessee Blue Raiders,MTSU,FBS,14,2046,Austin Peay Governors,APSU,FCS,34,2046,Austin Peay Governors,"Johnny ""Red"" Floyd Stadium",18505,STATUS_FINAL,false,false
+401757226,2025,1,2,2025-08-30T23:00Z,98,Western Kentucky Hilltoppers,WKU,FBS,55,2453,North Alabama Lions,UNA,FCS,6,98,Western Kentucky Hilltoppers,Houchens Industries-L.T. Smith Stadium,12226,STATUS_FINAL,false,false
+401761591,2025,1,2,2025-08-30T23:00Z,2032,Arkansas State Red Wolves,ARST,FBS,42,2546,Southeast Missouri State Redhawks,SEMO,FCS,24,2032,Arkansas State Red Wolves,Centennial Bank Stadium,18241,STATUS_FINAL,false,false
+401761593,2025,1,2,2025-08-30T23:00Z,6,South Alabama Jaguars,USA,FBS,38,2415,Morgan State Bears,MORG,FCS,21,6,South Alabama Jaguars,Hancock Whitney Stadium,14017,STATUS_FINAL,false,false
+401761595,2025,1,2,2025-08-30T23:00Z,2653,Troy Trojans,TROY,FBS,38,2447,Nicholls Colonels,NICH,FCS,20,2653,Troy Trojans,Veterans Memorial Stadium (AL),25546,STATUS_FINAL,false,false
+401752798,2025,1,2,2025-08-30T23:30Z,30,USC Trojans,USC,FBS,73,2623,Missouri State Bears,MOST,FBS,13,30,USC Trojans,Los Angeles Memorial Coliseum,62841,STATUS_FINAL,false,false
+401757221,2025,1,2,2025-08-30T23:30Z,2348,Louisiana Tech Bulldogs,LT,FBS,24,2545,SE Louisiana Lions,SELA,FCS,0,2348,Louisiana Tech Bulldogs,Joe Aillet Stadium,12872,STATUS_FINAL,false,false
+401757225,2025,1,2,2025-08-30T23:30Z,328,Utah State Aggies,USU,FBS,28,2638,UTEP Miners,UTEP,FBS,16,328,Utah State Aggies,Maverik Stadium,16448,STATUS_FINAL,false,false
+401756851,2025,1,2,2025-08-31T00:00Z,252,BYU Cougars,BYU,FBS,69,2502,Portland State Vikings,PRST,FCS,0,252,BYU Cougars,LaVell Edwards Stadium,64494,STATUS_FINAL,false,false
+401761592,2025,1,2,2025-08-31T00:00Z,309,Louisiana Ragin' Cajuns,UL,FBS,12,242,Rice Owls,RICE,FBS,14,242,Rice Owls,Our Lady of Lourdes Stadium,22148,STATUS_FINAL,false,false
+401761594,2025,1,2,2025-08-31T00:00Z,326,Texas State Bobcats,TXST,FBS,52,2199,Eastern Michigan Eagles,EMU,FBS,27,326,Texas State Bobcats,UFCU Stadium,21082,STATUS_FINAL,false,false
+401762435,2025,1,2,2025-08-31T00:00Z,249,North Texas Mean Green,UNT,FBS,51,2320,Lamar Cardinals,LAM,FCS,0,249,North Texas Mean Green,DATCU Stadium,20594,STATUS_FINAL,false,false
+401762457,2025,1,2,2025-08-31T00:00Z,202,Tulsa Golden Hurricane,TLSA,FBS,35,2000,Abilene Christian Wildcats,ACU,FCS,7,202,Tulsa Golden Hurricane,H. A. Chapman Stadium,17337,STATUS_FINAL,false,false
+401757223,2025,1,2,2025-08-31T01:00Z,166,New Mexico State Aggies,NMSU,FBS,19,2803,Bryant Bulldogs,BRY,FCS,3,166,New Mexico State Aggies,Aggie Memorial Stadium,10058,STATUS_FINAL,false,false
+401760361,2025,1,2,2025-08-31T01:30Z,278,Fresno State Bulldogs,FRES,FBS,42,290,Georgia Southern Eagles,GASO,FBS,14,278,Fresno State Bulldogs,Valley Children's Stadium,36801,STATUS_FINAL,false,false
+401752947,2025,1,2,2025-08-31T02:00Z,265,Washington State Cougars,WSU,FBS,13,70,Idaho Vandals,IDHO,FCS,10,265,Washington State Cougars,Martin Stadium,28243,STATUS_FINAL,false,false
+401752936,2025,1,2,2025-08-31T02:30Z,204,Oregon State Beavers,ORST,FBS,15,25,California Golden Bears,CAL,FBS,34,25,California Golden Bears,Reser Stadium,31630,STATUS_FINAL,false,false
+401756849,2025,1,2,2025-08-31T02:30Z,12,Arizona Wildcats,ARIZ,FBS,40,62,Hawai'i Rainbow Warriors,HAW,FBS,6,12,Arizona Wildcats,Casino Del Sol Stadium,42423,STATUS_FINAL,false,false
+401752800,2025,1,2,2025-08-31T03:00Z,26,UCLA Bruins,UCLA,FBS,10,254,Utah Utes,UTAH,FBS,43,254,Utah Utes,Rose Bowl,35032,STATUS_FINAL,false,false
+401752805,2025,1,2,2025-08-31T03:00Z,264,Washington Huskies,WASH,FBS,38,36,Colorado State Rams,CSU,FBS,21,264,Washington Huskies,Husky Stadium,67778,STATUS_FINAL,false,false
+401754522,2025,1,2,2025-08-31T23:30Z,2390,Miami Hurricanes,MIA,FBS,27,87,Notre Dame Fighting Irish,ND,FBS,24,2390,Miami Hurricanes,Hard Rock Stadium,66793,STATUS_FINAL,false,false
+401752680,2025,1,2,2025-08-31T19:00Z,2579,South Carolina Gamecocks,SC,FBS,24,259,Virginia Tech Hokies,VT,FBS,11,2579,South Carolina Gamecocks,Mercedes-Benz Stadium,55531,STATUS_FINAL,true,false
+401754523,2025,1,2,2025-09-02T00:00Z,153,North Carolina Tar Heels,UNC,FBS,14,2628,TCU Horned Frogs,TCU,FBS,48,2628,TCU Horned Frogs,Kenan Stadium,50500,STATUS_FINAL,false,false
+401754528,2025,2,2,2025-09-05T23:00Z,97,Louisville Cardinals,LOU,FBS,28,256,James Madison Dukes,JMU,FBS,14,97,Louisville Cardinals,L&N Federal Credit Union Stadium,48717,STATUS_FINAL,false,false
+401752817,2025,2,2,2025-09-05T23:30Z,77,Northwestern Wildcats,NU,FBS,42,2710,Western Illinois Leathernecks,WIU,FCS,7,77,Northwestern Wildcats,Northwestern Medicine Field at Martin Stadium,9647,STATUS_FINAL,false,false
+401752826,2025,2,2,2025-09-05T23:30Z,120,Maryland Terrapins,MD,FBS,20,2459,Northern Illinois Huskies,NIU,FBS,9,120,Maryland Terrapins,SECU Stadium,35331,STATUS_FINAL,false,false
+401760363,2025,2,2,2025-09-06T01:00Z,68,Boise State Broncos,BOIS,FBS,51,331,Eastern Washington Eagles,EWU,FCS,14,68,Boise State Broncos,Albertsons Stadium,32887,STATUS_FINAL,false,false
+401752815,2025,2,2,2025-09-06T19:30Z,194,Ohio State Buckeyes,OSU,FBS,70,2755,Grambling Tigers,GRAM,FCS,0,194,Ohio State Buckeyes,Ohio Stadium,100624,STATUS_FINAL,false,false
+401752811,2025,2,2,2025-09-06T16:00Z,213,Penn State Nittany Lions,PSU,FBS,34,2229,Florida International Panthers,FIU,FBS,0,213,Penn State Nittany Lions,Beaver Stadium,103818,STATUS_FINAL,false,false
+401752687,2025,2,2,2025-09-06T23:30Z,99,LSU Tigers,LSU,FBS,23,2348,Louisiana Tech Bulldogs,LT,FBS,7,99,LSU Tigers,Tiger Stadium (LA),101667,STATUS_FINAL,false,false
+401752685,2025,2,2,2025-09-06T18:28Z,61,Georgia Bulldogs,UGA,FBS,28,2046,Austin Peay Governors,APSU,FCS,6,61,Georgia Bulldogs,Sanford Stadium,93033,STATUS_FINAL,false,false
+401754641,2025,2,2,2025-09-06T23:00Z,2390,Miami Hurricanes,MIA,FBS,45,2065,Bethune-Cookman Wildcats,BCU,FCS,3,2390,Miami Hurricanes,Hard Rock Stadium,60617,STATUS_FINAL,false,false
+401752824,2025,2,2,2025-09-06T19:30Z,2483,Oregon Ducks,ORE,FBS,69,197,Oklahoma State Cowboys,OKST,FBS,3,2483,Oregon Ducks,Autzen Stadium,57266,STATUS_FINAL,false,false
+401752693,2025,2,2,2025-09-06T16:00Z,251,Texas Longhorns,TEX,FBS,38,23,San José State Spartans,SJSU,FBS,7,251,Texas Longhorns,DKR-Texas Memorial Stadium,100841,STATUS_FINAL,false,false
+401754637,2025,2,2,2025-09-06T19:30Z,228,Clemson Tigers,CLEM,FBS,27,2653,Troy Trojans,TROY,FBS,16,228,Clemson Tigers,"Memorial Stadium (Clemson, SC)",77890,STATUS_FINAL,false,false
+401752691,2025,2,2,2025-09-06T23:00Z,2579,South Carolina Gamecocks,SC,FBS,38,2569,South Carolina State Bulldogs,SCST,FCS,10,2579,South Carolina Gamecocks,Williams-Brice Stadium,79705,STATUS_FINAL,false,false
+401752825,2025,2,2,2025-09-06T16:00Z,150,Duke Blue Devils,DUKE,FBS,19,356,Illinois Fighting Illini,ILL,FBS,45,356,Illinois Fighting Illini,Wallace Wade Stadium,23893,STATUS_FINAL,false,false
+401752688,2025,2,2,2025-09-06T23:30Z,344,Mississippi State Bulldogs,MSST,FBS,24,9,Arizona State Sun Devils,ASU,FBS,20,344,Mississippi State Bulldogs,Davis Wade Stadium,50808,STATUS_FINAL,false,false
+401752684,2025,2,2,2025-09-06T20:15Z,57,Florida Gators,FLA,FBS,16,58,South Florida Bulls,USF,FBS,18,58,South Florida Bulls,Ben Hill Griffin Stadium,89909,STATUS_FINAL,false,false
+401754621,2025,2,2,2025-09-06T16:00Z,52,Florida State Seminoles,FSU,FBS,77,2837,East Texas A&M Lions,ETAM,FCS,3,52,Florida State Seminoles,Doak Campbell Stadium,65430,STATUS_FINAL,false,false
+401752690,2025,2,2,2025-09-06T23:30Z,201,Oklahoma Sooners,OU,FBS,24,130,Michigan Wolverines,MICH,FBS,13,201,Oklahoma Sooners,"Memorial Stadium (Norman, OK)",84107,STATUS_FINAL,false,false
+401752822,2025,2,2,2025-09-06T16:00Z,66,Iowa State Cyclones,ISU,FBS,16,2294,Iowa Hawkeyes,IOWA,FBS,13,66,Iowa State Cyclones,Jack Trice Stadium,61500,STATUS_FINAL,false,false
+401754525,2025,2,2,2025-09-06T16:00Z,2567,SMU Mustangs,SMU,FBS,45,239,Baylor Bears,BAY,FBS,48,239,Baylor Bears,Gerald J. Ford Stadium,34852,STATUS_FINAL,false,false
+401752694,2025,2,2,2025-09-06T16:45Z,245,Texas A&M Aggies,TA&M,FBS,44,328,Utah State Aggies,USU,FBS,22,245,Texas A&M Aggies,Kyle Field,100026,STATUS_FINAL,false,false
+401752686,2025,2,2,2025-09-06T19:30Z,96,Kentucky Wildcats,UK,FBS,23,145,Ole Miss Rebels,MISS,FBS,30,145,Ole Miss Rebels,Kroger Field,58346,STATUS_FINAL,false,true
+401752681,2025,2,2,2025-09-06T23:45Z,333,Alabama Crimson Tide,ALA,FBS,73,2433,UL Monroe Warhawks,ULM,FBS,0,333,Alabama Crimson Tide,Bryant-Denny Stadium,100077,STATUS_FINAL,false,false
+401752692,2025,2,2,2025-09-06T19:30Z,2633,Tennessee Volunteers,TENN,FBS,72,2193,East Tennessee State Buccaneers,ETSU,FCS,17,2633,Tennessee Volunteers,Neyland Stadium,101915,STATUS_FINAL,false,false
+401752812,2025,2,2,2025-09-06T16:00Z,84,Indiana Hoosiers,IU,FBS,56,338,Kennesaw State Owls,KENN,FBS,9,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",43801,STATUS_FINAL,false,false
+401756885,2025,2,2,2025-09-06T16:00Z,2641,Texas Tech Red Raiders,TTU,FBS,62,2309,Kent State Golden Flashes,KENT,FBS,14,2641,Texas Tech Red Raiders,Galaxy Stadium,60229,STATUS_FINAL,false,false
+401756887,2025,2,2,2025-09-06T22:00Z,254,Utah Utes,UTAH,FBS,63,13,Cal Poly Mustangs,CP,FCS,9,254,Utah Utes,Rice-Eccles Stadium,51463,STATUS_FINAL,false,false
+401752813,2025,2,2,2025-09-06T16:00Z,135,Minnesota Golden Gophers,MINN,FBS,66,2466,Northwestern State Demons,NWST,FCS,0,135,Minnesota Golden Gophers,Huntington Bank Stadium,42447,STATUS_FINAL,false,false
+401754524,2025,2,2,2025-09-06T16:00Z,152,NC State Wolfpack,NCSU,FBS,35,258,Virginia Cavaliers,UVA,FBS,31,152,NC State Wolfpack,Carter-Finley Stadium,56919,STATUS_FINAL,false,false
+401754529,2025,2,2,2025-09-06T16:00Z,221,Pittsburgh Panthers,PITT,FBS,45,2117,Central Michigan Chippewas,CMU,FBS,17,221,Pittsburgh Panthers,Acrisure Stadium,48424,STATUS_FINAL,false,false
+401754618,2025,2,2,2025-09-06T16:00Z,183,Syracuse Orange,SYR,FBS,27,41,UConn Huskies,CONN,FBS,20,183,Syracuse Orange,JMA Wireless Dome,39391,STATUS_FINAL,false,false
+401757227,2025,2,2,2025-09-06T16:00Z,55,Jacksonville State Gamecocks,JVST,FBS,34,2335,Liberty Flames,LIB,FBS,24,55,Jacksonville State Gamecocks,AmFirst Stadium,20755,STATUS_FINAL,false,true
+401762462,2025,2,2,2025-09-06T18:00Z,218,Temple Owls,TEM,FBS,55,47,Howard Bison,HOW,FCS,7,218,Temple Owls,Lincoln Financial Field,15655,STATUS_FINAL,false,false
+401760366,2025,2,2,2025-09-06T19:00Z,167,New Mexico Lobos,UNM,FBS,32,304,Idaho State Bengals,IDST,FCS,22,167,New Mexico Lobos,University Stadium (NM),17639,STATUS_FINAL,false,false
+401752689,2025,2,2,2025-09-06T19:30Z,142,Missouri Tigers,MIZ,FBS,42,2305,Kansas Jayhawks,KU,FBS,31,142,Missouri Tigers,Memorial Stadium,57321,STATUS_FINAL,false,false
+401752937,2025,2,2,2025-09-06T19:30Z,204,Oregon State Beavers,ORST,FBS,27,278,Fresno State Bulldogs,FRES,FBS,36,278,Fresno State Bulldogs,Reser Stadium,28068,STATUS_FINAL,false,false
+401754622,2025,2,2,2025-09-06T19:30Z,59,Georgia Tech Yellow Jackets,GT,FBS,59,2241,Gardner-Webb Runnin' Bulldogs,GWEB,FCS,12,59,Georgia Tech Yellow Jackets,Bobby Dodd Stadium,37775,STATUS_FINAL,false,false
+401756880,2025,2,2,2025-09-06T19:30Z,2132,Cincinnati Bearcats,CIN,FBS,34,189,Bowling Green Falcons,BGSU,FBS,20,2132,Cincinnati Bearcats,Nippert Stadium,35421,STATUS_FINAL,false,false
+401756881,2025,2,2,2025-09-06T19:30Z,38,Colorado Buffaloes,COLO,FBS,31,48,Delaware Blue Hens,DEL,FBS,7,38,Colorado Buffaloes,Folsom Field,50341,STATUS_FINAL,false,false
+401761596,2025,2,2,2025-09-06T19:30Z,2026,App State Mountaineers,APP,FBS,20,2815,Lindenwood Lions,LIN,FCS,13,2026,App State Mountaineers,Kidd Brewer Stadium,34921,STATUS_FINAL,false,false
+401761603,2025,2,2,2025-09-06T19:30Z,2636,UTSA Roadrunners,UTSA,FBS,36,326,Texas State Bobcats,TXST,FBS,43,326,Texas State Bobcats,Alamodome,45778,STATUS_FINAL,false,false
+401762458,2025,2,2,2025-09-06T19:30Z,2426,Navy Midshipmen,NAVY,FBS,38,5,UAB Blazers,UAB,FBS,24,2426,Navy Midshipmen,Navy-Marine Corps Memorial Stadium,28325,STATUS_FINAL,false,true
+401762461,2025,2,2,2025-09-06T19:30Z,2711,Western Michigan Broncos,WMU,FBS,30,249,North Texas Mean Green,UNT,FBS,33,249,North Texas Mean Green,Waldo Stadium,20051,STATUS_FINAL,false,false
+401762794,2025,2,2,2025-09-06T19:30Z,2084,Buffalo Bulls,BUFF,FBS,45,2598,Saint Francis Red Flash,SFPA,FCS,6,2084,Buffalo Bulls,Broadview Stadium,15740,STATUS_FINAL,false,false
+401752820,2025,2,2,2025-09-06T20:00Z,275,Wisconsin Badgers,WIS,FBS,42,2393,Middle Tennessee Blue Raiders,MTSU,FBS,10,275,Wisconsin Badgers,Camp Randall Stadium,70368,STATUS_FINAL,false,false
+401756883,2025,2,2,2025-09-06T20:00Z,195,Ohio Bobcats,OHIO,FBS,17,277,West Virginia Mountaineers,WVU,FBS,10,195,Ohio Bobcats,Peden Stadium,26740,STATUS_FINAL,false,false
+401760367,2025,2,2,2025-09-06T20:00Z,2751,Wyoming Cowboys,WYO,FBS,31,2460,Northern Iowa Panthers,UNI,FCS,7,2751,Wyoming Cowboys,War Memorial Stadium,25009,STATUS_FINAL,false,false
+401754620,2025,2,2,2025-09-06T20:25Z,154,Wake Forest Demon Deacons,WAKE,FBS,42,2717,Western Carolina Catamounts,WCU,FCS,10,154,Wake Forest Demon Deacons,Allegacy Federal Credit Union Stadium,28239,STATUS_FINAL,false,false
+401752818,2025,2,2,2025-09-06T20:30Z,164,Rutgers Scarlet Knights,RUTG,FBS,45,193,Miami (OH) RedHawks,M-OH,FBS,17,164,Rutgers Scarlet Knights,SHI Stadium,45981,STATUS_FINAL,false,false
+401752682,2025,2,2,2025-09-06T21:00Z,8,Arkansas Razorbacks,ARK,FBS,56,2032,Arkansas State Red Wolves,ARST,FBS,14,8,Arkansas Razorbacks,War Memorial Stadium (AR),54224,STATUS_FINAL,false,false
+401760365,2025,2,2,2025-09-06T21:00Z,2440,Nevada Wolf Pack,NEV,FBS,20,16,Sacramento State Hornets,SAC,FCS,17,2440,Nevada Wolf Pack,Mackay Stadium,20535,STATUS_FINAL,false,false
+401761602,2025,2,2,2025-09-06T21:00Z,2572,Southern Miss Golden Eagles,USM,FBS,38,2296,Jackson State Tigers,JKST,FCS,20,2572,Southern Miss Golden Eagles,M. M. Roberts Stadium,32011,STATUS_FINAL,false,false
+401762816,2025,2,2,2025-09-06T21:30Z,113,Massachusetts Minutemen,MASS,FBS,26,2803,Bryant Bulldogs,BRY,FCS,27,2803,Bryant Bulldogs,Warren McGuirk Alumni Stadium,3714,STATUS_FINAL,false,false
+401754530,2025,2,2,2025-09-06T22:00Z,25,California Golden Bears,CAL,FBS,35,2640,Texas Southern Tigers,TXSO,FCS,3,25,California Golden Bears,California Memorial Stadium,35898,STATUS_FINAL,false,false
+401757228,2025,2,2,2025-09-06T22:00Z,276,Marshall Thundering Herd,MRSH,FBS,20,2623,Missouri State Bears,MOST,FBS,21,2623,Missouri State Bears,Joan C. Edwards Stadium,28564,STATUS_FINAL,false,false
+401761599,2025,2,2,2025-09-06T22:00Z,295,Old Dominion Monarchs,ODU,FBS,54,2428,North Carolina Central Eagles,NCCU,FCS,6,295,Old Dominion Monarchs,S.B. Ballard Stadium,18111,STATUS_FINAL,false,false
+401762459,2025,2,2,2025-09-06T22:00Z,151,East Carolina Pirates,ECU,FBS,56,2097,Campbell Fighting Camels,CAM,FCS,3,151,East Carolina Pirates,Dowdy-Ficklen Stadium,35120,STATUS_FINAL,false,false
+401762460,2025,2,2,2025-09-06T22:00Z,2226,Florida Atlantic Owls,FAU,FBS,56,50,Florida A&M Rattlers,FAMU,FCS,14,2226,Florida Atlantic Owls,Flagler Credit Union Stadium,21029,STATUS_FINAL,false,false
+401754527,2025,2,2,2025-09-06T23:00Z,2429,Charlotte 49ers,CLT,FBS,3,153,North Carolina Tar Heels,UNC,FBS,20,153,North Carolina Tar Heels,Jerry Richardson Stadium,19233,STATUS_FINAL,false,false
+401756882,2025,2,2,2025-09-06T23:00Z,2306,Kansas State Wildcats,KSU,FBS,21,349,Army Black Knights,ARMY,FBS,24,349,Army Black Knights,Bill Snyder Family Stadium,52723,STATUS_FINAL,false,false
+401756884,2025,2,2,2025-09-06T23:00Z,242,Rice Owls,RICE,FBS,9,248,Houston Cougars,HOU,FBS,35,248,Houston Cougars,Rice Stadium,30116,STATUS_FINAL,false,false
+401756886,2025,2,2,2025-09-06T23:00Z,2116,UCF Knights,UCF,FBS,68,2448,North Carolina A&T Aggies,NCAT,FCS,7,2116,UCF Knights,Acrisure Bounce House,44009,STATUS_FINAL,false,false
+401757232,2025,2,2,2025-09-06T23:00Z,2649,Toledo Rockets,TOL,FBS,45,98,Western Kentucky Hilltoppers,WKU,FBS,21,2649,Toledo Rockets,Glass Bowl,24138,STATUS_FINAL,false,false
+401760364,2025,2,2,2025-09-06T23:00Z,36,Colorado State Rams,CSU,FBS,21,2458,Northern Colorado Bears,UNCO,FCS,17,36,Colorado State Rams,Canvas Stadium,37023,STATUS_FINAL,false,false
+401761598,2025,2,2,2025-09-06T23:00Z,2247,Georgia State Panthers,GAST,FBS,16,235,Memphis Tigers,MEM,FBS,38,235,Memphis Tigers,Center Parc Stadium,13625,STATUS_FINAL,false,false
+401761601,2025,2,2,2025-09-06T23:00Z,6,South Alabama Jaguars,USA,FBS,31,2655,Tulane Green Wave,TULN,FBS,33,2655,Tulane Green Wave,Hancock Whitney Stadium,16871,STATUS_FINAL,false,false
+401762795,2025,2,2,2025-09-06T23:00Z,2199,Eastern Michigan Eagles,EMU,FBS,23,2341,Long Island University Sharks,LIU,FCS,28,2341,Long Island University Sharks,Rynearson Stadium,15313,STATUS_FINAL,false,false
+401752683,2025,2,2,2025-09-06T23:30Z,2,Auburn Tigers,AUB,FBS,42,2050,Ball State Cardinals,BALL,FBS,3,2,Auburn Tigers,Jordan-Hare Stadium,88043,STATUS_FINAL,false,false
+401752695,2025,2,2,2025-09-06T23:30Z,259,Virginia Tech Hokies,VT,FBS,20,238,Vanderbilt Commodores,VAN,FBS,44,238,Vanderbilt Commodores,Lane Stadium,65632,STATUS_FINAL,false,false
+401752810,2025,2,2,2025-09-06T23:30Z,158,Nebraska Cornhuskers,NEB,FBS,68,2006,Akron Zips,AKR,FBS,0,158,Nebraska Cornhuskers,"Memorial Stadium (Lincoln, NE)",86439,STATUS_FINAL,false,false
+401752814,2025,2,2,2025-09-06T23:30Z,30,USC Trojans,USC,FBS,59,290,Georgia Southern Eagles,GASO,FBS,20,30,USC Trojans,Los Angeles Memorial Coliseum,0,STATUS_FINAL,false,false
+401752816,2025,2,2,2025-09-06T23:30Z,127,Michigan State Spartans,MSU,FBS,42,103,Boston College Eagles,BC,FBS,40,127,Michigan State Spartans,Spartan Stadium,70510,STATUS_FINAL,false,false
+401752819,2025,2,2,2025-09-06T23:30Z,2509,Purdue Boilermakers,PUR,FBS,34,79,Southern Illinois Salukis,SIU,FCS,17,2509,Purdue Boilermakers,Ross-Ade Stadium,54663,STATUS_FINAL,false,false
+401761597,2025,2,2,2025-09-06T23:30Z,324,Coastal Carolina Chanticleers,CCU,FBS,13,2127,Charleston Southern Buccaneers,CHSO,FCS,0,324,Coastal Carolina Chanticleers,Brooks Stadium (SC),22217,STATUS_FINAL,false,false
+401752823,2025,2,2,2025-09-07T00:00Z,2439,UNLV Rebels,UNLV,FBS,30,26,UCLA Bruins,UCLA,FBS,23,2439,UNLV Rebels,Allegiant Stadium,36117,STATUS_FINAL,false,false
+401761600,2025,2,2,2025-09-07T00:00Z,309,Louisiana Ragin' Cajuns,UL,FBS,34,2377,McNeese Cowboys,MCN,FCS,10,309,Louisiana Ragin' Cajuns,Our Lady of Lourdes Stadium,26071,STATUS_FINAL,false,false
+401757229,2025,2,2,2025-09-07T01:00Z,166,New Mexico State Aggies,NMSU,FBS,21,202,Tulsa Golden Hurricane,TLSA,FBS,14,166,New Mexico State Aggies,Aggie Memorial Stadium,10240,STATUS_FINAL,false,false
+401757231,2025,2,2,2025-09-07T01:00Z,2638,UTEP Miners,UTEP,FBS,42,2630,UT Martin Skyhawks,UTM,FCS,17,2638,UTEP Miners,Sun Bowl,31122,STATUS_FINAL,false,false
+401756879,2025,2,2,2025-09-07T02:00Z,12,Arizona Wildcats,ARIZ,FBS,48,2692,Weber State Wildcats,WEB,FCS,3,12,Arizona Wildcats,Casino Del Sol Stadium,40038,STATUS_FINAL,false,false
+401752948,2025,2,2,2025-09-07T02:15Z,265,Washington State Cougars,WSU,FBS,36,21,San Diego State Aztecs,SDSU,FBS,13,265,Washington State Cougars,Martin Stadium,24330,STATUS_FINAL,false,false
+401754526,2025,2,2,2025-09-07T02:15Z,252,BYU Cougars,BYU,FBS,27,24,Stanford Cardinal,STAN,FBS,3,252,BYU Cougars,LaVell Edwards Stadium,64692,STATUS_FINAL,false,false
+401752821,2025,2,2,2025-09-07T03:00Z,264,Washington Huskies,WASH,FBS,70,302,UC Davis Aggies,UCD,FCS,10,264,Washington Huskies,Husky Stadium,65421,STATUS_FINAL,false,false
+401757230,2025,2,2,2025-09-07T03:59Z,62,Hawai'i Rainbow Warriors,HAW,FBS,37,2534,Sam Houston Bearkats,SHSU,FBS,20,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,11625,STATUS_FINAL,false,false
+401754531,2025,3,2,2025-09-11T23:30Z,154,Wake Forest Demon Deacons,WAKE,FBS,24,152,NC State Wolfpack,NCSU,FBS,34,152,NC State Wolfpack,Allegacy Federal Credit Union Stadium,29043,STATUS_FINAL,false,true
+401752836,2025,3,2,2025-09-12T22:30Z,84,Indiana Hoosiers,IU,FBS,73,282,Indiana State Sycamores,INST,FCS,0,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",46219,STATUS_FINAL,false,false
+401754532,2025,3,2,2025-09-12T23:00Z,183,Syracuse Orange,SYR,FBS,66,2142,Colgate Raiders,COLG,FCS,24,183,Syracuse Orange,JMA Wireless Dome,37372,STATUS_FINAL,false,false
+401756893,2025,3,2,2025-09-12T23:30Z,248,Houston Cougars,HOU,FBS,36,38,Colorado Buffaloes,COLO,FBS,20,248,Houston Cougars,TDECU Stadium,37899,STATUS_FINAL,false,true
+401756888,2025,3,2,2025-09-13T01:00Z,12,Arizona Wildcats,ARIZ,FBS,23,2306,Kansas State Wildcats,KSU,FBS,17,12,Arizona Wildcats,Casino Del Sol Stadium,40051,STATUS_FINAL,false,false
+401752837,2025,3,2,2025-09-13T02:00Z,26,UCLA Bruins,UCLA,FBS,10,167,New Mexico Lobos,UNM,FBS,35,167,New Mexico Lobos,Rose Bowl,31163,STATUS_FINAL,false,false
+401752827,2025,3,2,2025-09-13T23:00Z,194,Ohio State Buckeyes,OSU,FBS,37,195,Ohio Bobcats,OHIO,FBS,9,194,Ohio State Buckeyes,Ohio Stadium,105765,STATUS_FINAL,false,false
+401752835,2025,3,2,2025-09-13T19:30Z,213,Penn State Nittany Lions,PSU,FBS,52,222,Villanova Wildcats,VILL,FCS,6,213,Penn State Nittany Lions,Beaver Stadium,109516,STATUS_FINAL,false,false
+401752699,2025,3,2,2025-09-13T23:30Z,99,LSU Tigers,LSU,FBS,20,57,Florida Gators,FLA,FBS,10,99,LSU Tigers,Tiger Stadium (LA),102158,STATUS_FINAL,false,true
+401752831,2025,3,2,2025-09-13T16:00Z,77,Northwestern Wildcats,NU,FBS,14,2483,Oregon Ducks,ORE,FBS,34,2483,Oregon Ducks,Northwestern Medicine Field at Martin Stadium,12023,STATUS_FINAL,false,true
+401754535,2025,3,2,2025-09-13T20:30Z,2390,Miami Hurricanes,MIA,FBS,49,58,South Florida Bulls,USF,FBS,12,2390,Miami Hurricanes,Hard Rock Stadium,66591,STATUS_FINAL,false,false
+401752705,2025,3,2,2025-09-13T19:30Z,2633,Tennessee Volunteers,TENN,FBS,41,61,Georgia Bulldogs,UGA,FBS,44,61,Georgia Bulldogs,Neyland Stadium,101915,STATUS_FINAL,false,true
+401752706,2025,3,2,2025-09-13T20:15Z,251,Texas Longhorns,TEX,FBS,27,2638,UTEP Miners,UTEP,FBS,10,251,Texas Longhorns,DKR-Texas Memorial Stadium,102025,STATUS_FINAL,false,false
+401752707,2025,3,2,2025-09-13T23:30Z,87,Notre Dame Fighting Irish,ND,FBS,40,245,Texas A&M Aggies,TA&M,FBS,41,245,Texas A&M Aggies,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401752829,2025,3,2,2025-09-13T23:00Z,356,Illinois Fighting Illini,ILL,FBS,38,2711,Western Michigan Broncos,WMU,FBS,0,356,Illinois Fighting Illini,Gies Memorial Stadium,60670,STATUS_FINAL,false,false
+401752704,2025,3,2,2025-09-13T23:45Z,2579,South Carolina Gamecocks,SC,FBS,7,238,Vanderbilt Commodores,VAN,FBS,31,238,Vanderbilt Commodores,Williams-Brice Stadium,79873,STATUS_FINAL,false,true
+401754623,2025,3,2,2025-09-13T16:00Z,59,Georgia Tech Yellow Jackets,GT,FBS,24,228,Clemson Tigers,CLEM,FBS,21,59,Georgia Tech Yellow Jackets,Bobby Dodd Stadium,48059,STATUS_FINAL,false,true
+401752703,2025,3,2,2025-09-13T16:00Z,218,Temple Owls,TEM,FBS,3,201,Oklahoma Sooners,OU,FBS,42,201,Oklahoma Sooners,Lincoln Financial Field,24927,STATUS_FINAL,false,false
+401756890,2025,3,2,2025-09-13T20:00Z,2032,Arkansas State Red Wolves,ARST,FBS,16,66,Iowa State Cyclones,ISU,FBS,24,66,Iowa State Cyclones,Centennial Bank Stadium,22348,STATUS_FINAL,false,false
+401752700,2025,3,2,2025-09-13T23:00Z,145,Ole Miss Rebels,MISS,FBS,41,8,Arkansas Razorbacks,ARK,FBS,35,145,Ole Miss Rebels,Vaught-Hemingway Stadium,65068,STATUS_FINAL,false,true
+401752696,2025,3,2,2025-09-13T16:00Z,333,Alabama Crimson Tide,ALA,FBS,38,275,Wisconsin Badgers,WIS,FBS,14,333,Alabama Crimson Tide,Bryant-Denny Stadium,100077,STATUS_FINAL,false,false
+401756895,2025,3,2,2025-09-14T00:00Z,2751,Wyoming Cowboys,WYO,FBS,6,254,Utah Utes,UTAH,FBS,31,254,Utah Utes,War Memorial Stadium,23500,STATUS_FINAL,false,false
+401752938,2025,3,2,2025-09-13T19:30Z,2641,Texas Tech Red Raiders,TTU,FBS,45,204,Oregon State Beavers,ORST,FBS,14,2641,Texas Tech Red Raiders,Galaxy Stadium,60229,STATUS_FINAL,false,false
+401752839,2025,3,2,2025-09-13T16:00Z,130,Michigan Wolverines,MICH,FBS,63,2117,Central Michigan Chippewas,CMU,FBS,3,130,Michigan Wolverines,Michigan Stadium,110740,STATUS_FINAL,false,false
+401752697,2025,3,2,2025-09-13T16:45Z,2,Auburn Tigers,AUB,FBS,31,6,South Alabama Jaguars,USA,FBS,15,2,Auburn Tigers,Jordan-Hare Stadium,88043,STATUS_FINAL,false,false
+401752702,2025,3,2,2025-09-13T17:00Z,142,Missouri Tigers,MIZ,FBS,52,309,Louisiana Ragin' Cajuns,UL,FBS,10,142,Missouri Tigers,Memorial Stadium,57321,STATUS_FINAL,false,false
+401752828,2025,3,2,2025-09-13T16:00Z,158,Nebraska Cornhuskers,NEB,FBS,59,2277,Houston Christian Huskies,HCU,FCS,7,158,Nebraska Cornhuskers,"Memorial Stadium (Lincoln, NE)",86292,STATUS_FINAL,false,false
+401752838,2025,3,2,2025-09-13T16:00Z,120,Maryland Terrapins,MD,FBS,44,119,Towson Tigers,TOW,FCS,17,120,Maryland Terrapins,SECU Stadium,36780,STATUS_FINAL,false,false
+401754619,2025,3,2,2025-09-13T16:00Z,258,Virginia Cavaliers,UVA,FBS,55,2729,William & Mary Tribe,W&M,FCS,16,258,Virginia Cavaliers,Scott Stadium,38512,STATUS_FINAL,false,false
+401756891,2025,3,2,2025-09-13T16:00Z,239,Baylor Bears,BAY,FBS,42,2535,Samford Bulldogs,SAM,FCS,7,239,Baylor Bears,McLane Stadium,41215,STATUS_FINAL,false,false
+401761608,2025,3,2,2025-09-13T16:00Z,2653,Troy Trojans,TROY,FBS,7,235,Memphis Tigers,MEM,FBS,28,235,Memphis Tigers,Veterans Memorial Stadium (AL),23384,STATUS_FINAL,false,false
+401762817,2025,3,2,2025-09-13T16:00Z,2309,Kent State Golden Flashes,KENT,FBS,28,2084,Buffalo Bulls,BUFF,FBS,31,2084,Buffalo Bulls,Zoeller Field at Dix Stadium,11833,STATUS_FINAL,false,true
+401762818,2025,3,2,2025-09-13T18:00Z,2050,Ball State Cardinals,BALL,FBS,34,160,New Hampshire Wildcats,UNH,FCS,29,2050,Ball State Cardinals,Scheumann Stadium,10512,STATUS_FINAL,false,false
+401757168,2025,3,2,2025-09-13T19:00Z,48,Delaware Blue Hens,DEL,FBS,44,41,UConn Huskies,CONN,FBS,41,48,Delaware Blue Hens,Delaware Stadium,17862,STATUS_FINAL,false,false
+401752833,2025,3,2,2025-09-13T19:30Z,164,Rutgers Scarlet Knights,RUTG,FBS,60,2450,Norfolk State Spartans,NORF,FCS,10,164,Rutgers Scarlet Knights,SHI Stadium,41011,STATUS_FINAL,false,false
+401752834,2025,3,2,2025-09-13T19:30Z,127,Michigan State Spartans,MSU,FBS,41,2754,Youngstown State Penguins,YSU,FCS,24,127,Michigan State Spartans,Spartan Stadium,71301,STATUS_FINAL,false,false
+401752949,2025,3,2,2025-09-13T19:30Z,249,North Texas Mean Green,UNT,FBS,59,265,Washington State Cougars,WSU,FBS,10,249,North Texas Mean Green,DATCU Stadium,26837,STATUS_FINAL,false,false
+401754615,2025,3,2,2025-09-13T19:30Z,2623,Missouri State Bears,MOST,FBS,10,2567,SMU Mustangs,SMU,FBS,28,2567,SMU Mustangs,Robert W. Plaster Stadium,15027,STATUS_FINAL,false,false
+401754638,2025,3,2,2025-09-13T19:30Z,277,West Virginia Mountaineers,WVU,FBS,31,221,Pittsburgh Panthers,PITT,FBS,24,277,West Virginia Mountaineers,Milan Puskar Stadium,62108,STATUS_FINAL,false,false
+401754639,2025,3,2,2025-09-13T19:30Z,153,North Carolina Tar Heels,UNC,FBS,41,257,Richmond Spiders,RICH,FCS,6,153,North Carolina Tar Heels,Kenan Stadium,50500,STATUS_FINAL,false,false
+401756892,2025,3,2,2025-09-13T19:30Z,2132,Cincinnati Bearcats,CIN,FBS,70,2466,Northwestern State Demons,NWST,FCS,0,2132,Cincinnati Bearcats,Nippert Stadium,30014,STATUS_FINAL,false,false
+401762467,2025,3,2,2025-09-13T19:30Z,2636,UTSA Roadrunners,UTSA,FBS,48,2916,Incarnate Word Cardinals,UIW,FCS,20,2636,UTSA Roadrunners,Alamodome,20421,STATUS_FINAL,false,false
+401762819,2025,3,2,2025-09-13T19:30Z,2649,Toledo Rockets,TOL,FBS,60,2415,Morgan State Bears,MORG,FCS,0,2649,Toledo Rockets,Glass Bowl,22846,STATUS_FINAL,false,false
+401757256,2025,3,2,2025-09-13T21:00Z,189,Bowling Green Falcons,BGSU,FBS,23,2335,Liberty Flames,LIB,FBS,13,189,Bowling Green Falcons,Doyt L. Perry Stadium,23159,STATUS_FINAL,false,false
+401757258,2025,3,2,2025-09-13T21:00Z,2440,Nevada Wolf Pack,NEV,FBS,13,2393,Middle Tennessee Blue Raiders,MTSU,FBS,14,2393,Middle Tennessee Blue Raiders,Mackay Stadium,16808,STATUS_FINAL,false,false
+401752701,2025,3,2,2025-09-13T22:00Z,344,Mississippi State Bulldogs,MSST,FBS,63,2016,Alcorn State Braves,ALCN,FCS,0,344,Mississippi State Bulldogs,Davis Wade Stadium,49158,STATUS_FINAL,false,false
+401757235,2025,3,2,2025-09-13T22:00Z,338,Kennesaw State Owls,KENN,FBS,27,2771,Merrimack Warriors,MRMK,FCS,13,338,Kennesaw State Owls,Walens Family Field at Fifth Third Stadium,11040,STATUS_FINAL,false,false
+401761606,2025,3,2,2025-09-13T22:00Z,276,Marshall Thundering Herd,MRSH,FBS,38,2198,Eastern Kentucky Colonels,EKU,FCS,7,276,Marshall Thundering Herd,Joan C. Edwards Stadium,23925,STATUS_FINAL,false,false
+401762464,2025,3,2,2025-09-13T22:00Z,2429,Charlotte 49ers,CLT,FBS,42,2405,Monmouth Hawks,MONM,FCS,35,2429,Charlotte 49ers,Jerry Richardson Stadium,15681,STATUS_FINAL,false,false
+401752832,2025,3,2,2025-09-13T22:45Z,2509,Purdue Boilermakers,PUR,FBS,17,30,USC Trojans,USC,FBS,33,30,USC Trojans,Ross-Ade Stadium,58065,STATUS_FINAL,false,true
+401754536,2025,3,2,2025-09-13T23:00Z,259,Virginia Tech Hokies,VT,FBS,26,295,Old Dominion Monarchs,ODU,FBS,45,295,Old Dominion Monarchs,Lane Stadium,57627,STATUS_FINAL,false,false
+401757234,2025,3,2,2025-09-13T23:00Z,290,Georgia Southern Eagles,GASO,FBS,41,55,Jacksonville State Gamecocks,JVST,FBS,34,290,Georgia Southern Eagles,Allen E. Paulson Stadium,24585,STATUS_FINAL,false,false
+401761605,2025,3,2,2025-09-13T23:00Z,2247,Georgia State Panthers,GAST,FBS,37,93,Murray State Racers,MUR,FCS,21,2247,Georgia State Panthers,Center Parc Stadium,13988,STATUS_FINAL,false,false
+401761607,2025,3,2,2025-09-13T23:00Z,2572,Southern Miss Golden Eagles,USM,FBS,38,2026,App State Mountaineers,APP,FBS,22,2572,Southern Miss Golden Eagles,M. M. Roberts Stadium,24534,STATUS_FINAL,false,true
+401762466,2025,3,2,2025-09-13T23:00Z,242,Rice Owls,RICE,FBS,38,2504,Prairie View A&M Panthers,PV,FCS,17,242,Rice Owls,Rice Stadium,22260,STATUS_FINAL,false,false
+401752698,2025,3,2,2025-09-13T23:30Z,96,Kentucky Wildcats,UK,FBS,48,2199,Eastern Michigan Eagles,EMU,FBS,23,96,Kentucky Wildcats,Kroger Field,58489,STATUS_FINAL,false,false
+401752830,2025,3,2,2025-09-13T23:30Z,2294,Iowa Hawkeyes,IOWA,FBS,47,113,Massachusetts Minutemen,MASS,FBS,7,2294,Iowa Hawkeyes,Kinnick Stadium,69250,STATUS_FINAL,false,false
+401757257,2025,3,2,2025-09-13T23:30Z,2348,Louisiana Tech Bulldogs,LT,FBS,49,166,New Mexico State Aggies,NMSU,FBS,14,2348,Louisiana Tech Bulldogs,Joe Aillet Stadium,60229,STATUS_FINAL,false,true
+401761604,2025,3,2,2025-09-13T23:30Z,324,Coastal Carolina Chanticleers,CCU,FBS,0,151,East Carolina Pirates,ECU,FBS,38,151,East Carolina Pirates,Brooks Stadium (SC),21634,STATUS_FINAL,false,false
+401754534,2025,3,2,2025-09-14T00:00Z,2655,Tulane Green Wave,TULN,FBS,34,150,Duke Blue Devils,DUKE,FBS,27,2655,Tulane Green Wave,Yulman Stadium,30000,STATUS_FINAL,false,false
+401756894,2025,3,2,2025-09-14T00:00Z,2628,TCU Horned Frogs,TCU,FBS,42,2000,Abilene Christian Wildcats,ACU,FCS,21,2628,TCU Horned Frogs,Amon G. Carter Stadium,48094,STATUS_FINAL,false,false
+401762465,2025,3,2,2025-09-14T00:00Z,202,Tulsa Golden Hurricane,TLSA,FBS,23,2426,Navy Midshipmen,NAVY,FBS,42,2426,Navy Midshipmen,H. A. Chapman Stadium,20103,STATUS_FINAL,false,true
+401757233,2025,3,2,2025-09-14T00:30Z,2229,Florida International Panthers,FIU,FBS,38,2226,Florida Atlantic Owls,FAU,FBS,28,2229,Florida International Panthers,Pitbull Stadium,17638,STATUS_FINAL,false,false
+401762463,2025,3,2,2025-09-14T00:30Z,5,UAB Blazers,UAB,FBS,31,2006,Akron Zips,AKR,FBS,28,5,UAB Blazers,Protective Stadium,17823,STATUS_FINAL,false,false
+401760368,2025,3,2,2025-09-14T01:45Z,328,Utah State Aggies,USU,FBS,49,2005,Air Force Falcons,AFA,FBS,30,328,Utah State Aggies,Maverik Stadium,17124,STATUS_FINAL,false,true
+401760369,2025,3,2,2025-09-14T02:00Z,278,Fresno State Bulldogs,FRES,FBS,56,2582,Southern Jaguars,SOU,FCS,7,278,Fresno State Bulldogs,Valley Children's Stadium,37210,STATUS_FINAL,false,false
+401752840,2025,3,2,2025-09-14T02:30Z,25,California Golden Bears,CAL,FBS,27,135,Minnesota Golden Gophers,MINN,FBS,14,25,California Golden Bears,California Memorial Stadium,38556,STATUS_FINAL,false,false
+401754533,2025,3,2,2025-09-14T02:30Z,24,Stanford Cardinal,STAN,FBS,30,103,Boston College Eagles,BC,FBS,20,24,Stanford Cardinal,Stanford Stadium,22162,STATUS_FINAL,false,true
+401756889,2025,3,2,2025-09-14T02:30Z,9,Arizona State Sun Devils,ASU,FBS,34,326,Texas State Bobcats,TXST,FBS,15,9,Arizona State Sun Devils,Mountain America Stadium,54005,STATUS_FINAL,false,false
+401760370,2025,3,2,2025-09-14T03:59Z,62,Hawai'i Rainbow Warriors,HAW,FBS,23,2502,Portland State Vikings,PRST,FCS,3,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,11936,STATUS_FINAL,false,false
+401762468,2025,4,2,2025-09-18T23:30Z,2429,Charlotte 49ers,CLT,FBS,17,242,Rice Owls,RICE,FBS,28,242,Rice Owls,Jerry Richardson Stadium,13397,STATUS_FINAL,false,true
+401756900,2025,4,2,2025-09-19T23:30Z,197,Oklahoma State Cowboys,OKST,FBS,12,202,Tulsa Golden Hurricane,TLSA,FBS,19,202,Tulsa Golden Hurricane,Boone Pickens Stadium,48842,STATUS_FINAL,false,false
+401752844,2025,4,2,2025-09-20T00:00Z,164,Rutgers Scarlet Knights,RUTG,FBS,28,2294,Iowa Hawkeyes,IOWA,FBS,38,2294,Iowa Hawkeyes,SHI Stadium,55942,STATUS_FINAL,false,true
+401752710,2025,4,2,2025-09-20T23:45Z,99,LSU Tigers,LSU,FBS,56,2545,SE Louisiana Lions,SELA,FCS,10,99,LSU Tigers,Tiger Stadium (LA),102219,STATUS_FINAL,false,false
+401752709,2025,4,2,2025-09-20T23:30Z,2390,Miami Hurricanes,MIA,FBS,26,57,Florida Gators,FLA,FBS,7,2390,Miami Hurricanes,Hard Rock Stadium,66713,STATUS_FINAL,false,false
+401752841,2025,4,2,2025-09-20T19:00Z,2483,Oregon Ducks,ORE,FBS,41,204,Oregon State Beavers,ORST,FBS,7,2483,Oregon Ducks,Autzen Stadium,58571,STATUS_FINAL,false,false
+401754541,2025,4,2,2025-09-20T19:30Z,52,Florida State Seminoles,FSU,FBS,66,2309,Kent State Golden Flashes,KENT,FBS,10,52,Florida State Seminoles,Doak Campbell Stadium,67277,STATUS_FINAL,false,false
+401752723,2025,4,2,2025-09-21T00:00Z,251,Texas Longhorns,TEX,FBS,55,2534,Sam Houston Bearkats,SHSU,FBS,0,251,Texas Longhorns,DKR-Texas Memorial Stadium,103003,STATUS_FINAL,false,false
+401752843,2025,4,2,2025-09-20T23:30Z,84,Indiana Hoosiers,IU,FBS,63,356,Illinois Fighting Illini,ILL,FBS,10,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",56088,STATUS_FINAL,false,true
+401752714,2025,4,2,2025-09-20T19:30Z,201,Oklahoma Sooners,OU,FBS,24,2,Auburn Tigers,AUB,FBS,17,201,Oklahoma Sooners,"Memorial Stadium (Norman, OK)",83639,STATUS_FINAL,false,true
+401752711,2025,4,2,2025-09-20T19:30Z,145,Ole Miss Rebels,MISS,FBS,45,2655,Tulane Green Wave,TULN,FBS,10,145,Ole Miss Rebels,Vaught-Hemingway Stadium,65644,STATUS_FINAL,false,false
+401752715,2025,4,2,2025-09-20T16:45Z,2633,Tennessee Volunteers,TENN,FBS,56,5,UAB Blazers,UAB,FBS,24,2633,Tennessee Volunteers,Neyland Stadium,101915,STATUS_FINAL,false,false
+401756901,2025,4,2,2025-09-20T16:00Z,254,Utah Utes,UTAH,FBS,10,2641,Texas Tech Red Raiders,TTU,FBS,34,2641,Texas Tech Red Raiders,Rice-Eccles Stadium,52236,STATUS_FINAL,false,true
+401754542,2025,4,2,2025-09-20T21:05Z,59,Georgia Tech Yellow Jackets,GT,FBS,45,218,Temple Owls,TEM,FBS,24,59,Georgia Tech Yellow Jackets,Bobby Dodd Stadium,45123,STATUS_FINAL,false,false
+401752716,2025,4,2,2025-09-20T23:30Z,238,Vanderbilt Commodores,VAN,FBS,70,2247,Georgia State Panthers,GAST,FBS,21,238,Vanderbilt Commodores,FirstBank Stadium,35000,STATUS_FINAL,false,false
+401752846,2025,4,2,2025-09-20T19:30Z,158,Nebraska Cornhuskers,NEB,FBS,27,130,Michigan Wolverines,MICH,FBS,30,130,Michigan Wolverines,"Memorial Stadium (Lincoln, NE)",87278,STATUS_FINAL,false,true
+401752713,2025,4,2,2025-09-20T23:00Z,142,Missouri Tigers,MIZ,FBS,29,2579,South Carolina Gamecocks,SC,FBS,20,142,Missouri Tigers,Memorial Stadium,57321,STATUS_FINAL,false,true
+401752848,2025,4,2,2025-09-20T19:30Z,87,Notre Dame Fighting Irish,ND,FBS,56,2509,Purdue Boilermakers,PUR,FBS,30,87,Notre Dame Fighting Irish,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401752847,2025,4,2,2025-09-21T03:00Z,30,USC Trojans,USC,FBS,45,127,Michigan State Spartans,MSU,FBS,31,30,USC Trojans,Los Angeles Memorial Coliseum,67614,STATUS_FINAL,false,true
+401752708,2025,4,2,2025-09-20T16:00Z,235,Memphis Tigers,MEM,FBS,32,8,Arkansas Razorbacks,ARK,FBS,31,235,Memphis Tigers,Simmons Bank Liberty Stadium,39861,STATUS_FINAL,false,false
+401752845,2025,4,2,2025-09-20T16:00Z,275,Wisconsin Badgers,WIS,FBS,10,120,Maryland Terrapins,MD,FBS,27,120,Maryland Terrapins,Camp Randall Stadium,68547,STATUS_FINAL,false,true
+401754537,2025,4,2,2025-09-20T16:00Z,228,Clemson Tigers,CLEM,FBS,21,183,Syracuse Orange,SYR,FBS,34,183,Syracuse Orange,"Memorial Stadium (Clemson, SC)",80225,STATUS_FINAL,false,true
+401754617,2025,4,2,2025-09-20T16:00Z,259,Virginia Tech Hokies,VT,FBS,38,2747,Wofford Terriers,WOF,FCS,6,259,Virginia Tech Hokies,Lane Stadium,57229,STATUS_FINAL,false,false
+401754636,2025,4,2,2025-09-20T16:00Z,2628,TCU Horned Frogs,TCU,FBS,35,2567,SMU Mustangs,SMU,FBS,24,2628,TCU Horned Frogs,Amon G. Carter Stadium,43333,STATUS_FINAL,false,false
+401754642,2025,4,2,2025-09-20T16:00Z,97,Louisville Cardinals,LOU,FBS,40,189,Bowling Green Falcons,BGSU,FBS,17,97,Louisville Cardinals,L&N Federal Credit Union Stadium,49482,STATUS_FINAL,false,false
+401760376,2025,4,2,2025-09-20T16:00Z,193,Miami (OH) RedHawks,M-OH,FBS,38,2439,UNLV Rebels,UNLV,FBS,41,2439,UNLV Rebels,Yager Stadium,12625,STATUS_FINAL,false,false
+401762469,2025,4,2,2025-09-20T16:00Z,349,Army Black Knights,ARMY,FBS,38,249,North Texas Mean Green,UNT,FBS,45,249,North Texas Mean Green,Michie Stadium,28446,STATUS_FINAL,false,true
+401762470,2025,4,2,2025-09-20T16:00Z,58,South Florida Bulls,USF,FBS,63,2569,South Carolina State Bulldogs,SCST,FCS,14,58,South Florida Bulls,Raymond James Stadium,28461,STATUS_FINAL,false,false
+401762822,2025,4,2,2025-09-20T17:00Z,2117,Central Michigan Chippewas,CMU,FBS,49,2681,Wagner Seahawks,WAG,FCS,10,2117,Central Michigan Chippewas,Kelly/Shorts Stadium,18787,STATUS_FINAL,false,false
+401754640,2025,4,2,2025-09-20T19:30Z,2116,UCF Knights,UCF,FBS,34,153,North Carolina Tar Heels,UNC,FBS,9,2116,UCF Knights,Acrisure Bounce House,44206,STATUS_FINAL,false,false
+401757169,2025,4,2,2025-09-20T19:30Z,41,UConn Huskies,CONN,FBS,31,2050,Ball State Cardinals,BALL,FBS,25,41,UConn Huskies,Pratt & Whitney Stadium,25025,STATUS_FINAL,false,false
+401757262,2025,4,2,2025-09-20T19:30Z,2335,Liberty Flames,LIB,FBS,13,256,James Madison Dukes,JMU,FBS,31,256,James Madison Dukes,Williams Stadium (VA),24022,STATUS_FINAL,false,false
+401761610,2025,4,2,2025-09-20T19:30Z,2199,Eastern Michigan Eagles,EMU,FBS,34,309,Louisiana Ragin' Cajuns,UL,FBS,31,2199,Eastern Michigan Eagles,Rynearson Stadium,18371,STATUS_FINAL,false,false
+401761613,2025,4,2,2025-09-20T19:30Z,2084,Buffalo Bulls,BUFF,FBS,17,2653,Troy Trojans,TROY,FBS,21,2653,Troy Trojans,Broadview Stadium,12068,STATUS_FINAL,false,false
+401762820,2025,4,2,2025-09-20T19:30Z,2711,Western Michigan Broncos,WMU,FBS,14,2649,Toledo Rockets,TOL,FBS,13,2711,Western Michigan Broncos,Waldo Stadium,20744,STATUS_FINAL,false,true
+401762823,2025,4,2,2025-09-20T19:30Z,195,Ohio Bobcats,OHIO,FBS,52,2241,Gardner-Webb Runnin' Bulldogs,GWEB,FCS,35,195,Ohio Bobcats,Peden Stadium,22312,STATUS_FINAL,false,false
+401754538,2025,4,2,2025-09-20T20:00Z,150,Duke Blue Devils,DUKE,FBS,45,152,NC State Wolfpack,NCSU,FBS,33,150,Duke Blue Devils,Wallace Wade Stadium,30022,STATUS_FINAL,false,true
+401752712,2025,4,2,2025-09-20T20:15Z,344,Mississippi State Bulldogs,MSST,FBS,38,2459,Northern Illinois Huskies,NIU,FBS,10,344,Mississippi State Bulldogs,Davis Wade Stadium,45803,STATUS_FINAL,false,false
+401760375,2025,4,2,2025-09-20T21:00Z,23,San José State Spartans,SJSU,FBS,31,70,Idaho Vandals,IDHO,FCS,28,23,San José State Spartans,CEFCU Stadium,13155,STATUS_FINAL,false,false
+401756899,2025,4,2,2025-09-20T22:00Z,2305,Kansas Jayhawks,KU,FBS,41,277,West Virginia Mountaineers,WVU,FBS,10,2305,Kansas Jayhawks,David Booth Kansas Memorial Stadium,40320,STATUS_FINAL,false,true
+401757259,2025,4,2,2025-09-20T22:00Z,2229,Florida International Panthers,FIU,FBS,16,48,Delaware Blue Hens,DEL,FBS,38,48,Delaware Blue Hens,Pitbull Stadium,11705,STATUS_FINAL,false,true
+401757261,2025,4,2,2025-09-20T22:00Z,338,Kennesaw State Owls,KENN,FBS,28,2032,Arkansas State Red Wolves,ARST,FBS,21,338,Kennesaw State Owls,Walens Family Field at Fifth Third Stadium,10713,STATUS_FINAL,false,false
+401762821,2025,4,2,2025-09-20T22:00Z,2006,Akron Zips,AKR,FBS,51,2184,Duquesne Dukes,DUQ,FCS,7,2006,Akron Zips,InfoCision Stadium,8117,STATUS_FINAL,false,false
+401757260,2025,4,2,2025-09-20T23:00Z,55,Jacksonville State Gamecocks,JVST,FBS,45,93,Murray State Racers,MUR,FCS,10,55,Jacksonville State Gamecocks,AmFirst Stadium,21426,STATUS_FINAL,false,false
+401757264,2025,4,2,2025-09-20T23:00Z,2393,Middle Tennessee Blue Raiders,MTSU,FBS,28,276,Marshall Thundering Herd,MRSH,FBS,42,276,Marshall Thundering Herd,"Johnny ""Red"" Floyd Stadium",15168,STATUS_FINAL,false,false
+401757265,2025,4,2,2025-09-20T23:00Z,2623,Missouri State Bears,MOST,FBS,42,2630,UT Martin Skyhawks,UTM,FCS,10,2623,Missouri State Bears,Robert W. Plaster Stadium,14476,STATUS_FINAL,false,false
+401757268,2025,4,2,2025-09-20T23:00Z,98,Western Kentucky Hilltoppers,WKU,FBS,31,2440,Nevada Wolf Pack,NEV,FBS,16,98,Western Kentucky Hilltoppers,Houchens Industries-L.T. Smith Stadium,17247,STATUS_FINAL,false,false
+401760372,2025,4,2,2025-09-20T23:00Z,2005,Air Force Falcons,AFA,FBS,37,68,Boise State Broncos,BOIS,FBS,49,68,Boise State Broncos,Falcon Stadium,24046,STATUS_FINAL,false,true
+401761609,2025,4,2,2025-09-20T23:00Z,290,Georgia Southern Eagles,GASO,FBS,45,311,Maine Black Bears,ME,FCS,17,290,Georgia Southern Eagles,Allen E. Paulson Stadium,23217,STATUS_FINAL,false,false
+401761611,2025,4,2,2025-09-20T23:00Z,6,South Alabama Jaguars,USA,FBS,20,324,Coastal Carolina Chanticleers,CCU,FBS,38,324,Coastal Carolina Chanticleers,Hancock Whitney Stadium,17050,STATUS_FINAL,false,true
+401752842,2025,4,2,2025-09-20T23:30Z,265,Washington State Cougars,WSU,FBS,24,264,Washington Huskies,WASH,FBS,59,264,Washington Huskies,Martin Stadium,32952,STATUS_FINAL,false,false
+401754539,2025,4,2,2025-09-20T23:30Z,258,Virginia Cavaliers,UVA,FBS,48,24,Stanford Cardinal,STAN,FBS,20,258,Virginia Cavaliers,Scott Stadium,36223,STATUS_FINAL,false,true
+401756896,2025,4,2,2025-09-20T23:30Z,239,Baylor Bears,BAY,FBS,24,9,Arizona State Sun Devils,ASU,FBS,27,9,Arizona State Sun Devils,McLane Stadium,40964,STATUS_FINAL,false,true
+401756898,2025,4,2,2025-09-20T23:30Z,151,East Carolina Pirates,ECU,FBS,13,252,BYU Cougars,BYU,FBS,34,252,BYU Cougars,Dowdy-Ficklen Stadium,47213,STATUS_FINAL,false,false
+401757263,2025,4,2,2025-09-20T23:30Z,2348,Louisiana Tech Bulldogs,LT,FBS,30,2572,Southern Miss Golden Eagles,USM,FBS,20,2348,Louisiana Tech Bulldogs,Joe Aillet Stadium,17108,STATUS_FINAL,false,false
+401760377,2025,4,2,2025-09-21T00:00Z,328,Utah State Aggies,USU,FBS,48,2377,McNeese Cowboys,MCN,FCS,7,328,Utah State Aggies,Maverik Stadium,16273,STATUS_FINAL,false,false
+401761612,2025,4,2,2025-09-21T00:00Z,326,Texas State Bobcats,TXST,FBS,35,2447,Nicholls Colonels,NICH,FCS,3,326,Texas State Bobcats,UFCU Stadium,31500,STATUS_FINAL,false,false
+401757267,2025,4,2,2025-09-21T01:00Z,2638,UTEP Miners,UTEP,FBS,25,2433,UL Monroe Warhawks,ULM,FBS,31,2433,UL Monroe Warhawks,Sun Bowl,15272,STATUS_FINAL,false,false
+401760373,2025,4,2,2025-09-21T01:30Z,36,Colorado State Rams,CSU,FBS,16,2636,UTSA Roadrunners,UTSA,FBS,17,2636,UTSA Roadrunners,Canvas Stadium,32061,STATUS_FINAL,false,false
+401756897,2025,4,2,2025-09-21T02:25Z,38,Colorado Buffaloes,COLO,FBS,37,2751,Wyoming Cowboys,WYO,FBS,20,38,Colorado Buffaloes,Folsom Field,53442,STATUS_FINAL,false,false
+401754540,2025,4,2,2025-09-21T02:30Z,21,San Diego State Aztecs,SDSU,FBS,34,25,California Golden Bears,CAL,FBS,0,21,San Diego State Aztecs,Snapdragon Stadium,31369,STATUS_FINAL,false,false
+401760374,2025,4,2,2025-09-21T03:59Z,62,Hawai'i Rainbow Warriors,HAW,FBS,21,278,Fresno State Bulldogs,FRES,FBS,23,278,Fresno State Bulldogs,Clarence T.C. Ching Athletics Complex,13789,STATUS_FINAL,false,true
+401762471,2025,5,2,2025-09-25T23:30Z,151,East Carolina Pirates,ECU,FBS,28,349,Army Black Knights,ARMY,FBS,6,151,East Carolina Pirates,Dowdy-Ficklen Stadium,32497,STATUS_FINAL,false,true
+401754543,2025,5,2,2025-09-26T23:00Z,258,Virginia Cavaliers,UVA,FBS,46,52,Florida State Seminoles,FSU,FBS,38,258,Virginia Cavaliers,Scott Stadium,50107,STATUS_FINAL,false,true
+401756902,2025,5,2,2025-09-27T01:00Z,9,Arizona State Sun Devils,ASU,FBS,27,2628,TCU Horned Frogs,TCU,FBS,24,9,Arizona State Sun Devils,Mountain America Stadium,53774,STATUS_FINAL,false,true
+401752939,2025,5,2,2025-09-27T02:35Z,204,Oregon State Beavers,ORST,FBS,24,248,Houston Cougars,HOU,FBS,27,248,Houston Cougars,Reser Stadium,29338,STATUS_FINAL,false,false
+401752852,2025,5,2,2025-09-27T19:30Z,264,Washington Huskies,WASH,FBS,6,194,Ohio State Buckeyes,OSU,FBS,24,194,Ohio State Buckeyes,Husky Stadium,72485,STATUS_FINAL,false,true
+401752854,2025,5,2,2025-09-27T23:30Z,213,Penn State Nittany Lions,PSU,FBS,24,2483,Oregon Ducks,ORE,FBS,30,2483,Oregon Ducks,Beaver Stadium,111015,STATUS_FINAL,false,true
+401752719,2025,5,2,2025-09-27T19:30Z,145,Ole Miss Rebels,MISS,FBS,24,99,LSU Tigers,LSU,FBS,19,145,Ole Miss Rebels,Vaught-Hemingway Stadium,67737,STATUS_FINAL,false,true
+401752718,2025,5,2,2025-09-27T23:30Z,61,Georgia Bulldogs,UGA,FBS,21,333,Alabama Crimson Tide,ALA,FBS,24,333,Alabama Crimson Tide,Sanford Stadium,93033,STATUS_FINAL,false,true
+401752724,2025,5,2,2025-09-27T19:30Z,245,Texas A&M Aggies,TA&M,FBS,16,2,Auburn Tigers,AUB,FBS,10,245,Texas A&M Aggies,Kyle Field,108449,STATUS_FINAL,false,true
+401752853,2025,5,2,2025-09-27T19:30Z,2294,Iowa Hawkeyes,IOWA,FBS,15,84,Indiana Hoosiers,IU,FBS,20,84,Indiana Hoosiers,Kinnick Stadium,69250,STATUS_FINAL,false,true
+401756904,2025,5,2,2025-09-27T23:00Z,66,Iowa State Cyclones,ISU,FBS,39,12,Arizona Wildcats,ARIZ,FBS,14,66,Iowa State Cyclones,Jack Trice Stadium,61500,STATUS_FINAL,false,true
+401752720,2025,5,2,2025-09-27T20:15Z,344,Mississippi State Bulldogs,MSST,FBS,34,2633,Tennessee Volunteers,TENN,FBS,41,2633,Tennessee Volunteers,Davis Wade Stadium,60417,STATUS_FINAL,false,true
+401754546,2025,5,2,2025-09-27T16:00Z,154,Wake Forest Demon Deacons,WAKE,FBS,29,59,Georgia Tech Yellow Jackets,GT,FBS,30,59,Georgia Tech Yellow Jackets,Allegacy Federal Credit Union Stadium,30264,STATUS_FINAL,false,true
+401752725,2025,5,2,2025-09-27T16:45Z,238,Vanderbilt Commodores,VAN,FBS,55,328,Utah State Aggies,USU,FBS,35,238,Vanderbilt Commodores,FirstBank Stadium,33688,STATUS_FINAL,false,false
+401752721,2025,5,2,2025-09-27T23:30Z,142,Missouri Tigers,MIZ,FBS,42,113,Massachusetts Minutemen,MASS,FBS,6,142,Missouri Tigers,Memorial Stadium,57321,STATUS_FINAL,false,false
+401752850,2025,5,2,2025-09-27T16:00Z,356,Illinois Fighting Illini,ILL,FBS,34,30,USC Trojans,USC,FBS,32,356,Illinois Fighting Illini,Gies Memorial Stadium,60670,STATUS_FINAL,false,true
+401752717,2025,5,2,2025-09-27T16:00Z,8,Arkansas Razorbacks,ARK,FBS,13,87,Notre Dame Fighting Irish,ND,FBS,56,87,Notre Dame Fighting Irish,Donald W. Reynolds Razorback Stadium,75111,STATUS_FINAL,false,false
+401756903,2025,5,2,2025-09-28T02:15Z,38,Colorado Buffaloes,COLO,FBS,21,252,BYU Cougars,BYU,FBS,24,252,BYU Cougars,Folsom Field,52265,STATUS_FINAL,false,true
+401752849,2025,5,2,2025-09-27T16:00Z,135,Minnesota Golden Gophers,MINN,FBS,31,164,Rutgers Scarlet Knights,RUTG,FBS,28,135,Minnesota Golden Gophers,Huntington Bank Stadium,46234,STATUS_FINAL,false,true
+401754545,2025,5,2,2025-09-27T16:00Z,183,Syracuse Orange,SYR,FBS,3,150,Duke Blue Devils,DUKE,FBS,38,150,Duke Blue Devils,JMA Wireless Dome,44451,STATUS_FINAL,false,true
+401754547,2025,5,2,2025-09-27T16:00Z,221,Pittsburgh Panthers,PITT,FBS,27,97,Louisville Cardinals,LOU,FBS,34,97,Louisville Cardinals,Acrisure Stadium,45301,STATUS_FINAL,false,true
+401756905,2025,5,2,2025-09-27T16:00Z,2305,Kansas Jayhawks,KU,FBS,34,2132,Cincinnati Bearcats,CIN,FBS,37,2132,Cincinnati Bearcats,David Booth Kansas Memorial Stadium,41525,STATUS_FINAL,false,true
+401756906,2025,5,2,2025-09-27T16:00Z,2306,Kansas State Wildcats,KSU,FBS,34,2116,UCF Knights,UCF,FBS,20,2306,Kansas State Wildcats,Bill Snyder Family Stadium,53013,STATUS_FINAL,false,true
+401761617,2025,5,2,2025-09-27T16:00Z,249,North Texas Mean Green,UNT,FBS,36,6,South Alabama Jaguars,USA,FBS,22,249,North Texas Mean Green,DATCU Stadium,16575,STATUS_FINAL,false,false
+401762825,2025,5,2,2025-09-27T16:00Z,195,Ohio Bobcats,OHIO,FBS,35,189,Bowling Green Falcons,BGSU,FBS,20,195,Ohio Bobcats,Peden Stadium,20027,STATUS_FINAL,false,true
+401762826,2025,5,2,2025-09-27T17:00Z,2117,Central Michigan Chippewas,CMU,FBS,24,2199,Eastern Michigan Eagles,EMU,FBS,13,2117,Central Michigan Chippewas,Kelly/Shorts Stadium,28605,STATUS_FINAL,false,true
+401761614,2025,5,2,2025-09-27T17:30Z,256,James Madison Dukes,JMU,FBS,35,290,Georgia Southern Eagles,GASO,FBS,10,256,James Madison Dukes,Bridgeforth Stadium,25029,STATUS_FINAL,false,true
+401761616,2025,5,2,2025-09-27T19:00Z,2433,UL Monroe Warhawks,ULM,FBS,28,2032,Arkansas State Red Wolves,ARST,FBS,16,2433,UL Monroe Warhawks,Malone Stadium,21147,STATUS_FINAL,false,true
+401752851,2025,5,2,2025-09-27T19:30Z,77,Northwestern Wildcats,NU,FBS,17,26,UCLA Bruins,UCLA,FBS,14,77,Northwestern Wildcats,Northwestern Medicine Field at Martin Stadium,12023,STATUS_FINAL,false,true
+401754544,2025,5,2,2025-09-27T19:30Z,103,Boston College Eagles,BC,FBS,24,25,California Golden Bears,CAL,FBS,28,25,California Golden Bears,"Alumni Stadium (Chestnut Hill, MA)",44500,STATUS_FINAL,false,true
+401756907,2025,5,2,2025-09-27T19:30Z,197,Oklahoma State Cowboys,OKST,FBS,27,239,Baylor Bears,BAY,FBS,45,239,Baylor Bears,Boone Pickens Stadium,45689,STATUS_FINAL,false,true
+401756908,2025,5,2,2025-09-27T19:30Z,277,West Virginia Mountaineers,WVU,FBS,14,254,Utah Utes,UTAH,FBS,48,254,Utah Utes,Milan Puskar Stadium,53965,STATUS_FINAL,false,true
+401757170,2025,5,2,2025-09-27T19:30Z,2084,Buffalo Bulls,BUFF,FBS,17,41,UConn Huskies,CONN,FBS,20,41,UConn Huskies,Broadview Stadium,12717,STATUS_FINAL,false,false
+401760380,2025,5,2,2025-09-27T19:30Z,2459,Northern Illinois Huskies,NIU,FBS,3,21,San Diego State Aztecs,SDSU,FBS,6,21,San Diego State Aztecs,Huskie Stadium,13512,STATUS_FINAL,false,false
+401762473,2025,5,2,2025-09-27T19:30Z,2426,Navy Midshipmen,NAVY,FBS,21,242,Rice Owls,RICE,FBS,13,2426,Navy Midshipmen,Navy-Marine Corps Memorial Stadium,28873,STATUS_FINAL,false,true
+401762824,2025,5,2,2025-09-27T19:30Z,2649,Toledo Rockets,TOL,FBS,45,2006,Akron Zips,AKR,FBS,3,2649,Toledo Rockets,Glass Bowl,24535,STATUS_FINAL,false,true
+401762827,2025,5,2,2025-09-27T19:30Z,193,Miami (OH) RedHawks,M-OH,FBS,38,2815,Lindenwood Lions,LIN,FCS,0,193,Miami (OH) RedHawks,Yager Stadium,10504,STATUS_FINAL,false,false
+401757274,2025,5,2,2025-09-27T20:00Z,167,New Mexico Lobos,UNM,FBS,38,166,New Mexico State Aggies,NMSU,FBS,20,167,New Mexico Lobos,University Stadium (NM),37440,STATUS_FINAL,false,false
+401760378,2025,5,2,2025-09-27T20:00Z,2005,Air Force Falcons,AFA,FBS,35,62,Hawai'i Rainbow Warriors,HAW,FBS,44,62,Hawai'i Rainbow Warriors,Falcon Stadium,22677,STATUS_FINAL,false,true
+401762474,2025,5,2,2025-09-27T20:00Z,202,Tulsa Golden Hurricane,TLSA,FBS,14,2655,Tulane Green Wave,TULN,FBS,31,2655,Tulane Green Wave,H. A. Chapman Stadium,16311,STATUS_FINAL,false,true
+401757270,2025,5,2,2025-09-27T22:00Z,338,Kennesaw State Owls,KENN,FBS,24,2393,Middle Tennessee Blue Raiders,MTSU,FBS,16,338,Kennesaw State Owls,Walens Family Field at Fifth Third Stadium,11040,STATUS_FINAL,false,true
+401757271,2025,5,2,2025-09-27T22:00Z,295,Old Dominion Monarchs,ODU,FBS,21,2335,Liberty Flames,LIB,FBS,7,295,Old Dominion Monarchs,S.B. Ballard Stadium,18435,STATUS_FINAL,false,false
+401762828,2025,5,2,2025-09-27T22:30Z,2711,Western Michigan Broncos,WMU,FBS,47,227,Rhode Island Rams,URI,FCS,14,2711,Western Michigan Broncos,Waldo Stadium,20191,STATUS_FINAL,false,false
+401754548,2025,5,2,2025-09-27T23:00Z,152,NC State Wolfpack,NCSU,FBS,21,259,Virginia Tech Hokies,VT,FBS,23,259,Virginia Tech Hokies,Carter-Finley Stadium,56919,STATUS_FINAL,false,true
+401757269,2025,5,2,2025-09-27T23:00Z,2572,Southern Miss Golden Eagles,USM,FBS,42,55,Jacksonville State Gamecocks,JVST,FBS,25,2572,Southern Miss Golden Eagles,M. M. Roberts Stadium,25034,STATUS_FINAL,false,false
+401757273,2025,5,2,2025-09-27T23:00Z,2623,Missouri State Bears,MOST,FBS,22,98,Western Kentucky Hilltoppers,WKU,FBS,27,98,Western Kentucky Hilltoppers,Robert W. Plaster Stadium,10068,STATUS_FINAL,false,true
+401762472,2025,5,2,2025-09-27T23:00Z,2226,Florida Atlantic Owls,FAU,FBS,26,235,Memphis Tigers,MEM,FBS,55,235,Memphis Tigers,Flagler Credit Union Stadium,17733,STATUS_FINAL,false,true
+401752950,2025,5,2,2025-09-27T23:30Z,36,Colorado State Rams,CSU,FBS,3,265,Washington State Cougars,WSU,FBS,20,265,Washington State Cougars,Canvas Stadium,32087,STATUS_FINAL,false,false
+401754549,2025,5,2,2025-09-27T23:30Z,24,Stanford Cardinal,STAN,FBS,30,23,San José State Spartans,SJSU,FBS,29,24,Stanford Cardinal,Stanford Stadium,26357,STATUS_FINAL,false,false
+401760379,2025,5,2,2025-09-27T23:30Z,68,Boise State Broncos,BOIS,FBS,47,2026,App State Mountaineers,APP,FBS,14,68,Boise State Broncos,Albertsons Stadium,32904,STATUS_FINAL,false,false
+401752722,2025,5,2,2025-09-27T23:45Z,2579,South Carolina Gamecocks,SC,FBS,35,96,Kentucky Wildcats,UK,FBS,13,2579,South Carolina Gamecocks,Williams-Brice Stadium,79266,STATUS_FINAL,false,true
+401761615,2025,5,2,2025-09-28T00:00Z,309,Louisiana Ragin' Cajuns,UL,FBS,54,276,Marshall Thundering Herd,MRSH,FBS,51,309,Louisiana Ragin' Cajuns,Our Lady of Lourdes Stadium,20125,STATUS_FINAL,false,true
+401757272,2025,5,2,2025-09-28T01:00Z,2638,UTEP Miners,UTEP,FBS,11,2348,Louisiana Tech Bulldogs,LT,FBS,30,2348,Louisiana Tech Bulldogs,Sun Bowl,13013,STATUS_FINAL,false,true
+401757275,2025,6,2,2025-10-03T01:00Z,166,New Mexico State Aggies,NMSU,FBS,37,2534,Sam Houston Bearkats,SHSU,FBS,10,166,New Mexico State Aggies,Aggie Memorial Stadium,9089,STATUS_FINAL,false,true
+401756909,2025,6,2,2025-10-04T02:30Z,252,BYU Cougars,BYU,FBS,38,277,West Virginia Mountaineers,WVU,FBS,24,252,BYU Cougars,LaVell Edwards Stadium,63917,STATUS_FINAL,false,true
+401757276,2025,6,2,2025-10-03T23:00Z,48,Delaware Blue Hens,DEL,FBS,24,98,Western Kentucky Hilltoppers,WKU,FBS,27,98,Western Kentucky Hilltoppers,Delaware Stadium,19176,STATUS_FINAL,false,true
+401762475,2025,6,2,2025-10-03T23:00Z,58,South Florida Bulls,USF,FBS,54,2429,Charlotte 49ers,CLT,FBS,26,58,South Florida Bulls,Raymond James Stadium,34577,STATUS_FINAL,false,true
+401760384,2025,6,2,2025-10-04T02:00Z,23,San José State Spartans,SJSU,FBS,35,167,New Mexico Lobos,UNM,FBS,28,23,San José State Spartans,CEFCU Stadium,12109,STATUS_FINAL,false,true
+401760382,2025,6,2,2025-10-04T02:30Z,21,San Diego State Aztecs,SDSU,FBS,45,36,Colorado State Rams,CSU,FBS,24,21,San Diego State Aztecs,Snapdragon Stadium,29019,STATUS_FINAL,false,true
+401752859,2025,6,2,2025-10-04T23:30Z,194,Ohio State Buckeyes,OSU,FBS,42,135,Minnesota Golden Gophers,MINN,FBS,3,194,Ohio State Buckeyes,Ohio Stadium,105114,STATUS_FINAL,false,true
+401754553,2025,6,2,2025-10-04T23:30Z,52,Florida State Seminoles,FSU,FBS,22,2390,Miami Hurricanes,MIA,FBS,28,2390,Miami Hurricanes,Doak Campbell Stadium,67277,STATUS_FINAL,false,true
+401752729,2025,6,2,2025-10-04T20:00Z,201,Oklahoma Sooners,OU,FBS,44,2309,Kent State Golden Flashes,KENT,FBS,0,201,Oklahoma Sooners,"Memorial Stadium (Norman, OK)",83016,STATUS_FINAL,false,false
+401752730,2025,6,2,2025-10-04T23:30Z,245,Texas A&M Aggies,TA&M,FBS,31,344,Mississippi State Bulldogs,MSST,FBS,9,245,Texas A&M Aggies,Kyle Field,108572,STATUS_FINAL,false,true
+401752855,2025,6,2,2025-10-04T19:30Z,26,UCLA Bruins,UCLA,FBS,42,213,Penn State Nittany Lions,PSU,FBS,37,26,UCLA Bruins,Rose Bowl,39256,STATUS_FINAL,false,true
+401752727,2025,6,2,2025-10-04T19:30Z,57,Florida Gators,FLA,FBS,29,251,Texas Longhorns,TEX,FBS,21,57,Florida Gators,Ben Hill Griffin Stadium,90714,STATUS_FINAL,false,true
+401752726,2025,6,2,2025-10-04T19:30Z,333,Alabama Crimson Tide,ALA,FBS,30,238,Vanderbilt Commodores,VAN,FBS,14,333,Alabama Crimson Tide,Bryant-Denny Stadium,100077,STATUS_FINAL,false,true
+401756913,2025,6,2,2025-10-04T23:00Z,248,Houston Cougars,HOU,FBS,11,2641,Texas Tech Red Raiders,TTU,FBS,35,2641,Texas Tech Red Raiders,TDECU Stadium,42806,STATUS_FINAL,false,true
+401752728,2025,6,2,2025-10-04T16:00Z,61,Georgia Bulldogs,UGA,FBS,35,96,Kentucky Wildcats,UK,FBS,14,61,Georgia Bulldogs,Sanford Stadium,93033,STATUS_FINAL,false,true
+401756912,2025,6,2,2025-10-04T16:00Z,2132,Cincinnati Bearcats,CIN,FBS,38,66,Iowa State Cyclones,ISU,FBS,30,2132,Cincinnati Bearcats,Nippert Stadium,38007,STATUS_FINAL,false,true
+401752856,2025,6,2,2025-10-04T16:00Z,130,Michigan Wolverines,MICH,FBS,24,275,Wisconsin Badgers,WIS,FBS,10,130,Michigan Wolverines,Michigan Stadium,111070,STATUS_FINAL,false,true
+401757165,2025,6,2,2025-10-04T19:30Z,87,Notre Dame Fighting Irish,ND,FBS,28,68,Boise State Broncos,BOIS,FBS,7,87,Notre Dame Fighting Irish,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401752861,2025,6,2,2025-10-04T16:00Z,2509,Purdue Boilermakers,PUR,FBS,27,356,Illinois Fighting Illini,ILL,FBS,43,356,Illinois Fighting Illini,Ross-Ade Stadium,56551,STATUS_FINAL,false,true
+401754554,2025,6,2,2025-10-04T19:30Z,97,Louisville Cardinals,LOU,FBS,27,258,Virginia Cavaliers,UVA,FBS,30,258,Virginia Cavaliers,L&N Federal Credit Union Stadium,50032,STATUS_FINAL,false,true
+401754550,2025,6,2,2025-10-04T16:00Z,221,Pittsburgh Panthers,PITT,FBS,48,103,Boston College Eagles,BC,FBS,7,221,Pittsburgh Panthers,Acrisure Stadium,51101,STATUS_FINAL,false,true
+401754552,2025,6,2,2025-10-04T16:00Z,153,North Carolina Tar Heels,UNC,FBS,10,228,Clemson Tigers,CLEM,FBS,38,228,Clemson Tigers,Kenan Stadium,50500,STATUS_FINAL,false,true
+401756911,2025,6,2,2025-10-04T16:00Z,239,Baylor Bears,BAY,FBS,35,2306,Kansas State Wildcats,KSU,FBS,34,239,Baylor Bears,McLane Stadium,35596,STATUS_FINAL,false,true
+401760381,2025,6,2,2025-10-04T16:00Z,2426,Navy Midshipmen,NAVY,FBS,34,2005,Air Force Falcons,AFA,FBS,31,2426,Navy Midshipmen,Navy-Marine Corps Memorial Stadium,37517,STATUS_FINAL,false,false
+401762476,2025,6,2,2025-10-04T16:00Z,5,UAB Blazers,UAB,FBS,13,349,Army Black Knights,ARMY,FBS,31,349,Army Black Knights,Protective Stadium,22489,STATUS_FINAL,false,true
+401762830,2025,6,2,2025-10-04T16:00Z,2050,Ball State Cardinals,BALL,FBS,20,195,Ohio Bobcats,OHIO,FBS,14,2050,Ball State Cardinals,Scheumann Stadium,8427,STATUS_FINAL,false,true
+401754556,2025,6,2,2025-10-04T17:00Z,259,Virginia Tech Hokies,VT,FBS,23,154,Wake Forest Demon Deacons,WAKE,FBS,30,154,Wake Forest Demon Deacons,Lane Stadium,65632,STATUS_FINAL,false,true
+401762479,2025,6,2,2025-10-04T17:00Z,218,Temple Owls,TEM,FBS,27,2636,UTSA Roadrunners,UTSA,FBS,21,218,Temple Owls,Lincoln Financial Field,12132,STATUS_FINAL,false,true
+401754557,2025,6,2,2025-10-04T18:00Z,152,NC State Wolfpack,NCSU,FBS,56,2097,Campbell Fighting Camels,CAM,FCS,10,152,NC State Wolfpack,Carter-Finley Stadium,56919,STATUS_FINAL,false,false
+401762832,2025,6,2,2025-10-04T18:30Z,113,Massachusetts Minutemen,MASS,FBS,3,2711,Western Michigan Broncos,WMU,FBS,21,2711,Western Michigan Broncos,Warren McGuirk Alumni Stadium,10014,STATUS_FINAL,false,true
+401756910,2025,6,2,2025-10-04T19:00Z,12,Arizona Wildcats,ARIZ,FBS,41,197,Oklahoma State Cowboys,OKST,FBS,13,12,Arizona Wildcats,Casino Del Sol Stadium,40685,STATUS_FINAL,false,true
+401752857,2025,6,2,2025-10-04T19:30Z,120,Maryland Terrapins,MD,FBS,20,264,Washington Huskies,WASH,FBS,24,264,Washington Huskies,SECU Stadium,46185,STATUS_FINAL,false,true
+401752858,2025,6,2,2025-10-04T19:30Z,77,Northwestern Wildcats,NU,FBS,42,2433,UL Monroe Warhawks,ULM,FBS,7,77,Northwestern Wildcats,Northwestern Medicine Field at Martin Stadium,12023,STATUS_FINAL,false,false
+401752940,2025,6,2,2025-10-04T19:30Z,2026,App State Mountaineers,APP,FBS,27,204,Oregon State Beavers,ORST,FBS,23,2026,App State Mountaineers,Kidd Brewer Stadium,35021,STATUS_FINAL,false,false
+401754555,2025,6,2,2025-10-04T19:30Z,2567,SMU Mustangs,SMU,FBS,31,183,Syracuse Orange,SYR,FBS,18,2567,SMU Mustangs,Gerald J. Ford Stadium,34845,STATUS_FINAL,false,true
+401757171,2025,6,2,2025-10-04T19:30Z,41,UConn Huskies,CONN,FBS,51,2229,Florida International Panthers,FIU,FBS,10,41,UConn Huskies,Pratt & Whitney Stadium,27310,STATUS_FINAL,false,false
+401761618,2025,6,2,2025-10-04T19:30Z,2247,Georgia State Panthers,GAST,FBS,7,256,James Madison Dukes,JMU,FBS,14,256,James Madison Dukes,Center Parc Stadium,19256,STATUS_FINAL,false,true
+401762829,2025,6,2,2025-10-04T19:30Z,2006,Akron Zips,AKR,FBS,28,2117,Central Michigan Chippewas,CMU,FBS,22,2006,Akron Zips,InfoCision Stadium,8995,STATUS_FINAL,false,true
+401762831,2025,6,2,2025-10-04T19:30Z,2084,Buffalo Bulls,BUFF,FBS,31,2199,Eastern Michigan Eagles,EMU,FBS,30,2084,Buffalo Bulls,Broadview Stadium,17300,STATUS_FINAL,false,true
+401762873,2025,6,2,2025-10-04T19:30Z,2459,Northern Illinois Huskies,NIU,FBS,14,193,Miami (OH) RedHawks,M-OH,FBS,25,193,Miami (OH) RedHawks,Huskie Stadium,13827,STATUS_FINAL,false,true
+401752860,2025,6,2,2025-10-04T20:00Z,158,Nebraska Cornhuskers,NEB,FBS,38,127,Michigan State Spartans,MSU,FBS,27,158,Nebraska Cornhuskers,"Memorial Stadium (Lincoln, NE)",86496,STATUS_FINAL,false,true
+401761620,2025,6,2,2025-10-04T20:00Z,2032,Arkansas State Red Wolves,ARST,FBS,31,326,Texas State Bobcats,TXST,FBS,30,2032,Arkansas State Red Wolves,Centennial Bank Stadium,15841,STATUS_FINAL,false,true
+401761619,2025,6,2,2025-10-04T22:00Z,295,Old Dominion Monarchs,ODU,FBS,47,324,Coastal Carolina Chanticleers,CCU,FBS,7,295,Old Dominion Monarchs,S.B. Ballard Stadium,20895,STATUS_FINAL,false,true
+401760385,2025,6,2,2025-10-04T23:00Z,2751,Wyoming Cowboys,WYO,FBS,17,2439,UNLV Rebels,UNLV,FBS,31,2439,UNLV Rebels,War Memorial Stadium,19861,STATUS_FINAL,false,true
+401761621,2025,6,2,2025-10-04T23:00Z,2653,Troy Trojans,TROY,FBS,31,6,South Alabama Jaguars,USA,FBS,24,2653,Troy Trojans,Veterans Memorial Stadium (AL),28035,STATUS_FINAL,false,true
+401762477,2025,6,2,2025-10-04T23:00Z,242,Rice Owls,RICE,FBS,21,2226,Florida Atlantic Owls,FAU,FBS,27,2226,Florida Atlantic Owls,Rice Stadium,22999,STATUS_FINAL,false,true
+401756914,2025,6,2,2025-10-04T23:30Z,2628,TCU Horned Frogs,TCU,FBS,35,38,Colorado Buffaloes,COLO,FBS,21,2628,TCU Horned Frogs,Amon G. Carter Stadium,43160,STATUS_FINAL,false,true
+401756915,2025,6,2,2025-10-04T23:30Z,2116,UCF Knights,UCF,FBS,20,2305,Kansas Jayhawks,KU,FBS,27,2305,Kansas Jayhawks,Acrisure Bounce House,43229,STATUS_FINAL,false,true
+401762478,2025,6,2,2025-10-05T00:00Z,235,Memphis Tigers,MEM,FBS,45,202,Tulsa Golden Hurricane,TLSA,FBS,7,235,Memphis Tigers,Simmons Bank Liberty Stadium,27303,STATUS_FINAL,false,true
+401754551,2025,6,2,2025-10-05T02:30Z,25,California Golden Bears,CAL,FBS,21,150,Duke Blue Devils,DUKE,FBS,45,150,Duke Blue Devils,California Memorial Stadium,42240,STATUS_FINAL,false,true
+401760383,2025,6,2,2025-10-05T02:30Z,278,Fresno State Bulldogs,FRES,FBS,20,2440,Nevada Wolf Pack,NEV,FBS,17,278,Fresno State Bulldogs,Valley Children's Stadium,40005,STATUS_FINAL,false,true
+401757278,2025,7,2,2025-10-08T23:30Z,2393,Middle Tennessee Blue Raiders,MTSU,FBS,20,2623,Missouri State Bears,MOST,FBS,22,2623,Missouri State Bears,"Johnny ""Red"" Floyd Stadium",9806,STATUS_FINAL,false,true
+401757277,2025,7,2,2025-10-09T00:00Z,2638,UTEP Miners,UTEP,FBS,8,2335,Liberty Flames,LIB,FBS,19,2335,Liberty Flames,Sun Bowl,9286,STATUS_FINAL,false,true
+401757280,2025,7,2,2025-10-09T23:00Z,338,Kennesaw State Owls,KENN,FBS,35,2348,Louisiana Tech Bulldogs,LT,FBS,7,338,Kennesaw State Owls,Walens Family Field at Fifth Third Stadium,9585,STATUS_FINAL,false,true
+401762480,2025,7,2,2025-10-09T23:30Z,2655,Tulane Green Wave,TULN,FBS,26,151,East Carolina Pirates,ECU,FBS,19,2655,Tulane Green Wave,Yulman Stadium,20035,STATUS_FINAL,false,true
+401757279,2025,7,2,2025-10-10T00:00Z,2534,Sam Houston Bearkats,SHSU,FBS,27,55,Jacksonville State Gamecocks,JVST,FBS,29,55,Jacksonville State Gamecocks,Shell Energy Stadium,5419,STATUS_FINAL,false,true
+401761622,2025,7,2,2025-10-10T00:00Z,290,Georgia Southern Eagles,GASO,FBS,35,2572,Southern Miss Golden Eagles,USM,FBS,38,2572,Southern Miss Golden Eagles,Allen E. Paulson Stadium,20032,STATUS_FINAL,false,true
+401762481,2025,7,2,2025-10-10T23:30Z,249,North Texas Mean Green,UNT,FBS,36,58,South Florida Bulls,USF,FBS,63,58,South Florida Bulls,DATCU Stadium,31386,STATUS_FINAL,false,true
+401752862,2025,7,2,2025-10-11T01:00Z,264,Washington Huskies,WASH,FBS,38,164,Rutgers Scarlet Knights,RUTG,FBS,19,264,Washington Huskies,Husky Stadium,63743,STATUS_FINAL,false,true
+401760388,2025,7,2,2025-10-11T01:00Z,36,Colorado State Rams,CSU,FBS,49,278,Fresno State Bulldogs,FRES,FBS,21,36,Colorado State Rams,Canvas Stadium,27874,STATUS_FINAL,false,true
+401752865,2025,7,2,2025-10-11T16:00Z,356,Illinois Fighting Illini,ILL,FBS,16,194,Ohio State Buckeyes,OSU,FBS,34,194,Ohio State Buckeyes,Gies Memorial Stadium,60670,STATUS_FINAL,false,true
+401752870,2025,7,2,2025-10-11T19:30Z,2483,Oregon Ducks,ORE,FBS,20,84,Indiana Hoosiers,IU,FBS,30,84,Indiana Hoosiers,Autzen Stadium,59625,STATUS_FINAL,false,true
+401752733,2025,7,2,2025-10-11T16:45Z,145,Ole Miss Rebels,MISS,FBS,24,265,Washington State Cougars,WSU,FBS,21,145,Ole Miss Rebels,Vaught-Hemingway Stadium,66392,STATUS_FINAL,false,false
+401752737,2025,7,2,2025-10-11T23:00Z,245,Texas A&M Aggies,TA&M,FBS,34,57,Florida Gators,FLA,FBS,17,245,Texas A&M Aggies,Kyle Field,105086,STATUS_FINAL,false,true
+401752736,2025,7,2,2025-10-11T19:30Z,251,Texas Longhorns,TEX,FBS,23,201,Oklahoma Sooners,OU,FBS,6,251,Texas Longhorns,Cotton Bowl,92100,STATUS_FINAL,true,true
+401752734,2025,7,2,2025-10-11T16:00Z,142,Missouri Tigers,MIZ,FBS,24,333,Alabama Crimson Tide,ALA,FBS,27,333,Alabama Crimson Tide,Memorial Stadium,57321,STATUS_FINAL,false,true
+401756921,2025,7,2,2025-10-11T23:30Z,2641,Texas Tech Red Raiders,TTU,FBS,42,2305,Kansas Jayhawks,KU,FBS,17,2641,Texas Tech Red Raiders,Galaxy Stadium,60229,STATUS_FINAL,false,true
+401752731,2025,7,2,2025-10-11T23:30Z,2,Auburn Tigers,AUB,FBS,10,61,Georgia Bulldogs,UGA,FBS,20,61,Georgia Bulldogs,Jordan-Hare Stadium,88043,STATUS_FINAL,false,true
+401752732,2025,7,2,2025-10-11T23:45Z,99,LSU Tigers,LSU,FBS,20,2579,South Carolina Gamecocks,SC,FBS,10,99,LSU Tigers,Tiger Stadium (LA),101921,STATUS_FINAL,false,true
+401752735,2025,7,2,2025-10-11T20:15Z,2633,Tennessee Volunteers,TENN,FBS,34,8,Arkansas Razorbacks,ARK,FBS,31,2633,Tennessee Volunteers,Neyland Stadium,101915,STATUS_FINAL,false,true
+401754560,2025,7,2,2025-10-11T19:30Z,59,Georgia Tech Yellow Jackets,GT,FBS,35,259,Virginia Tech Hokies,VT,FBS,20,59,Georgia Tech Yellow Jackets,Bobby Dodd Stadium,50878,STATUS_FINAL,false,true
+401752868,2025,7,2,2025-10-11T23:30Z,30,USC Trojans,USC,FBS,31,130,Michigan Wolverines,MICH,FBS,13,30,USC Trojans,Los Angeles Memorial Coliseum,75500,STATUS_FINAL,false,true
+401754562,2025,7,2,2025-10-11T19:30Z,87,Notre Dame Fighting Irish,ND,FBS,36,152,NC State Wolfpack,NCSU,FBS,7,87,Notre Dame Fighting Irish,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401756916,2025,7,2,2025-10-12T00:00Z,12,Arizona Wildcats,ARIZ,FBS,27,252,BYU Cougars,BYU,FBS,33,252,BYU Cougars,Casino Del Sol Stadium,47960,STATUS_FINAL,false,true
+401756922,2025,7,2,2025-10-12T02:25Z,254,Utah Utes,UTAH,FBS,42,9,Arizona State Sun Devils,ASU,FBS,10,254,Utah Utes,Rice-Eccles Stadium,51444,STATUS_FINAL,false,true
+401756918,2025,7,2,2025-10-11T19:30Z,38,Colorado Buffaloes,COLO,FBS,24,66,Iowa State Cyclones,ISU,FBS,17,38,Colorado Buffaloes,Folsom Field,52698,STATUS_FINAL,false,true
+401754559,2025,7,2,2025-10-11T16:00Z,52,Florida State Seminoles,FSU,FBS,31,221,Pittsburgh Panthers,PITT,FBS,34,221,Pittsburgh Panthers,Doak Campbell Stadium,65256,STATUS_FINAL,false,true
+401752863,2025,7,2,2025-10-11T16:00Z,127,Michigan State Spartans,MSU,FBS,13,26,UCLA Bruins,UCLA,FBS,38,26,UCLA Bruins,Spartan Stadium,72109,STATUS_FINAL,false,true
+401754561,2025,7,2,2025-10-11T16:00Z,2567,SMU Mustangs,SMU,FBS,34,24,Stanford Cardinal,STAN,FBS,10,2567,SMU Mustangs,Gerald J. Ford Stadium,30654,STATUS_FINAL,false,true
+401756917,2025,7,2,2025-10-11T16:00Z,2132,Cincinnati Bearcats,CIN,FBS,20,2116,UCF Knights,UCF,FBS,11,2132,Cincinnati Bearcats,Nippert Stadium,35782,STATUS_FINAL,false,true
+401756920,2025,7,2,2025-10-11T16:00Z,197,Oklahoma State Cowboys,OKST,FBS,17,248,Houston Cougars,HOU,FBS,39,248,Houston Cougars,Boone Pickens Stadium,44941,STATUS_FINAL,false,true
+401761625,2025,7,2,2025-10-11T16:00Z,256,James Madison Dukes,JMU,FBS,24,309,Louisiana Ragin' Cajuns,UL,FBS,14,256,James Madison Dukes,Bridgeforth Stadium,0,STATUS_FINAL,false,true
+401762483,2025,7,2,2025-10-11T16:00Z,349,Army Black Knights,ARMY,FBS,24,2429,Charlotte 49ers,CLT,FBS,7,349,Army Black Knights,Michie Stadium,31172,STATUS_FINAL,false,true
+401762833,2025,7,2,2025-10-11T16:00Z,2006,Akron Zips,AKR,FBS,7,193,Miami (OH) RedHawks,M-OH,FBS,20,193,Miami (OH) RedHawks,InfoCision Stadium,6575,STATUS_FINAL,false,true
+401762835,2025,7,2,2025-10-11T16:00Z,189,Bowling Green Falcons,BGSU,FBS,28,2649,Toledo Rockets,TOL,FBS,23,189,Bowling Green Falcons,Doyt L. Perry Stadium,24000,STATUS_FINAL,false,true
+401762836,2025,7,2,2025-10-11T17:00Z,2199,Eastern Michigan Eagles,EMU,FBS,16,2459,Northern Illinois Huskies,NIU,FBS,10,2199,Eastern Michigan Eagles,Rynearson Stadium,15676,STATUS_FINAL,false,true
+401762837,2025,7,2,2025-10-11T18:30Z,2309,Kent State Golden Flashes,KENT,FBS,42,113,Massachusetts Minutemen,MASS,FBS,6,2309,Kent State Golden Flashes,Zoeller Field at Dix Stadium,11523,STATUS_FINAL,false,true
+401752866,2025,7,2,2025-10-11T19:30Z,213,Penn State Nittany Lions,PSU,FBS,21,77,Northwestern Wildcats,NU,FBS,22,77,Northwestern Wildcats,Beaver Stadium,108121,STATUS_FINAL,false,true
+401752867,2025,7,2,2025-10-11T19:30Z,120,Maryland Terrapins,MD,FBS,31,158,Nebraska Cornhuskers,NEB,FBS,34,158,Nebraska Cornhuskers,SECU Stadium,39623,STATUS_FINAL,false,true
+401754563,2025,7,2,2025-10-11T19:30Z,204,Oregon State Beavers,ORST,FBS,14,154,Wake Forest Demon Deacons,WAKE,FBS,39,154,Wake Forest Demon Deacons,Reser Stadium,29710,STATUS_FINAL,false,false
+401756919,2025,7,2,2025-10-11T19:30Z,2306,Kansas State Wildcats,KSU,FBS,41,2628,TCU Horned Frogs,TCU,FBS,28,2306,Kansas State Wildcats,Bill Snyder Family Stadium,51316,STATUS_FINAL,false,true
+401760386,2025,7,2,2025-10-11T19:30Z,2439,UNLV Rebels,UNLV,FBS,51,2005,Air Force Falcons,AFA,FBS,48,2439,UNLV Rebels,Allegiant Stadium,32932,STATUS_FINAL,false,true
+401761624,2025,7,2,2025-10-11T19:30Z,2247,Georgia State Panthers,GAST,FBS,20,2026,App State Mountaineers,APP,FBS,41,2026,App State Mountaineers,Center Parc Stadium,19587,STATUS_FINAL,false,true
+401761626,2025,7,2,2025-10-11T19:30Z,276,Marshall Thundering Herd,MRSH,FBS,48,295,Old Dominion Monarchs,ODU,FBS,24,276,Marshall Thundering Herd,Joan C. Edwards Stadium,23515,STATUS_FINAL,false,true
+401762834,2025,7,2,2025-10-11T19:30Z,2711,Western Michigan Broncos,WMU,FBS,42,2050,Ball State Cardinals,BALL,FBS,0,2711,Western Michigan Broncos,Waldo Stadium,20032,STATUS_FINAL,false,true
+401762484,2025,7,2,2025-10-11T20:00Z,218,Temple Owls,TEM,FBS,31,2426,Navy Midshipmen,NAVY,FBS,32,2426,Navy Midshipmen,Lincoln Financial Field,26149,STATUS_FINAL,false,true
+401762482,2025,7,2,2025-10-11T22:00Z,2226,Florida Atlantic Owls,FAU,FBS,53,5,UAB Blazers,UAB,FBS,33,2226,Florida Atlantic Owls,Flagler Credit Union Stadium,20052,STATUS_FINAL,false,true
+401752869,2025,7,2,2025-10-11T23:00Z,275,Wisconsin Badgers,WIS,FBS,0,2294,Iowa Hawkeyes,IOWA,FBS,37,2294,Iowa Hawkeyes,Camp Randall Stadium,76064,STATUS_FINAL,false,true
+401760391,2025,7,2,2025-10-11T23:00Z,2751,Wyoming Cowboys,WYO,FBS,35,23,San José State Spartans,SJSU,FBS,28,2751,Wyoming Cowboys,War Memorial Stadium,20970,STATUS_FINAL,false,true
+401761623,2025,7,2,2025-10-11T23:00Z,324,Coastal Carolina Chanticleers,CCU,FBS,23,2433,UL Monroe Warhawks,ULM,FBS,8,324,Coastal Carolina Chanticleers,Brooks Stadium (SC),15211,STATUS_FINAL,false,true
+401752864,2025,7,2,2025-10-11T23:30Z,135,Minnesota Golden Gophers,MINN,FBS,27,2509,Purdue Boilermakers,PUR,FBS,20,135,Minnesota Golden Gophers,Huntington Bank Stadium,49254,STATUS_FINAL,false,true
+401754558,2025,7,2,2025-10-11T23:30Z,103,Boston College Eagles,BC,FBS,10,228,Clemson Tigers,CLEM,FBS,41,228,Clemson Tigers,"Alumni Stadium (Chestnut Hill, MA)",42265,STATUS_FINAL,false,true
+401762485,2025,7,2,2025-10-11T23:30Z,2636,UTSA Roadrunners,UTSA,FBS,61,242,Rice Owls,RICE,FBS,13,2636,UTSA Roadrunners,Alamodome,22058,STATUS_FINAL,false,true
+401761627,2025,7,2,2025-10-12T00:00Z,326,Texas State Bobcats,TXST,FBS,41,2653,Troy Trojans,TROY,FBS,48,2653,Troy Trojans,UFCU Stadium,24369,STATUS_FINAL,false,true
+401760387,2025,7,2,2025-10-12T01:45Z,68,Boise State Broncos,BOIS,FBS,41,167,New Mexico Lobos,UNM,FBS,25,68,Boise State Broncos,Albertsons Stadium,32982,STATUS_FINAL,false,true
+401760390,2025,7,2,2025-10-12T02:30Z,2440,Nevada Wolf Pack,NEV,FBS,10,21,San Diego State Aztecs,SDSU,FBS,44,21,San Diego State Aztecs,Mackay Stadium,19473,STATUS_FINAL,false,true
+401760389,2025,7,2,2025-10-12T03:59Z,62,Hawai'i Rainbow Warriors,HAW,FBS,44,328,Utah State Aggies,USU,FBS,26,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,13023,STATUS_FINAL,false,true
+401757282,2025,8,2,2025-10-14T23:00Z,2335,Liberty Flames,LIB,FBS,30,166,New Mexico State Aggies,NMSU,FBS,27,2335,Liberty Flames,Williams Stadium (VA),16312,STATUS_FINAL,false,true
+401761628,2025,8,2,2025-10-14T23:30Z,6,South Alabama Jaguars,USA,FBS,14,2032,Arkansas State Red Wolves,ARST,FBS,15,2032,Arkansas State Red Wolves,Hancock Whitney Stadium,19634,STATUS_FINAL,false,true
+401757281,2025,8,2,2025-10-15T00:00Z,98,Western Kentucky Hilltoppers,WKU,FBS,6,2229,Florida International Panthers,FIU,FBS,25,2229,Florida International Panthers,Houchens Industries-L.T. Smith Stadium,12276,STATUS_FINAL,false,true
+401757283,2025,8,2,2025-10-15T23:00Z,55,Jacksonville State Gamecocks,JVST,FBS,38,48,Delaware Blue Hens,DEL,FBS,25,55,Jacksonville State Gamecocks,AmFirst Stadium,16884,STATUS_FINAL,false,true
+401757284,2025,8,2,2025-10-15T23:00Z,2534,Sam Houston Bearkats,SHSU,FBS,17,2638,UTEP Miners,UTEP,FBS,35,2638,UTEP Miners,Shell Energy Stadium,4657,STATUS_FINAL,false,true
+401762486,2025,8,2,2025-10-16T23:30Z,151,East Carolina Pirates,ECU,FBS,41,202,Tulsa Golden Hurricane,TLSA,FBS,27,151,East Carolina Pirates,Dowdy-Ficklen Stadium,31307,STATUS_FINAL,false,true
+401754564,2025,8,2,2025-10-17T23:00Z,2390,Miami Hurricanes,MIA,FBS,21,97,Louisville Cardinals,LOU,FBS,24,97,Louisville Cardinals,Hard Rock Stadium,66573,STATUS_FINAL,false,true
+401752872,2025,8,2,2025-10-18T00:00Z,135,Minnesota Golden Gophers,MINN,FBS,24,158,Nebraska Cornhuskers,NEB,FBS,6,135,Minnesota Golden Gophers,Huntington Bank Stadium,48549,STATUS_FINAL,false,true
+401760396,2025,8,2,2025-10-18T01:00Z,328,Utah State Aggies,USU,FBS,30,23,San José State Spartans,SJSU,FBS,25,328,Utah State Aggies,Maverik Stadium,22710,STATUS_FINAL,false,true
+401754371,2025,8,2,2025-10-18T02:30Z,25,California Golden Bears,CAL,FBS,21,153,North Carolina Tar Heels,UNC,FBS,18,25,California Golden Bears,California Memorial Stadium,33401,STATUS_FINAL,false,true
+401752877,2025,8,2,2025-10-18T19:30Z,275,Wisconsin Badgers,WIS,FBS,0,194,Ohio State Buckeyes,OSU,FBS,34,194,Ohio State Buckeyes,Camp Randall Stadium,72795,STATUS_FINAL,false,true
+401752878,2025,8,2,2025-10-18T19:30Z,84,Indiana Hoosiers,IU,FBS,38,127,Michigan State Spartans,MSU,FBS,13,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",55165,STATUS_FINAL,false,true
+401752739,2025,8,2,2025-10-18T21:30Z,8,Arkansas Razorbacks,ARK,FBS,42,245,Texas A&M Aggies,TA&M,FBS,45,245,Texas A&M Aggies,Donald W. Reynolds Razorback Stadium,73845,STATUS_FINAL,false,true
+401752742,2025,8,2,2025-10-18T19:30Z,61,Georgia Bulldogs,UGA,FBS,43,145,Ole Miss Rebels,MISS,FBS,35,61,Georgia Bulldogs,Sanford Stadium,93033,STATUS_FINAL,false,true
+401752738,2025,8,2,2025-10-18T23:30Z,333,Alabama Crimson Tide,ALA,FBS,37,2633,Tennessee Volunteers,TENN,FBS,20,333,Alabama Crimson Tide,Bryant-Denny Stadium,100077,STATUS_FINAL,false,true
+401756923,2025,8,2,2025-10-18T20:00Z,9,Arizona State Sun Devils,ASU,FBS,26,2641,Texas Tech Red Raiders,TTU,FBS,22,9,Arizona State Sun Devils,Mountain America Stadium,54177,STATUS_FINAL,false,true
+401752876,2025,8,2,2025-10-18T22:30Z,164,Rutgers Scarlet Knights,RUTG,FBS,10,2483,Oregon Ducks,ORE,FBS,56,2483,Oregon Ducks,SHI Stadium,53127,STATUS_FINAL,false,true
+401752745,2025,8,2,2025-10-18T16:00Z,238,Vanderbilt Commodores,VAN,FBS,31,99,LSU Tigers,LSU,FBS,24,238,Vanderbilt Commodores,FirstBank Stadium,35000,STATUS_FINAL,false,true
+401754566,2025,8,2,2025-10-18T16:00Z,150,Duke Blue Devils,DUKE,FBS,18,59,Georgia Tech Yellow Jackets,GT,FBS,27,59,Georgia Tech Yellow Jackets,Wallace Wade Stadium,27846,STATUS_FINAL,false,true
+401752871,2025,8,2,2025-10-18T23:30Z,87,Notre Dame Fighting Irish,ND,FBS,34,30,USC Trojans,USC,FBS,24,87,Notre Dame Fighting Irish,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401752744,2025,8,2,2025-10-18T16:45Z,2579,South Carolina Gamecocks,SC,FBS,7,201,Oklahoma Sooners,OU,FBS,26,201,Oklahoma Sooners,Williams-Brice Stadium,78680,STATUS_FINAL,false,true
+401756924,2025,8,2,2025-10-19T00:00Z,252,BYU Cougars,BYU,FBS,24,254,Utah Utes,UTAH,FBS,21,252,BYU Cougars,LaVell Edwards Stadium,64794,STATUS_FINAL,false,true
+401752740,2025,8,2,2025-10-18T23:45Z,2,Auburn Tigers,AUB,FBS,17,142,Missouri Tigers,MIZ,FBS,23,142,Missouri Tigers,Jordan-Hare Stadium,88043,STATUS_FINAL,false,true
+401752951,2025,8,2,2025-10-18T22:30Z,258,Virginia Cavaliers,UVA,FBS,22,265,Washington State Cougars,WSU,FBS,20,258,Virginia Cavaliers,Scott Stadium,56048,STATUS_FINAL,false,false
+401762490,2025,8,2,2025-10-18T23:30Z,58,South Florida Bulls,USF,FBS,48,2226,Florida Atlantic Owls,FAU,FBS,13,58,South Florida Bulls,Raymond James Stadium,45169,STATUS_FINAL,false,true
+401752743,2025,8,2,2025-10-18T23:00Z,96,Kentucky Wildcats,UK,FBS,13,251,Texas Longhorns,TEX,FBS,16,251,Texas Longhorns,Kroger Field,60937,STATUS_FINAL,false,true
+401762487,2025,8,2,2025-10-18T20:00Z,5,UAB Blazers,UAB,FBS,31,235,Memphis Tigers,MEM,FBS,24,5,UAB Blazers,Protective Stadium,19037,STATUS_FINAL,false,true
+401756926,2025,8,2,2025-10-19T00:00Z,197,Oklahoma State Cowboys,OKST,FBS,17,2132,Cincinnati Bearcats,CIN,FBS,49,2132,Cincinnati Bearcats,Boone Pickens Stadium,46901,STATUS_FINAL,false,true
+401752873,2025,8,2,2025-10-18T16:00Z,130,Michigan Wolverines,MICH,FBS,24,264,Washington Huskies,WASH,FBS,7,130,Michigan Wolverines,Michigan Stadium,110701,STATUS_FINAL,false,true
+401754569,2025,8,2,2025-10-18T16:00Z,103,Boston College Eagles,BC,FBS,23,41,UConn Huskies,CONN,FBS,38,41,UConn Huskies,"Alumni Stadium (Chestnut Hill, MA)",38917,STATUS_FINAL,false,false
+401756925,2025,8,2,2025-10-18T16:00Z,248,Houston Cougars,HOU,FBS,31,12,Arizona Wildcats,ARIZ,FBS,28,248,Houston Cougars,TDECU Stadium,28535,STATUS_FINAL,false,true
+401756927,2025,8,2,2025-10-18T16:00Z,2628,TCU Horned Frogs,TCU,FBS,42,239,Baylor Bears,BAY,FBS,36,2628,TCU Horned Frogs,Amon G. Carter Stadium,43868,STATUS_FINAL,false,true
+401762488,2025,8,2,2025-10-18T16:00Z,2655,Tulane Green Wave,TULN,FBS,24,349,Army Black Knights,ARMY,FBS,17,2655,Tulane Green Wave,Yulman Stadium,20027,STATUS_FINAL,false,true
+401762839,2025,8,2,2025-10-18T16:00Z,189,Bowling Green Falcons,BGSU,FBS,6,2117,Central Michigan Chippewas,CMU,FBS,27,2117,Central Michigan Chippewas,Doyt L. Perry Stadium,23105,STATUS_FINAL,false,true
+401762841,2025,8,2,2025-10-18T16:00Z,193,Miami (OH) RedHawks,M-OH,FBS,44,2199,Eastern Michigan Eagles,EMU,FBS,30,193,Miami (OH) RedHawks,Yager Stadium,6832,STATUS_FINAL,false,true
+401756928,2025,8,2,2025-10-18T17:00Z,2116,UCF Knights,UCF,FBS,45,277,West Virginia Mountaineers,WVU,FBS,13,2116,UCF Knights,Acrisure Bounce House,43445,STATUS_FINAL,false,true
+401762842,2025,8,2,2025-10-18T18:00Z,2649,Toledo Rockets,TOL,FBS,45,2309,Kent State Golden Flashes,KENT,FBS,10,2649,Toledo Rockets,Glass Bowl,18417,STATUS_FINAL,false,true
+401762840,2025,8,2,2025-10-18T18:30Z,113,Massachusetts Minutemen,MASS,FBS,21,2084,Buffalo Bulls,BUFF,FBS,28,2084,Buffalo Bulls,Warren McGuirk Alumni Stadium,15239,STATUS_FINAL,false,true
+401752874,2025,8,2,2025-10-18T19:00Z,77,Northwestern Wildcats,NU,FBS,19,2509,Purdue Boilermakers,PUR,FBS,0,77,Northwestern Wildcats,Northwestern Medicine Field at Martin Stadium,12023,STATUS_FINAL,false,true
+401761633,2025,8,2,2025-10-18T19:00Z,2433,UL Monroe Warhawks,ULM,FBS,14,2653,Troy Trojans,TROY,FBS,37,2653,Troy Trojans,Malone Stadium,16863,STATUS_FINAL,false,true
+401754565,2025,8,2,2025-10-18T19:30Z,228,Clemson Tigers,CLEM,FBS,24,2567,SMU Mustangs,SMU,FBS,35,2567,SMU Mustangs,"Memorial Stadium (Clemson, SC)",78669,STATUS_FINAL,false,true
+401760392,2025,8,2,2025-10-18T19:30Z,2005,Air Force Falcons,AFA,FBS,24,2751,Wyoming Cowboys,WYO,FBS,21,2005,Air Force Falcons,Falcon Stadium,23401,STATUS_FINAL,false,true
+401760393,2025,8,2,2025-10-18T19:30Z,68,Boise State Broncos,BOIS,FBS,56,2439,UNLV Rebels,UNLV,FBS,31,68,Boise State Broncos,Albertsons Stadium,32927,STATUS_FINAL,false,true
+401761629,2025,8,2,2025-10-18T19:30Z,2026,App State Mountaineers,APP,FBS,37,324,Coastal Carolina Chanticleers,CCU,FBS,45,324,Coastal Carolina Chanticleers,Kidd Brewer Stadium,33862,STATUS_FINAL,false,true
+401761631,2025,8,2,2025-10-18T19:30Z,256,James Madison Dukes,JMU,FBS,63,295,Old Dominion Monarchs,ODU,FBS,27,256,James Madison Dukes,Bridgeforth Stadium,25232,STATUS_FINAL,false,true
+401761632,2025,8,2,2025-10-18T19:30Z,276,Marshall Thundering Herd,MRSH,FBS,40,326,Texas State Bobcats,TXST,FBS,37,276,Marshall Thundering Herd,Joan C. Edwards Stadium,27533,STATUS_FINAL,false,true
+401762489,2025,8,2,2025-10-18T19:30Z,2429,Charlotte 49ers,CLT,FBS,14,218,Temple Owls,TEM,FBS,49,218,Temple Owls,Jerry Richardson Stadium,13618,STATUS_FINAL,false,true
+401762838,2025,8,2,2025-10-18T19:30Z,2050,Ball State Cardinals,BALL,FBS,42,2006,Akron Zips,AKR,FBS,28,2050,Ball State Cardinals,Scheumann Stadium,12248,STATUS_FINAL,false,true
+401762843,2025,8,2,2025-10-18T19:30Z,195,Ohio Bobcats,OHIO,FBS,48,2459,Northern Illinois Huskies,NIU,FBS,21,195,Ohio Bobcats,Peden Stadium,22293,STATUS_FINAL,false,true
+401762491,2025,8,2,2025-10-18T20:05Z,249,North Texas Mean Green,UNT,FBS,55,2636,UTSA Roadrunners,UTSA,FBS,17,249,North Texas Mean Green,DATCU Stadium,25053,STATUS_FINAL,false,true
+401752741,2025,8,2,2025-10-18T20:15Z,57,Florida Gators,FLA,FBS,23,344,Mississippi State Bulldogs,MSST,FBS,21,57,Florida Gators,Ben Hill Griffin Stadium,90203,STATUS_FINAL,false,true
+401761668,2025,8,2,2025-10-18T21:00Z,309,Louisiana Ragin' Cajuns,UL,FBS,10,2572,Southern Miss Golden Eagles,USM,FBS,22,2572,Southern Miss Golden Eagles,Our Lady of Lourdes Stadium,21047,STATUS_FINAL,false,true
+401752875,2025,8,2,2025-10-18T23:00Z,2294,Iowa Hawkeyes,IOWA,FBS,25,213,Penn State Nittany Lions,PSU,FBS,24,2294,Iowa Hawkeyes,Kinnick Stadium,69250,STATUS_FINAL,false,true
+401752879,2025,8,2,2025-10-18T23:00Z,26,UCLA Bruins,UCLA,FBS,20,120,Maryland Terrapins,MD,FBS,17,26,UCLA Bruins,Rose Bowl,35561,STATUS_FINAL,false,true
+401760394,2025,8,2,2025-10-18T23:00Z,36,Colorado State Rams,CSU,FBS,19,62,Hawai'i Rainbow Warriors,HAW,FBS,31,62,Hawai'i Rainbow Warriors,Canvas Stadium,40416,STATUS_FINAL,false,true
+401761630,2025,8,2,2025-10-18T23:00Z,290,Georgia Southern Eagles,GASO,FBS,41,2247,Georgia State Panthers,GAST,FBS,24,290,Georgia Southern Eagles,Allen E. Paulson Stadium,25428,STATUS_FINAL,false,true
+401754568,2025,8,2,2025-10-18T23:30Z,183,Syracuse Orange,SYR,FBS,13,221,Pittsburgh Panthers,PITT,FBS,30,221,Pittsburgh Panthers,JMA Wireless Dome,40772,STATUS_FINAL,false,true
+401760395,2025,8,2,2025-10-19T01:45Z,167,New Mexico Lobos,UNM,FBS,24,2440,Nevada Wolf Pack,NEV,FBS,22,167,New Mexico Lobos,University Stadium (NM),18233,STATUS_FINAL,false,true
+401752941,2025,8,2,2025-10-19T02:00Z,204,Oregon State Beavers,ORST,FBS,45,322,Lafayette Leopards,LAF,FCS,13,204,Oregon State Beavers,Reser Stadium,27735,STATUS_FINAL,false,false
+401754567,2025,8,2,2025-10-19T02:30Z,24,Stanford Cardinal,STAN,FBS,20,52,Florida State Seminoles,FSU,FBS,13,24,Stanford Cardinal,Stanford Stadium,26470,STATUS_FINAL,false,true
+401757285,2025,9,2,2025-10-21T23:00Z,2229,Florida International Panthers,FIU,FBS,26,338,Kennesaw State Owls,KENN,FBS,45,338,Kennesaw State Owls,Pitbull Stadium,12133,STATUS_FINAL,false,true
+401757286,2025,9,2,2025-10-21T23:30Z,2348,Louisiana Tech Bulldogs,LT,FBS,27,98,Western Kentucky Hilltoppers,WKU,FBS,28,98,Western Kentucky Hilltoppers,Joe Aillet Stadium,10928,STATUS_FINAL,false,true
+401757287,2025,9,2,2025-10-22T23:30Z,48,Delaware Blue Hens,DEL,FBS,31,2393,Middle Tennessee Blue Raiders,MTSU,FBS,28,48,Delaware Blue Hens,Delaware Stadium,14102,STATUS_FINAL,false,true
+401757288,2025,9,2,2025-10-23T01:00Z,166,New Mexico State Aggies,NMSU,FBS,17,2623,Missouri State Bears,MOST,FBS,24,2623,Missouri State Bears,Aggie Memorial Stadium,8790,STATUS_FINAL,false,true
+401761634,2025,9,2,2025-10-23T23:30Z,2247,Georgia State Panthers,GAST,FBS,31,6,South Alabama Jaguars,USA,FBS,38,6,South Alabama Jaguars,Center Parc Stadium,13673,STATUS_FINAL,false,true
+401762492,2025,9,2,2025-10-24T23:00Z,2429,Charlotte 49ers,CLT,FBS,20,249,North Texas Mean Green,UNT,FBS,54,249,North Texas Mean Green,Jerry Richardson Stadium,9626,STATUS_FINAL,false,true
+401754372,2025,9,2,2025-10-24T23:30Z,259,Virginia Tech Hokies,VT,FBS,42,25,California Golden Bears,CAL,FBS,34,259,Virginia Tech Hokies,Lane Stadium,53837,STATUS_FINAL,false,true
+401760397,2025,9,2,2025-10-25T02:00Z,2440,Nevada Wolf Pack,NEV,FBS,3,68,Boise State Broncos,BOIS,FBS,24,68,Boise State Broncos,Mackay Stadium,18029,STATUS_FINAL,false,true
+401752885,2025,9,2,2025-10-25T16:00Z,84,Indiana Hoosiers,IU,FBS,56,26,UCLA Bruins,UCLA,FBS,6,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",54867,STATUS_FINAL,false,true
+401752748,2025,9,2,2025-10-25T23:30Z,99,LSU Tigers,LSU,FBS,25,245,Texas A&M Aggies,TA&M,FBS,49,245,Texas A&M Aggies,Tiger Stadium (LA),101924,STATUS_FINAL,false,true
+401752751,2025,9,2,2025-10-25T19:30Z,2579,South Carolina Gamecocks,SC,FBS,22,333,Alabama Crimson Tide,ALA,FBS,29,333,Alabama Crimson Tide,Williams-Brice Stadium,79537,STATUS_FINAL,false,true
+401752886,2025,9,2,2025-10-25T23:00Z,2483,Oregon Ducks,ORE,FBS,21,275,Wisconsin Badgers,WIS,FBS,7,2483,Oregon Ducks,Autzen Stadium,58940,STATUS_FINAL,false,true
+401754571,2025,9,2,2025-10-25T16:00Z,59,Georgia Tech Yellow Jackets,GT,FBS,41,183,Syracuse Orange,SYR,FBS,16,59,Georgia Tech Yellow Jackets,Bobby Dodd Stadium,51913,STATUS_FINAL,false,true
+401752750,2025,9,2,2025-10-25T16:00Z,201,Oklahoma Sooners,OU,FBS,26,145,Ole Miss Rebels,MISS,FBS,34,145,Ole Miss Rebels,"Memorial Stadium (Norman, OK)",83468,STATUS_FINAL,false,true
+401754572,2025,9,2,2025-10-25T23:00Z,2390,Miami Hurricanes,MIA,FBS,42,24,Stanford Cardinal,STAN,FBS,7,2390,Miami Hurricanes,Hard Rock Stadium,63892,STATUS_FINAL,false,true
+401752752,2025,9,2,2025-10-25T19:30Z,238,Vanderbilt Commodores,VAN,FBS,17,142,Missouri Tigers,MIZ,FBS,10,238,Vanderbilt Commodores,FirstBank Stadium,35000,STATUS_FINAL,false,true
+401756931,2025,9,2,2025-10-25T19:30Z,66,Iowa State Cyclones,ISU,FBS,27,252,BYU Cougars,BYU,FBS,41,252,BYU Cougars,Jack Trice Stadium,61500,STATUS_FINAL,false,true
+401756933,2025,9,2,2025-10-25T20:00Z,2641,Texas Tech Red Raiders,TTU,FBS,42,197,Oklahoma State Cowboys,OKST,FBS,0,2641,Texas Tech Red Raiders,Galaxy Stadium,59625,STATUS_FINAL,false,true
+401754573,2025,9,2,2025-10-25T16:00Z,153,North Carolina Tar Heels,UNC,FBS,16,258,Virginia Cavaliers,UVA,FBS,17,258,Virginia Cavaliers,Kenan Stadium,50500,STATUS_FINAL,false,true
+401752747,2025,9,2,2025-10-25T23:45Z,96,Kentucky Wildcats,UK,FBS,34,2633,Tennessee Volunteers,TENN,FBS,56,2633,Tennessee Volunteers,Kroger Field,60153,STATUS_FINAL,false,true
+401762494,2025,9,2,2025-10-25T16:00Z,235,Memphis Tigers,MEM,FBS,34,58,South Florida Bulls,USF,FBS,31,235,Memphis Tigers,Simmons Bank Liberty Stadium,30940,STATUS_FINAL,false,true
+401754570,2025,9,2,2025-10-25T23:30Z,97,Louisville Cardinals,LOU,FBS,38,103,Boston College Eagles,BC,FBS,24,97,Louisville Cardinals,L&N Federal Credit Union Stadium,50320,STATUS_FINAL,false,true
+401756930,2025,9,2,2025-10-25T20:00Z,2132,Cincinnati Bearcats,CIN,FBS,41,239,Baylor Bears,BAY,FBS,20,2132,Cincinnati Bearcats,Nippert Stadium,38007,STATUS_FINAL,false,true
+401752749,2025,9,2,2025-10-25T20:15Z,344,Mississippi State Bulldogs,MSST,FBS,38,251,Texas Longhorns,TEX,FBS,45,251,Texas Longhorns,Davis Wade Stadium,52680,STATUS_FINAL,false,true
+401752880,2025,9,2,2025-10-25T19:30Z,264,Washington Huskies,WASH,FBS,42,356,Illinois Fighting Illini,ILL,FBS,25,264,Washington Huskies,Husky Stadium,68630,STATUS_FINAL,false,true
+401756929,2025,9,2,2025-10-26T00:00Z,9,Arizona State Sun Devils,ASU,FBS,16,248,Houston Cougars,HOU,FBS,24,248,Houston Cougars,Mountain America Stadium,54256,STATUS_FINAL,false,true
+401752881,2025,9,2,2025-10-25T23:30Z,127,Michigan State Spartans,MSU,FBS,20,130,Michigan Wolverines,MICH,FBS,31,130,Michigan Wolverines,Spartan Stadium,75085,STATUS_FINAL,false,true
+401752883,2025,9,2,2025-10-25T16:00Z,158,Nebraska Cornhuskers,NEB,FBS,28,77,Northwestern Wildcats,NU,FBS,21,158,Nebraska Cornhuskers,"Memorial Stadium (Lincoln, NE)",86401,STATUS_FINAL,false,true
+401752884,2025,9,2,2025-10-25T16:00Z,2509,Purdue Boilermakers,PUR,FBS,24,164,Rutgers Scarlet Knights,RUTG,FBS,27,164,Rutgers Scarlet Knights,Ross-Ade Stadium,55289,STATUS_FINAL,false,true
+401752942,2025,9,2,2025-10-25T16:00Z,154,Wake Forest Demon Deacons,WAKE,FBS,13,2567,SMU Mustangs,SMU,FBS,12,154,Wake Forest Demon Deacons,Allegacy Federal Credit Union Stadium,28358,STATUS_FINAL,false,true
+401756932,2025,9,2,2025-10-25T16:00Z,2305,Kansas Jayhawks,KU,FBS,17,2306,Kansas State Wildcats,KSU,FBS,42,2306,Kansas State Wildcats,David Booth Kansas Memorial Stadium,0,STATUS_FINAL,false,true
+401761635,2025,9,2,2025-10-25T16:00Z,295,Old Dominion Monarchs,ODU,FBS,24,2026,App State Mountaineers,APP,FBS,21,295,Old Dominion Monarchs,S.B. Ballard Stadium,18097,STATUS_FINAL,false,true
+401762846,2025,9,2,2025-10-25T16:00Z,2309,Kent State Golden Flashes,KENT,FBS,24,189,Bowling Green Falcons,BGSU,FBS,21,2309,Kent State Golden Flashes,Zoeller Field at Dix Stadium,9260,STATUS_FINAL,false,true
+401762848,2025,9,2,2025-10-25T16:00Z,2199,Eastern Michigan Eagles,EMU,FBS,21,195,Ohio Bobcats,OHIO,FBS,28,195,Ohio Bobcats,Rynearson Stadium,15985,STATUS_FINAL,false,true
+401752746,2025,9,2,2025-10-25T16:45Z,8,Arkansas Razorbacks,ARK,FBS,24,2,Auburn Tigers,AUB,FBS,33,2,Auburn Tigers,Donald W. Reynolds Razorback Stadium,68922,STATUS_FINAL,false,true
+401762844,2025,9,2,2025-10-25T17:00Z,2084,Buffalo Bulls,BUFF,FBS,16,2006,Akron Zips,AKR,FBS,24,2006,Akron Zips,Broadview Stadium,12491,STATUS_FINAL,false,true
+401757172,2025,9,2,2025-10-25T19:00Z,242,Rice Owls,RICE,FBS,37,41,UConn Huskies,CONN,FBS,34,242,Rice Owls,Rice Stadium,21122,STATUS_FINAL,false,false
+401760400,2025,9,2,2025-10-25T19:00Z,167,New Mexico Lobos,UNM,FBS,33,328,Utah State Aggies,USU,FBS,14,167,New Mexico Lobos,University Stadium (NM),20097,STATUS_FINAL,false,true
+401752882,2025,9,2,2025-10-25T19:30Z,2294,Iowa Hawkeyes,IOWA,FBS,41,135,Minnesota Golden Gophers,MINN,FBS,3,2294,Iowa Hawkeyes,Kinnick Stadium,69250,STATUS_FINAL,false,true
+401752952,2025,9,2,2025-10-25T19:30Z,265,Washington State Cougars,WSU,FBS,28,2649,Toledo Rockets,TOL,FBS,7,265,Washington State Cougars,Martin Stadium,27646,STATUS_FINAL,false,false
+401754574,2025,9,2,2025-10-25T19:30Z,221,Pittsburgh Panthers,PITT,FBS,53,152,NC State Wolfpack,NCSU,FBS,34,221,Pittsburgh Panthers,Acrisure Stadium,46840,STATUS_FINAL,false,true
+401760399,2025,9,2,2025-10-25T19:30Z,278,Fresno State Bulldogs,FRES,FBS,0,21,San Diego State Aztecs,SDSU,FBS,23,21,San Diego State Aztecs,Valley Children's Stadium,41535,STATUS_FINAL,false,true
+401761637,2025,9,2,2025-10-25T19:30Z,2572,Southern Miss Golden Eagles,USM,FBS,49,2433,UL Monroe Warhawks,ULM,FBS,21,2572,Southern Miss Golden Eagles,M. M. Roberts Stadium,27111,STATUS_FINAL,false,true
+401762493,2025,9,2,2025-10-25T19:30Z,2426,Navy Midshipmen,NAVY,FBS,42,2226,Florida Atlantic Owls,FAU,FBS,32,2426,Navy Midshipmen,Navy-Marine Corps Memorial Stadium,32175,STATUS_FINAL,false,true
+401762495,2025,9,2,2025-10-25T19:30Z,202,Tulsa Golden Hurricane,TLSA,FBS,37,218,Temple Owls,TEM,FBS,38,218,Temple Owls,H. A. Chapman Stadium,16403,STATUS_FINAL,false,true
+401762845,2025,9,2,2025-10-25T19:30Z,2459,Northern Illinois Huskies,NIU,FBS,21,2050,Ball State Cardinals,BALL,FBS,7,2459,Northern Illinois Huskies,Huskie Stadium,10124,STATUS_FINAL,false,true
+401762847,2025,9,2,2025-10-25T19:30Z,2117,Central Michigan Chippewas,CMU,FBS,38,113,Massachusetts Minutemen,MASS,FBS,13,2117,Central Michigan Chippewas,Kelly/Shorts Stadium,20489,STATUS_FINAL,false,true
+401762874,2025,9,2,2025-10-25T19:30Z,193,Miami (OH) RedHawks,M-OH,FBS,26,2711,Western Michigan Broncos,WMU,FBS,17,193,Miami (OH) RedHawks,Yager Stadium,18025,STATUS_FINAL,false,true
+401756935,2025,9,2,2025-10-25T22:00Z,277,West Virginia Mountaineers,WVU,FBS,17,2628,TCU Horned Frogs,TCU,FBS,23,2628,TCU Horned Frogs,Milan Puskar Stadium,54110,STATUS_FINAL,false,true
+401761636,2025,9,2,2025-10-25T23:00Z,2032,Arkansas State Red Wolves,ARST,FBS,34,290,Georgia Southern Eagles,GASO,FBS,24,2032,Arkansas State Red Wolves,Centennial Bank Stadium,16341,STATUS_FINAL,false,true
+401761638,2025,9,2,2025-10-25T23:00Z,2653,Troy Trojans,TROY,FBS,35,309,Louisiana Ragin' Cajuns,UL,FBS,23,2653,Troy Trojans,Veterans Memorial Stadium (AL),23719,STATUS_FINAL,false,true
+401760398,2025,9,2,2025-10-25T23:30Z,2751,Wyoming Cowboys,WYO,FBS,28,36,Colorado State Rams,CSU,FBS,0,2751,Wyoming Cowboys,War Memorial Stadium,25609,STATUS_FINAL,false,true
+401756934,2025,9,2,2025-10-26T02:25Z,254,Utah Utes,UTAH,FBS,53,38,Colorado Buffaloes,COLO,FBS,7,254,Utah Utes,Rice-Eccles Stadium,51949,STATUS_FINAL,false,true
+401757289,2025,10,2,2025-10-29T00:00Z,338,Kennesaw State Owls,KENN,FBS,33,2638,UTEP Miners,UTEP,FBS,20,338,Kennesaw State Owls,Walens Family Field at Fifth Third Stadium,11040,STATUS_FINAL,false,true
+401761639,2025,10,2,2025-10-29T00:00Z,326,Texas State Bobcats,TXST,FBS,20,256,James Madison Dukes,JMU,FBS,52,256,James Madison Dukes,UFCU Stadium,17363,STATUS_FINAL,false,true
+401757292,2025,10,2,2025-10-29T23:30Z,2393,Middle Tennessee Blue Raiders,MTSU,FBS,21,55,Jacksonville State Gamecocks,JVST,FBS,24,55,Jacksonville State Gamecocks,"Johnny ""Red"" Floyd Stadium",10200,STATUS_FINAL,false,true
+401757291,2025,10,2,2025-10-30T00:00Z,2623,Missouri State Bears,MOST,FBS,28,2229,Florida International Panthers,FIU,FBS,21,2623,Missouri State Bears,Robert W. Plaster Stadium,8754,STATUS_FINAL,false,true
+401761640,2025,10,2,2025-10-30T23:30Z,324,Coastal Carolina Chanticleers,CCU,FBS,44,276,Marshall Thundering Herd,MRSH,FBS,27,324,Coastal Carolina Chanticleers,Brooks Stadium (SC),17034,STATUS_FINAL,false,true
+401762443,2025,10,2,2025-10-30T23:30Z,2636,UTSA Roadrunners,UTSA,FBS,48,2655,Tulane Green Wave,TULN,FBS,26,2636,UTSA Roadrunners,Alamodome,16715,STATUS_FINAL,false,true
+401762497,2025,10,2,2025-10-31T23:00Z,242,Rice Owls,RICE,FBS,14,235,Memphis Tigers,MEM,FBS,38,235,Memphis Tigers,Rice Stadium,20197,STATUS_FINAL,false,true
+401754575,2025,10,2,2025-10-31T23:30Z,183,Syracuse Orange,SYR,FBS,10,153,North Carolina Tar Heels,UNC,FBS,27,153,North Carolina Tar Heels,JMA Wireless Dome,37184,STATUS_FINAL,false,true
+401757290,2025,10,2,2025-11-01T00:00Z,2348,Louisiana Tech Bulldogs,LT,FBS,55,2534,Sam Houston Bearkats,SHSU,FBS,14,2348,Louisiana Tech Bulldogs,Joe Aillet Stadium,17841,STATUS_FINAL,false,true
+401752889,2025,10,2,2025-11-01T16:00Z,194,Ohio State Buckeyes,OSU,FBS,38,213,Penn State Nittany Lions,PSU,FBS,14,194,Ohio State Buckeyes,Ohio Stadium,105517,STATUS_FINAL,false,true
+401752887,2025,10,2,2025-11-01T19:30Z,120,Maryland Terrapins,MD,FBS,10,84,Indiana Hoosiers,IU,FBS,55,84,Indiana Hoosiers,SECU Stadium,46185,STATUS_FINAL,false,true
+401752755,2025,10,2,2025-11-01T19:30Z,57,Florida Gators,FLA,FBS,20,61,Georgia Bulldogs,UGA,FBS,24,61,Georgia Bulldogs,EverBank Stadium,76131,STATUS_FINAL,true,true
+401752756,2025,10,2,2025-11-01T23:00Z,145,Ole Miss Rebels,MISS,FBS,30,2579,South Carolina Gamecocks,SC,FBS,14,145,Ole Miss Rebels,Vaught-Hemingway Stadium,67491,STATUS_FINAL,false,true
+401754579,2025,10,2,2025-11-01T23:30Z,152,NC State Wolfpack,NCSU,FBS,48,59,Georgia Tech Yellow Jackets,GT,FBS,36,152,NC State Wolfpack,Carter-Finley Stadium,56919,STATUS_FINAL,false,true
+401752758,2025,10,2,2025-11-01T16:00Z,251,Texas Longhorns,TEX,FBS,34,238,Vanderbilt Commodores,VAN,FBS,31,251,Texas Longhorns,DKR-Texas Memorial Stadium,102338,STATUS_FINAL,false,true
+401754581,2025,10,2,2025-11-01T16:00Z,2567,SMU Mustangs,SMU,FBS,26,2390,Miami Hurricanes,MIA,FBS,20,2567,SMU Mustangs,Gerald J. Ford Stadium,35074,STATUS_FINAL,false,true
+401754583,2025,10,2,2025-11-01T19:30Z,103,Boston College Eagles,BC,FBS,10,87,Notre Dame Fighting Irish,ND,FBS,25,87,Notre Dame Fighting Irish,"Alumni Stadium (Chestnut Hill, MA)",44500,STATUS_FINAL,false,false
+401756941,2025,10,2,2025-11-01T19:30Z,2306,Kansas State Wildcats,KSU,FBS,20,2641,Texas Tech Red Raiders,TTU,FBS,43,2641,Texas Tech Red Raiders,Bill Snyder Family Stadium,52111,STATUS_FINAL,false,true
+401752757,2025,10,2,2025-11-01T23:30Z,2633,Tennessee Volunteers,TENN,FBS,27,201,Oklahoma Sooners,OU,FBS,33,201,Oklahoma Sooners,Neyland Stadium,101915,STATUS_FINAL,false,true
+401754576,2025,10,2,2025-11-01T19:45Z,25,California Golden Bears,CAL,FBS,21,258,Virginia Cavaliers,UVA,FBS,31,258,Virginia Cavaliers,California Memorial Stadium,30893,STATUS_FINAL,false,true
+401754580,2025,10,2,2025-11-01T19:00Z,259,Virginia Tech Hokies,VT,FBS,16,97,Louisville Cardinals,LOU,FBS,28,97,Louisville Cardinals,Lane Stadium,54030,STATUS_FINAL,false,true
+401756942,2025,10,2,2025-11-02T02:15Z,254,Utah Utes,UTAH,FBS,45,2132,Cincinnati Bearcats,CIN,FBS,14,254,Utah Utes,Rice-Eccles Stadium,51672,STATUS_FINAL,false,true
+401752890,2025,10,2,2025-11-01T23:00Z,130,Michigan Wolverines,MICH,FBS,21,2509,Purdue Boilermakers,PUR,FBS,16,130,Michigan Wolverines,Michigan Stadium,110517,STATUS_FINAL,false,true
+401756938,2025,10,2,2025-11-01T16:00Z,248,Houston Cougars,HOU,FBS,35,277,West Virginia Mountaineers,WVU,FBS,45,277,West Virginia Mountaineers,TDECU Stadium,25049,STATUS_FINAL,false,true
+401752892,2025,10,2,2025-11-01T23:30Z,158,Nebraska Cornhuskers,NEB,FBS,17,30,USC Trojans,USC,FBS,21,30,USC Trojans,"Memorial Stadium (Lincoln, NE)",86529,STATUS_FINAL,false,true
+401752891,2025,10,2,2025-11-01T16:00Z,356,Illinois Fighting Illini,ILL,FBS,35,164,Rutgers Scarlet Knights,RUTG,FBS,13,356,Illinois Fighting Illini,Gies Memorial Stadium,60670,STATUS_FINAL,false,true
+401754577,2025,10,2,2025-11-01T16:00Z,228,Clemson Tigers,CLEM,FBS,45,150,Duke Blue Devils,DUKE,FBS,46,150,Duke Blue Devils,"Memorial Stadium (Clemson, SC)",75809,STATUS_FINAL,false,true
+401756936,2025,10,2,2025-11-01T16:00Z,239,Baylor Bears,BAY,FBS,30,2116,UCF Knights,UCF,FBS,3,239,Baylor Bears,McLane Stadium,40212,STATUS_FINAL,false,true
+401757173,2025,10,2,2025-11-01T16:00Z,41,UConn Huskies,CONN,FBS,38,5,UAB Blazers,UAB,FBS,19,41,UConn Huskies,Pratt & Whitney Stadium,23170,STATUS_FINAL,false,false
+401760401,2025,10,2,2025-11-01T16:00Z,2005,Air Force Falcons,AFA,FBS,17,349,Army Black Knights,ARMY,FBS,20,349,Army Black Knights,Falcon Stadium,39441,STATUS_FINAL,false,false
+401762499,2025,10,2,2025-11-01T16:00Z,249,North Texas Mean Green,UNT,FBS,31,2426,Navy Midshipmen,NAVY,FBS,17,249,North Texas Mean Green,DATCU Stadium,26516,STATUS_FINAL,false,true
+401762849,2025,10,2,2025-11-01T16:00Z,189,Bowling Green Falcons,BGSU,FBS,3,2084,Buffalo Bulls,BUFF,FBS,28,2084,Buffalo Bulls,Doyt L. Perry Stadium,11876,STATUS_FINAL,false,true
+401756939,2025,10,2,2025-11-01T17:00Z,66,Iowa State Cyclones,ISU,FBS,19,9,Arizona State Sun Devils,ASU,FBS,24,9,Arizona State Sun Devils,Jack Trice Stadium,60899,STATUS_FINAL,false,true
+401762498,2025,10,2,2025-11-01T18:00Z,218,Temple Owls,TEM,FBS,14,151,East Carolina Pirates,ECU,FBS,45,151,East Carolina Pirates,Lincoln Financial Field,13168,STATUS_FINAL,false,true
+401760404,2025,10,2,2025-11-01T19:00Z,2439,UNLV Rebels,UNLV,FBS,35,167,New Mexico Lobos,UNM,FBS,40,167,New Mexico Lobos,Allegiant Stadium,25972,STATUS_FINAL,false,true
+401752888,2025,10,2,2025-11-01T19:30Z,135,Minnesota Golden Gophers,MINN,FBS,23,127,Michigan State Spartans,MSU,FBS,20,135,Minnesota Golden Gophers,Huntington Bank Stadium,45339,STATUS_FINAL,false,true
+401754582,2025,10,2,2025-11-01T19:30Z,24,Stanford Cardinal,STAN,FBS,20,221,Pittsburgh Panthers,PITT,FBS,35,221,Pittsburgh Panthers,Stanford Stadium,16540,STATUS_FINAL,false,true
+401757293,2025,10,2,2025-11-01T19:30Z,2335,Liberty Flames,LIB,FBS,59,48,Delaware Blue Hens,DEL,FBS,30,2335,Liberty Flames,Williams Stadium (VA),18455,STATUS_FINAL,false,true
+401757294,2025,10,2,2025-11-01T19:30Z,98,Western Kentucky Hilltoppers,WKU,FBS,35,166,New Mexico State Aggies,NMSU,FBS,16,98,Western Kentucky Hilltoppers,Houchens Industries-L.T. Smith Stadium,15023,STATUS_FINAL,false,true
+401760402,2025,10,2,2025-11-01T19:30Z,68,Boise State Broncos,BOIS,FBS,7,278,Fresno State Bulldogs,FRES,FBS,30,278,Fresno State Bulldogs,Albertsons Stadium,32826,STATUS_FINAL,false,true
+401761641,2025,10,2,2025-11-01T19:30Z,2433,UL Monroe Warhawks,ULM,FBS,6,295,Old Dominion Monarchs,ODU,FBS,31,295,Old Dominion Monarchs,Malone Stadium,17087,STATUS_FINAL,false,true
+401761642,2025,10,2,2025-11-01T19:30Z,6,South Alabama Jaguars,USA,FBS,22,309,Louisiana Ragin' Cajuns,UL,FBS,31,309,Louisiana Ragin' Cajuns,Hancock Whitney Stadium,18462,STATUS_FINAL,false,true
+401752753,2025,10,2,2025-11-01T20:00Z,8,Arkansas Razorbacks,ARK,FBS,35,344,Mississippi State Bulldogs,MSST,FBS,38,344,Mississippi State Bulldogs,Donald W. Reynolds Razorback Stadium,68358,STATUS_FINAL,false,true
+401756940,2025,10,2,2025-11-01T20:00Z,2305,Kansas Jayhawks,KU,FBS,38,197,Oklahoma State Cowboys,OKST,FBS,21,2305,Kansas Jayhawks,David Booth Kansas Memorial Stadium,39511,STATUS_FINAL,false,true
+401762850,2025,10,2,2025-11-01T20:00Z,2711,Western Michigan Broncos,WMU,FBS,24,2117,Central Michigan Chippewas,CMU,FBS,21,2711,Western Michigan Broncos,Waldo Stadium,29299,STATUS_FINAL,false,true
+401756937,2025,10,2,2025-11-01T23:00Z,38,Colorado Buffaloes,COLO,FBS,17,12,Arizona Wildcats,ARIZ,FBS,52,12,Arizona Wildcats,Folsom Field,48322,STATUS_FINAL,false,true
+401760405,2025,10,2,2025-11-01T23:00Z,21,San Diego State Aztecs,SDSU,FBS,24,2751,Wyoming Cowboys,WYO,FBS,7,21,San Diego State Aztecs,Snapdragon Stadium,24325,STATUS_FINAL,false,true
+401752754,2025,10,2,2025-11-01T23:30Z,2,Auburn Tigers,AUB,FBS,3,96,Kentucky Wildcats,UK,FBS,10,96,Kentucky Wildcats,Jordan-Hare Stadium,88043,STATUS_FINAL,false,true
+401752943,2025,10,2,2025-11-01T23:30Z,204,Oregon State Beavers,ORST,FBS,10,265,Washington State Cougars,WSU,FBS,7,204,Oregon State Beavers,Reser Stadium,32905,STATUS_FINAL,false,true
+401754578,2025,10,2,2025-11-01T23:30Z,52,Florida State Seminoles,FSU,FBS,42,154,Wake Forest Demon Deacons,WAKE,FBS,7,52,Florida State Seminoles,Doak Campbell Stadium,63677,STATUS_FINAL,false,true
+401761643,2025,10,2,2025-11-02T00:00Z,2653,Troy Trojans,TROY,FBS,10,2032,Arkansas State Red Wolves,ARST,FBS,23,2032,Arkansas State Red Wolves,Veterans Memorial Stadium (AL),23391,STATUS_FINAL,false,true
+401760403,2025,10,2,2025-11-02T02:30Z,23,San José State Spartans,SJSU,FBS,45,62,Hawai'i Rainbow Warriors,HAW,FBS,38,23,San José State Spartans,CEFCU Stadium,16012,STATUS_FINAL,false,true
+401762851,2025,11,2,2025-11-05T00:00Z,2006,Akron Zips,AKR,FBS,44,113,Massachusetts Minutemen,MASS,FBS,10,2006,Akron Zips,InfoCision Stadium,5046,STATUS_FINAL,false,true
+401762852,2025,11,2,2025-11-05T00:00Z,195,Ohio Bobcats,OHIO,FBS,24,193,Miami (OH) RedHawks,M-OH,FBS,20,195,Ohio Bobcats,Peden Stadium,22231,STATUS_FINAL,false,true
+401762853,2025,11,2,2025-11-06T00:00Z,2050,Ball State Cardinals,BALL,FBS,17,2309,Kent State Golden Flashes,KENT,FBS,13,2050,Ball State Cardinals,Scheumann Stadium,5225,STATUS_FINAL,false,true
+401762854,2025,11,2,2025-11-06T00:00Z,2649,Toledo Rockets,TOL,FBS,42,2459,Northern Illinois Huskies,NIU,FBS,3,2649,Toledo Rockets,Glass Bowl,22128,STATUS_FINAL,false,true
+401761644,2025,11,2,2025-11-07T00:30Z,2026,App State Mountaineers,APP,FBS,23,290,Georgia Southern Eagles,GASO,FBS,25,290,Georgia Southern Eagles,Kidd Brewer Stadium,31876,STATUS_FINAL,false,true
+401762500,2025,11,2,2025-11-07T00:30Z,58,South Florida Bulls,USF,FBS,55,2636,UTSA Roadrunners,UTSA,FBS,23,58,South Florida Bulls,Raymond James Stadium,27437,STATUS_FINAL,false,true
+401752896,2025,11,2,2025-11-08T02:00Z,30,USC Trojans,USC,FBS,38,77,Northwestern Wildcats,NU,FBS,17,30,USC Trojans,Los Angeles Memorial Coliseum,67179,STATUS_FINAL,false,true
+401756946,2025,11,2,2025-11-08T01:15Z,2116,UCF Knights,UCF,FBS,27,248,Houston Cougars,HOU,FBS,30,248,Houston Cougars,Acrisure Bounce House,44206,STATUS_FINAL,false,true
+401762501,2025,11,2,2025-11-08T02:10Z,235,Memphis Tigers,MEM,FBS,32,2655,Tulane Green Wave,TULN,FBS,38,2655,Tulane Green Wave,Simmons Bank Liberty Stadium,30384,STATUS_FINAL,false,true
+401752897,2025,11,2,2025-11-08T18:00Z,2509,Purdue Boilermakers,PUR,FBS,10,194,Ohio State Buckeyes,OSU,FBS,34,194,Ohio State Buckeyes,Ross-Ade Stadium,57701,STATUS_FINAL,false,true
+401752893,2025,11,2,2025-11-08T17:00Z,213,Penn State Nittany Lions,PSU,FBS,24,84,Indiana Hoosiers,IU,FBS,27,84,Indiana Hoosiers,Beaver Stadium,105231,STATUS_FINAL,false,true
+401752763,2025,11,2,2025-11-08T20:30Z,142,Missouri Tigers,MIZ,FBS,17,245,Texas A&M Aggies,TA&M,FBS,38,245,Texas A&M Aggies,Memorial Stadium,57321,STATUS_FINAL,false,true
+401752759,2025,11,2,2025-11-09T00:30Z,333,Alabama Crimson Tide,ALA,FBS,20,99,LSU Tigers,LSU,FBS,9,333,Alabama Crimson Tide,Bryant-Denny Stadium,100077,STATUS_FINAL,false,true
+401752762,2025,11,2,2025-11-08T17:00Z,344,Mississippi State Bulldogs,MSST,FBS,21,61,Georgia Bulldogs,UGA,FBS,41,61,Georgia Bulldogs,Davis Wade Stadium,53017,STATUS_FINAL,false,true
+401752761,2025,11,2,2025-11-08T18:00Z,145,Ole Miss Rebels,MISS,FBS,49,2643,The Citadel Bulldogs,CIT,FCS,0,145,Ole Miss Rebels,Vaught-Hemingway Stadium,67326,STATUS_FINAL,false,false
+401756945,2025,11,2,2025-11-08T17:00Z,2641,Texas Tech Red Raiders,TTU,FBS,29,252,BYU Cougars,BYU,FBS,7,2641,Texas Tech Red Raiders,Galaxy Stadium,60229,STATUS_FINAL,false,true
+401752898,2025,11,2,2025-11-08T20:30Z,2294,Iowa Hawkeyes,IOWA,FBS,16,2483,Oregon Ducks,ORE,FBS,18,2483,Oregon Ducks,Kinnick Stadium,69250,STATUS_FINAL,false,true
+401757166,2025,11,2,2025-11-09T00:30Z,87,Notre Dame Fighting Irish,ND,FBS,49,2426,Navy Midshipmen,NAVY,FBS,10,87,Notre Dame Fighting Irish,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401754589,2025,11,2,2025-11-09T00:00Z,258,Virginia Cavaliers,UVA,FBS,9,154,Wake Forest Demon Deacons,WAKE,FBS,16,154,Wake Forest Demon Deacons,Scott Stadium,55568,STATUS_FINAL,false,true
+401754585,2025,11,2,2025-11-09T00:00Z,97,Louisville Cardinals,LOU,FBS,26,25,California Golden Bears,CAL,FBS,29,25,California Golden Bears,L&N Federal Credit Union Stadium,51381,STATUS_FINAL,false,true
+401752764,2025,11,2,2025-11-08T21:00Z,238,Vanderbilt Commodores,VAN,FBS,45,2,Auburn Tigers,AUB,FBS,38,238,Vanderbilt Commodores,FirstBank Stadium,35000,STATUS_FINAL,false,true
+401754587,2025,11,2,2025-11-08T20:30Z,2390,Miami Hurricanes,MIA,FBS,38,183,Syracuse Orange,SYR,FBS,10,2390,Miami Hurricanes,Hard Rock Stadium,60337,STATUS_FINAL,false,true
+401752899,2025,11,2,2025-11-08T21:30Z,275,Wisconsin Badgers,WIS,FBS,13,264,Washington Huskies,WASH,FBS,10,275,Wisconsin Badgers,Camp Randall Stadium,71217,STATUS_FINAL,false,true
+401754584,2025,11,2,2025-11-08T17:00Z,103,Boston College Eagles,BC,FBS,13,2567,SMU Mustangs,SMU,FBS,45,2567,SMU Mustangs,"Alumni Stadium (Chestnut Hill, MA)",38345,STATUS_FINAL,false,true
+401756947,2025,11,2,2025-11-08T17:00Z,277,West Virginia Mountaineers,WVU,FBS,29,38,Colorado Buffaloes,COLO,FBS,22,277,West Virginia Mountaineers,Milan Puskar Stadium,55510,STATUS_FINAL,false,true
+401761646,2025,11,2,2025-11-08T17:00Z,276,Marshall Thundering Herd,MRSH,FBS,23,256,James Madison Dukes,JMU,FBS,35,256,James Madison Dukes,Joan C. Edwards Stadium,26727,STATUS_FINAL,false,true
+401761647,2025,11,2,2025-11-08T17:00Z,2032,Arkansas State Red Wolves,ARST,FBS,21,2572,Southern Miss Golden Eagles,USM,FBS,27,2572,Southern Miss Golden Eagles,Centennial Bank Stadium,15441,STATUS_FINAL,false,true
+401762503,2025,11,2,2025-11-08T17:00Z,349,Army Black Knights,ARMY,FBS,14,218,Temple Owls,TEM,FBS,13,349,Army Black Knights,Michie Stadium,30594,STATUS_FINAL,false,true
+401757299,2025,11,2,2025-11-08T18:00Z,2335,Liberty Flames,LIB,FBS,17,2623,Missouri State Bears,MOST,FBS,21,2623,Missouri State Bears,Williams Stadium (VA),18407,STATUS_FINAL,false,true
+401762855,2025,11,2,2025-11-08T18:00Z,2199,Eastern Michigan Eagles,EMU,FBS,27,189,Bowling Green Falcons,BGSU,FBS,21,2199,Eastern Michigan Eagles,Rynearson Stadium,11889,STATUS_FINAL,false,true
+401762502,2025,11,2,2025-11-08T19:00Z,242,Rice Owls,RICE,FBS,24,5,UAB Blazers,UAB,FBS,17,242,Rice Owls,Rice Stadium,22671,STATUS_FINAL,false,true
+401752894,2025,11,2,2025-11-08T19:30Z,164,Rutgers Scarlet Knights,RUTG,FBS,35,120,Maryland Terrapins,MD,FBS,20,164,Rutgers Scarlet Knights,SHI Stadium,41032,STATUS_FINAL,false,true
+401757295,2025,11,2,2025-11-08T20:00Z,48,Delaware Blue Hens,DEL,FBS,25,2348,Louisiana Tech Bulldogs,LT,FBS,24,48,Delaware Blue Hens,Delaware Stadium,17912,STATUS_FINAL,false,true
+401757296,2025,11,2,2025-11-08T20:00Z,2393,Middle Tennessee Blue Raiders,MTSU,FBS,30,2229,Florida International Panthers,FIU,FBS,56,2229,Florida International Panthers,"Johnny ""Red"" Floyd Stadium",12227,STATUS_FINAL,false,true
+401757297,2025,11,2,2025-11-08T20:00Z,2638,UTEP Miners,UTEP,FBS,27,55,Jacksonville State Gamecocks,JVST,FBS,30,55,Jacksonville State Gamecocks,Sun Bowl,9536,STATUS_FINAL,false,true
+401762504,2025,11,2,2025-11-08T20:00Z,151,East Carolina Pirates,ECU,FBS,48,2429,Charlotte 49ers,CLT,FBS,22,151,East Carolina Pirates,Dowdy-Ficklen Stadium,39096,STATUS_FINAL,false,true
+401762505,2025,11,2,2025-11-08T20:00Z,2226,Florida Atlantic Owls,FAU,FBS,40,202,Tulsa Golden Hurricane,TLSA,FBS,21,2226,Florida Atlantic Owls,Flagler Credit Union Stadium,16170,STATUS_FINAL,false,true
+401754590,2025,11,2,2025-11-08T20:30Z,41,UConn Huskies,CONN,FBS,37,150,Duke Blue Devils,DUKE,FBS,34,41,UConn Huskies,Pratt & Whitney Stadium,38106,STATUS_FINAL,false,false
+401756943,2025,11,2,2025-11-08T20:30Z,12,Arizona Wildcats,ARIZ,FBS,24,2305,Kansas Jayhawks,KU,FBS,20,12,Arizona Wildcats,Casino Del Sol Stadium,41115,STATUS_FINAL,false,true
+401756944,2025,11,2,2025-11-08T20:30Z,2628,TCU Horned Frogs,TCU,FBS,17,66,Iowa State Cyclones,ISU,FBS,20,66,Iowa State Cyclones,Amon G. Carter Stadium,44197,STATUS_FINAL,false,true
+401757298,2025,11,2,2025-11-08T21:00Z,166,New Mexico State Aggies,NMSU,FBS,21,338,Kennesaw State Owls,KENN,FBS,24,338,Kennesaw State Owls,Aggie Memorial Stadium,11473,STATUS_FINAL,false,true
+401761645,2025,11,2,2025-11-08T21:00Z,324,Coastal Carolina Chanticleers,CCU,FBS,40,2247,Georgia State Panthers,GAST,FBS,27,324,Coastal Carolina Chanticleers,Brooks Stadium (SC),18878,STATUS_FINAL,false,true
+401754588,2025,11,2,2025-11-08T21:30Z,153,North Carolina Tar Heels,UNC,FBS,20,24,Stanford Cardinal,STAN,FBS,15,153,North Carolina Tar Heels,Kenan Stadium,50500,STATUS_FINAL,false,true
+401761648,2025,11,2,2025-11-08T22:00Z,309,Louisiana Ragin' Cajuns,UL,FBS,42,326,Texas State Bobcats,TXST,FBS,39,309,Louisiana Ragin' Cajuns,Our Lady of Lourdes Stadium,14231,STATUS_FINAL,false,true
+401760406,2025,11,2,2025-11-08T23:00Z,23,San José State Spartans,SJSU,FBS,16,2005,Air Force Falcons,AFA,FBS,26,2005,Air Force Falcons,CEFCU Stadium,13637,STATUS_FINAL,false,true
+401754586,2025,11,2,2025-11-09T00:00Z,228,Clemson Tigers,CLEM,FBS,24,52,Florida State Seminoles,FSU,FBS,10,228,Clemson Tigers,"Memorial Stadium (Clemson, SC)",81500,STATUS_FINAL,false,true
+401752760,2025,11,2,2025-11-09T00:30Z,96,Kentucky Wildcats,UK,FBS,38,57,Florida Gators,FLA,FBS,7,96,Kentucky Wildcats,Kroger Field,56388,STATUS_FINAL,false,true
+401760409,2025,11,2,2025-11-09T00:30Z,328,Utah State Aggies,USU,FBS,51,2440,Nevada Wolf Pack,NEV,FBS,14,328,Utah State Aggies,Maverik Stadium,19418,STATUS_FINAL,false,true
+401752895,2025,11,2,2025-11-09T02:00Z,26,UCLA Bruins,UCLA,FBS,21,158,Nebraska Cornhuskers,NEB,FBS,28,158,Nebraska Cornhuskers,Rose Bowl,44481,STATUS_FINAL,false,true
+401760407,2025,11,2,2025-11-09T02:30Z,36,Colorado State Rams,CSU,FBS,10,2439,UNLV Rebels,UNLV,FBS,42,2439,UNLV Rebels,Canvas Stadium,27970,STATUS_FINAL,false,true
+401752944,2025,11,2,2025-11-09T03:00Z,204,Oregon State Beavers,ORST,FBS,17,2534,Sam Houston Bearkats,SHSU,FBS,21,2534,Sam Houston Bearkats,Reser Stadium,31626,STATUS_FINAL,false,false
+401760408,2025,11,2,2025-11-09T04:00Z,62,Hawai'i Rainbow Warriors,HAW,FBS,38,21,San Diego State Aztecs,SDSU,FBS,6,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,15194,STATUS_FINAL,false,true
+401762856,2025,12,2,2025-11-12T00:30Z,2006,Akron Zips,AKR,FBS,35,2309,Kent State Golden Flashes,KENT,FBS,42,2309,Kent State Golden Flashes,InfoCision Stadium,8501,STATUS_FINAL,false,true
+401762857,2025,12,2,2025-11-12T01:00Z,2711,Western Michigan Broncos,WMU,FBS,17,195,Ohio Bobcats,OHIO,FBS,13,2711,Western Michigan Broncos,Waldo Stadium,10849,STATUS_FINAL,false,true
+401762858,2025,12,2,2025-11-13T00:00Z,2117,Central Michigan Chippewas,CMU,FBS,38,2084,Buffalo Bulls,BUFF,FBS,19,2117,Central Michigan Chippewas,Kelly/Shorts Stadium,6833,STATUS_FINAL,false,true
+401762859,2025,12,2,2025-11-13T00:00Z,113,Massachusetts Minutemen,MASS,FBS,3,2459,Northern Illinois Huskies,NIU,FBS,45,2459,Northern Illinois Huskies,Warren McGuirk Alumni Stadium,6155,STATUS_FINAL,false,true
+401762860,2025,12,2,2025-11-13T00:00Z,193,Miami (OH) RedHawks,M-OH,FBS,3,2649,Toledo Rockets,TOL,FBS,24,2649,Toledo Rockets,Yager Stadium,10825,STATUS_FINAL,false,true
+401761649,2025,12,2,2025-11-14T00:30Z,295,Old Dominion Monarchs,ODU,FBS,33,2653,Troy Trojans,TROY,FBS,0,295,Old Dominion Monarchs,S.B. Ballard Stadium,18831,STATUS_FINAL,false,true
+401752904,2025,12,2,2025-11-15T02:00Z,2483,Oregon Ducks,ORE,FBS,42,135,Minnesota Golden Gophers,MINN,FBS,13,2483,Oregon Ducks,Autzen Stadium,58830,STATUS_FINAL,false,true
+401754591,2025,12,2,2025-11-15T00:30Z,97,Louisville Cardinals,LOU,FBS,19,228,Clemson Tigers,CLEM,FBS,20,228,Clemson Tigers,L&N Federal Credit Union Stadium,51234,STATUS_FINAL,false,true
+401752900,2025,12,2,2025-11-16T00:30Z,194,Ohio State Buckeyes,OSU,FBS,48,26,UCLA Bruins,UCLA,FBS,10,194,Ohio State Buckeyes,Ohio Stadium,104168,STATUS_FINAL,false,true
+401752901,2025,12,2,2025-11-15T17:00Z,84,Indiana Hoosiers,IU,FBS,31,275,Wisconsin Badgers,WIS,FBS,7,84,Indiana Hoosiers,"Memorial Stadium (Bloomington, IN)",55042,STATUS_FINAL,false,true
+401752772,2025,12,2,2025-11-15T17:00Z,245,Texas A&M Aggies,TA&M,FBS,31,2579,South Carolina Gamecocks,SC,FBS,30,245,Texas A&M Aggies,Kyle Field,108582,STATUS_FINAL,false,true
+401752765,2025,12,2,2025-11-15T20:30Z,333,Alabama Crimson Tide,ALA,FBS,21,201,Oklahoma Sooners,OU,FBS,23,201,Oklahoma Sooners,Bryant-Denny Stadium,100077,STATUS_FINAL,false,true
+401752766,2025,12,2,2025-11-16T00:30Z,61,Georgia Bulldogs,UGA,FBS,35,251,Texas Longhorns,TEX,FBS,10,61,Georgia Bulldogs,Sanford Stadium,93033,STATUS_FINAL,false,true
+401756953,2025,12,2,2025-11-15T20:30Z,2641,Texas Tech Red Raiders,TTU,FBS,48,2116,UCF Knights,UCF,FBS,9,2641,Texas Tech Red Raiders,Galaxy Stadium,60229,STATUS_FINAL,false,true
+401752769,2025,12,2,2025-11-16T00:00Z,145,Ole Miss Rebels,MISS,FBS,34,57,Florida Gators,FLA,FBS,24,145,Ole Miss Rebels,Vaught-Hemingway Stadium,68138,STATUS_FINAL,false,true
+401754597,2025,12,2,2025-11-15T17:00Z,221,Pittsburgh Panthers,PITT,FBS,15,87,Notre Dame Fighting Irish,ND,FBS,37,87,Notre Dame Fighting Irish,Acrisure Stadium,68400,STATUS_FINAL,false,false
+401756950,2025,12,2,2025-11-16T03:15Z,252,BYU Cougars,BYU,FBS,44,2628,TCU Horned Frogs,TCU,FBS,13,252,BYU Cougars,LaVell Edwards Stadium,64447,STATUS_FINAL,false,true
+401756949,2025,12,2,2025-11-16T00:00Z,239,Baylor Bears,BAY,FBS,28,254,Utah Utes,UTAH,FBS,55,254,Utah Utes,McLane Stadium,38186,STATUS_FINAL,false,true
+401754595,2025,12,2,2025-11-15T20:40Z,2390,Miami Hurricanes,MIA,FBS,41,152,NC State Wolfpack,NCSU,FBS,7,2390,Miami Hurricanes,Hard Rock Stadium,59157,STATUS_FINAL,false,true
+401754592,2025,12,2,2025-11-15T20:30Z,103,Boston College Eagles,BC,FBS,34,59,Georgia Tech Yellow Jackets,GT,FBS,36,59,Georgia Tech Yellow Jackets,"Alumni Stadium (Chestnut Hill, MA)",37879,STATUS_FINAL,false,true
+401752907,2025,12,2,2025-11-15T20:30Z,30,USC Trojans,USC,FBS,26,2294,Iowa Hawkeyes,IOWA,FBS,21,30,USC Trojans,Los Angeles Memorial Coliseum,65216,STATUS_FINAL,false,true
+401752905,2025,12,2,2025-11-15T17:00Z,77,Northwestern Wildcats,NU,FBS,22,130,Michigan Wolverines,MICH,FBS,24,130,Michigan Wolverines,Wrigley Field,38223,STATUS_FINAL,false,true
+401754593,2025,12,2,2025-11-15T20:35Z,150,Duke Blue Devils,DUKE,FBS,17,258,Virginia Cavaliers,UVA,FBS,34,258,Virginia Cavaliers,Wallace Wade Stadium,27215,STATUS_FINAL,false,true
+401752771,2025,12,2,2025-11-15T21:15Z,2633,Tennessee Volunteers,TENN,FBS,42,166,New Mexico State Aggies,NMSU,FBS,9,2633,Tennessee Volunteers,Neyland Stadium,101915,STATUS_FINAL,false,false
+401762510,2025,12,2,2025-11-15T17:00Z,2426,Navy Midshipmen,NAVY,FBS,41,58,South Florida Bulls,USF,FBS,38,2426,Navy Midshipmen,Navy-Marine Corps Memorial Stadium,34856,STATUS_FINAL,false,true
+401756951,2025,12,2,2025-11-15T17:00Z,2132,Cincinnati Bearcats,CIN,FBS,24,12,Arizona Wildcats,ARIZ,FBS,30,12,Arizona Wildcats,Nippert Stadium,37099,STATUS_FINAL,false,true
+401756952,2025,12,2,2025-11-15T17:00Z,197,Oklahoma State Cowboys,OKST,FBS,6,2306,Kansas State Wildcats,KSU,FBS,14,2306,Kansas State Wildcats,Boone Pickens Stadium,46340,STATUS_FINAL,false,true
+401757174,2025,12,2,2025-11-15T17:00Z,41,UConn Huskies,CONN,FBS,26,2005,Air Force Falcons,AFA,FBS,16,41,UConn Huskies,Pratt & Whitney Stadium,31457,STATUS_FINAL,false,false
+401762507,2025,12,2,2025-11-15T17:00Z,2429,Charlotte 49ers,CLT,FBS,7,2636,UTSA Roadrunners,UTSA,FBS,28,2636,UTSA Roadrunners,Jerry Richardson Stadium,9831,STATUS_FINAL,false,true
+401762861,2025,12,2,2025-11-15T17:00Z,2050,Ball State Cardinals,BALL,FBS,9,2199,Eastern Michigan Eagles,EMU,FBS,24,2199,Eastern Michigan Eagles,Scheumann Stadium,8430,STATUS_FINAL,false,true
+401752768,2025,12,2,2025-11-15T17:45Z,99,LSU Tigers,LSU,FBS,23,8,Arkansas Razorbacks,ARK,FBS,22,99,LSU Tigers,Tiger Stadium (LA),100212,STATUS_FINAL,false,true
+401752945,2025,12,2,2025-11-15T18:00Z,202,Tulsa Golden Hurricane,TLSA,FBS,31,204,Oregon State Beavers,ORST,FBS,14,202,Tulsa Golden Hurricane,H. A. Chapman Stadium,15034,STATUS_FINAL,false,false
+401756948,2025,12,2,2025-11-15T18:00Z,9,Arizona State Sun Devils,ASU,FBS,25,277,West Virginia Mountaineers,WVU,FBS,23,9,Arizona State Sun Devils,Mountain America Stadium,54101,STATUS_FINAL,false,true
+401752767,2025,12,2,2025-11-15T18:30Z,96,Kentucky Wildcats,UK,FBS,42,2635,Tennessee Tech Golden Eagles,TNTC,FCS,10,96,Kentucky Wildcats,Kroger Field,53686,STATUS_FINAL,false,false
+401761651,2025,12,2,2025-11-15T19:00Z,2247,Georgia State Panthers,GAST,FBS,18,276,Marshall Thundering Herd,MRSH,FBS,30,276,Marshall Thundering Herd,Center Parc Stadium,12871,STATUS_FINAL,false,true
+401762506,2025,12,2,2025-11-15T19:00Z,5,UAB Blazers,UAB,FBS,24,249,North Texas Mean Green,UNT,FBS,53,249,North Texas Mean Green,Protective Stadium,16190,STATUS_FINAL,false,true
+401757304,2025,12,2,2025-11-15T20:00Z,2623,Missouri State Bears,MOST,FBS,38,2638,UTEP Miners,UTEP,FBS,24,2623,Missouri State Bears,Robert W. Plaster Stadium,13298,STATUS_FINAL,false,true
+401760411,2025,12,2,2025-11-15T20:00Z,167,New Mexico Lobos,UNM,FBS,20,36,Colorado State Rams,CSU,FBS,17,167,New Mexico Lobos,University Stadium (NM),27526,STATUS_FINAL,false,true
+401752903,2025,12,2,2025-11-15T20:30Z,127,Michigan State Spartans,MSU,FBS,10,213,Penn State Nittany Lions,PSU,FBS,28,213,Penn State Nittany Lions,Spartan Stadium,61671,STATUS_FINAL,false,true
+401752906,2025,12,2,2025-11-15T20:30Z,356,Illinois Fighting Illini,ILL,FBS,24,120,Maryland Terrapins,MD,FBS,6,356,Illinois Fighting Illini,Gies Memorial Stadium,56416,STATUS_FINAL,false,true
+401757303,2025,12,2,2025-11-15T20:30Z,98,Western Kentucky Hilltoppers,WKU,FBS,42,2393,Middle Tennessee Blue Raiders,MTSU,FBS,26,98,Western Kentucky Hilltoppers,Houchens Industries-L.T. Smith Stadium,16547,STATUS_FINAL,false,true
+401760413,2025,12,2,2025-11-15T20:30Z,2440,Nevada Wolf Pack,NEV,FBS,55,23,San José State Spartans,SJSU,FBS,10,2440,Nevada Wolf Pack,Mackay Stadium,14491,STATUS_FINAL,false,true
+401761652,2025,12,2,2025-11-15T20:30Z,256,James Madison Dukes,JMU,FBS,58,2026,App State Mountaineers,APP,FBS,10,256,James Madison Dukes,Bridgeforth Stadium,25298,STATUS_FINAL,false,true
+401761653,2025,12,2,2025-11-15T20:30Z,2433,UL Monroe Warhawks,ULM,FBS,14,6,South Alabama Jaguars,USA,FBS,26,6,South Alabama Jaguars,Malone Stadium,19872,STATUS_FINAL,false,true
+401761654,2025,12,2,2025-11-15T20:30Z,2572,Southern Miss Golden Eagles,USM,FBS,14,326,Texas State Bobcats,TXST,FBS,41,326,Texas State Bobcats,M. M. Roberts Stadium,27223,STATUS_FINAL,false,true
+401762508,2025,12,2,2025-11-15T21:00Z,151,East Carolina Pirates,ECU,FBS,31,235,Memphis Tigers,MEM,FBS,27,151,East Carolina Pirates,Dowdy-Ficklen Stadium,37348,STATUS_FINAL,false,true
+401762509,2025,12,2,2025-11-15T21:00Z,2655,Tulane Green Wave,TULN,FBS,35,2226,Florida Atlantic Owls,FAU,FBS,24,2655,Tulane Green Wave,Yulman Stadium,30000,STATUS_FINAL,false,true
+401754596,2025,12,2,2025-11-15T21:30Z,154,Wake Forest Demon Deacons,WAKE,FBS,28,153,North Carolina Tar Heels,UNC,FBS,12,154,Wake Forest Demon Deacons,Allegacy Federal Credit Union Stadium,32390,STATUS_FINAL,false,true
+401757301,2025,12,2,2025-11-15T22:00Z,2229,Florida International Panthers,FIU,FBS,34,2335,Liberty Flames,LIB,FBS,27,2229,Florida International Panthers,Pitbull Stadium,14167,STATUS_FINAL,false,true
+401761650,2025,12,2,2025-11-15T23:00Z,290,Georgia Southern Eagles,GASO,FBS,45,324,Coastal Carolina Chanticleers,CCU,FBS,40,290,Georgia Southern Eagles,Allen E. Paulson Stadium,22738,STATUS_FINAL,false,true
+401752902,2025,12,2,2025-11-16T00:00Z,264,Washington Huskies,WASH,FBS,49,2509,Purdue Boilermakers,PUR,FBS,13,264,Washington Huskies,Husky Stadium,67229,STATUS_FINAL,false,true
+401757300,2025,12,2,2025-11-16T00:00Z,2534,Sam Houston Bearkats,SHSU,FBS,26,48,Delaware Blue Hens,DEL,FBS,23,2534,Sam Houston Bearkats,Shell Energy Stadium,3713,STATUS_FINAL,false,true
+401760414,2025,12,2,2025-11-16T00:00Z,2439,UNLV Rebels,UNLV,FBS,29,328,Utah State Aggies,USU,FBS,26,2439,UNLV Rebels,Allegiant Stadium,31682,STATUS_FINAL,false,true
+401754594,2025,12,2,2025-11-16T00:30Z,52,Florida State Seminoles,FSU,FBS,34,259,Virginia Tech Hokies,VT,FBS,14,52,Florida State Seminoles,Doak Campbell Stadium,64937,STATUS_FINAL,false,true
+401752770,2025,12,2,2025-11-16T00:45Z,142,Missouri Tigers,MIZ,FBS,49,344,Mississippi State Bulldogs,MSST,FBS,27,142,Missouri Tigers,Memorial Stadium,57321,STATUS_FINAL,false,true
+401757302,2025,12,2,2025-11-16T01:00Z,55,Jacksonville State Gamecocks,JVST,FBS,35,338,Kennesaw State Owls,KENN,FBS,26,55,Jacksonville State Gamecocks,AmFirst Stadium,24166,STATUS_FINAL,false,true
+401752953,2025,12,2,2025-11-16T03:00Z,265,Washington State Cougars,WSU,FBS,28,2348,Louisiana Tech Bulldogs,LT,FBS,3,265,Washington State Cougars,Martin Stadium,21186,STATUS_FINAL,false,false
+401760410,2025,12,2,2025-11-16T03:30Z,21,San Diego State Aztecs,SDSU,FBS,17,68,Boise State Broncos,BOIS,FBS,7,21,San Diego State Aztecs,Snapdragon Stadium,29201,STATUS_FINAL,false,true
+401760412,2025,12,2,2025-11-16T03:30Z,278,Fresno State Bulldogs,FRES,FBS,24,2751,Wyoming Cowboys,WYO,FBS,3,278,Fresno State Bulldogs,Valley Children's Stadium,35076,STATUS_FINAL,false,true
+401762862,2025,13,2,2025-11-19T00:00Z,189,Bowling Green Falcons,BGSU,FBS,16,2006,Akron Zips,AKR,FBS,19,2006,Akron Zips,Doyt L. Perry Stadium,9867,STATUS_FINAL,false,true
+401762864,2025,13,2,2025-11-19T00:00Z,2459,Northern Illinois Huskies,NIU,FBS,19,2711,Western Michigan Broncos,WMU,FBS,35,2711,Western Michigan Broncos,Huskie Stadium,4734,STATUS_FINAL,false,true
+401762863,2025,13,2,2025-11-19T00:15Z,195,Ohio Bobcats,OHIO,FBS,42,113,Massachusetts Minutemen,MASS,FBS,14,195,Ohio Bobcats,Peden Stadium,12438,STATUS_FINAL,false,true
+401762865,2025,13,2,2025-11-20T00:00Z,2084,Buffalo Bulls,BUFF,FBS,20,193,Miami (OH) RedHawks,M-OH,FBS,37,193,Miami (OH) RedHawks,Broadview Stadium,15246,STATUS_FINAL,false,true
+401762866,2025,13,2,2025-11-20T00:00Z,2309,Kent State Golden Flashes,KENT,FBS,16,2117,Central Michigan Chippewas,CMU,FBS,28,2117,Central Michigan Chippewas,Zoeller Field at Dix Stadium,8112,STATUS_FINAL,false,true
+401761655,2025,13,2,2025-11-21T00:30Z,2032,Arkansas State Red Wolves,ARST,FBS,30,309,Louisiana Ragin' Cajuns,UL,FBS,34,309,Louisiana Ragin' Cajuns,Centennial Bank Stadium,13571,STATUS_FINAL,false,true
+401754598,2025,13,2,2025-11-22T01:00Z,152,NC State Wolfpack,NCSU,FBS,21,52,Florida State Seminoles,FSU,FBS,11,152,NC State Wolfpack,Carter-Finley Stadium,56919,STATUS_FINAL,false,true
+401760418,2025,13,2,2025-11-22T03:30Z,2439,UNLV Rebels,UNLV,FBS,38,62,Hawai'i Rainbow Warriors,HAW,FBS,10,2439,UNLV Rebels,Allegiant Stadium,37106,STATUS_FINAL,false,true
+401752912,2025,13,2,2025-11-22T17:00Z,194,Ohio State Buckeyes,OSU,FBS,42,164,Rutgers Scarlet Knights,RUTG,FBS,9,194,Ohio State Buckeyes,Ohio Stadium,0,STATUS_FINAL,false,true
+401752781,2025,13,2,2025-11-22T17:00Z,245,Texas A&M Aggies,TA&M,FBS,48,2535,Samford Bulldogs,SAM,FCS,0,245,Texas A&M Aggies,Kyle Field,104877,STATUS_FINAL,false,false
+401752776,2025,13,2,2025-11-22T17:45Z,61,Georgia Bulldogs,UGA,FBS,35,2429,Charlotte 49ers,CLT,FBS,3,61,Georgia Bulldogs,Sanford Stadium,93033,STATUS_FINAL,false,false
+401752911,2025,13,2,2025-11-22T20:30Z,2483,Oregon Ducks,ORE,FBS,42,30,USC Trojans,USC,FBS,27,2483,Oregon Ducks,Autzen Stadium,59588,STATUS_FINAL,false,true
+401752778,2025,13,2,2025-11-22T17:00Z,201,Oklahoma Sooners,OU,FBS,17,142,Missouri Tigers,MIZ,FBS,6,201,Oklahoma Sooners,"Memorial Stadium (Norman, OK)",83541,STATUS_FINAL,false,true
+401754604,2025,13,2,2025-11-22T20:30Z,87,Notre Dame Fighting Irish,ND,FBS,70,183,Syracuse Orange,SYR,FBS,7,87,Notre Dame Fighting Irish,Notre Dame Stadium,77622,STATUS_FINAL,false,false
+401752773,2025,13,2,2025-11-22T19:00Z,333,Alabama Crimson Tide,ALA,FBS,56,2197,Eastern Illinois Panthers,EIU,FCS,0,333,Alabama Crimson Tide,Bryant-Denny Stadium,100077,STATUS_FINAL,false,false
+401756955,2025,13,2,2025-11-23T01:00Z,2132,Cincinnati Bearcats,CIN,FBS,14,252,BYU Cougars,BYU,FBS,26,252,BYU Cougars,Nippert Stadium,38034,STATUS_FINAL,false,true
+401756960,2025,13,2,2025-11-22T21:00Z,254,Utah Utes,UTAH,FBS,51,2306,Kansas State Wildcats,KSU,FBS,47,254,Utah Utes,Rice-Eccles Stadium,51444,STATUS_FINAL,false,true
+401754603,2025,13,2,2025-11-22T17:00Z,259,Virginia Tech Hokies,VT,FBS,17,2390,Miami Hurricanes,MIA,FBS,34,2390,Miami Hurricanes,Lane Stadium,65632,STATUS_FINAL,false,true
+401752782,2025,13,2,2025-11-22T20:30Z,238,Vanderbilt Commodores,VAN,FBS,45,96,Kentucky Wildcats,UK,FBS,17,238,Vanderbilt Commodores,FirstBank Stadium,35000,STATUS_FINAL,false,true
+401754601,2025,13,2,2025-11-23T00:00Z,59,Georgia Tech Yellow Jackets,GT,FBS,28,221,Pittsburgh Panthers,PITT,FBS,42,221,Pittsburgh Panthers,Bobby Dodd Stadium,52413,STATUS_FINAL,false,true
+401752780,2025,13,2,2025-11-22T20:30Z,251,Texas Longhorns,TEX,FBS,52,8,Arkansas Razorbacks,ARK,FBS,37,251,Texas Longhorns,DKR-Texas Memorial Stadium,102361,STATUS_FINAL,false,true
+401752914,2025,13,2,2025-11-22T21:00Z,120,Maryland Terrapins,MD,FBS,20,130,Michigan Wolverines,MICH,FBS,45,130,Michigan Wolverines,SECU Stadium,46185,STATUS_FINAL,false,true
+401752775,2025,13,2,2025-11-23T00:30Z,57,Florida Gators,FLA,FBS,11,2633,Tennessee Volunteers,TENN,FBS,31,2633,Tennessee Volunteers,Ben Hill Griffin Stadium,90465,STATUS_FINAL,false,true
+401752915,2025,13,2,2025-11-23T00:30Z,275,Wisconsin Badgers,WIS,FBS,27,356,Illinois Fighting Illini,ILL,FBS,10,275,Wisconsin Badgers,Camp Randall Stadium,0,STATUS_FINAL,false,true
+401756957,2025,13,2,2025-11-22T21:00Z,248,Houston Cougars,HOU,FBS,14,2628,TCU Horned Frogs,TCU,FBS,17,2628,TCU Horned Frogs,TDECU Stadium,30852,STATUS_FINAL,false,true
+401762515,2025,13,2,2025-11-22T20:45Z,218,Temple Owls,TEM,FBS,13,2655,Tulane Green Wave,TULN,FBS,37,2655,Tulane Green Wave,Lincoln Financial Field,13366,STATUS_FINAL,false,true
+401756956,2025,13,2,2025-11-23T01:00Z,38,Colorado Buffaloes,COLO,FBS,17,9,Arizona State Sun Devils,ASU,FBS,42,9,Arizona State Sun Devils,Folsom Field,43348,STATUS_FINAL,false,true
+401752909,2025,13,2,2025-11-22T17:00Z,77,Northwestern Wildcats,NU,FBS,38,135,Minnesota Golden Gophers,MINN,FBS,35,77,Northwestern Wildcats,Wrigley Field,15323,STATUS_FINAL,false,true
+401754602,2025,13,2,2025-11-22T17:00Z,2567,SMU Mustangs,SMU,FBS,38,97,Louisville Cardinals,LOU,FBS,6,2567,SMU Mustangs,Gerald J. Ford Stadium,32713,STATUS_FINAL,false,true
+401754606,2025,13,2,2025-11-22T17:00Z,154,Wake Forest Demon Deacons,WAKE,FBS,52,48,Delaware Blue Hens,DEL,FBS,14,154,Wake Forest Demon Deacons,Allegacy Federal Credit Union Stadium,26950,STATUS_FINAL,false,false
+401756958,2025,13,2,2025-11-22T17:00Z,66,Iowa State Cyclones,ISU,FBS,38,2305,Kansas Jayhawks,KU,FBS,14,66,Iowa State Cyclones,Jack Trice Stadium,58275,STATUS_FINAL,false,true
+401762512,2025,13,2,2025-11-22T17:00Z,349,Army Black Knights,ARMY,FBS,25,202,Tulsa Golden Hurricane,TLSA,FBS,26,202,Tulsa Golden Hurricane,Michie Stadium,28705,STATUS_FINAL,false,true
+401752954,2025,13,2,2025-11-22T18:00Z,256,James Madison Dukes,JMU,FBS,24,265,Washington State Cougars,WSU,FBS,20,256,James Madison Dukes,Bridgeforth Stadium,25156,STATUS_FINAL,false,false
+401756954,2025,13,2,2025-11-22T18:00Z,12,Arizona Wildcats,ARIZ,FBS,41,239,Baylor Bears,BAY,FBS,17,12,Arizona Wildcats,Casino Del Sol Stadium,40199,STATUS_FINAL,false,true
+401761657,2025,13,2,2025-11-22T18:00Z,290,Georgia Southern Eagles,GASO,FBS,10,295,Old Dominion Monarchs,ODU,FBS,45,295,Old Dominion Monarchs,Allen E. Paulson Stadium,19247,STATUS_FINAL,false,true
+401752774,2025,13,2,2025-11-22T19:00Z,2,Auburn Tigers,AUB,FBS,62,2382,Mercer Bears,MER,FCS,17,2,Auburn Tigers,Jordan-Hare Stadium,88043,STATUS_FINAL,false,false
+401757306,2025,13,2,2025-11-22T19:00Z,338,Kennesaw State Owls,KENN,FBS,41,2623,Missouri State Bears,MOST,FBS,34,338,Kennesaw State Owls,Walens Family Field at Fifth Third Stadium,11040,STATUS_FINAL,false,true
+401760419,2025,13,2,2025-11-22T19:00Z,2751,Wyoming Cowboys,WYO,FBS,7,2440,Nevada Wolf Pack,NEV,FBS,13,2440,Nevada Wolf Pack,War Memorial Stadium,25650,STATUS_FINAL,false,true
+401762867,2025,13,2,2025-11-22T19:00Z,2649,Toledo Rockets,TOL,FBS,38,2050,Ball State Cardinals,BALL,FBS,9,2649,Toledo Rockets,Glass Bowl,15127,STATUS_FINAL,false,true
+401761656,2025,13,2,2025-11-22T19:30Z,2026,App State Mountaineers,APP,FBS,26,276,Marshall Thundering Herd,MRSH,FBS,24,2026,App State Mountaineers,Kidd Brewer Stadium,31322,STATUS_FINAL,false,true
+401757175,2025,13,2,2025-11-22T20:00Z,2226,Florida Atlantic Owls,FAU,FBS,45,41,UConn Huskies,CONN,FBS,48,41,UConn Huskies,Flagler Credit Union Stadium,16306,STATUS_FINAL,false,false
+401757307,2025,13,2,2025-11-22T20:00Z,2348,Louisiana Tech Bulldogs,LT,FBS,34,2335,Liberty Flames,LIB,FBS,28,2348,Louisiana Tech Bulldogs,Joe Aillet Stadium,10107,STATUS_FINAL,false,true
+401757308,2025,13,2,2025-11-22T20:00Z,2393,Middle Tennessee Blue Raiders,MTSU,FBS,31,2534,Sam Houston Bearkats,SHSU,FBS,17,2393,Middle Tennessee Blue Raiders,"Johnny ""Red"" Floyd Stadium",7605,STATUS_FINAL,false,true
+401757309,2025,13,2,2025-11-22T20:00Z,2638,UTEP Miners,UTEP,FBS,31,166,New Mexico State Aggies,NMSU,FBS,34,166,New Mexico State Aggies,Sun Bowl,16677,STATUS_FINAL,false,true
+401762511,2025,13,2,2025-11-22T20:00Z,5,UAB Blazers,UAB,FBS,18,58,South Florida Bulls,USF,FBS,48,58,South Florida Bulls,Protective Stadium,16376,STATUS_FINAL,false,true
+401752913,2025,13,2,2025-11-22T20:30Z,2294,Iowa Hawkeyes,IOWA,FBS,20,127,Michigan State Spartans,MSU,FBS,17,2294,Iowa Hawkeyes,Kinnick Stadium,69250,STATUS_FINAL,false,true
+401754600,2025,13,2,2025-11-22T20:30Z,153,North Carolina Tar Heels,UNC,FBS,25,150,Duke Blue Devils,DUKE,FBS,32,150,Duke Blue Devils,Kenan Stadium,50500,STATUS_FINAL,false,true
+401757305,2025,13,2,2025-11-22T20:30Z,2229,Florida International Panthers,FIU,FBS,27,55,Jacksonville State Gamecocks,JVST,FBS,21,2229,Florida International Panthers,Pitbull Stadium,9504,STATUS_FINAL,false,true
+401761658,2025,13,2,2025-11-22T20:30Z,6,South Alabama Jaguars,USA,FBS,42,2572,Southern Miss Golden Eagles,USM,FBS,35,6,South Alabama Jaguars,Hancock Whitney Stadium,17601,STATUS_FINAL,false,true
+401762513,2025,13,2,2025-11-22T20:30Z,2636,UTSA Roadrunners,UTSA,FBS,58,151,East Carolina Pirates,ECU,FBS,24,2636,UTSA Roadrunners,Alamodome,18573,STATUS_FINAL,false,true
+401756959,2025,13,2,2025-11-22T21:00Z,2116,UCF Knights,UCF,FBS,17,197,Oklahoma State Cowboys,OKST,FBS,14,2116,UCF Knights,Acrisure Bounce House,41723,STATUS_FINAL,false,true
+401761660,2025,13,2,2025-11-22T21:00Z,2653,Troy Trojans,TROY,FBS,31,2247,Georgia State Panthers,GAST,FBS,19,2653,Troy Trojans,Veterans Memorial Stadium (AL),20243,STATUS_FINAL,false,true
+401752779,2025,13,2,2025-11-22T21:15Z,2579,South Carolina Gamecocks,SC,FBS,51,324,Coastal Carolina Chanticleers,CCU,FBS,7,2579,South Carolina Gamecocks,Williams-Brice Stadium,78452,STATUS_FINAL,false,false
+401754605,2025,13,2,2025-11-22T21:30Z,228,Clemson Tigers,CLEM,FBS,45,231,Furman Paladins,FUR,FCS,10,228,Clemson Tigers,"Memorial Stadium (Clemson, SC)",78403,STATUS_FINAL,false,false
+401761659,2025,13,2,2025-11-22T22:00Z,326,Texas State Bobcats,TXST,FBS,31,2433,UL Monroe Warhawks,ULM,FBS,14,326,Texas State Bobcats,UFCU Stadium,17078,STATUS_FINAL,false,true
+401752908,2025,13,2,2025-11-23T00:00Z,213,Penn State Nittany Lions,PSU,FBS,37,158,Nebraska Cornhuskers,NEB,FBS,10,213,Penn State Nittany Lions,Beaver Stadium,105038,STATUS_FINAL,false,true
+401760415,2025,13,2,2025-11-23T00:00Z,2005,Air Force Falcons,AFA,FBS,3,167,New Mexico Lobos,UNM,FBS,20,167,New Mexico Lobos,Falcon Stadium,20218,STATUS_FINAL,false,true
+401760416,2025,13,2,2025-11-23T00:00Z,68,Boise State Broncos,BOIS,FBS,49,36,Colorado State Rams,CSU,FBS,21,68,Boise State Broncos,Albertsons Stadium,32819,STATUS_FINAL,false,true
+401754599,2025,13,2,2025-11-23T00:30Z,24,Stanford Cardinal,STAN,FBS,31,25,California Golden Bears,CAL,FBS,10,24,Stanford Cardinal,Stanford Stadium,50039,STATUS_FINAL,false,true
+401762514,2025,13,2,2025-11-23T00:30Z,242,Rice Owls,RICE,FBS,24,249,North Texas Mean Green,UNT,FBS,56,249,North Texas Mean Green,Rice Stadium,24598,STATUS_FINAL,false,true
+401752777,2025,13,2,2025-11-23T00:45Z,99,LSU Tigers,LSU,FBS,13,98,Western Kentucky Hilltoppers,WKU,FBS,10,99,LSU Tigers,Tiger Stadium (LA),100923,STATUS_FINAL,false,false
+401752910,2025,13,2,2025-11-23T03:30Z,26,UCLA Bruins,UCLA,FBS,14,264,Washington Huskies,WASH,FBS,48,264,Washington Huskies,Rose Bowl,38201,STATUS_FINAL,false,true
+401760417,2025,13,2,2025-11-23T03:30Z,278,Fresno State Bulldogs,FRES,FBS,17,328,Utah State Aggies,USU,FBS,28,328,Utah State Aggies,Valley Children's Stadium,37551,STATUS_FINAL,false,true
+401760420,2025,13,2,2025-11-23T03:30Z,21,San Diego State Aztecs,SDSU,FBS,25,23,San José State Spartans,SJSU,FBS,3,21,San Diego State Aztecs,Snapdragon Stadium,22595,STATUS_FINAL,false,true
+401762868,2025,14,2,2025-11-25T21:30Z,113,Massachusetts Minutemen,MASS,FBS,14,189,Bowling Green Falcons,BGSU,FBS,45,189,Bowling Green Falcons,Warren McGuirk Alumni Stadium,6043,STATUS_FINAL,false,true
+401762869,2025,14,2,2025-11-26T00:30Z,2199,Eastern Michigan Eagles,EMU,FBS,21,2711,Western Michigan Broncos,WMU,FBS,31,2711,Western Michigan Broncos,Rynearson Stadium,11818,STATUS_FINAL,false,true
+401762516,2025,14,2,2025-11-28T00:30Z,235,Memphis Tigers,MEM,FBS,17,2426,Navy Midshipmen,NAVY,FBS,28,2426,Navy Midshipmen,Simmons Bank Liberty Stadium,27082,STATUS_FINAL,false,true
+401752924,2025,14,2,2025-11-29T00:30Z,2509,Purdue Boilermakers,PUR,FBS,3,84,Indiana Hoosiers,IU,FBS,56,84,Indiana Hoosiers,Ross-Ade Stadium,59807,STATUS_FINAL,false,true
+401752792,2025,14,2,2025-11-29T00:30Z,251,Texas Longhorns,TEX,FBS,27,245,Texas A&M Aggies,TA&M,FBS,17,251,Texas Longhorns,DKR-Texas Memorial Stadium,103632,STATUS_FINAL,false,true
+401752786,2025,14,2,2025-11-28T20:30Z,59,Georgia Tech Yellow Jackets,GT,FBS,9,61,Georgia Bulldogs,UGA,FBS,16,61,Georgia Bulldogs,Mercedes-Benz Stadium,73728,STATUS_FINAL,true,false
+401752788,2025,14,2,2025-11-28T17:00Z,344,Mississippi State Bulldogs,MSST,FBS,19,145,Ole Miss Rebels,MISS,FBS,38,145,Ole Miss Rebels,Davis Wade Stadium,60417,STATUS_FINAL,false,true
+401756964,2025,14,2,2025-11-28T17:00Z,2305,Kansas Jayhawks,KU,FBS,21,254,Utah Utes,UTAH,FBS,31,254,Utah Utes,David Booth Kansas Memorial Stadium,32811,STATUS_FINAL,false,true
+401756961,2025,14,2,2025-11-29T02:00Z,9,Arizona State Sun Devils,ASU,FBS,7,12,Arizona Wildcats,ARIZ,FBS,23,12,Arizona Wildcats,Mountain America Stadium,54037,STATUS_FINAL,false,true
+401752916,2025,14,2,2025-11-28T17:00Z,158,Nebraska Cornhuskers,NEB,FBS,16,2294,Iowa Hawkeyes,IOWA,FBS,40,2294,Iowa Hawkeyes,"Memorial Stadium (Lincoln, NE)",86410,STATUS_FINAL,false,true
+401762870,2025,14,2,2025-11-28T17:00Z,2084,Buffalo Bulls,BUFF,FBS,26,195,Ohio Bobcats,OHIO,FBS,31,195,Ohio Bobcats,Broadview Stadium,11096,STATUS_FINAL,false,true
+401762871,2025,14,2,2025-11-28T17:00Z,2459,Northern Illinois Huskies,NIU,FBS,31,2309,Kent State Golden Flashes,KENT,FBS,35,2309,Kent State Golden Flashes,Huskie Stadium,3090,STATUS_FINAL,false,true
+401760421,2025,14,2,2025-11-28T20:00Z,36,Colorado State Rams,CSU,FBS,21,2005,Air Force Falcons,AFA,FBS,42,2005,Air Force Falcons,Canvas Stadium,25873,STATUS_FINAL,false,true
+401760426,2025,14,2,2025-11-28T20:30Z,167,New Mexico Lobos,UNM,FBS,23,21,San Diego State Aztecs,SDSU,FBS,17,167,New Mexico Lobos,University Stadium (NM),30575,STATUS_FINAL,false,true
+401762442,2025,14,2,2025-11-28T20:30Z,249,North Texas Mean Green,UNT,FBS,52,218,Temple Owls,TEM,FBS,25,249,North Texas Mean Green,DATCU Stadium,24492,STATUS_FINAL,false,true
+401760422,2025,14,2,2025-11-28T21:00Z,328,Utah State Aggies,USU,FBS,24,68,Boise State Broncos,BOIS,FBS,25,68,Boise State Broncos,Maverik Stadium,21115,STATUS_FINAL,false,true
+401752921,2025,14,2,2025-11-29T17:00Z,130,Michigan Wolverines,MICH,FBS,9,194,Ohio State Buckeyes,OSU,FBS,27,194,Ohio State Buckeyes,Michigan Stadium,111373,STATUS_FINAL,false,true
+401756968,2025,14,2,2025-11-29T17:00Z,277,West Virginia Mountaineers,WVU,FBS,0,2641,Texas Tech Red Raiders,TTU,FBS,49,2641,Texas Tech Red Raiders,Milan Puskar Stadium,44250,STATUS_FINAL,false,true
+401752917,2025,14,2,2025-11-29T20:30Z,264,Washington Huskies,WASH,FBS,14,2483,Oregon Ducks,ORE,FBS,26,2483,Oregon Ducks,Husky Stadium,72376,STATUS_FINAL,false,true
+401752789,2025,14,2,2025-11-29T20:30Z,201,Oklahoma Sooners,OU,FBS,17,99,LSU Tigers,LSU,FBS,13,201,Oklahoma Sooners,"Memorial Stadium (Norman, OK)",83734,STATUS_FINAL,false,true
+401754614,2025,14,2,2025-11-30T03:30Z,24,Stanford Cardinal,STAN,FBS,20,87,Notre Dame Fighting Irish,ND,FBS,49,87,Notre Dame Fighting Irish,Stanford Stadium,27456,STATUS_FINAL,false,false
+401752784,2025,14,2,2025-11-30T00:30Z,2,Auburn Tigers,AUB,FBS,20,333,Alabama Crimson Tide,ALA,FBS,27,333,Alabama Crimson Tide,Jordan-Hare Stadium,88043,STATUS_FINAL,false,true
+401756963,2025,14,2,2025-11-29T18:00Z,252,BYU Cougars,BYU,FBS,41,2116,UCF Knights,UCF,FBS,21,252,BYU Cougars,LaVell Edwards Stadium,60389,STATUS_FINAL,false,true
+401754611,2025,14,2,2025-11-29T17:00Z,221,Pittsburgh Panthers,PITT,FBS,7,2390,Miami Hurricanes,MIA,FBS,38,2390,Miami Hurricanes,Acrisure Stadium,49845,STATUS_FINAL,false,true
+401752791,2025,14,2,2025-11-29T20:30Z,2633,Tennessee Volunteers,TENN,FBS,24,238,Vanderbilt Commodores,VAN,FBS,45,238,Vanderbilt Commodores,Neyland Stadium,101915,STATUS_FINAL,false,true
+401752919,2025,14,2,2025-11-30T00:30Z,30,USC Trojans,USC,FBS,29,26,UCLA Bruins,UCLA,FBS,10,30,USC Trojans,Los Angeles Memorial Coliseum,69614,STATUS_FINAL,false,true
+401754613,2025,14,2,2025-11-30T00:00Z,258,Virginia Cavaliers,UVA,FBS,27,259,Virginia Tech Hokies,VT,FBS,7,258,Virginia Cavaliers,Scott Stadium,58832,STATUS_FINAL,false,true
+401754609,2025,14,2,2025-11-30T01:00Z,25,California Golden Bears,CAL,FBS,38,2567,SMU Mustangs,SMU,FBS,35,25,California Golden Bears,California Memorial Stadium,28956,STATUS_FINAL,false,true
+401762518,2025,14,2,2025-11-30T00:30Z,2655,Tulane Green Wave,TULN,FBS,27,2429,Charlotte 49ers,CLT,FBS,0,2655,Tulane Green Wave,Yulman Stadium,22245,STATUS_FINAL,false,true
+401752787,2025,14,2,2025-11-29T17:00Z,97,Louisville Cardinals,LOU,FBS,41,96,Kentucky Wildcats,UK,FBS,0,97,Louisville Cardinals,L&N Federal Credit Union Stadium,50634,STATUS_FINAL,false,false
+401752790,2025,14,2,2025-11-29T17:00Z,2579,South Carolina Gamecocks,SC,FBS,14,228,Clemson Tigers,CLEM,FBS,28,228,Clemson Tigers,Williams-Brice Stadium,79827,STATUS_FINAL,false,false
+401756962,2025,14,2,2025-11-29T17:00Z,239,Baylor Bears,BAY,FBS,24,248,Houston Cougars,HOU,FBS,31,248,Houston Cougars,McLane Stadium,34720,STATUS_FINAL,false,true
+401756965,2025,14,2,2025-11-29T17:00Z,2306,Kansas State Wildcats,KSU,FBS,24,38,Colorado Buffaloes,COLO,FBS,14,2306,Kansas State Wildcats,Bill Snyder Family Stadium,49549,STATUS_FINAL,false,true
+401756966,2025,14,2,2025-11-29T17:00Z,197,Oklahoma State Cowboys,OKST,FBS,13,66,Iowa State Cyclones,ISU,FBS,20,66,Iowa State Cyclones,Boone Pickens Stadium,35127,STATUS_FINAL,false,true
+401762519,2025,14,2,2025-11-29T17:00Z,2226,Florida Atlantic Owls,FAU,FBS,3,151,East Carolina Pirates,ECU,FBS,42,151,East Carolina Pirates,Flagler Credit Union Stadium,14712,STATUS_FINAL,false,true
+401762872,2025,14,2,2025-11-29T17:00Z,2117,Central Michigan Chippewas,CMU,FBS,3,2649,Toledo Rockets,TOL,FBS,21,2649,Toledo Rockets,Kelly/Shorts Stadium,6673,STATUS_FINAL,false,true
+401762875,2025,14,2,2025-11-29T17:00Z,193,Miami (OH) RedHawks,M-OH,FBS,45,2050,Ball State Cardinals,BALL,FBS,24,193,Miami (OH) RedHawks,Yager Stadium,11137,STATUS_FINAL,false,true
+401757310,2025,14,2,2025-11-29T18:00Z,48,Delaware Blue Hens,DEL,FBS,61,2638,UTEP Miners,UTEP,FBS,31,48,Delaware Blue Hens,Delaware Stadium,13560,STATUS_FINAL,false,true
+401757311,2025,14,2,2025-11-29T18:00Z,2534,Sam Houston Bearkats,SHSU,FBS,16,2229,Florida International Panthers,FIU,FBS,56,2229,Florida International Panthers,Shell Energy Stadium,4237,STATUS_FINAL,false,true
+401761663,2025,14,2,2025-11-29T18:30Z,276,Marshall Thundering Herd,MRSH,FBS,19,290,Georgia Southern Eagles,GASO,FBS,24,290,Georgia Southern Eagles,Joan C. Edwards Stadium,21524,STATUS_FINAL,false,true
+401757312,2025,14,2,2025-11-29T19:00Z,55,Jacksonville State Gamecocks,JVST,FBS,37,98,Western Kentucky Hilltoppers,WKU,FBS,34,55,Jacksonville State Gamecocks,AmFirst Stadium,16733,STATUS_FINAL,false,true
+401757314,2025,14,2,2025-11-29T19:00Z,2623,Missouri State Bears,MOST,FBS,30,2348,Louisiana Tech Bulldogs,LT,FBS,42,2348,Louisiana Tech Bulldogs,Robert W. Plaster Stadium,7656,STATUS_FINAL,false,true
+401761664,2025,14,2,2025-11-29T19:00Z,295,Old Dominion Monarchs,ODU,FBS,27,2247,Georgia State Panthers,GAST,FBS,10,295,Old Dominion Monarchs,S.B. Ballard Stadium,17126,STATUS_FINAL,false,true
+401761661,2025,14,2,2025-11-29T19:30Z,2026,App State Mountaineers,APP,FBS,29,2032,Arkansas State Red Wolves,ARST,FBS,30,2032,Arkansas State Red Wolves,Kidd Brewer Stadium,23876,STATUS_FINAL,false,true
+401754608,2025,14,2,2025-11-29T20:00Z,183,Syracuse Orange,SYR,FBS,12,103,Boston College Eagles,BC,FBS,34,103,Boston College Eagles,JMA Wireless Dome,32457,STATUS_FINAL,false,true
+401757315,2025,14,2,2025-11-29T20:00Z,166,New Mexico State Aggies,NMSU,FBS,24,2393,Middle Tennessee Blue Raiders,MTSU,FBS,31,2393,Middle Tennessee Blue Raiders,Aggie Memorial Stadium,7381,STATUS_FINAL,false,true
+401761665,2025,14,2,2025-11-29T20:00Z,309,Louisiana Ragin' Cajuns,UL,FBS,30,2433,UL Monroe Warhawks,ULM,FBS,27,309,Louisiana Ragin' Cajuns,Our Lady of Lourdes Stadium,16270,STATUS_FINAL,false,true
+401761667,2025,14,2,2025-11-29T20:00Z,326,Texas State Bobcats,TXST,FBS,49,6,South Alabama Jaguars,USA,FBS,26,326,Texas State Bobcats,UFCU Stadium,16169,STATUS_FINAL,false,true
+401762517,2025,14,2,2025-11-29T20:00Z,202,Tulsa Golden Hurricane,TLSA,FBS,24,5,UAB Blazers,UAB,FBS,31,5,UAB Blazers,H. A. Chapman Stadium,13026,STATUS_FINAL,false,true
+401752783,2025,14,2,2025-11-29T20:30Z,8,Arkansas Razorbacks,ARK,FBS,17,142,Missouri Tigers,MIZ,FBS,31,142,Missouri Tigers,Donald W. Reynolds Razorback Stadium,61508,STATUS_FINAL,false,true
+401752918,2025,14,2,2025-11-29T20:30Z,135,Minnesota Golden Gophers,MINN,FBS,17,275,Wisconsin Badgers,WIS,FBS,7,135,Minnesota Golden Gophers,Huntington Bank Stadium,46038,STATUS_FINAL,false,true
+401752920,2025,14,2,2025-11-29T20:30Z,164,Rutgers Scarlet Knights,RUTG,FBS,36,213,Penn State Nittany Lions,PSU,FBS,40,213,Penn State Nittany Lions,SHI Stadium,55212,STATUS_FINAL,false,true
+401754610,2025,14,2,2025-11-29T20:30Z,150,Duke Blue Devils,DUKE,FBS,49,154,Wake Forest Demon Deacons,WAKE,FBS,32,150,Duke Blue Devils,Wallace Wade Stadium,21045,STATUS_FINAL,false,true
+401756967,2025,14,2,2025-11-29T20:30Z,2628,TCU Horned Frogs,TCU,FBS,45,2132,Cincinnati Bearcats,CIN,FBS,23,2628,TCU Horned Frogs,Amon G. Carter Stadium,37259,STATUS_FINAL,false,true
+401757313,2025,14,2,2025-11-29T20:30Z,2335,Liberty Flames,LIB,FBS,42,338,Kennesaw State Owls,KENN,FBS,48,338,Kennesaw State Owls,Williams Stadium (VA),12695,STATUS_FINAL,false,true
+401761666,2025,14,2,2025-11-29T20:30Z,2572,Southern Miss Golden Eagles,USM,FBS,18,2653,Troy Trojans,TROY,FBS,28,2653,Troy Trojans,M. M. Roberts Stadium,25987,STATUS_FINAL,false,true
+401762441,2025,14,2,2025-11-29T20:30Z,2636,UTSA Roadrunners,UTSA,FBS,24,349,Army Black Knights,ARMY,FBS,27,349,Army Black Knights,Alamodome,22620,STATUS_FINAL,false,true
+401761662,2025,14,2,2025-11-29T20:45Z,324,Coastal Carolina Chanticleers,CCU,FBS,10,256,James Madison Dukes,JMU,FBS,59,256,James Madison Dukes,Brooks Stadium (SC),15137,STATUS_FINAL,false,true
+401752785,2025,14,2,2025-11-29T21:30Z,57,Florida Gators,FLA,FBS,40,52,Florida State Seminoles,FSU,FBS,21,57,Florida Gators,Ben Hill Griffin Stadium,90007,STATUS_FINAL,false,false
+401752946,2025,14,2,2025-11-29T23:30Z,265,Washington State Cougars,WSU,FBS,32,204,Oregon State Beavers,ORST,FBS,8,265,Washington State Cougars,Martin Stadium,24806,STATUS_FINAL,false,true
+401752923,2025,14,2,2025-11-30T00:00Z,127,Michigan State Spartans,MSU,FBS,38,120,Maryland Terrapins,MD,FBS,28,127,Michigan State Spartans,Ford Field,30317,STATUS_FINAL,true,true
+401762520,2025,14,2,2025-11-30T00:00Z,58,South Florida Bulls,USF,FBS,52,242,Rice Owls,RICE,FBS,3,58,South Florida Bulls,Raymond James Stadium,28813,STATUS_FINAL,false,true
+401752922,2025,14,2,2025-11-30T00:30Z,356,Illinois Fighting Illini,ILL,FBS,20,77,Northwestern Wildcats,NU,FBS,13,356,Illinois Fighting Illini,Gies Memorial Stadium,0,STATUS_FINAL,false,true
+401754612,2025,14,2,2025-11-30T00:30Z,152,NC State Wolfpack,NCSU,FBS,42,153,North Carolina Tar Heels,UNC,FBS,19,152,NC State Wolfpack,Carter-Finley Stadium,56919,STATUS_FINAL,false,true
+401760425,2025,14,2,2025-11-30T02:00Z,2440,Nevada Wolf Pack,NEV,FBS,17,2439,UNLV Rebels,UNLV,FBS,42,2439,UNLV Rebels,Mackay Stadium,0,STATUS_FINAL,false,true
+401760423,2025,14,2,2025-11-30T03:30Z,23,San José State Spartans,SJSU,FBS,14,278,Fresno State Bulldogs,FRES,FBS,41,278,Fresno State Bulldogs,CEFCU Stadium,14194,STATUS_FINAL,false,true
+401760424,2025,14,2,2025-11-30T04:00Z,62,Hawai'i Rainbow Warriors,HAW,FBS,27,2751,Wyoming Cowboys,WYO,FBS,7,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,15194,STATUS_FINAL,false,true
+401777324,2025,15,2,2025-12-06T01:00Z,2655,Tulane Green Wave,TULN,FBS,34,249,North Texas Mean Green,UNT,FBS,21,2655,Tulane Green Wave,Yulman Stadium,23986,STATUS_FINAL,false,false
+401777352,2025,15,2,2025-12-06T00:00Z,256,James Madison Dukes,JMU,FBS,31,2653,Troy Trojans,TROY,FBS,14,256,James Madison Dukes,Bridgeforth Stadium,19836,STATUS_FINAL,false,false
+401777325,2025,15,2,2025-12-06T00:00Z,55,Jacksonville State Gamecocks,JVST,FBS,15,338,Kennesaw State Owls,KENN,FBS,19,338,Kennesaw State Owls,AmFirst Stadium,18142,STATUS_FINAL,false,false
+401777326,2025,15,2,2025-12-06T01:00Z,68,Boise State Broncos,BOIS,FBS,38,2439,UNLV Rebels,UNLV,FBS,21,68,Boise State Broncos,Albertsons Stadium,27152,STATUS_FINAL,false,false
+401777353,2025,15,2,2025-12-07T01:00Z,194,Ohio State Buckeyes,OSU,FBS,10,84,Indiana Hoosiers,IU,FBS,13,84,Indiana Hoosiers,Lucas Oil Stadium,68214,STATUS_FINAL,true,false
+401777351,2025,15,2,2025-12-06T21:00Z,333,Alabama Crimson Tide,ALA,FBS,7,61,Georgia Bulldogs,UGA,FBS,28,61,Georgia Bulldogs,Mercedes-Benz Stadium,77247,STATUS_FINAL,true,false
+401777327,2025,15,2,2025-12-06T17:00Z,2641,Texas Tech Red Raiders,TTU,FBS,34,252,BYU Cougars,BYU,FBS,7,2641,Texas Tech Red Raiders,AT&T Stadium,85519,STATUS_FINAL,true,false
+401777328,2025,15,2,2025-12-07T01:00Z,258,Virginia Cavaliers,UVA,FBS,20,150,Duke Blue Devils,DUKE,FBS,27,150,Duke Blue Devils,Bank of America Stadium,41672,STATUS_FINAL,true,false
+401777329,2025,15,2,2025-12-06T17:00Z,2711,Western Michigan Broncos,WMU,FBS,23,193,Miami (OH) RedHawks,M-OH,FBS,13,2711,Western Michigan Broncos,Ford Field,19114,STATUS_FINAL,true,false
+401762521,2025,16,2,2025-12-13T20:00Z,2426,Navy Midshipmen,NAVY,FBS,17,349,Army Black Knights,ARMY,FBS,16,2426,Navy Midshipmen,M&T Bank Stadium,70936,STATUS_FINAL,true,false
+401778302,2025,1,3,2025-12-14T01:00Z,264,Washington Huskies,WASH,FBS,38,68,Boise State Broncos,BOIS,FBS,10,264,Washington Huskies,SoFi Stadium,23269,STATUS_FINAL,true,false
+401778303,2025,1,3,2025-12-17T02:00Z,55,Jacksonville State Gamecocks,JVST,FBS,17,2653,Troy Trojans,TROY,FBS,13,55,Jacksonville State Gamecocks,Cramton Bowl,15721,STATUS_FINAL,true,false
+401778304,2025,1,3,2025-12-17T22:00Z,58,South Florida Bulls,USF,FBS,10,295,Old Dominion Monarchs,ODU,FBS,24,295,Old Dominion Monarchs,Camping World Stadium,15036,STATUS_FINAL,true,false
+401778305,2025,1,3,2025-12-18T01:40Z,48,Delaware Blue Hens,DEL,FBS,20,309,Louisiana Ragin' Cajuns,UL,FBS,13,48,Delaware Blue Hens,Hancock Whitney Stadium,17234,STATUS_FINAL,true,false
+401838053,2025,1,3,2025-12-19T02:00Z,2032,Arkansas State Red Wolves,ARST,FBS,34,2623,Missouri State Bears,MOST,FBS,28,2032,Arkansas State Red Wolves,Ford Center At The Star,7782,STATUS_FINAL,true,false
+401778306,2025,1,3,2025-12-19T16:00Z,2711,Western Michigan Broncos,WMU,FBS,41,338,Kennesaw State Owls,KENN,FBS,6,2711,Western Michigan Broncos,Brooks Stadium (SC),9139,STATUS_FINAL,true,false
+401778307,2025,1,3,2025-12-19T19:30Z,152,NC State Wolfpack,NCSU,FBS,31,235,Memphis Tigers,MEM,FBS,7,152,NC State Wolfpack,Raymond James Stadium,13336,STATUS_FINAL,true,false
+401778308,2025,1,3,2025-12-22T19:00Z,328,Utah State Aggies,USU,FBS,21,265,Washington State Cougars,WSU,FBS,34,265,Washington State Cougars,Albertsons Stadium,17031,STATUS_FINAL,true,false
+401778309,2025,1,3,2025-12-23T19:00Z,97,Louisville Cardinals,LOU,FBS,27,2649,Toledo Rockets,TOL,FBS,22,97,Louisville Cardinals,Flagler Credit Union Stadium,0,STATUS_FINAL,true,false
+401778310,2025,1,3,2025-12-23T22:30Z,2572,Southern Miss Golden Eagles,USM,FBS,16,98,Western Kentucky Hilltoppers,WKU,FBS,27,98,Western Kentucky Hilltoppers,Caesars Superdome,16693,STATUS_FINAL,true,false
+401778311,2025,1,3,2025-12-24T02:00Z,195,Ohio Bobcats,OHIO,FBS,17,2439,UNLV Rebels,UNLV,FBS,10,195,Ohio Bobcats,Ford Center At The Star,6521,STATUS_FINAL,true,false
+401778312,2025,1,3,2025-12-25T01:00Z,62,Hawai'i Rainbow Warriors,HAW,FBS,35,25,California Golden Bears,CAL,FBS,31,62,Hawai'i Rainbow Warriors,Clarence T.C. Ching Athletics Complex,15194,STATUS_FINAL,false,false
+401778313,2025,1,3,2025-12-26T18:00Z,77,Northwestern Wildcats,NU,FBS,34,2117,Central Michigan Chippewas,CMU,FBS,7,77,Northwestern Wildcats,Ford Field,27857,STATUS_FINAL,true,false
+401778314,2025,1,3,2025-12-26T21:30Z,135,Minnesota Golden Gophers,MINN,FBS,20,167,New Mexico Lobos,UNM,FBS,17,135,Minnesota Golden Gophers,Chase Field,27439,STATUS_FINAL,true,false
+401778315,2025,1,3,2025-12-27T01:00Z,2636,UTSA Roadrunners,UTSA,FBS,57,2229,Florida International Panthers,FIU,FBS,20,2636,UTSA Roadrunners,Gerald J. Ford Stadium,8671,STATUS_FINAL,true,false
+401778319,2025,1,3,2025-12-27T20:40Z,252,BYU Cougars,BYU,FBS,25,59,Georgia Tech Yellow Jackets,GT,FBS,21,252,BYU Cougars,Camping World Stadium,34126,STATUS_FINAL,true,false
+401778322,2025,1,3,2025-12-28T00:30Z,142,Missouri Tigers,MIZ,FBS,7,258,Virginia Cavaliers,UVA,FBS,13,258,Virginia Cavaliers,EverBank Stadium,31802,STATUS_FINAL,true,false
+401778323,2025,1,3,2025-12-28T02:20Z,248,Houston Cougars,HOU,FBS,38,99,LSU Tigers,LSU,FBS,35,248,Houston Cougars,NRG Stadium,63867,STATUS_FINAL,true,false
+401778321,2025,1,3,2025-12-27T22:45Z,21,San Diego State Aztecs,SDSU,FBS,47,249,North Texas Mean Green,UNT,FBS,49,249,North Texas Mean Green,University Stadium (NM),18867,STATUS_FINAL,true,false
+401778316,2025,1,3,2025-12-27T16:00Z,151,East Carolina Pirates,ECU,FBS,23,221,Pittsburgh Panthers,PITT,FBS,17,151,East Carolina Pirates,Navy-Marine Corps Memorial Stadium,17016,STATUS_FINAL,true,false
+401778317,2025,1,3,2025-12-27T17:00Z,228,Clemson Tigers,CLEM,FBS,10,213,Penn State Nittany Lions,PSU,FBS,22,213,Penn State Nittany Lions,Yankee Stadium,41101,STATUS_FINAL,true,false
+401778318,2025,1,3,2025-12-27T19:15Z,349,Army Black Knights,ARMY,FBS,41,41,UConn Huskies,CONN,FBS,16,349,Army Black Knights,Fenway Park,22461,STATUS_FINAL,true,false
+401778320,2025,1,3,2025-12-27T21:30Z,278,Fresno State Bulldogs,FRES,FBS,18,193,Miami (OH) RedHawks,M-OH,FBS,3,278,Fresno State Bulldogs,Casino Del Sol Stadium,37232,STATUS_FINAL,true,false
+401778324,2025,1,3,2025-12-29T19:00Z,2026,App State Mountaineers,APP,FBS,10,290,Georgia Southern Eagles,GASO,FBS,29,290,Georgia Southern Eagles,Protective Stadium,12092,STATUS_FINAL,true,false
+401778327,2025,1,3,2025-12-31T02:00Z,2628,TCU Horned Frogs,TCU,FBS,30,30,USC Trojans,USC,FBS,27,2628,TCU Horned Frogs,Alamodome,54751,STATUS_FINAL,true,false
+401778325,2025,1,3,2025-12-30T19:00Z,2348,Louisiana Tech Bulldogs,LT,FBS,23,324,Coastal Carolina Chanticleers,CCU,FBS,14,2348,Louisiana Tech Bulldogs,Independence Stadium,30298,STATUS_FINAL,true,false
+401778326,2025,1,3,2025-12-30T22:30Z,356,Illinois Fighting Illini,ILL,FBS,30,2633,Tennessee Volunteers,TENN,FBS,28,356,Illinois Fighting Illini,Nissan Stadium,52815,STATUS_FINAL,true,false
+401778330,2025,1,3,2025-12-31T20:00Z,251,Texas Longhorns,TEX,FBS,41,130,Michigan Wolverines,MICH,FBS,27,251,Texas Longhorns,Camping World Stadium,47316,STATUS_FINAL,true,false
+401778328,2025,1,3,2025-12-31T17:00Z,238,Vanderbilt Commodores,VAN,FBS,27,2294,Iowa Hawkeyes,IOWA,FBS,34,2294,Iowa Hawkeyes,Raymond James Stadium,35382,STATUS_FINAL,true,false
+401778331,2025,1,3,2025-12-31T20:30Z,254,Utah Utes,UTAH,FBS,44,158,Nebraska Cornhuskers,NEB,FBS,22,254,Utah Utes,Allegiant Stadium,38879,STATUS_FINAL,true,false
+401778329,2025,1,3,2025-12-31T19:00Z,150,Duke Blue Devils,DUKE,FBS,42,9,Arizona State Sun Devils,ASU,FBS,39,150,Duke Blue Devils,Sun Bowl,44975,STATUS_FINAL,true,false
+401831583,2025,1,3,2026-01-03T01:00Z,2567,SMU Mustangs,SMU,FBS,24,12,Arizona Wildcats,ARIZ,FBS,19,2567,SMU Mustangs,Snapdragon Stadium,30602,STATUS_FINAL,true,false
+401778332,2025,1,3,2026-01-02T18:00Z,326,Texas State Bobcats,TXST,FBS,41,242,Rice Owls,RICE,FBS,10,326,Texas State Bobcats,Amon G. Carter Stadium,28243,STATUS_FINAL,true,false
+401778333,2025,1,3,2026-01-02T21:30Z,2132,Cincinnati Bearcats,CIN,FBS,13,2426,Navy Midshipmen,NAVY,FBS,35,2426,Navy Midshipmen,Simmons Bank Liberty Stadium,21908,STATUS_FINAL,true,false
+401778334,2025,1,3,2026-01-03T01:00Z,344,Mississippi State Bulldogs,MSST,FBS,29,154,Wake Forest Demon Deacons,WAKE,FBS,43,154,Wake Forest Demon Deacons,Bank of America Stadium,29328,STATUS_FINAL,true,false
+401779840,2025,1,3,2025-12-20T01:00Z,201,Oklahoma Sooners,OU,FBS,24,333,Alabama Crimson Tide,ALA,FBS,34,333,Alabama Crimson Tide,"Memorial Stadium (Norman, OK)",83550,STATUS_FINAL,false,false
+401779843,2025,1,3,2025-12-21T00:30Z,2483,Oregon Ducks,ORE,FBS,51,256,James Madison Dukes,JMU,FBS,34,2483,Oregon Ducks,Autzen Stadium,55124,STATUS_FINAL,false,false
+401779842,2025,1,3,2025-12-20T20:30Z,145,Ole Miss Rebels,MISS,FBS,41,2655,Tulane Green Wave,TULN,FBS,10,145,Ole Miss Rebels,Vaught-Hemingway Stadium,68251,STATUS_FINAL,false,false
+401779841,2025,1,3,2025-12-20T17:00Z,245,Texas A&M Aggies,TA&M,FBS,3,2390,Miami Hurricanes,MIA,FBS,10,2390,Miami Hurricanes,Kyle Field,104122,STATUS_FINAL,false,false
+401769070,2025,1,3,2026-01-01T00:30Z,194,Ohio State Buckeyes,OSU,FBS,14,2390,Miami Hurricanes,MIA,FBS,24,2390,Miami Hurricanes,AT&T Stadium,71323,STATUS_FINAL,true,false
+401769072,2025,1,3,2026-01-01T21:00Z,84,Indiana Hoosiers,IU,FBS,38,333,Alabama Crimson Tide,ALA,FBS,3,84,Indiana Hoosiers,Rose Bowl,90278,STATUS_FINAL,true,false
+401769073,2025,1,3,2026-01-02T01:00Z,61,Georgia Bulldogs,UGA,FBS,34,145,Ole Miss Rebels,MISS,FBS,39,145,Ole Miss Rebels,Caesars Superdome,68371,STATUS_FINAL,true,false
+401769071,2025,1,3,2026-01-01T17:00Z,2641,Texas Tech Red Raiders,TTU,FBS,0,2483,Oregon Ducks,ORE,FBS,23,2483,Oregon Ducks,Hard Rock Stadium,65021,STATUS_FINAL,true,false
+401769075,2025,1,3,2026-01-09T00:30Z,145,Ole Miss Rebels,MISS,FBS,27,2390,Miami Hurricanes,MIA,FBS,31,2390,Miami Hurricanes,State Farm Stadium,67928,STATUS_FINAL,true,false
+401769074,2025,1,3,2026-01-10T00:30Z,84,Indiana Hoosiers,IU,FBS,56,2483,Oregon Ducks,ORE,FBS,22,84,Indiana Hoosiers,Mercedes-Benz Stadium,75604,STATUS_FINAL,true,false
+401769076,2025,1,3,2026-01-20T00:30Z,84,Indiana Hoosiers,IU,FBS,27,2390,Miami Hurricanes,MIA,FBS,21,84,Indiana Hoosiers,Hard Rock Stadium,67227,STATUS_FINAL,false,false

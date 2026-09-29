@@ -7,6 +7,7 @@
   const mobile = window.matchMedia('(max-width: 620px)').matches;
   const animate = !reduced && !mobile;
   let width = 0; let height = 0; let frame = 0; let active = true; let tick = 0;
+  let scrollFrame = 0;
   const particles = Array.from({ length: 30 }, (_, i) => ({ x: (i * 73 % 100) / 100, y: (i * 47 % 100) / 100, speed: .00013 + (i % 5) * .000035, phase: i * 2.1 }));
 
   function resize() {
@@ -16,6 +17,16 @@
     canvas.width = Math.round(width * dpr); canvas.height = Math.round(height * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     draw();
+  }
+  function updateScroll() {
+    if (scrollFrame) return;
+    scrollFrame = requestAnimationFrame(() => {
+      scrollFrame = 0;
+      const progress = Math.min(1, Math.max(0, window.scrollY / Math.max(1, height) * .72));
+      canvas.parentElement.style.setProperty('--hero-opacity', String(1 - progress * .5));
+      const content = canvas.parentElement.querySelector('.hero-content');
+      if (content) content.style.setProperty('--hero-shift', `${-progress * 24}px`);
+    });
   }
   function draw() {
     if (!width || !height) return;
@@ -68,6 +79,8 @@
     observer.observe(canvas);
   }
   window.addEventListener('resize', resize, { passive: true });
+  if (!reduced && !mobile) window.addEventListener('scroll', updateScroll, { passive: true });
   resize();
+  if (!reduced && !mobile) updateScroll();
   if (animate && !('IntersectionObserver' in window)) frame = requestAnimationFrame(draw);
 })();

@@ -8,14 +8,15 @@
     status: document.getElementById('load-status'), team: document.getElementById('team-filter'), week: document.getElementById('week-filter'),
     type: document.getElementById('type-filter'), season: document.getElementById('season-filter'), perspective: document.getElementById('perspective-filter'),
     measure: document.getElementById('measure-filter'), breakdown: document.getElementById('breakdown-filter'), reset: document.getElementById('reset-filters'),
-    context: document.getElementById('team-context'), error: document.getElementById('dashboard-error'), sort: document.getElementById('table-sort'),
+    context: document.getElementById('team-broadcast'), identityLogo: document.getElementById('team-identity-logo'), identityName: document.getElementById('team-identity-name'), identityKicker: document.getElementById('team-identity-kicker'), error: document.getElementById('dashboard-error'), sort: document.getElementById('table-sort'),
     prev: document.getElementById('table-prev'), next: document.getElementById('table-next'), range: document.getElementById('table-range'), tbody: document.querySelector('#results-table tbody')
   };
+  els.loading = document.getElementById('loading-overlay'); els.loadCount = document.getElementById('load-count'); els.loadStage = document.getElementById('load-stage'); els.loadFill = document.getElementById('load-progress-fill');
   const PAGE_SIZE = 15;
   const build = { offense: [], defense: [], week: [], season: [], type: [], down: [], period: [], epa: [], defEPA: [], yards: [], success: [], explosive: [], scoring: [], points: [] };
   const lookup = { teams: [''], types: [''], seasons: [''] };
   const ids = { teams: new Map(), types: new Map(), seasons: new Map() };
-  let rows = null; let branding = {}; let chartInstances = []; let resultRows = []; let page = 0; let debounce = 0; let rootColor = '#cbff50'; let chartColor = '#cbff50';
+  let rows = null; let branding = {}; let chartInstances = []; let resultRows = []; let page = 0; let debounce = 0; let chartColor = '#cbff50'; let lastIdentity = null;
   let settled = false; let loadWatchdog = 0; let loadStartedAt = Date.now();
   const measureLabels = { epa: 'Average EPA / actual play', success: 'EPA success rate', explosive: 'EPA explosive-play rate', yards: 'Average recorded yards', scoring: 'Scoring-play rate', plays: 'Actual play count' };
   const breakdownLabels = { team: 'Team', opponent: 'Opponent', week: 'Week', type: 'Play type', down: 'Down', quarter: 'Quarter / period' };
@@ -80,7 +81,11 @@
     els.team.value = ''; els.week.value = ''; els.type.value = ''; els.season.value = '';
     els.perspective.value = 'offense'; els.measure.value = 'epa'; els.breakdown.value = 'team'; els.sort.value = 'metric'; page = 0; scheduleRender();
   }
-  function scheduleRender() { window.clearTimeout(debounce); debounce = window.setTimeout(() => { page = 0; render(); }, 85); }
+  function scheduleRender() {
+    window.clearTimeout(debounce);
+    document.getElementById('summary-cards').classList.add('filter-pending');
+    debounce = window.setTimeout(() => { page = 0; render(); document.getElementById('summary-cards').classList.remove('filter-pending'); }, 85);
+  }
   function chosenTeamId() { return els.team.value ? ids.teams.get(els.team.value) : null; }
   function selectedValue(key, value, perspective) {
     if (key === 'team') return lookup.teams[perspective === 'offense' ? rows.offense[value] : rows.defense[value]];
@@ -146,31 +151,50 @@
     const labels = ['Actual plays', p === 'offense' ? 'Average offensive EPA' : 'Average defensive EPA', p === 'offense' ? 'Offensive success' : 'Defensive stop rate', p === 'offense' ? 'Explosive-play rate' : 'Non-explosive share', p === 'offense' ? 'Scoring-play rate' : 'Opponent scoring rate'];
     const feet = ['Filtered actual-play count', 'Per actual play', p === 'offense' ? 'EPA > 0 share' : 'EPA ≤ 0 allowed share', p === 'offense' ? 'Source EPA explosive flag' : 'Source EPA explosive flag is false', 'Source scoring flag'];
     cards.forEach((card, i) => { card.querySelector('.summary-value').textContent = values[i]; card.querySelector('.summary-label').textContent = labels[i]; card.querySelector('.summary-foot').textContent = feet[i]; });
+    document.getElementById('broadcast-epa-label').textContent = p === 'offense' ? 'OFFENSIVE EPA' : 'DEFENSIVE EPA';
+    document.getElementById('broadcast-success-label').textContent = p === 'offense' ? 'SUCCESS RATE' : 'DEFENSIVE STOP RATE';
+    document.getElementById('broadcast-explosive-label').textContent = p === 'offense' ? 'EXPLOSIVE RATE' : 'NON-EXPLOSIVE SHARE';
+    document.getElementById('broadcast-yards-label').textContent = p === 'offense' ? 'AVERAGE YARDS' : 'AVERAGE YARDS ALLOWED';
+    document.getElementById('broadcast-epa').textContent = all.n ? Saturday.signed(metricEPA / all.n, 3) : '—';
+    document.getElementById('broadcast-success').textContent = all.n ? Saturday.percent(all.success / all.n) : '—';
+    document.getElementById('broadcast-explosive').textContent = all.n ? Saturday.percent(all.explosive / all.n) : '—';
+    document.getElementById('broadcast-yards').textContent = all.n ? Saturday.number(all.yards / all.n, 2) : '—';
+    document.getElementById('broadcast-plays').textContent = Saturday.compact(all.n);
   }
   function fillBrandContext() {
     const name = els.team.value; const team = branding[name]; const initials = Saturday.initials(name);
-    const context = els.context; context.replaceChildren();
-    const color = team && /^#[0-9a-f]{6}$/i.test(team.primaryColor) ? team.primaryColor : '#cbff50';
+    const context = els.context; const logo = els.identityLogo; logo.replaceChildren();
+    const primary = team && /^#[0-9a-f]{6}$/i.test(team.primaryColor) ? team.primaryColor : '#cbff50';
     const secondary = team && /^#[0-9a-f]{6}$/i.test(team.secondaryColor) ? team.secondaryColor : '#344427';
-    context.style.setProperty('--selected-team', color); document.documentElement.style.setProperty('--team', color); document.documentElement.style.setProperty('--team-secondary', secondary); chartColor = color;
+    const color = contrastColor(primary, secondary);
+    context.style.setProperty('--selected-team', color); context.style.setProperty('--selected-primary', primary); context.style.setProperty('--selected-secondary', secondary); document.documentElement.style.setProperty('--team', color); document.documentElement.style.setProperty('--team-secondary', secondary); document.body.style.setProperty('--team', color); document.body.style.setProperty('--team-secondary', secondary); chartColor = color;
     if (name && team && team.logo) {
       const image = document.createElement('img'); image.src = team.logo; image.alt = `${name} logo`; image.loading = 'lazy'; image.referrerPolicy = 'no-referrer';
-      image.onerror = () => { image.replaceWith(fallback()); }; context.append(image);
-    } else context.append(fallback());
-    const info = document.createElement('div'); info.innerHTML = `<span class="context-label">${name ? 'TEAM LENS' : 'CURRENT LENS'}</span><strong></strong><small></small>`;
-    info.querySelector('strong').textContent = name || 'All teams';
-    info.querySelector('small').textContent = name ? [team && team.conference, team && team.division].filter(Boolean).join(' • ') || '2025 • college football' : '2025 • college football';
-    context.append(info);
-    function fallback() { const box = document.createElement('div'); box.className = 'team-logo-fallback'; box.textContent = initials; box.setAttribute('aria-hidden', 'true'); return box; }
+      image.onerror = () => { image.replaceWith(fallback()); }; logo.append(image);
+    } else logo.append(fallback());
+    els.identityName.textContent = (name || 'ALL TEAMS').toUpperCase();
+    els.identityKicker.textContent = name ? `${team && team.conference || '2025 COLLEGE FOOTBALL'} / ${els.perspective.value.toUpperCase()} PERFORMANCE` : 'SEASON-WIDE LENS / 2025';
+    if (lastIdentity !== name) {
+      context.classList.remove('team-changed'); void context.offsetWidth; context.classList.add('team-changed'); lastIdentity = name;
+    }
+    function fallback() { const box = document.createElement('span'); box.className = 'broadcast-logo-fallback'; box.textContent = initials; box.setAttribute('aria-hidden', 'true'); return box; }
   }
-  function setOption(chart, groups, measure, label, kind = 'bar') {
+  function contrastColor(primary, secondary) {
+    const luminance = (hex) => {
+      const rgb = hex.slice(1).match(/.{2}/g).map((part) => parseInt(part, 16) / 255).map((value) => value <= .04045 ? value / 12.92 : Math.pow((value + .055) / 1.055, 2));
+      return .2126 * rgb[0] + .7152 * rgb[1] + .0722 * rgb[2];
+    };
+    if (luminance(primary) >= .2) return primary;
+    return luminance(secondary) >= .2 ? secondary : '#cbff50';
+  }
+  function setOption(chart, groups, measure, label, kind = 'bar', emphasizeLeader = false) {
     const perspective = els.perspective.value; const val = groups.map((g) => currentMetric(g, measure, perspective));
     const categories = groups.map((g) => g.label);
     const commonText = '#b6c2c7'; const gridLine = '#26343e';
     const opts = {
       animationDuration: 350, animationDurationUpdate: 260,
       grid: { left: kind === 'bar' ? 132 : 46, right: 24, top: 25, bottom: 44, containLabel: false },
-      tooltip: { trigger: kind === 'line' ? 'axis' : 'item', backgroundColor: '#111b24', borderColor: '#34434f', textStyle: { color: '#f2f3ee', fontFamily: 'DM Mono', fontSize: 10 }, formatter: (params) => {
+      tooltip: { trigger: kind === 'line' ? 'axis' : 'item', backgroundColor: '#101923', borderColor: chartColor, borderWidth: 1, padding: [11, 14], extraCssText: 'box-shadow:0 12px 34px rgba(0,0,0,.42);border-radius:2px', textStyle: { color: '#f2f3ee', fontFamily: 'DM Mono', fontSize: 10 }, formatter: (params) => {
         const item = Array.isArray(params) ? params[0] : params; const g = groups[item.dataIndex];
         const epaLabel = perspective === 'offense' ? 'Offensive EPA / play' : 'Defensive EPA / play';
         return `<strong>${Saturday.esc(g.label)}</strong><br>${Saturday.esc(measureLabels[measure])}: ${formatMeasure(item.value, measure)}<br>Actual plays: ${Saturday.compact(g.n)}<br>${epaLabel}: ${Saturday.signed(perspective === 'offense' ? g.meanEpa : g.meanDefEpa)}<br>Success: ${Saturday.percent(g.successRate)}`;
@@ -179,7 +203,7 @@
         : { type: 'category', data: categories, boundaryGap: kind !== 'line', axisLabel: { color: commonText, fontSize: 9, interval: 'auto', rotate: categories.length > 8 ? 25 : 0, formatter: (v) => v.length > 17 ? `${v.slice(0, 16)}…` : v }, axisLine: { lineStyle: { color: gridLine } }, axisTick: { show: false } },
       yAxis: kind === 'bar' ? { type: 'category', data: categories, inverse: true, axisLabel: { color: commonText, fontSize: 9, width: 120, overflow: 'truncate', formatter: (v) => v.length > 20 ? `${v.slice(0, 19)}…` : v }, axisLine: { show: false }, axisTick: { show: false }, splitLine: { show: false } }
         : { type: 'value', min: measure === 'success' || measure === 'explosive' || measure === 'scoring' ? 0 : undefined, max: measure === 'success' || measure === 'explosive' || measure === 'scoring' ? 1 : undefined, axisLabel: { color: '#85949c', fontFamily: 'DM Mono', fontSize: 9, formatter: (v) => measure === 'success' || measure === 'explosive' || measure === 'scoring' ? `${Math.round(v * 100)}%` : v }, splitLine: { lineStyle: { color: gridLine } }, axisLine: { lineStyle: { color: gridLine } } },
-      series: [{ type: kind, data: val, smooth: kind === 'line', symbolSize: 7, showSymbol: kind === 'line', barMaxWidth: 17, itemStyle: { color: chartColor, borderRadius: kind === 'bar' ? [0, 2, 2, 0] : 0 }, lineStyle: { color: chartColor, width: 2 }, areaStyle: kind === 'line' ? { color: `${chartColor}18` } : undefined, label: { show: categories.length <= 7 && kind === 'bar', position: 'right', color: '#dfe6e0', fontFamily: 'DM Mono', fontSize: 9, formatter: (p) => formatMeasure(p.value, measure) } }],
+      series: [{ type: kind, data: val, smooth: kind === 'line', symbolSize: 7, showSymbol: kind === 'line', barMaxWidth: 17, itemStyle: { color: kind === 'bar' && emphasizeLeader ? (params) => params.dataIndex === 0 ? chartColor : '#53656d' : chartColor, borderRadius: kind === 'bar' ? [0, 2, 2, 0] : 0 }, lineStyle: { color: chartColor, width: 2 }, areaStyle: kind === 'line' ? { color: `${chartColor}18` } : undefined, label: { show: categories.length <= 7 && kind === 'bar', position: 'right', color: '#dfe6e0', fontFamily: 'DM Mono', fontSize: 9, formatter: (p) => formatMeasure(p.value, measure) } }],
       aria: { enabled: true, decal: { show: true } }
     };
     chart.setOption(opts, true);
@@ -199,7 +223,7 @@
     const typePoints = cap(type, 14, (a, z) => z.n - a.n);
     const weekPoints = week.slice().sort((a, z) => Number(a.label.replace(/\D/g, '')) - Number(z.label.replace(/\D/g, '')));
     const downPoints = down.slice().sort((a, z) => Number(a.label.replace(/\D/g, '')) - Number(z.label.replace(/\D/g, '')));
-    setOption(chartInstances[0], first, m, `${measureLabels[m]} by ${breakdownLabels[b]}`, b === 'week' ? 'line' : 'bar');
+    setOption(chartInstances[0], first, m, `${measureLabels[m]} by ${breakdownLabels[b]}`, b === 'week' ? 'line' : 'bar', b === 'team');
     setOption(chartInstances[1], weekPoints, m, `${measureLabels[m]} by week`, 'line');
     setOption(chartInstances[2], downPoints, m, `${measureLabels[m]} by down`, 'bar');
     setOption(chartInstances[3], typePoints, m, `${measureLabels[m]} by play type`, 'bar');
@@ -241,12 +265,19 @@
     settled = true; window.clearTimeout(loadWatchdog);
     const message = error && (error.message || error.reason || error.type) ? (error.message || error.reason || error.type) : String(error || 'Unknown loading error');
     els.error.hidden = false;
+    if (els.loading) els.loading.hidden = true;
+    document.getElementById('main').inert = false;
     els.error.textContent = `The dashboard could not load its data: ${message}. ${location.protocol === 'file:' ? 'Open it through a local web server (see README) instead of opening the HTML file directly.' : 'Check that the CSV and JavaScript files are being served, then reload.'}`;
     els.status.textContent = 'Dashboard failed to load';
     els.status.setAttribute('data-state', 'error');
   }
   function showProgress(seen) {
     els.status.textContent = `Loading ${Saturday.compact(seen)} / ${Saturday.compact(EXPECTED_ROWS)} rows…`;
+    els.loadCount.textContent = `${Saturday.compact(seen)} / ${Saturday.compact(EXPECTED_ROWS)} ROWS PARSED`;
+    els.loadStage.textContent = seen ? 'Indexing teams and play outcomes…' : 'Receiving and parsing the play-by-play file…';
+    const percentage = Math.min(100, seen / EXPECTED_ROWS * 100);
+    els.loadFill.style.width = `${percentage}%`;
+    els.loadFill.parentElement.setAttribute('aria-valuenow', String(seen));
     window.clearTimeout(loadWatchdog);
     loadWatchdog = window.setTimeout(() => fail(new Error(`No CSV loading progress for 60 seconds (${Saturday.compact(seen)} rows received)`)), 60000);
   }
@@ -292,6 +323,10 @@
             settled = true; window.clearTimeout(loadWatchdog);
             els.status.textContent = `${Saturday.compact(rows.week.length)} actual plays loaded in ${((Date.now() - loadStartedAt) / 1000).toFixed(1)}s`;
             els.status.setAttribute('data-state', 'ready');
+            els.loadCount.textContent = `${Saturday.compact(seen)} SOURCE ROWS / ${Saturday.compact(rows.week.length)} ACTUAL PLAYS`;
+            els.loadStage.textContent = 'Signal acquired. The season is ready.';
+            els.loadFill.style.width = '100%'; els.loadFill.parentElement.setAttribute('aria-valuenow', String(EXPECTED_ROWS));
+            els.loading.classList.add('is-dismissed'); window.setTimeout(() => { els.loading.hidden = true; document.getElementById('main').inert = false; }, 480);
           } catch (error) { fail(error); }
         },
         error: fail

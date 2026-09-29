@@ -20,6 +20,8 @@
         status.setAttribute('data-state', 'error');
         panel.hidden = false;
         panel.textContent = `The dashboard could not start: ${message}. Check that the page is served over HTTP, its JavaScript files loaded, and then reload.`;
+        document.getElementById('loading-overlay').hidden = true;
+        document.getElementById('main').inert = false;
       }
       window.addEventListener('error', (event) => {
         if (event.target instanceof HTMLScriptElement) showStartupError(`script failed to load: ${event.target.src || 'inline script'}`);
@@ -44,10 +46,38 @@
     <div class="header-season"><span class="live-dot"></span> 2025 SEASON <span class="header-divider">/</span> INTERACTIVE</div>
   </header>
 
-  <main id="main" class="dashboard-main page-shell">
+  <div id="loading-overlay" class="loading-overlay" role="status" aria-live="polite" aria-label="Loading 2025 college football play-by-play">
+    <div class="loading-card">
+      <div class="loading-brand"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span><span>SATURDAY <b>SIGNAL</b></span><small>DATA OPERATIONS / 2025</small></div>
+      <div class="loading-field" aria-hidden="true"><i></i><i></i><i></i><i></i><span class="loading-ball">●</span></div>
+      <p class="loading-kicker">READING THE SEASON</p>
+      <h1>Processing<br><em>the tape.</em></h1>
+      <div class="loading-facts"><span><b>166,053</b> PLAY RECORDS</span><span><b>236</b> TEAMS</span><span><b>16</b> WEEKS</span></div>
+      <div class="load-meter" role="progressbar" aria-label="CSV rows parsed" aria-valuemin="0" aria-valuemax="166053" aria-valuenow="0"><i id="load-progress-fill"></i></div>
+      <p id="load-stage">Connecting to the play-by-play file…</p>
+      <p id="load-count" class="load-count">0 / 166,053 ROWS PARSED</p>
+    </div>
+  </div>
+
+  <main id="main" class="dashboard-main page-shell" inert>
     <section class="dashboard-heading">
       <div><div class="eyebrow"><span class="eyebrow-rule"></span> THE ANALYTICS BOOTH <span class="eyebrow-year">01—16</span></div><h1>Read the <em>field.</em></h1><p>Choose a team, set the game state, and follow the signal through 2025.</p></div>
       <div class="data-status"><span class="status-pulse"></span><span id="load-status" role="status">Loading 166,053 plays…</span></div>
+    </section>
+
+    <section class="team-broadcast" id="team-broadcast" aria-label="Filtered team performance" aria-live="polite">
+      <div class="broadcast-identity">
+        <div id="team-identity-logo" class="broadcast-logo"><span>CF</span></div>
+        <div class="broadcast-nameplate"><span id="team-identity-kicker">SEASON-WIDE LENS / 2025</span><h2 id="team-identity-name">ALL TEAMS</h2><span class="broadcast-subtitle">PERFORMANCE SIGNAL</span></div>
+      </div>
+      <div class="broadcast-metrics">
+        <div><span id="broadcast-epa-label">OFFENSIVE EPA</span><strong id="broadcast-epa">—</strong><small>PER ACTUAL PLAY</small></div>
+        <div><span id="broadcast-success-label">SUCCESS RATE</span><strong id="broadcast-success">—</strong><small>EPA &gt; 0</small></div>
+        <div><span id="broadcast-explosive-label">EXPLOSIVE RATE</span><strong id="broadcast-explosive">—</strong><small>SOURCE EPA FLAG</small></div>
+        <div><span id="broadcast-yards-label">AVERAGE YARDS</span><strong id="broadcast-yards">—</strong><small>RECORDED YARDAGE</small></div>
+        <div><span>TOTAL PLAYS</span><strong id="broadcast-plays">—</strong><small>FILTERED ACTUAL PLAYS</small></div>
+      </div>
+      <div class="broadcast-rule" aria-hidden="true"></div>
     </section>
 
     <section class="dashboard-controls panel" aria-label="Dashboard filters and controls">
@@ -67,7 +97,6 @@
         <label class="field-control breakdown-control"><span>Breakdown <i>HOW TO GROUP</i></span><select id="breakdown-filter">
           <option value="team">Team</option><option value="week">Week</option><option value="type">Play type</option><option value="down">Down</option><option value="quarter">Quarter / period</option><option value="opponent">Opponent</option>
         </select></label>
-        <div id="team-context" class="team-context" aria-live="polite"><div class="team-logo-fallback">CF</div><div><span class="context-label">CURRENT LENS</span><strong>All teams</strong><small>2025 • college football</small></div></div>
       </div>
     </section>
 
