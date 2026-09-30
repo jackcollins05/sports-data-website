@@ -721,7 +721,7 @@
       "id": "receiving",
       "kicker": "PASS CATCHERS / RECEIVING",
       "title": "D. Scudero (SJSU) led in receiving yards",
-      "copy": "With at least 40 receptions, D. Scudero of San José State Spartans led the receiving cohort with 1,291 yards on 88 catches, averaging 14.67 yards per reception, with 10 receiving touchdowns.",
+      "copy": "With at least 40 receptions, D. Scudero of San José State Spartans led the receiving cohort with 1,291 yards on 88 catches, averaging 14.67 yards per reception, with 10 receiving touchdowns. That was 696 yards ahead of J. Tibbs, the next player in the same qualifying group.",
       "kind": "players",
       "metric": "receiving_yards",
       "unit": "RECEIVING YARDS",
@@ -2030,7 +2030,7 @@
       "id": "poll-churn",
       "kicker": "AP TOP 25 / POLL TURNOVER",
       "title": "The Top 25 changed by 43 entries and 43 exits across available weekly polls",
-      "copy": "Across the 16 transitions after the first captured snapshot, teams entered the AP Top 25 43 times and dropped out 43 times. A departure is shown as unranked in that poll period; the trend data never assigns an invented No. 26.",
+      "copy": "Across the 16 transitions after the first captured snapshot, teams entered the AP Top 25 43 times and dropped out 43 times. These are team-poll transitions, so a program may enter or leave more than once. A departure is shown as unranked in that poll period; the trend data never assigns an invented No. 26.",
       "kind": "churn",
       "unit": "TEAMS PER POLL TRANSITION",
       "data": [

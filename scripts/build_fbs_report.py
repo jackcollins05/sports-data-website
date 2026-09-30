@@ -179,6 +179,7 @@ def main():
     top_qb=qbs and take(qbs,'passing_yards',1)[0]
     top_rb=rushers and take(rushers,'rushing_yards',1)[0]
     top_wr=receivers and take(receivers,'receiving_yards',1)[0]
+    next_wr=receivers[1] if len(receivers)>1 else None
     top_sacker=defenders and take(defenders,'sacks',1)[0]
     top_tackler=defenders and take(defenders,'tackles',1)[0]
     top_scoring=team_ppg[0] if team_ppg else None
@@ -206,7 +207,7 @@ def main():
        'kind':'players','metric':'rushing_yards','unit':'RUSHING YARDS','data':take(rushers,'rushing_yards',8)},
       {'id':'receiving','kicker':'PASS CATCHERS / RECEIVING',
        'title':f"{p_name(top_wr)} led in receiving yards" if top_wr else 'The receiving leaderboard',
-       'copy':f"With at least 40 receptions, {top_wr['name']} of {top_wr['team']} led the receiving cohort with {int(top_wr['receiving_yards']):,} yards on {int(top_wr['receptions'])} catches, averaging {top_wr['receiving_yards_per_reception']:.2f} yards per reception, with {int(top_wr['receiving_touchdowns'] or 0)} receiving touchdowns." if top_wr else 'No qualifying receiving line was available.',
+       'copy':(f"With at least 40 receptions, {top_wr['name']} of {top_wr['team']} led the receiving cohort with {int(top_wr['receiving_yards']):,} yards on {int(top_wr['receptions'])} catches, averaging {top_wr['receiving_yards_per_reception']:.2f} yards per reception, with {int(top_wr['receiving_touchdowns'] or 0)} receiving touchdowns. " + (f"That was {int(top_wr['receiving_yards']-next_wr['receiving_yards']):,} yards ahead of {next_wr['name']}, the next player in the same qualifying group." if next_wr else '')) if top_wr else 'No qualifying receiving line was available.',
        'kind':'players','metric':'receiving_yards','unit':'RECEIVING YARDS','data':take(receivers,'receiving_yards',8)},
       {'id':'defense','kicker':'DEFENSE / SACK PRODUCTION',
        'title':f"{p_name(top_sacker)} paced the sack leaders" if top_sacker else 'Sack production across the FBS',
@@ -234,7 +235,7 @@ def main():
        'kind':'weekly','unit':'POINTS / TEAM-GAME','data':weekly_rows},
       {'id':'poll-churn','kicker':'AP TOP 25 / POLL TURNOVER',
        'title':f"The Top 25 changed by {sum(x['entered'] for x in transitions)} entries and {sum(x['dropped'] for x in transitions)} exits across available weekly polls",
-       'copy':f"Across the {len(transitions)} transitions after the first captured snapshot, teams entered the AP Top 25 {sum(x['entered'] for x in transitions)} times and dropped out {sum(x['dropped'] for x in transitions)} times. A departure is shown as unranked in that poll period; the trend data never assigns an invented No. 26.",
+       'copy':f"Across the {len(transitions)} transitions after the first captured snapshot, teams entered the AP Top 25 {sum(x['entered'] for x in transitions)} times and dropped out {sum(x['dropped'] for x in transitions)} times. These are team-poll transitions, so a program may enter or leave more than once. A departure is shown as unranked in that poll period; the trend data never assigns an invented No. 26.",
        'kind':'churn','unit':'TEAMS PER POLL TRANSITION','data':transitions},
     ]
 
